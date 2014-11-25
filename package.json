@@ -1,4 +1,14 @@
 {
   "name": "style-transfer",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "description": "Library for transferring style between charts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harperj/"
+  },
+  "author": "Jonathan Harper",
+  "license": "BSD",
+  "devDependencies": {
+    "d3-decon-lib": "https://github.com/harperj/d3-decon-lib"
+  }
 }
