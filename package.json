@@ -9,6 +9,6 @@
   "author": "Jonathan Harper",
   "license": "BSD",
   "devDependencies": {
-    "d3-decon-lib": "https://github.com/harperj/d3-decon-lib"
+    "d3-decon-lib": "git://github.com/harperj/d3-decon-lib"
   }
 }
