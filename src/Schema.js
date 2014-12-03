@@ -1,4 +1,5 @@
 var _ = require('underscore');
+var Mapping = require('./Mapping');
 
 function Schema(data, attrs, nodeAttrs, ids, mappings) {
     this.data = data;
@@ -20,7 +21,10 @@ function Schema(data, attrs, nodeAttrs, ids, mappings) {
 
     this.numFields = Object.keys(data).length;
     this.ids = ids;
-    this.mappings = mappings;
+
+    this.mappings = _.map(mappings, function(mapping) {
+        return new Mapping(mapping.data, mapping.attr, mapping.type, mapping.params);
+    });
     this.nodeAttrs = nodeAttrs;
 }
 
@@ -41,6 +45,25 @@ Schema.prototype.uniqVals = function(fieldName, isAttr) {
     return _.uniq(allVals);
 };
 
+Schema.prototype.updateAttrsFromMappings = function() {
+    var schema = this;
+    _.each(schema.mappings, function(mapping) {
+        var data = schema.data;
+        var attrs = schema.attrs;
+        if (mapping.type === "nominal") {
+            for (var i = 0; i < data[mapping.data].length; ++i) {
+                attrs[mapping.attr][i] = mapping.params[data[mapping.data][i]];
+            }
+        }
+        else {
+            for (var j = 0; j < data[mapping.data[0]].length; ++j) {
+                var dataVal = data[mapping.data[0]][j];
+                attrs[mapping.attr][j] = dataVal * mapping.params.coeffs[0] + mapping.params.coeffs[1];
+            }
+        }
+    });
+};
+
 Schema.prototype.updateMarks = function(val, attr, ids) {
     var schema = this;
     _.each(ids, function(id) {
@@ -58,13 +81,25 @@ Schema.prototype.updateMarks = function(val, attr, ids) {
 };
 
 Schema.fromJSON = function(deconData) {
-    return new Schema(
+    var schema = new Schema(
         deconData.data,
         deconData.attrs,
         deconData.nodeAttrs,
         deconData.ids,
         deconData.mappings
     );
+    schema.svg = deconData.svg;
+    return schema;
+};
+
+Schema.prototype.getMappingForAttr = function(attr) {
+    for (var i = 0; i < this.mappings.length; ++i) {
+        var mapping = this.mappings[i];
+        if (mapping.attr === attr) {
+            return mapping;
+        }
+    }
+    return null;
 };
 
 Schema.prototype.getDataCSVBlob = function() {

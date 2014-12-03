@@ -3,9 +3,12 @@
  */
 
 var Schema = require('./Schema');
+var Mapping = require('./Mapping');
 var fs = require('fs');
 var _ = require('underscore');
 var assert = require('assert');
+var clone = require('clone');
+var ss = require('simple-statistics');
 
 var semiology_lin = ["xPosition", "yPosition", "width", "height", "area", "opacity", "fill", "stroke"];
 var semiology_nom = ["xPosition", "yPosition",  "fill", "stroke", "opacity", "shape", "width", "height", "area"];
@@ -15,13 +18,15 @@ var main = function() {
     var source_obj = JSON.parse(fs.readFileSync('data/murray_bars.json', 'utf8'));
     source_obj = source_obj[0];
 
-    var target_obj = JSON.parse(fs.readFileSync('data/pudney_bars.json', 'utf8'));
+    var target_obj = JSON.parse(fs.readFileSync('data/miso_bars.json', 'utf8'));
     target_obj = target_obj[0];
 
     var sourceVis = Schema.fromJSON(source_obj);
     var targetVis = Schema.fromJSON(target_obj);
 
-    transferStyle(sourceVis, targetVis);
+    var newVis = transferStyle(targetVis, sourceVis);
+    newVis.updateAttrsFromMappings();
+    fs.writeFile('out.decon.json', JSON.stringify(newVis));
 };
 
 var getSemiologyRanking = function(mapping) {
@@ -45,7 +50,7 @@ var getMinRanked = function(mappingArray, skipList, requireLinear) {
 
         var skipNotLinear = requireLinear && mapping.type !== "linear";
 
-        if (rank < min && !_.contains(skipList, mapping) && skipNotLinear) {
+        if (rank < min && !_.contains(skipList, mapping) && !skipNotLinear) {
             min = rank;
             minMapping = mapping;
         }
@@ -54,25 +59,153 @@ var getMinRanked = function(mappingArray, skipList, requireLinear) {
 };
 
 var transferStyle = function(sourceVis, targetVis) {
+    var newVis = clone(sourceVis);
+    newVis.mappings = [];
+
     var sourceProcessedMappings = [];
     var targetProcessedMappings = [];
 
+    transferUnmapped(targetVis, newVis);
+
     while (sourceProcessedMappings.length < sourceVis.mappings.length) {
-        var sourceNextMapping = getMinRanked(sourceVis.mappings);
+        var sourceNextMapping = getMinRanked(sourceVis.mappings, sourceProcessedMappings);
         var targetNextMapping;
 
         if (sourceNextMapping.type === "linear") {
-            targetNextMapping = getMinRanked(targetVis.mappings, sourceProcessedMappings, true);
+            targetNextMapping = getMinRanked(targetVis.mappings, targetProcessedMappings, true);
         }
         else {
-            targetNextMapping = getMinRanked(targetVis.mappings, sourceProcessedMappings);
+            targetNextMapping = getMinRanked(targetVis.mappings, targetProcessedMappings);
         }
 
-        var newMapping = transferMapping(sourceNextMapping, targetNextMapping);
+        if (!targetNextMapping) {
+            break;
+        }
+
+        var newMapping = transferMapping(sourceNextMapping, targetNextMapping, sourceVis, targetVis);
+        newVis.mappings.push(newMapping);
+        sourceProcessedMappings.push(sourceNextMapping);
+        targetProcessedMappings.push(targetNextMapping);
+
+        // find other target mappings with the same data field
+        var sameDataMappings = [];
+        _.each(targetVis.mappings, function(mapping) {
+            if (mapping.data[0] === targetNextMapping.data[0]
+                && mapping.type === "linear"
+                && !_.contains(targetProcessedMappings, mapping)) {
+
+                sameDataMappings.push(mapping);
+            }
+        });
+
+        _.each(sameDataMappings, function(mapping) {
+            var rel = findRelationship(targetNextMapping, mapping);
+            var newMappingCoeffs = propagateCoeffs(newMapping, rel);
+            var newPropagatedMapping = {
+                data: sourceNextMapping.data,
+                attr: mapping.attr,
+                type: "linear",
+                params: {
+                    coeffs: newMappingCoeffs
+                }
+            };
+            newVis.mappings.push(newPropagatedMapping);
+            targetProcessedMappings.push(mapping);
+        });
+
+        _.each(sourceVis.mappings, function(mapping) {
+            if (mapping.data[0] === sourceNextMapping.data[0]
+                && mapping.type === "linear"
+                && !_.contains(sourceProcessedMappings, mapping)) {
+
+                sourceProcessedMappings.push(mapping);
+            }
+        });
+    }
+    return newVis;
+};
+
+var zeroWidthScale = function(vis) {
+    var scale = {};
+    if (vis.getMappingForAttr("xPosition") && vis.getMappingForAttr("width")) {
+        var intercept = vis.getMappingForAttr("width").getZeroVal();
+        scale.xMin = vis.getMappingForAttr("xPosition").map(intercept);
+        scale.xMax = _.max(vis.attrs["xPosition"]);
+    }
+    else {
+        scale.xMin = _.min(vis.attrs["xPosition"]);
+        scale.xMax = _.max(vis.attrs["xPosition"]);
+    }
+
+    if (vis.getMappingForAttr("yPosition") && vis.getMappingForAttr("height")) {
+        var intercept = vis.getMappingForAttr("height").getZeroVal();
+        scale.yMin = _.min(vis.attrs["yPosition"]);
+        scale.yMax = vis.getMappingForAttr("yPosition").map(intercept);
+    }
+    else {
+        scale.yMin = _.min(vis.attrs["yPosition"]);
+        scale.yMax = _.max(vis.attrs["yPosition"]);
+    }
+
+    return scale;
+};
+
+var transferMapping = function(sourceMapping, targetMapping, sourceVis, targetVis) {
+
+    var sourceScale = zeroWidthScale(sourceVis);
+    var targetScale = zeroWidthScale(targetVis);
+
+    if (sourceMapping.type === "linear") {
+        return transferMappingLinear(sourceMapping, targetMapping, sourceScale, targetScale);
+    }
+    else {
+        return undefined;
     }
 };
 
-var transferMappingLinear = function(sourceMapping, targetMapping) {
+var transferUnmapped = function(sourceVis, transferredVis) {
+    var mappedAttrs = _.map(sourceVis.mappings, function(mapping) {
+        return mapping.attr;
+    });
+    mappedAttrs = _.uniq(mappedAttrs);
+
+    _.each(sourceVis.attrs, function(valArray, attr) {
+        if (!_.contains(mappedAttrs, attr)) {
+            for (var i = 0; i < transferredVis.attrs[attr].length; ++i) {
+                transferredVis.attrs[attr][i] = valArray[0];
+            }
+        }
+    });
+};
+
+var getLinearCoeffs = function(pairs) {
+    var line = ss.linear_regression()
+        .data(pairs);
+    return [line.m(), line.b()];
+};
+
+var transferMappingLinear = function(sourceMapping, targetMapping, sourceScale, targetScale) {
+    var newMapping = {
+        type: "linear",
+        data: sourceMapping.data,
+        attr: targetMapping.attr,
+        params: {}
+    };
+
+    var sourceMap = new Mapping(sourceMapping.data, sourceMapping.attr, sourceMapping.type, sourceMapping.params);
+    if (targetMapping.attr === "xPosition" || targetMapping.attr === "width") {
+        newMapping.params.coeffs = getLinearCoeffs([
+            [sourceMap.dataFromAttr(sourceScale.xMin), targetScale.xMin],
+            [sourceMap.dataFromAttr(sourceScale.xMax), targetScale.xMax]
+        ]);
+    }
+    else if(targetMapping.attr === "yPosition" || targetMapping.attr === "height") {
+        newMapping.params.coeffs = getLinearCoeffs([
+            [sourceMap.dataFromAttr(sourceScale.yMin), targetScale.yMin],
+            [sourceMap.dataFromAttr(sourceScale.yMax), targetScale.yMax]
+        ]);
+    }
+    return newMapping;
 };
 
 var findRelationship = function(mapping1, mapping2) {
@@ -81,11 +214,11 @@ var findRelationship = function(mapping1, mapping2) {
 
     var a = mapping1.params.coeffs[0];
     var b = mapping1.params.coeffs[1];
-    var c = mapping2.params.coeffs[0];
-    var d = mapping2.params.coeffs[1];
+    var x = mapping2.params.coeffs[0];
+    var y = mapping2.params.coeffs[1];
 
-    var relCoeff1 = c / a;
-    var relCoeff2 = d - (c * b) / a;
+    var relCoeff1 = x / a;
+    var relCoeff2 = y - ((b * x) / a);
     return [relCoeff1, relCoeff2];
 };
 
