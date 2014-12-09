@@ -1,6 +1,7 @@
 {
   "name": "style-transfer",
   "version": "0.0.1",
+  "main": "./src/main.js",
   "description": "Library for transferring style between charts",
   "repository": {
     "type": "git",

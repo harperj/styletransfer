@@ -50,6 +50,7 @@ Schema.prototype.updateAttrsFromMappings = function() {
     _.each(schema.mappings, function(mapping) {
         var data = schema.data;
         var attrs = schema.attrs;
+
         if (mapping.type === "nominal") {
             for (var i = 0; i < data[mapping.data].length; ++i) {
                 attrs[mapping.attr][i] = mapping.params[data[mapping.data][i]];
@@ -78,6 +79,40 @@ Schema.prototype.updateMarks = function(val, attr, ids) {
             * schema.attrs["height"][ind];
         }
     });
+};
+
+Schema.prototype.getMarkBoundingBox = function() {
+
+    var xMin = Number.MAX_VALUE;
+    var xMax = Number.MIN_VALUE;
+    var yMin = Number.MAX_VALUE;
+    var yMax = Number.MIN_VALUE;
+
+    for (var i = 0; i < this.attrs["xPosition"].length; ++i) {
+        var markMinX = this.attrs["xPosition"][i] - this.attrs["width"][i] / 2;
+        var markMinY = this.attrs["yPosition"][i] - this.attrs["height"][i] / 2;
+        var markMaxX = this.attrs["xPosition"][i] + this.attrs["width"][i] / 2;
+        var markMaxY = this.attrs["yPosition"][i] + this.attrs["height"][i] / 2;
+        if (markMinX < xMin) {
+            xMin = markMinX;
+        }
+        if (markMinY < yMin) {
+            yMin = markMinY;
+        }
+        if (markMaxX > xMax) {
+            xMax = markMaxX;
+        }
+        if (markMaxY > yMax) {
+            yMax = markMaxY;
+        }
+    }
+
+    return {
+        x: xMin,
+        y: yMin,
+        width: xMax - xMin,
+        height: yMax - yMin
+    };
 };
 
 Schema.fromJSON = function(deconData) {
