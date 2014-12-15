@@ -10,31 +10,40 @@ var assert = require('assert');
 var clone = require('clone');
 var ss = require('simple-statistics');
 
+var config = require('./config');
+var transferTests = require('./tests');
+
 var semiology_lin = ["xPosition", "yPosition", "width", "height", "area", "opacity", "fill", "stroke"];
 var semiology_nom = ["xPosition", "yPosition",  "fill", "stroke", "opacity", "shape", "width", "height", "area"];
 
 
 var main = function() {
-    var source_obj = JSON.parse(fs.readFileSync('data/dutoit_bars.json', 'utf8'));
-    source_obj = source_obj[0];
+    var transfers = [];
+    _.each(transferTests, function(test, testName) {
+        var sourceVis = loadDeconstructedVis(test.files[0]);
+        var targetVis = loadDeconstructedVis(test.files[1]);
+        var newVis = transferStyle(sourceVis, targetVis);
+        newVis.updateAttrsFromMappings();
+        newVis.svg = newVis.getMarkBoundingBox();
 
-    var target_obj = JSON.parse(fs.readFileSync('data/cereal_scatter.json', 'utf8'));
-    target_obj = target_obj[0];
+        test.result = newVis;
 
-    var sourceVis = Schema.fromJSON(source_obj);
-    var targetVis = Schema.fromJSON(target_obj);
+        if (test.do_reverse) {
+            var newVisReverse = transferStyle(targetVis, sourceVis);
+            newVisReverse.updateAttrsFromMappings();
+            newVisReverse.svg = newVisReverse.getMarkBoundingBox();
 
-    var newVis = transferStyle(sourceVis, targetVis);
-    newVis.updateAttrsFromMappings();
-    fs.writeFile('out.decon.json', JSON.stringify(newVis));
+            test.reverseResult = newVisReverse;
+        }
+    });
+    fs.writeFile('out.json', JSON.stringify(transferTests));
 };
 
 var loadDeconstructedVis = function(filename) {
     var file = fs.readFileSync(filename, 'utf8');
     var vis = JSON.parse(file);
-    _.each(vis, function(val, ind) {
-
-    });
+    vis = vis[0];
+    return Schema.fromJSON(vis);
 };
 
 var getSemiologyRanking = function(mapping) {

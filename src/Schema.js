@@ -82,7 +82,6 @@ Schema.prototype.updateMarks = function(val, attr, ids) {
 };
 
 Schema.prototype.getMarkBoundingBox = function() {
-
     var xMin = Number.MAX_VALUE;
     var xMax = Number.MIN_VALUE;
     var yMin = Number.MAX_VALUE;
