@@ -1,5 +1,9 @@
 [
   {
+    "svg": {
+      "width": 960,
+      "height": 500
+    },
     "data": {
       "Cereal Name": [
         "100%_Bran",

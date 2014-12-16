@@ -1,25 +1,50 @@
-$.getJSON("out.json", function(tests) {
+$.getJSON("../out.json", function(tests) {
     _.each(tests, function(test, testName) {
-        var testDiv = $("<div id='test'></div>");
+        var testDiv = $('<div class="container"></div>');
         var header = $("<h3>" + testName + "</h3>");
 
         testDiv.append(header);
         $("#transfers").append(testDiv);
 
+        var sourceImgDiv = $('<div class="row">');
+
+
+        var img1Div = $('<div class="result-container col-md-6">');
+        var img1 = $('<img class="sourceImg">');
+        img1.attr("src", "../" + test.files[0] + ".png");
+        img1Div.append(img1);
+        img1Div.append($("<h3>Vis 1</h3>"));
+
+        sourceImgDiv.append(img1Div);
+
+        var img2Div = $('<div class="result-container col-md-6">');
+        var img2 = $('<img class="sourceImg">');
+        img2.attr("src", "../" + test.files[1] + ".png");
+        img2Div.append(img2);
+        img2Div.append($("<h3>Vis 2</h3>"));
+        sourceImgDiv.append(img2Div);
+
+        testDiv.append(sourceImgDiv);
+
         var svgWidth = test.result.svg ? test.result.svg.x + test.result.svg.width : 1000;
         var svgHeight = test.result.svg ? test.result.svg.y + test.result.svg.height : 1000;
 
-        var svg = d3.select(testDiv[0]).append("svg").attr("width", svgWidth).attr("height", svgHeight).node();
+        var result1Div = $('<div class="result-container row">');
+        var svg = d3.select(result1Div[0]).append("svg").attr("width", svgWidth).attr("height", svgHeight).node();
+        testDiv.append(result1Div);
         createVis(test.result, svg);
-        testDiv.append($("<br>"));
-        testDiv.append($("<br>"));
+        result1Div.append($("<h3>Vis 1 &rarr; Vis 2</h3>"));
+
 
         if (test.reverseResult) {
             svgWidth = test.reverseResult.svg ? test.reverseResult.svg.width : 1000;
             svgHeight = test.reverseResult.svg ? test.reverseResult.svg.height : 1000;
-            svg = d3.select(testDiv[0]).append("svg").attr("width", svgWidth).attr("height", svgHeight).node();
+
+            var result2Div = $('<div class="result-container row">');
+            svg = d3.select(result2Div[0]).append("svg").attr("width", svgWidth).attr("height", svgHeight).node();
+            testDiv.append(result2Div);
             createVis(test.reverseResult, svg);
-            testDiv.append($("<br>"));
+            result2Div.append($("<h3>Vis 2 &rarr; Vis 1</h3>"));
         }
 
 

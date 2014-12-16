@@ -1,0 +1,13 @@
+img.sourceImg {
+    /*transform: scale(0.5);*/
+    width: 90%;
+}
+
+div.row {
+    border: 1px solid dimgray;
+}
+
+div.result-container {
+    border-left: 1px solid dimgray;
+    border-right: 1px solid dimgray;
+}
