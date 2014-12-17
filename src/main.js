@@ -13,10 +13,6 @@ var ss = require('simple-statistics');
 var config = require('./config');
 var transferTests = require('./tests');
 
-var semiology_lin = ["xPosition", "yPosition", "width", "height", "area", "opacity", "fill", "stroke"];
-var semiology_nom = ["xPosition", "yPosition",  "fill", "stroke", "opacity", "shape", "width", "height", "area"];
-
-
 var main = function() {
     var transfers = [];
     _.each(transferTests, function(test, testName) {
@@ -48,10 +44,10 @@ var loadDeconstructedVis = function(filename) {
 
 var getSemiologyRanking = function(mapping) {
     if (mapping.type === "linear") {
-        return _.indexOf(semiology_lin, mapping.attr);
+        return _.indexOf(config.semiology_lin, mapping.attr);
     }
     else {
-        return _.indexOf(semiology_nom, mapping.attr);
+        return _.indexOf(config.semiology_nom, mapping.attr);
     }
 };
 
@@ -144,39 +140,48 @@ var propagateMappings = function(newMapping, sourceNextMapping, targetNextMappin
     return propagatedMappings;
 };
 
-var zeroWidthScale = function(vis) {
-    var scale = {};
-    if (vis.getMappingForAttr("xPosition") && vis.getMappingForAttr("width")) {
-        var intercept = vis.getMappingForAttr("width").getZeroVal();
-        scale.xMin = vis.getMappingForAttr("xPosition").map(intercept);
-        scale.xMax = _.max(vis.attrs["xPosition"]);
-    }
-    else {
-        scale.xMin = _.min(vis.attrs["xPosition"]);
-        scale.xMax = _.max(vis.attrs["xPosition"]);
-    }
-
-    if (vis.getMappingForAttr("yPosition") && vis.getMappingForAttr("height")) {
-        var intercept = vis.getMappingForAttr("height").getZeroVal();
-        scale.yMin = _.min(vis.attrs["yPosition"]);
-        scale.yMax = vis.getMappingForAttr("yPosition").map(intercept);
-    }
-    else {
-        scale.yMin = _.min(vis.attrs["yPosition"]);
-        scale.yMax = _.max(vis.attrs["yPosition"]);
-    }
-
-    scale.maxWidth = _.max(vis.attrs["width"]);
-    scale.maxHeight = _.max(vis.attrs["height"]);
-
-    return scale;
-};
+//var zeroWidthScale = function(vis) {
+//    var scale = {};
+//    if (vis.getMappingForAttr("xPosition") && vis.getMappingForAttr("width")) {
+//        var intercept = vis.getMappingForAttr("width").getZeroVal();
+//        scale.xMin = vis.getMappingForAttr("xPosition").map(intercept);
+//        scale.xMax = _.max(vis.attrs["xPosition"]);
+//    }
+//    else {
+//        scale.xMin = _.min(vis.attrs["xPosition"]);
+//        scale.xMax = _.max(vis.attrs["xPosition"]);
+//    }
+//
+//    if (vis.getMappingForAttr("yPosition") && vis.getMappingForAttr("height")) {
+//        var intercept = vis.getMappingForAttr("height").getZeroVal();
+//        scale.yMin = _.min(vis.attrs["yPosition"]);
+//        scale.yMax = vis.getMappingForAttr("yPosition").map(intercept);
+//    }
+//    else {
+//        scale.yMin = _.min(vis.attrs["yPosition"]);
+//        scale.yMax = _.max(vis.attrs["yPosition"]);
+//    }
+//
+//    scale.maxWidth = _.max(vis.attrs["width"]);
+//    scale.maxHeight = _.max(vis.attrs["height"]);
+//
+//    return scale;
+//};
 
 var transferMapping = function(sourceMapping, targetMapping, sourceVis, targetVis) {
 
+    // If enabled, we'll transfer layouts with regular intervals by hacking deconID mappings
+    if (config.regularIntervalLayout) {
+        if (sourceMapping.data === "deconID" && targetMapping.data === "deconID") {
+            var newMapping = transferIntervalMapping(sourceMapping, targetMapping, sourceVis, targetVis);
+            if (newMapping) {
+                return newMapping;
+            }
+        }
+    }
+
     var sourceScale = sourceVis.getMarkBoundingBox();
     var targetScale = targetVis.getMarkBoundingBox();
-
     if (sourceMapping.type === "linear") {
         return transferMappingLinear(sourceMapping, targetMapping, sourceScale, targetScale);
     }
