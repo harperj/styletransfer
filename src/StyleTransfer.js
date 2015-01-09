@@ -175,16 +175,21 @@ var transferIntervalMapping = function(sourceMapping, targetMapping, sourceVis, 
     var sourceInterval = getArrayInterval(sourceAttrVals);
     var targetInterval = getArrayInterval(targetAttrVals);
 
-    var minSourceData = _.min(sourceVis.data[sourceMapping.data]);
+    var sourceData = sourceVis.data[sourceMapping.data];
+    var sourceDataInterval = getArrayInterval(sourceData);
+
     var minTargetData = _.min(targetVis.data[targetMapping.data]);
 
-    var sourceOffset = (minSourceData-1) * targetInterval;
-    var targetShift = targetMapping.params.coeffs[1] + (minTargetData-1) * targetInterval;
 
     if (sourceInterval && targetInterval) {
+        var coeffs = getLinearCoeffs([
+            [_.min(sourceData), _.min(targetAttrVals)],
+            [_.min(sourceData) + sourceDataInterval, _.min(targetAttrVals) + targetInterval]
+        ]);
+
         var params = {
             attrMin: _.min(targetAttrVals),
-            coeffs: [targetMapping.params.coeffs[0], targetShift - sourceOffset]
+            coeffs: coeffs
         };
         return new Mapping(sourceMapping.data, targetMapping.attr, 'linear', params)
     }
