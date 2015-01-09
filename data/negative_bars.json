@@ -1,41 +1,187 @@
-[
-  {
-    "svg": {
-      "width": 960,
-      "height": 500
-    },
-    "data": {
-      "name": [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E",
-        "F",
-        "G",
-        "H"
-      ],
-      "value": [
-        -15,
-        -20,
-        -22,
-        -18,
-        2,
-        6,
-        -26,
-        -18
-      ],
-      "absVal": [
-        15,
-        20,
-        22,
-        18,
-        2,
-        6,
-        26,
-        18
-      ],
-      "deconID": [
+{
+  "svg": {
+    "width": 960,
+    "height": 500
+  },
+  "marks": [
+    {
+      "name": "bars",
+      "data": {
+        "name": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H"
+        ],
+        "value": [
+          -15,
+          -20,
+          -22,
+          -18,
+          2,
+          6,
+          -26,
+          -18
+        ],
+        "deconID": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(165, 42, 42)",
+          "rgb(165, 42, 42)",
+          "rgb(165, 42, 42)",
+          "rgb(165, 42, 42)",
+          "rgb(70, 130, 180)",
+          "rgb(70, 130, 180)",
+          "rgb(165, 42, 42)",
+          "rgb(165, 42, 42)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "rect",
+          "rect",
+          "rect",
+          "rect",
+          "rect",
+          "rect",
+          "rect",
+          "rect"
+        ],
+        "xPosition": [
+          538.75,
+          480,
+          456.5,
+          503.5,
+          738.5,
+          785.5,
+          409.5,
+          503.5
+        ],
+        "yPosition": [
+          64.5,
+          120.5,
+          176.5,
+          232.5,
+          288.5,
+          344.5,
+          400.5,
+          456.5
+        ],
+        "area": [
+          15862.5,
+          21150,
+          23265,
+          19035,
+          2115,
+          6345,
+          27495,
+          19035
+        ],
+        "width": [
+          352.5,
+          470,
+          517,
+          423,
+          47,
+          141,
+          611,
+          423
+        ],
+        "height": [
+          45,
+          45,
+          45,
+          45,
+          45,
+          45,
+          45,
+          45
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 3,
+      "ids": [
         1,
         2,
         3,
@@ -44,285 +190,728 @@
         6,
         7,
         8
-      ]
+      ],
+      "mappings": [
+        {
+          "type": "nominal",
+          "params": {
+            "2": 2115,
+            "6": 6345,
+            "-15": 15862.5,
+            "-20": 21150,
+            "-22": 23265,
+            "-18": 19035,
+            "-26": 27495
+          },
+          "data": "value",
+          "attr": "area",
+          "$$hashKey": "object:186"
+        },
+        {
+          "type": "nominal",
+          "params": {
+            "2": 47,
+            "6": 141,
+            "-15": 352.5,
+            "-20": 470,
+            "-22": 517,
+            "-18": 423,
+            "-26": 611
+          },
+          "data": "value",
+          "attr": "width",
+          "$$hashKey": "object:187"
+        },
+        {
+          "type": "linear",
+          "data": ["value"],
+          "attr": "xPosition",
+          "params": {
+            "attrMin": 409.4999999999999,
+            "coeffs": [
+              11.750000000000004,
+              715
+            ],
+            "err": 1
+          },
+          "$$hashKey": "object:188"
+        },
+        {
+          "type": "linear",
+          "data": ["deconID"],
+          "attr": "yPosition",
+          "params": {
+            "attrMin": 64.49999999999996,
+            "coeffs": [
+              56,
+              8.499999999999957
+            ],
+            "err": 1
+          },
+          "$$hashKey": "object:189"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "bar negative",
+          "x": "352.5",
+          "y": "12",
+          "width": "352.5",
+          "height": "45",
+          "text": ""
+        },
+        {
+          "class": "bar negative",
+          "x": "235",
+          "y": "68",
+          "width": "470",
+          "height": "45",
+          "text": ""
+        },
+        {
+          "class": "bar negative",
+          "x": "188",
+          "y": "124",
+          "width": "517",
+          "height": "45",
+          "text": ""
+        },
+        {
+          "class": "bar negative",
+          "x": "282",
+          "y": "180",
+          "width": "423",
+          "height": "45",
+          "text": ""
+        },
+        {
+          "class": "bar positive",
+          "x": "705",
+          "y": "236",
+          "width": "47",
+          "height": "45",
+          "text": ""
+        },
+        {
+          "class": "bar positive",
+          "x": "705",
+          "y": "292",
+          "width": "141",
+          "height": "45",
+          "text": ""
+        },
+        {
+          "class": "bar negative",
+          "x": "94",
+          "y": "348",
+          "width": "611",
+          "height": "45",
+          "text": ""
+        },
+        {
+          "class": "bar negative",
+          "x": "282",
+          "y": "404",
+          "width": "423",
+          "height": "45",
+          "text": ""
+        }
+      ],
+      "$$hashKey": "object:9"
     },
-    "attrs": {
-      "font-family": [
-        "Times",
-        "Times",
-        "Times",
-        "Times",
-        "Times",
-        "Times",
-        "Times",
-        "Times"
+    {
+      "name": "xticks",
+      "data": {
+        "number": [
+          -30,
+          -25,
+          -20,
+          -15,
+          -10,
+          -5,
+          0,
+          5,
+          10
+        ],
+        "deconID": [
+          11,
+          14,
+          17,
+          20,
+          23,
+          26,
+          29,
+          32,
+          35
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "rgb(0, 0, 0)"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line"
+        ],
+        "xPosition": [
+          10,
+          127.5,
+          245,
+          362.5,
+          480,
+          597.5,
+          715,
+          832.5,
+          950
+        ],
+        "yPosition": [
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "height": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 2,
+      "ids": [
+        11,
+        14,
+        17,
+        20,
+        23,
+        26,
+        29,
+        32,
+        35
       ],
-      "font-size": [
-        "16px",
-        "16px",
-        "16px",
-        "16px",
-        "16px",
-        "16px",
-        "16px",
-        "16px"
+      "mappings": [
+        {
+          "type": "linear",
+          "data": ["number"],
+          "attr": "xPosition",
+          "params": {
+            "attrMin": 10,
+            "coeffs": [
+              23.5,
+              715
+            ],
+            "err": 1
+          }
+        },
+        {
+          "type": "linear",
+          "data": ["deconID"],
+          "attr": "xPosition",
+          "params": {
+            "attrMin": 9.999999999999545,
+            "coeffs": [
+              39.16666666666667,
+              -420.8333333333338
+            ],
+            "err": 1
+          }
+        }
       ],
-      "opacity": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
+      "nodeAttrs": [
+        {
+          "y2": "-6",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-6",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-6",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-6",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-6",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-6",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-6",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-6",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-6",
+          "x2": "0",
+          "text": ""
+        }
       ],
-      "fill": [
-        "rgb(165, 42, 42)",
-        "rgb(165, 42, 42)",
-        "rgb(165, 42, 42)",
-        "rgb(165, 42, 42)",
-        "rgb(70, 130, 180)",
-        "rgb(70, 130, 180)",
-        "rgb(165, 42, 42)",
-        "rgb(165, 42, 42)"
-      ],
-      "fill-opacity": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "stroke": [
-        "none",
-        "none",
-        "none",
-        "none",
-        "none",
-        "none",
-        "none",
-        "none"
-      ],
-      "stroke-width": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "shape": [
-        "rect",
-        "rect",
-        "rect",
-        "rect",
-        "rect",
-        "rect",
-        "rect",
-        "rect"
-      ],
-      "xPosition": [
-        538.75,
-        480,
-        456.5,
-        503.5,
-        738.5,
-        785.5,
-        409.5,
-        503.5
-      ],
-      "yPosition": [
-        64.5,
-        120.5,
-        176.5,
-        232.5,
-        288.5,
-        344.5,
-        400.5,
-        456.5
-      ],
-      "area": [
-        15862.5,
-        21150,
-        23265,
-        19035,
-        2115,
-        6345,
-        27495,
-        19035
-      ],
-      "width": [
-        352.5,
-        470,
-        517,
-        423,
-        47,
-        141,
-        611,
-        423
-      ],
-      "height": [
-        45,
-        45,
-        45,
-        45,
-        45,
-        45,
-        45,
-        45
-      ],
-      "rotation": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
+      "$$hashKey": "object:10"
     },
-    "numFields": 4,
-    "ids": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8
-    ],
-    "mappings": [
-      {
-        "type": "linear",
-        "data": ["value"],
-        "attr": "xPosition",
-        "params": {
-          "attrMin": 409.4999999999999,
-          "coeffs": [
-            11.750000000000004,
-            715
-          ],
-          "err": 1
+    {
+      "name": "xlabels",
+      "data": {
+        "number": [
+          -30,
+          -25,
+          -20,
+          -15,
+          -10,
+          -5,
+          0,
+          5,
+          10
+        ],
+        "deconID": [
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33,
+          36
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif"
+        ],
+        "font-size": [
+          "10px",
+          "10px",
+          "10px",
+          "10px",
+          "10px",
+          "10px",
+          "10px",
+          "10px",
+          "10px"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "rgb(0, 0, 0)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text"
+        ],
+        "xPosition": [
+          10,
+          127.5,
+          245,
+          362.5,
+          480,
+          597.5,
+          715,
+          832.5,
+          950
+        ],
+        "yPosition": [
+          17.3046875,
+          17.3046875,
+          17.3046875,
+          17.3046875,
+          17.3046875,
+          17.3046875,
+          17.3046875,
+          17.3046875,
+          17.3046875
+        ],
+        "area": [
+          173.85107421875,
+          173.85107421875,
+          173.85107421875,
+          173.85107421875,
+          173.85107421875,
+          107.01416015625,
+          66.8369140625,
+          66.8369140625,
+          133.673828125
+        ],
+        "width": [
+          14.46875,
+          14.46875,
+          14.46875,
+          14.46875,
+          14.46875,
+          8.90625,
+          5.5625,
+          5.5625,
+          11.125
+        ],
+        "height": [
+          12.015625,
+          12.015625,
+          12.015625,
+          12.015625,
+          12.015625,
+          12.015625,
+          12.015625,
+          12.015625,
+          12.015625
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 2,
+      "ids": [
+        12,
+        15,
+        18,
+        21,
+        24,
+        27,
+        30,
+        33,
+        36
+      ],
+      "mappings": [
+        {
+          "type": "linear",
+          "data": ["number"],
+          "attr": "xPosition",
+          "params": {
+            "attrMin": 10,
+            "coeffs": [
+              23.5,
+              715
+            ],
+            "err": 1
+          }
         },
-        "$$hashKey": "object:204"
-      },
-      {
-        "type": "linear",
-        "data": ["deconID"],
-        "attr": "yPosition",
-        "params": {
-          "attrMin": 64.49999999999996,
-          "coeffs": [
-            56,
-            8.499999999999957
-          ],
-          "err": 1
+        {
+          "type": "linear",
+          "data": ["deconID"],
+          "attr": "xPosition",
+          "params": {
+            "attrMin": 10,
+            "coeffs": [
+              39.16666666666667,
+              -460.00000000000006
+            ],
+            "err": 1
+          }
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "dy": "0em",
+          "y": "-9",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "-30"
         },
-        "$$hashKey": "object:205"
-      },
-      {
-        "type": "linear",
-        "data": ["absVal"],
-        "attr": "area",
-        "params": {
-          "attrMin": 2114.9999999999964,
-          "coeffs": [
-            1057.5,
-            -3.751665644813329e-12
-          ],
-          "err": 1
+        {
+          "dy": "0em",
+          "y": "-9",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "-25"
         },
-        "$$hashKey": "object:206"
-      },
-      {
-        "type": "linear",
-        "data": ["absVal"],
-        "attr": "width",
-        "params": {
-          "attrMin": 46.99999999999991,
-          "coeffs": [
-            23.5,
-            -9.237055564881302e-14
-          ],
-          "err": 1
+        {
+          "dy": "0em",
+          "y": "-9",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "-20"
         },
-        "$$hashKey": "object:207"
-      }
-    ],
-    "nodeAttrs": [
-      {
-        "class": "bar negative",
-        "x": "352.5",
-        "y": "12",
-        "width": "352.5",
-        "height": "45",
-        "text": ""
+        {
+          "dy": "0em",
+          "y": "-9",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "-15"
+        },
+        {
+          "dy": "0em",
+          "y": "-9",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "-10"
+        },
+        {
+          "dy": "0em",
+          "y": "-9",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "-5"
+        },
+        {
+          "dy": "0em",
+          "y": "-9",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "0"
+        },
+        {
+          "dy": "0em",
+          "y": "-9",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "5"
+        },
+        {
+          "dy": "0em",
+          "y": "-9",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "10"
+        }
+      ],
+      "$$hashKey": "object:11"
+    },
+    {
+      "name": "xaxis",
+      "data": {
+        "number": [0],
+        "deconID": [37]
       },
-      {
-        "class": "bar negative",
-        "x": "235",
-        "y": "68",
-        "width": "470",
-        "height": "45",
-        "text": ""
+      "attrs": {
+        "font-family": ["Times"],
+        "font-size": ["16px"],
+        "opacity": [1],
+        "fill": ["none"],
+        "fill-opacity": [1],
+        "stroke": ["rgb(0, 0, 0)"],
+        "stroke-width": [1],
+        "shape": ["path"],
+        "xPosition": [480],
+        "yPosition": [27],
+        "area": [5640],
+        "width": [940],
+        "height": [6],
+        "rotation": [0]
       },
-      {
-        "class": "bar negative",
-        "x": "188",
-        "y": "124",
-        "width": "517",
-        "height": "45",
-        "text": ""
-      },
-      {
-        "class": "bar negative",
-        "x": "282",
-        "y": "180",
-        "width": "423",
-        "height": "45",
-        "text": ""
-      },
-      {
-        "class": "bar positive",
-        "x": "705",
-        "y": "236",
-        "width": "47",
-        "height": "45",
-        "text": ""
-      },
-      {
-        "class": "bar positive",
-        "x": "705",
-        "y": "292",
-        "width": "141",
-        "height": "45",
-        "text": ""
-      },
-      {
-        "class": "bar negative",
-        "x": "94",
-        "y": "348",
-        "width": "611",
-        "height": "45",
-        "text": ""
-      },
-      {
-        "class": "bar negative",
-        "x": "282",
-        "y": "404",
-        "width": "423",
-        "height": "45",
-        "text": ""
-      }
-    ],
-    "$$hashKey": "object:9"
-  }
-]
+      "numFields": 2,
+      "ids": [37],
+      "mappings": [],
+      "nodeAttrs": [
+        {
+          "class": "domain",
+          "d": "M0,-6V0H940V-6",
+          "text": ""
+        }
+      ],
+      "$$hashKey": "object:12"
+    }
+  ]
+}

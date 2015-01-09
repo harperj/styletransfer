@@ -1,7 +1,7 @@
 $.getJSON("../out.json", function(tests) {
     _.each(tests, function(test, testName) {
-        var testDiv = $('<div class="container"></div>');
-        var header = $("<h3>" + testName + "</h3>");
+        var testDiv = $('<div class="container-fluid"></div>');
+        var header = $("<h2>" + testName + "</h2>");
 
         testDiv.append(header);
         $("#transfers").append(testDiv);
@@ -9,54 +9,49 @@ $.getJSON("../out.json", function(tests) {
         var sourceImgDiv = $('<div class="row">');
 
 
-        var img1Div = $('<div class="result-container col-md-6">');
+        var img1Div = $('<div class="result-container col-md-4">');
         var img1 = $('<img class="sourceImg">');
-        img1.attr("src", "../" + test.files[0] + ".png");
+        img1.attr("src", "../" + test.source_file + ".png");
         img1Div.append(img1);
-        img1Div.append($("<h3>Vis 1</h3>"));
+        img1Div.append($("<h3>Source Vis</h3>"));
 
         sourceImgDiv.append(img1Div);
 
-        var img2Div = $('<div class="result-container col-md-6">');
+        var img2Div = $('<div class="result-container col-md-4">');
         var img2 = $('<img class="sourceImg">');
-        img2.attr("src", "../" + test.files[1] + ".png");
+        img2.attr("src", "../" + test.target_file + ".png");
         img2Div.append(img2);
-        img2Div.append($("<h3>Vis 2</h3>"));
+        img2Div.append($("<h3>Target Vis</h3>"));
         sourceImgDiv.append(img2Div);
 
+        var svgWidth = test.result.svg ? test.result.svg.width : 1000;
+        var svgHeight = test.result.svg ? test.result.svg.height : 1000;
+
+        var result1Div = $('<div class="result-container col-md-4">');
+        var svg = d3.select(result1Div[0])
+            .append("svg")
+            .attr("width", "90%")
+            .attr("viewBox", "0 0 " + test.result.svg.width + " " + test.result.svg.height)
+            .attr("preserveAspectRatio", "xMidYMid")
+            .node();
+
+        sourceImgDiv.append(result1Div);
         testDiv.append(sourceImgDiv);
-
-        var svgWidth = test.result.svg ? test.result.svg.x + test.result.svg.width : 1000;
-        var svgHeight = test.result.svg ? test.result.svg.y + test.result.svg.height : 1000;
-
-        var result1Div = $('<div class="result-container row">');
-        var svg = d3.select(result1Div[0]).append("svg").attr("width", svgWidth).attr("height", svgHeight).node();
-        testDiv.append(result1Div);
         createVis(test.result, svg);
-        result1Div.append($("<h3>Vis 1 &rarr; Vis 2</h3>"));
-
-
-        if (test.reverseResult) {
-            svgWidth = test.reverseResult.svg ? test.reverseResult.svg.width : 1000;
-            svgHeight = test.reverseResult.svg ? test.reverseResult.svg.height : 1000;
-
-            var result2Div = $('<div class="result-container row">');
-            svg = d3.select(result2Div[0]).append("svg").attr("width", svgWidth).attr("height", svgHeight).node();
-            testDiv.append(result2Div);
-            createVis(test.reverseResult, svg);
-            result2Div.append($("<h3>Vis 2 &rarr; Vis 1</h3>"));
-        }
-
+        result1Div.append($("<h3>Result</h3>"));
 
     });
 });
 
 function createVis(decon, svgNode) {
-    for (var i = 0; i < decon.ids.length; ++i) {
-        var attrs = getAttrsFromInd(decon, i);
-        var data = getDataFromInd(decon, i);
-        var nodeAttrs = decon.nodeAttrs[i];
-        drawNode(attrs, data, nodeAttrs, decon, svgNode);
+    for (var j = 0; j < decon.marks.length; ++j) {
+        var vis = decon.marks[j];
+        for (var i = 0; i < vis.ids.length; ++i) {
+            var attrs = getAttrsFromInd(vis, i);
+            var data = getDataFromInd(vis, i);
+            var nodeAttrs = vis.nodeAttrs[i];
+            drawNode(attrs, data, nodeAttrs, vis, svgNode);
+        }
     }
 }
 
