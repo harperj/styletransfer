@@ -3,11 +3,32 @@ img.sourceImg {
     width: 90%;
 }
 
-div.row {
-    border: 1px solid dimgray;
+.container-fluid {
+    margin: 50px;
 }
 
-div.result-container {
-    border-left: 1px solid dimgray;
-    border-right: 1px solid dimgray;
+h2 {
+    margin-left: -50px;
+    color: black;
+    font-family: "Helvetic Neue", Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+div.row {
+    border-bottom: 1px solid lightgray;
+}
+
+div.result-container h3 {
+    bottom: 0;
+    left: 0;
+}
+
+.row {
+    display: table;
+}
+
+[class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
 }

@@ -1,7 +1,7 @@
 var _ = require('underscore');
 var Mapping = require('./Mapping');
 
-function Schema(data, attrs, nodeAttrs, ids, mappings) {
+function Schema(data, attrs, nodeAttrs, ids, mappings, name) {
     this.data = data;
     this.attrs = attrs;
 
@@ -26,6 +26,7 @@ function Schema(data, attrs, nodeAttrs, ids, mappings) {
         return new Mapping(mapping.data, mapping.attr, mapping.type, mapping.params);
     });
     this.nodeAttrs = nodeAttrs;
+    this.name = name;
 }
 
 Schema.prototype.attrIsMapped = function(attr) {
@@ -115,12 +116,19 @@ Schema.prototype.getMarkBoundingBox = function() {
 };
 
 Schema.fromJSON = function(deconData) {
+
+    var name = null;
+    if (deconData.name) {
+        name = deconData.name;
+    }
+
     var schema = new Schema(
         deconData.data,
         deconData.attrs,
         deconData.nodeAttrs,
         deconData.ids,
-        deconData.mappings
+        deconData.mappings,
+        name
     );
     schema.svg = deconData.svg;
     return schema;
@@ -131,6 +139,15 @@ Schema.prototype.getMappingForAttr = function(attr) {
         var mapping = this.mappings[i];
         if (mapping.attr === attr) {
             return mapping;
+        }
+    }
+    return null;
+};
+
+Schema.prototype.getMapping = function(data, attr) {
+    for (var i = 0; i < this.mappings.length; ++i) {
+        if (this.mappings[i].data[0] === data && this.mappings[i].attr === attr) {
+            return this.mappings[i];
         }
     }
     return null;

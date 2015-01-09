@@ -2,7 +2,7 @@
  * Created by harper on 11/25/14.
  */
 
-var Schema = require('./Schema');
+var Deconstruction = require('./Deconstruction');
 var Mapping = require('./Mapping');
 var fs = require('fs');
 var _ = require('underscore');
@@ -13,45 +13,18 @@ var ss = require('simple-statistics');
 var config = require('./config');
 var transferTests = require('./tests');
 
-var semiology_lin = ["xPosition", "yPosition", "width", "height", "area", "opacity", "fill", "stroke"];
-var semiology_nom = ["xPosition", "yPosition",  "fill", "stroke", "opacity", "shape", "width", "height", "area"];
-
-
-var main = function() {
-    var transfers = [];
-    _.each(transferTests, function(test, testName) {
-        var sourceVis = loadDeconstructedVis(test.files[0]);
-        var targetVis = loadDeconstructedVis(test.files[1]);
-        var newVis = transferStyle(sourceVis, targetVis);
-        newVis.updateAttrsFromMappings();
-        newVis.svg = newVis.getMarkBoundingBox();
-
-        test.result = newVis;
-
-        if (test.do_reverse) {
-            var newVisReverse = transferStyle(targetVis, sourceVis);
-            newVisReverse.updateAttrsFromMappings();
-            newVisReverse.svg = newVisReverse.getMarkBoundingBox();
-
-            test.reverseResult = newVisReverse;
-        }
-    });
-    fs.writeFile('out.json', JSON.stringify(transferTests));
-};
-
 var loadDeconstructedVis = function(filename) {
     var file = fs.readFileSync(filename, 'utf8');
-    var vis = JSON.parse(file);
-    vis = vis[0];
-    return Schema.fromJSON(vis);
+    var decon = JSON.parse(file);
+    return Deconstruction.fromJSON(decon);
 };
 
 var getSemiologyRanking = function(mapping) {
     if (mapping.type === "linear") {
-        return _.indexOf(semiology_lin, mapping.attr);
+        return _.indexOf(config.semiology_lin, mapping.attr);
     }
     else {
-        return _.indexOf(semiology_nom, mapping.attr);
+        return _.indexOf(config.semiology_nom, mapping.attr);
     }
 };
 
@@ -144,45 +117,104 @@ var propagateMappings = function(newMapping, sourceNextMapping, targetNextMappin
     return propagatedMappings;
 };
 
-var zeroWidthScale = function(vis) {
-    var scale = {};
-    if (vis.getMappingForAttr("xPosition") && vis.getMappingForAttr("width")) {
-        var intercept = vis.getMappingForAttr("width").getZeroVal();
-        scale.xMin = vis.getMappingForAttr("xPosition").map(intercept);
-        scale.xMax = _.max(vis.attrs["xPosition"]);
-    }
-    else {
-        scale.xMin = _.min(vis.attrs["xPosition"]);
-        scale.xMax = _.max(vis.attrs["xPosition"]);
-    }
-
-    if (vis.getMappingForAttr("yPosition") && vis.getMappingForAttr("height")) {
-        var intercept = vis.getMappingForAttr("height").getZeroVal();
-        scale.yMin = _.min(vis.attrs["yPosition"]);
-        scale.yMax = vis.getMappingForAttr("yPosition").map(intercept);
-    }
-    else {
-        scale.yMin = _.min(vis.attrs["yPosition"]);
-        scale.yMax = _.max(vis.attrs["yPosition"]);
-    }
-
-    scale.maxWidth = _.max(vis.attrs["width"]);
-    scale.maxHeight = _.max(vis.attrs["height"]);
-
-    return scale;
-};
+//var zeroWidthScale = function(vis) {
+//    var scale = {};
+//    if (vis.getMappingForAttr("xPosition") && vis.getMappingForAttr("width")) {
+//        var intercept = vis.getMappingForAttr("width").getZeroVal();
+//        scale.xMin = vis.getMappingForAttr("xPosition").map(intercept);
+//        scale.xMax = _.max(vis.attrs["xPosition"]);
+//    }
+//    else {
+//        scale.xMin = _.min(vis.attrs["xPosition"]);
+//        scale.xMax = _.max(vis.attrs["xPosition"]);
+//    }
+//
+//    if (vis.getMappingForAttr("yPosition") && vis.getMappingForAttr("height")) {
+//        var intercept = vis.getMappingForAttr("height").getZeroVal();
+//        scale.yMin = _.min(vis.attrs["yPosition"]);
+//        scale.yMax = vis.getMappingForAttr("yPosition").map(intercept);
+//    }
+//    else {
+//        scale.yMin = _.min(vis.attrs["yPosition"]);
+//        scale.yMax = _.max(vis.attrs["yPosition"]);
+//    }
+//
+//    scale.maxWidth = _.max(vis.attrs["width"]);
+//    scale.maxHeight = _.max(vis.attrs["height"]);
+//
+//    return scale;
+//};
 
 var transferMapping = function(sourceMapping, targetMapping, sourceVis, targetVis) {
 
+    // If enabled, we'll transfer layouts with regular intervals by hacking deconID mappings
+    if (config.regular_interval_layout) {
+        if (sourceMapping.type === "linear" && targetMapping.type === "linear") {
+            var newMapping = transferIntervalMapping(sourceMapping, targetMapping, sourceVis, targetVis);
+            if (newMapping) {
+                return newMapping;
+            }
+        }
+    }
+
     var sourceScale = sourceVis.getMarkBoundingBox();
     var targetScale = targetVis.getMarkBoundingBox();
-
     if (sourceMapping.type === "linear") {
         return transferMappingLinear(sourceMapping, targetMapping, sourceScale, targetScale);
     }
     else {
         return undefined;
     }
+};
+
+
+var transferIntervalMapping = function(sourceMapping, targetMapping, sourceVis, targetVis) {
+    var sourceAttrVals = sourceVis.attrs[sourceMapping.attr];
+    var targetAttrVals = targetVis.attrs[targetMapping.attr];
+
+    var sourceInterval = getArrayInterval(sourceAttrVals);
+    var targetInterval = getArrayInterval(targetAttrVals);
+
+    var sourceData = sourceVis.data[sourceMapping.data];
+    var sourceDataInterval = getArrayInterval(sourceData);
+
+    var minTargetData = _.min(targetVis.data[targetMapping.data]);
+
+
+    if (sourceInterval && targetInterval) {
+        var coeffs = getLinearCoeffs([
+            [_.min(sourceData), _.min(targetAttrVals)],
+            [_.min(sourceData) + sourceDataInterval, _.min(targetAttrVals) + targetInterval]
+        ]);
+
+        var params = {
+            attrMin: _.min(targetAttrVals),
+            coeffs: coeffs
+        };
+        return new Mapping(sourceMapping.data, targetMapping.attr, 'linear', params)
+    }
+};
+
+var getArrayInterval = function(arr) {
+    var EPSILON = Math.pow(2, -8);
+    function epsEqu(x, y) {
+        return Math.abs(x - y) < EPSILON;
+    }
+
+    var data = clone(arr);
+    data.sort(function(a, b){return a-b});
+
+    var interval = null;
+    for (var i = 1; i < data.length; ++i) {
+        var currInterval = data[i] - data[i-1];
+        if (!interval) {
+            interval = currInterval;
+        }
+        else if (!epsEqu(interval, currInterval)) {
+            return null;
+        }
+    }
+    return interval;
 };
 
 var transferUnmapped = function(sourceVis, transferredVis) {
@@ -274,6 +306,32 @@ var propagateCoeffs = function(mapping, relationship) {
     return [transferredCoeff1, transferredCoeff2];
 };
 
+var main = function() {
+    _.each(transferTests, function(test, testName) {
+        var sourceDecon = loadDeconstructedVis(test.source_file);
+        var targetDecon = loadDeconstructedVis(test.target_file);
+
+        test.result = {
+            "svg": targetDecon.svg,
+            "marks": []
+        };
+        _.each(test.transfers, function(transfer) {
+            var result = transferStyle(
+                sourceDecon.getSchemaByName(transfer[0]),
+                targetDecon.getSchemaByName(transfer[1])
+            );
+            result.updateAttrsFromMappings();
+            test.result.marks.push(result);
+        });
+    });
+    fs.writeFile('out.json', JSON.stringify(transferTests));
+};
+
 if (require.main === module) {
     main();
 }
+
+module.exports = {
+    loadDeconstructedVis: loadDeconstructedVis,
+    transferStyle: transferStyle
+};

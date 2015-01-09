@@ -1,6 +1,240 @@
+<<<<<<< HEAD
 [{
 "svg": {
   "width": 400,
   "height": 100
 },
 "data":{"number":[8,4,9,12,11],"deconID":[0,1,2,3,4]},"attrs":{"font-family":["Ubuntu, Tahoma, sans-serif","Ubuntu, Tahoma, sans-serif","Ubuntu, Tahoma, sans-serif","Ubuntu, Tahoma, sans-serif","Ubuntu, Tahoma, sans-serif"],"font-size":["13px","13px","13px","13px","13px"],"opacity":[1,1,1,1,1],"fill":["rgb(70,130,180)","rgb(70,130,180)","rgb(70,130,180)","rgb(70,130,180)","rgb(70,130,180)"],"fill-opacity":[1,1,1,1,1],"stroke":["rgb(255,255,255)","rgb(255,255,255)","rgb(255,255,255)","rgb(255,255,255)","rgb(255,255,255)"],"stroke-width":[1,1,1,1,1],"shape":["rect","rect","rect","rect","rect"],"xPosition":[133.3333282470703,66.66666412353516,150,200,183.3333282470703],"yPosition":[10,30,50,70,90],"area":[5333.3331298828125,2666.6665649414062,6000,8000,7333.3331298828125],"width":[266.6666564941406,133.3333282470703,300,400,366.6666564941406],"height":[20,20,20,20,20],"rotation":[0,0,0,0,0]},"numFields":2,"ids":[0,1,2,3,4],"mappings":[{"type":"linear","data":["number"],"attr":"xPosition","params":{"attrMin":66.66666349430687,"coeffs":[16.666666797755923,-0.000003696716824208579],"err":0.9999999999999977},"$$hashKey":"object:43"},{"type":"linear","data":["deconID"],"attr":"yPosition","params":{"attrMin":9.999999999999986,"coeffs":[20.000000000000004,9.999999999999986],"err":1},"$$hashKey":"object:44"},{"type":"linear","data":["number"],"attr":"area","params":{"attrMin":2666.6665397722727,"coeffs":[666.6666719102369,-0.00014786867495786282],"err":0.9999999999999977},"$$hashKey":"object:45"},{"type":"linear","data":["number"],"attr":"width","params":{"attrMin":133.33332698861375,"coeffs":[33.333333595511846,-0.000007393433648417158],"err":0.9999999999999977},"$$hashKey":"object:46"}],"nodeAttrs":[{"x":"0","y":"0","width":"266.66666666666663","height":"20","text":""},{"x":"0","y":"20","width":"133.33333333333331","height":"20","text":""},{"x":"0","y":"40","width":"300","height":"20","text":""},{"x":"0","y":"60","width":"400","height":"20","text":""},{"x":"0","y":"80","width":"366.66666666666663","height":"20","text":""}],"$$hashKey":"object:12"}]
+=======
+{
+  "svg": {
+    "width": 400,
+    "height": 100
+  },
+  "marks": [
+    {
+      "name": "bars",
+      "data": {
+        "number": [
+          8,
+          4,
+          9,
+          12,
+          11
+        ],
+        "deconID": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Ubuntu, Tahoma, sans-serif",
+          "Ubuntu, Tahoma, sans-serif",
+          "Ubuntu, Tahoma, sans-serif",
+          "Ubuntu, Tahoma, sans-serif",
+          "Ubuntu, Tahoma, sans-serif"
+        ],
+        "font-size": [
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(70,130,180)",
+          "rgb(70,130,180)",
+          "rgb(70,130,180)",
+          "rgb(70,130,180)",
+          "rgb(70,130,180)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(255,255,255)",
+          "rgb(255,255,255)",
+          "rgb(255,255,255)",
+          "rgb(255,255,255)",
+          "rgb(255,255,255)"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "rect",
+          "rect",
+          "rect",
+          "rect",
+          "rect"
+        ],
+        "xPosition": [
+          133.3333282470703,
+          66.66666412353516,
+          150,
+          200,
+          183.3333282470703
+        ],
+        "yPosition": [
+          10,
+          30,
+          50,
+          70,
+          90
+        ],
+        "area": [
+          5333.3331298828125,
+          2666.6665649414062,
+          6000,
+          8000,
+          7333.3331298828125
+        ],
+        "width": [
+          266.6666564941406,
+          133.3333282470703,
+          300,
+          400,
+          366.6666564941406
+        ],
+        "height": [
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 2,
+      "ids": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "mappings": [
+        {
+          "type": "linear",
+          "data": ["number"],
+          "attr": "xPosition",
+          "params": {
+            "attrMin": 66.66666349430687,
+            "coeffs": [
+              16.666666797755923,
+              -0.000003696716824208579
+            ],
+            "err": 0.9999999999999977
+          },
+          "$$hashKey": "object:43"
+        },
+        {
+          "type": "linear",
+          "data": ["deconID"],
+          "attr": "yPosition",
+          "params": {
+            "attrMin": 9.999999999999986,
+            "coeffs": [
+              20.000000000000004,
+              9.999999999999986
+            ],
+            "err": 1
+          },
+          "$$hashKey": "object:44"
+        },
+        {
+          "type": "linear",
+          "data": ["number"],
+          "attr": "area",
+          "params": {
+            "attrMin": 2666.6665397722727,
+            "coeffs": [
+              666.6666719102369,
+              -0.00014786867495786282
+            ],
+            "err": 0.9999999999999977
+          },
+          "$$hashKey": "object:45"
+        },
+        {
+          "type": "linear",
+          "data": ["number"],
+          "attr": "width",
+          "params": {
+            "attrMin": 133.33332698861375,
+            "coeffs": [
+              33.333333595511846,
+              -0.000007393433648417158
+            ],
+            "err": 0.9999999999999977
+          },
+          "$$hashKey": "object:46"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "x": "0",
+          "y": "0",
+          "width": "266.66666666666663",
+          "height": "20",
+          "text": ""
+        },
+        {
+          "x": "0",
+          "y": "20",
+          "width": "133.33333333333331",
+          "height": "20",
+          "text": ""
+        },
+        {
+          "x": "0",
+          "y": "40",
+          "width": "300",
+          "height": "20",
+          "text": ""
+        },
+        {
+          "x": "0",
+          "y": "60",
+          "width": "400",
+          "height": "20",
+          "text": ""
+        },
+        {
+          "x": "0",
+          "y": "80",
+          "width": "366.66666666666663",
+          "height": "20",
+          "text": ""
+        }
+      ],
+      "$$hashKey": "object:12"
+    }
+  ]
+}
+>>>>>>> master
