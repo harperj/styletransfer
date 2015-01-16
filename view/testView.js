@@ -5,11 +5,30 @@ function replaceAll(string, find, replace) {
 function escapeRegExp(string) {
     return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
 }
+
+var colorsReversed = false;
+
 $(function() {
     var loaderNode = $("#loader-select");
     loadResults(loaderNode[0].value);
     loaderNode.change(function () {
         loadResults(loaderNode[0].value);
+    });
+
+    $("#flip-colors").click(function() {
+        if (colorsReversed) {
+            $("*").css({
+                "color": "black",
+                "background-color": "white"
+            });
+        }
+        else {
+            $("*").css({
+                "color": "white",
+                "background-color": "black"
+            });
+        }
+        colorsReversed = !colorsReversed;
     });
 });
 
