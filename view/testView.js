@@ -37,7 +37,7 @@ var loadResults = function(value)
     $("#transfers").empty();
     $.getJSON("data/"+value, function (tests) {
         _.each(tests, function (test, testName) {
-            var testDiv = $('<div"></div>');
+            var testDiv = $('<div class="resultRow"></div>');
             var header = $("<h2>" + replaceAll(testName, '_', ' ') + "</h2>");
 
             testDiv.append(header);
@@ -90,13 +90,14 @@ var loadResults = function(value)
                 .attr("viewBox", "0 0 " + svgWidth + " " + svgHeight)
                 .attr("preserveAspectRatio", "xMidYMid")
                 .node();
+            result1Div.append($("<h3>Result</h3>"));
 
             sourceImgDiv.append(result1Div);
             testDiv.append(sourceImgDiv);
+            $("#transfers").append($("<hr>"));
             createVis(test.result, svg);
             createVis(test.sourceDecon, vis1Svg);
             createVis(test.targetDecon, vis2Svg);
-            result1Div.append($("<h3>Result</h3>"));
 
         });
     });

@@ -8,20 +8,20 @@ img.sourceImg {
     width: 90%;
 }
 
+.container {
+    margin-top: 15px;
+}
+
 .container-fluid {
-    margin-left: 50px;
 }
 
 h2 {
-    margin-left: -50px;
+    margin-top: 0;
+    margin-bottom: 25px;
     color: black;
     font-family: "Avenir", Helvetica, sans-serif;
     font-weight: 400;
     font-variant: small-caps;
-}
-
-div.row {
-    border-bottom: 1px solid lightgray;
 }
 
 div.result-container h3 {
