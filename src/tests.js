@@ -44,6 +44,15 @@ var tests = {
             ['xlabels', 'xlabels']
         ]
     },
+    negative_bars_rev: {
+        source_file: './data/dutoit_bars.json',
+        target_file: './data/negative_bars.json',
+        transfers: [
+            ['bars', 'bars'],
+            ['xticks', 'xticks'],
+            ['xlabels', 'xlabels']
+        ]
+    },
     bar_2_scatter: {
         source_file: './data/cpudney_bars.json',
         target_file: './data/cereal_scatter.json',

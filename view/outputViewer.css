@@ -1,17 +1,23 @@
+* {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-weight: 300;
+}
+
 img.sourceImg {
     /*transform: scale(0.5);*/
     width: 90%;
 }
 
 .container-fluid {
-    margin: 50px;
+    margin-left: 50px;
 }
 
 h2 {
     margin-left: -50px;
     color: black;
-    font-family: "Helvetic Neue", Helvetica, sans-serif;
-    font-weight: 700;
+    font-family: "Avenir", Helvetica, sans-serif;
+    font-weight: 400;
+    font-variant: small-caps;
 }
 
 div.row {
@@ -19,6 +25,8 @@ div.row {
 }
 
 div.result-container h3 {
+    font-weight: 300;
+    font-size: 20px;
     bottom: 0;
     left: 0;
 }

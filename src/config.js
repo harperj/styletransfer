@@ -3,7 +3,7 @@
  */
 
 var transfer_config = {
-    regular_interval_layout: true,
+    regular_interval_layout: false,
     position_transfer: "boundingbox",
     semiology_lin: ["xPosition", "yPosition", "width", "height", "area", "opacity", "fill", "stroke"],
     semiology_nom: ["xPosition", "yPosition",  "fill", "stroke", "opacity", "shape", "width", "height", "area"]

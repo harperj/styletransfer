@@ -311,6 +311,9 @@ var main = function() {
         var sourceDecon = loadDeconstructedVis(test.source_file);
         var targetDecon = loadDeconstructedVis(test.target_file);
 
+        test.sourceDecon = JSON.parse(fs.readFileSync(test.source_file, 'utf8'));
+        test.targetDecon = JSON.parse(fs.readFileSync(test.target_file, 'utf8'));
+
         test.result = {
             "svg": targetDecon.svg,
             "marks": []
