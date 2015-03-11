@@ -5,7 +5,6 @@
   },
   "marks": [
     {
-      "name": "yticks",
       "data": {
         "number": [
           0,
@@ -52,10 +51,10 @@
           1
         ],
         "stroke": [
-          "rgb(34, 34, 34)",
-          "rgb(34, 34, 34)",
-          "rgb(34, 34, 34)",
-          "rgb(34, 34, 34)"
+          "rgb(34,34,34)",
+          "rgb(34,34,34)",
+          "rgb(34,34,34)",
+          "rgb(34,34,34)"
         ],
         "stroke-width": [
           "1px",
@@ -115,9 +114,9 @@
       ],
       "mappings": [
         {
-          "type": "linear",
           "data": ["number"],
           "attr": "yPosition",
+          "type": "linear",
           "params": {
             "attrMin": 386.0000015258789,
             "coeffs": [
@@ -126,12 +125,12 @@
             ],
             "err": 0.9999999999999997
           },
-          "$$hashKey": "object:256"
+          "$$hashKey": "object:291"
         },
         {
-          "type": "linear",
           "data": ["deconID"],
           "attr": "yPosition",
+          "type": "linear",
           "params": {
             "attrMin": 386.00000152587864,
             "coeffs": [
@@ -140,7 +139,7 @@
             ],
             "err": 0.9999999999999997
           },
-          "$$hashKey": "object:257"
+          "$$hashKey": "object:292"
         }
       ],
       "nodeAttrs": [
@@ -165,10 +164,10 @@
           "text": ""
         }
       ],
-      "$$hashKey": "object:11"
+      "name": "yticks",
+      "$$hashKey": "object:12"
     },
     {
-      "name": "ylabels",
       "data": {
         "number": [
           0,
@@ -203,10 +202,10 @@
           1
         ],
         "fill": [
-          "rgb(0, 0, 0)",
-          "rgb(0, 0, 0)",
-          "rgb(0, 0, 0)",
-          "rgb(0, 0, 0)"
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
         ],
         "fill-opacity": [
           1,
@@ -221,10 +220,10 @@
           "none"
         ],
         "stroke-width": [
-          "1",
-          "1",
-          "1",
-          "1"
+          1,
+          1,
+          1,
+          1
         ],
         "shape": [
           "text",
@@ -278,9 +277,9 @@
       ],
       "mappings": [
         {
-          "type": "linear",
           "data": ["number"],
           "attr": "yPosition",
+          "type": "linear",
           "params": {
             "attrMin": 385.1171890258789,
             "coeffs": [
@@ -291,9 +290,9 @@
           }
         },
         {
-          "type": "linear",
           "data": ["deconID"],
           "attr": "yPosition",
+          "type": "linear",
           "params": {
             "attrMin": 385.11718902587893,
             "coeffs": [
@@ -334,44 +333,10 @@
           "text": "60"
         }
       ],
-      "$$hashKey": "object:12"
-    },
-    {
-      "name": "yaxis",
-      "data": {
-        "number": [0],
-        "deconID": [13]
-      },
-      "attrs": {
-        "font-family": ["Monaco"],
-        "font-size": ["16px"],
-        "opacity": [1],
-        "fill": ["none"],
-        "fill-opacity": [1],
-        "stroke": ["rgb(34, 34, 34)"],
-        "stroke-width": ["1px"],
-        "shape": ["path"],
-        "xPosition": [46],
-        "yPosition": [198.5],
-        "area": [2250],
-        "width": [6],
-        "height": [375],
-        "rotation": [0]
-      },
-      "numFields": 2,
-      "ids": [13],
-      "mappings": [],
-      "nodeAttrs": [
-        {
-          "class": "domain",
-          "d": "M-6,0H0V375H-6",
-          "text": ""
-        }
-      ],
+      "name": "ylabels",
       "$$hashKey": "object:13"
     },
     {
-      "name": "bars",
       "data": {
         "name": [
           "January",
@@ -460,18 +425,18 @@
           1
         ],
         "fill": [
-          "rgb(151, 232, 162)",
-          "rgb(151, 232, 162)",
-          "rgb(151, 232, 162)",
-          "rgb(151, 232, 162)",
-          "rgb(151, 232, 162)",
-          "rgb(151, 232, 162)",
-          "rgb(151, 232, 162)",
-          "rgb(151, 232, 162)",
-          "rgb(151, 232, 162)",
-          "rgb(151, 232, 162)",
-          "rgb(151, 232, 162)",
-          "rgb(151, 232, 162)"
+          "rgb(151,232,162)",
+          "rgb(151,232,162)",
+          "rgb(151,232,162)",
+          "rgb(151,232,162)",
+          "rgb(151,232,162)",
+          "rgb(151,232,162)",
+          "rgb(151,232,162)",
+          "rgb(151,232,162)",
+          "rgb(151,232,162)",
+          "rgb(151,232,162)",
+          "rgb(151,232,162)",
+          "rgb(151,232,162)"
         ],
         "fill-opacity": [
           1,
@@ -502,18 +467,18 @@
           "none"
         ],
         "stroke-width": [
-          "1",
-          "1",
-          "1",
-          "1",
-          "1",
-          "1",
-          "1",
-          "1",
-          "1",
-          "1",
-          "1",
-          "1"
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ],
         "shape": [
           "rect",
@@ -631,9 +596,9 @@
       ],
       "mappings": [
         {
-          "type": "linear",
           "data": ["deconID"],
           "attr": "xPosition",
+          "type": "linear",
           "params": {
             "attrMin": 76.16666784041956,
             "coeffs": [
@@ -644,9 +609,9 @@
           }
         },
         {
-          "type": "linear",
           "data": ["value"],
           "attr": "yPosition",
+          "type": "linear",
           "params": {
             "attrMin": 312.0202697787366,
             "coeffs": [
@@ -657,9 +622,9 @@
           }
         },
         {
-          "type": "linear",
           "data": ["value"],
           "attr": "area",
+          "type": "linear",
           "params": {
             "attrMin": 7837.832900548124,
             "coeffs": [
@@ -670,9 +635,9 @@
           }
         },
         {
-          "type": "linear",
           "data": ["value"],
           "attr": "height",
+          "type": "linear",
           "params": {
             "attrMin": 146.95945793285676,
             "coeffs": [
@@ -793,10 +758,10 @@
           "text": ""
         }
       ],
-      "$$hashKey": "object:9"
+      "name": "bars",
+      "$$hashKey": "object:10"
     },
     {
-      "name": "xlabels",
       "data": {
         "name": [
           "January",
@@ -885,18 +850,18 @@
           1
         ],
         "fill": [
-          "rgb(0, 0, 0)",
-          "rgb(0, 0, 0)",
-          "rgb(0, 0, 0)",
-          "rgb(0, 0, 0)",
-          "rgb(0, 0, 0)",
-          "rgb(0, 0, 0)",
-          "rgb(0, 0, 0)",
-          "rgb(0, 0, 0)",
-          "rgb(0, 0, 0)",
-          "rgb(0, 0, 0)",
-          "rgb(0, 0, 0)",
-          "rgb(0, 0, 0)"
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
         ],
         "fill-opacity": [
           1,
@@ -927,18 +892,18 @@
           "none"
         ],
         "stroke-width": [
-          "1",
-          "1",
-          "1",
-          "1",
-          "1",
-          "1",
-          "1",
-          "1",
-          "1",
-          "1",
-          "1",
-          "1"
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ],
         "shape": [
           "text",
@@ -1056,9 +1021,9 @@
       ],
       "mappings": [
         {
-          "type": "linear",
           "data": ["deconID"],
           "attr": "xPosition",
+          "type": "linear",
           "params": {
             "attrMin": 76.16406250000614,
             "coeffs": [
@@ -1155,7 +1120,181 @@
           "text": "December"
         }
       ],
-      "$$hashKey": "object:10"
+      "name": "xlabels",
+      "$$hashKey": "object:11"
+    },
+    {
+      "data": {
+        "domain": [
+          74,
+          74,
+          0,
+          0
+        ],
+        "tick": [
+          0,
+          6,
+          6,
+          0
+        ],
+        "deconID": [
+          13,
+          13,
+          13,
+          13
+        ],
+        "lineID": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Monaco",
+          "Monaco",
+          "Monaco",
+          "Monaco"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(34,34,34)",
+          "rgb(34,34,34)",
+          "rgb(34,34,34)",
+          "rgb(34,34,34)"
+        ],
+        "stroke-width": [
+          "1px",
+          "1px",
+          "1px",
+          "1px"
+        ],
+        "shape": [
+          "linePoint",
+          "linePoint",
+          "linePoint",
+          "linePoint"
+        ],
+        "xPosition": [
+          43,
+          49,
+          49,
+          43
+        ],
+        "yPosition": [
+          11,
+          11,
+          386,
+          386
+        ],
+        "area": [
+          2250,
+          2250,
+          2250,
+          2250
+        ],
+        "width": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "height": [
+          375,
+          375,
+          375,
+          375
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 4,
+      "ids": [
+        13,
+        13,
+        13,
+        13
+      ],
+      "mappings": [
+        {
+          "data": ["tick"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 43,
+            "coeffs": [
+              1,
+              43
+            ],
+            "err": 1
+          }
+        },
+        {
+          "data": ["domain"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 386,
+            "coeffs": [
+              -5.067567567567568,
+              386
+            ],
+            "err": 1
+          }
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "domain",
+          "d": "M-6,0H0V375H-6",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M-6,0H0V375H-6",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M-6,0H0V375H-6",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M-6,0H0V375H-6",
+          "text": ""
+        }
+      ],
+      "name": "yaxis",
+      "$$hashKey": "object:9"
     }
   ]
 }

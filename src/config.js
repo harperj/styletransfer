@@ -6,7 +6,7 @@ var transfer_config = {
     regular_interval_layout: true,
     position_transfer: "boundingbox",
     semiology_lin: ["xPosition", "yPosition", "width", "height", "area", "opacity", "fill", "stroke"],
-    semiology_nom: ["xPosition", "yPosition",  "fill", "stroke", "opacity", "shape", "width", "height", "area"]
+    semiology_nom: ["xPosition", "yPosition", "fill", "stroke", "opacity", "shape", "width", "height", "area"]
 };
 
 module.exports = transfer_config;

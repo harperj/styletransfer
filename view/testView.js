@@ -8,14 +8,14 @@ function escapeRegExp(string) {
 
 var colorsReversed = false;
 
-$(function() {
+$(function () {
     var loaderNode = $("#loader-select");
     loadResults(loaderNode[0].value);
     loaderNode.change(function () {
         loadResults(loaderNode[0].value);
     });
 
-    $("#flip-colors").click(function() {
+    $("#flip-colors").click(function () {
         if (colorsReversed) {
             $("*").css({
                 "color": "black",
@@ -32,10 +32,9 @@ $(function() {
     });
 });
 
-var loadResults = function(value)
-{
+var loadResults = function (value) {
     $("#transfers").empty();
-    $.getJSON("data/"+value, function (tests) {
+    $.getJSON("data/" + value, function (tests) {
         _.each(tests, function (test, testName) {
             var testDiv = $('<div class="resultRow"></div>');
             var header = $("<h2>" + replaceAll(testName, '_', ' ') + "</h2>");
@@ -43,77 +42,87 @@ var loadResults = function(value)
             testDiv.append(header);
             $("#transfers").append(testDiv);
 
-            var sourceImgDiv = $('<div class="row">');
-
+            var resultRowDiv = $('<div class="row">');
+            testDiv.append(resultRowDiv);
 
             var vis1Div = $('<div class="result-container col-md-4">');
-            //var img1 = $('<img class="sourceImg">');
-            //img1.attr("src", "../" + test.source_file + ".png");
-            //img1Div.append(img1);
-            var vis1Width = test.sourceDecon.svg.width;
-            var vis1Height = test.sourceDecon.svg.height;
-            var vis1Svg = d3.select(vis1Div[0])
-                .append("svg")
-                .attr("width", "90%")
-                .attr("viewBox", "0 0 " + vis1Width + " " + vis1Height)
-                .attr("preserveAspectRatio", "xMidYMid")
-                .node();
-
+            resultRowDiv.append(vis1Div);
+            createVisContainer(vis1Div[0], test.sourceDecon);
             vis1Div.append($("<h3>Source Vis</h3>"));
 
-            sourceImgDiv.append(vis1Div);
-
             var vis2Div = $('<div class="result-container col-md-4">');
-            //var img1 = $('<img class="sourceImg">');
-            //img1.attr("src", "../" + test.source_file + ".png");
-            //img1Div.append(img1);
-            var vis2Width = test.targetDecon.svg.width;
-            var vis2Height = test.targetDecon.svg.height;
-            var vis2Svg = d3.select(vis2Div[0])
-                .append("svg")
-                .attr("width", "90%")
-                .attr("viewBox", "0 0 " + vis2Width + " " + vis2Height)
-                .attr("preserveAspectRatio", "xMidYMid")
-                .node();
-
+            resultRowDiv.append(vis2Div);
+            createVisContainer(vis2Div[0], test.targetDecon);
             vis2Div.append($("<h3>Target Vis</h3>"));
 
-            sourceImgDiv.append(vis2Div);
-
-            var svgWidth = test.result.svg ? test.result.svg.width : 1000;
-            var svgHeight = test.result.svg ? test.result.svg.height : 1000;
-
             var result1Div = $('<div class="result-container col-md-4">');
-            var svg = d3.select(result1Div[0])
-                .append("svg")
-                .attr("width", "90%")
-                .attr("viewBox", "0 0 " + svgWidth + " " + svgHeight)
-                .attr("preserveAspectRatio", "xMidYMid")
-                .node();
+            resultRowDiv.append(result1Div);
+            createVisContainer(result1Div[0], test.result);
             result1Div.append($("<h3>Result</h3>"));
 
-            sourceImgDiv.append(result1Div);
-            testDiv.append(sourceImgDiv);
             $("#transfers").append($("<hr>"));
-            createVis(test.result, svg);
-            createVis(test.sourceDecon, vis1Svg);
-            createVis(test.targetDecon, vis2Svg);
-
         });
     });
 };
 
-function createVis(decon, svgNode) {
-    for (var j = 0; j < decon.marks.length; ++j) {
-        var vis = decon.marks[j];
-        for (var i = 0; i < vis.ids.length; ++i) {
-            var attrs = getAttrsFromInd(vis, i);
-            var data = getDataFromInd(vis, i);
-            var nodeAttrs = vis.nodeAttrs[i];
-            drawNode(attrs, data, nodeAttrs, vis, svgNode);
+
+var createVisContainer = function (container, decon) {
+    var svgWidth = decon.svg ? decon.svg.width : 1000;
+    var svgHeight = decon.svg ? decon.svg.height : 1000;
+
+    var svg = d3.select(container)
+        .append("svg")
+        .attr("width", "90%")
+        .attr("viewBox", "0 0 " + svgWidth + " " + svgHeight)
+        .attr("preserveAspectRatio", "xMidYMid")
+        .node();
+    renderVis(decon, svg);
+};
+
+
+var renderVis = function (decon, svgNode) {
+    for (var j = 0; j < decon.groups.length; ++j) {
+        var vis = decon.groups[j];
+
+        if (vis.data.hasOwnProperty('lineID')) {
+            console.log("has a lineID");
+            var lineInds = getDeconToIndMapping(vis.data);
+            for (var lineDeconID in lineInds) {
+                var inds = lineInds[lineDeconID];
+                var lineData = getDataFromInds(vis, inds);
+                var lineAttrs = getAttrsFromInds(vis, inds);
+                var lineNodeAttrs = getNodeAttrsFromInds(vis, inds);
+
+                drawLine(lineAttrs, lineData, lineNodeAttrs, svgNode);
+            }
+        }
+        else {
+            for (var i = 0; i < vis.ids.length; ++i) {
+                var attrs = getAttrsFromInd(vis, i);
+                var data = getDataFromInd(vis, i);
+                var nodeAttrs = vis.nodeAttrs[i];
+
+
+                drawNode(attrs, data, nodeAttrs, vis, svgNode);
+            }
         }
     }
-}
+};
+
+var getDeconToIndMapping = function (data) {
+    var mapping = {};
+
+    _.each(data['deconID'], function (id, ind) {
+        if (!mapping.hasOwnProperty(id)) {
+            mapping[id] = [ind];
+        }
+        else {
+            mapping[id].push(ind);
+        }
+    });
+
+    return mapping;
+};
 
 function getAttrsFromInd(schema, ind) {
     var attrs = {};
@@ -123,6 +132,30 @@ function getAttrsFromInd(schema, ind) {
     return attrs;
 }
 
+function getAttrsFromInds(schema, inds) {
+    var attrs = {};
+    _.each(inds, function (ind) {
+        _.each(schema.attrs, function (val, attr) {
+            if (!attrs.hasOwnProperty(attr)) {
+                attrs[attr] = [val[ind]];
+            }
+            else {
+                attrs[attr].push(val[ind]);
+            }
+        });
+    });
+
+    return attrs;
+}
+
+var getNodeAttrsFromInds = function (schema, inds) {
+    var nodeAttrs = [];
+    _.each(inds, function (ind) {
+        nodeAttrs.push(schema.nodeAttrs[ind]);
+    });
+    return nodeAttrs;
+};
+
 function getDataFromInd(schema, ind) {
     var data = {};
     _.each(schema.data, function (val, attr) {
@@ -131,11 +164,23 @@ function getDataFromInd(schema, ind) {
     return data;
 }
 
-function drawNode (attrs, data, nodeAttrs, schema, svg) {
-    var newNode = getNewNodeFromShape(attrs['shape']);
+function getDataFromInds(schema, inds) {
+    var data = {};
+    _.each(inds, function (ind) {
+        _.each(schema.data, function (val, attr) {
+            if (!data.hasOwnProperty(attr)) {
+                data[attr] = [val[ind]];
+            }
+            else {
+                data[attr].push(val[ind]);
+            }
+        });
+    });
 
-    svg.appendChild(newNode);
+    return data;
+}
 
+var transferNonSpatialAttrs = function (newNode, nodeAttrs, attrs) {
     _.each(nodeAttrs, function (val, attr) {
         if (attr === "text") {
             $(newNode).text(val);
@@ -151,11 +196,30 @@ function drawNode (attrs, data, nodeAttrs, schema, svg) {
         }
     });
     d3.select(newNode).style("vector-effect", "non-scaling-stroke");
+};
 
+var transferSpatialAttrs = function (newNode, svg, attrs) {
     var newNodeBoundingBox = transformedBoundingBox(newNode);
     var newScale = svg.createSVGTransform();
     var widthScale = attrs['width'] / newNodeBoundingBox.width;
     var heightScale = attrs['height'] / newNodeBoundingBox.height;
+    //if (isNaN(widthScale) || attrs['shape'] === "text") {
+    //    widthScale = 1;
+    //}
+    //if (isNaN(heightScale) || attrs['shape'] === "text") {
+    //    heightScale = 1;
+    //}
+    if (attrs['shape'] === "text") {
+        widthScaleDiff = 1 - widthScale;
+        heightScaleDiff = 1 - heightScale;
+        if (widthScaleDiff > heightScaleDiff) {
+            heightScale = widthScale;
+        }
+        else {
+            widthScale = heightScale;
+        }
+    }
+
     if (isNaN(widthScale)) {
         widthScale = 1;
     }
@@ -196,6 +260,53 @@ function drawNode (attrs, data, nodeAttrs, schema, svg) {
     var newRotate = svg.createSVGTransform();
     newRotate.setRotate(+attrs['rotation'], 0, 0);
     newNode.transform.baseVal.appendItem(newRotate);
+};
+
+var drawLine = function (attrs, data, nodeAttrs, svg) {
+    var newNode = createLine(data, attrs, svg);
+    var firstPointAttrs = {};
+    for (var attr in attrs) {
+        firstPointAttrs[attr] = attrs[attr][0];
+    }
+    delete nodeAttrs[0]['d'];
+
+    transferNonSpatialAttrs(newNode, nodeAttrs[0], firstPointAttrs);
+
+    newNode.__data__ = data;
+    newNode.__attrs__ = attrs;
+};
+
+var createLine = function (data, attrs, svg) {
+    var indMapping = {};
+    _.each(data['lineID'], function (lineID, ind) {
+        indMapping[lineID] = ind;
+    });
+
+    var newNode = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    svg.appendChild(newNode);
+
+    var dString = "";
+
+    for (var i = 0; i <= _.max(data['lineID']); ++i) {
+        if (i === 0)
+            dString += "M" + attrs['xPosition'][indMapping[i]] + "," + attrs['yPosition'][indMapping[i]];
+        else
+            dString += "L" + attrs['xPosition'][indMapping[i]] + "," + attrs['yPosition'][indMapping[i]];
+        //var newSeg = newNode.createSVGPathSegMovetoAbs(attrs['x'][indMapping[i]], attrs['y'][indMapping[i]]);
+        //newNode.animatedPathSegList.appendItem(newSeg);
+    }
+    d3.select(newNode).attr("d", dString);
+    return newNode;
+};
+
+function drawNode(attrs, data, nodeAttrs, schema, svg) {
+    var newNode = getNewNodeFromShape(attrs['shape']);
+
+    transferNonSpatialAttrs(newNode, nodeAttrs, attrs);
+
+    svg.appendChild(newNode);
+
+    transferSpatialAttrs(newNode, svg, attrs);
 
     newNode.__data__ = data;
     newNode.__attrs__ = attrs;
