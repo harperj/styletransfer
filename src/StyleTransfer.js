@@ -226,11 +226,11 @@ var getScale = function(vis, mapping) {
     else {
         var bbox = vis.getMarkBoundingBox();
         if (mapping.attr == "yPosition") {
-            attrRange = [bbox.y - bbox.height / 2, bbox.y + bbox.height / 2];
+            attrRange = [bbox.y + bbox.height, bbox.y];
             dataRange = [mapping.invert(attrRange[0]), mapping.invert(attrRange[1])];
         }
         else if (mapping.attr == "xPosition") {
-            attrRange = [bbox.x - bbox.width / 2, bbox.x + bbox.width / 2];
+            attrRange = [bbox.x, bbox.x + bbox.width];
             dataRange = [mapping.invert(attrRange[0]), mapping.invert(attrRange[1])];
         }
         else if (mapping.attr == "width") {
@@ -409,7 +409,7 @@ var replaceMaxMappingRange = function(attr, decon) {
     var mappingSets = [];
 
     allMappingsSorted.forEach(function(mapping) {
-        if (mapping.type == "linear") {
+        if (mapping.type == "linear" && mapping.data[0] !== "deconID" && mapping.data[0] !== "tick") {
             var mappingDomain = mapping.group.getDataRange(mapping.data);
             var mappingRange = [mapping.map(mappingDomain[0]), mapping.map(mappingDomain[1])];
             var foundSet = false;
@@ -434,9 +434,10 @@ var replaceMaxMappingRange = function(attr, decon) {
 
 
     mappingSets.forEach(function(mappingSet) {
-        if (mappingSet.mappings.length > 1) {
+        if (mappingSet.mappings.length >= 1) {
             mappingSet.mappings.forEach(function (mapping) {
                 mapping.dataRange = mappingSet.domain;
+                //mapping.dataRange = mapping.group.getDataRange(mapping.data);
                 var minMappedVal = mapping.map(mappingSet.domain[0]);
                 var minLargestMappedVal = mappingSet.largest.map(mappingSet.domain[0]);
                 var maxMappedVal = mapping.map(mappingSet.domain[1]);
@@ -451,8 +452,12 @@ var replaceMaxMappingRange = function(attr, decon) {
                 else {
                     // different mapping.  what's the relationship?
                     var relationship = findRelationship(mappingSet.largest, mapping);
-                    mapping.attrRange = [mappingSet.largest.map(mappingSet.domain[0]*relationship[0]),
-                        mappingSet.largest.map(mappingSet.domain[1]*relationship[0])];
+                    //var adjustedCoeffs = [mappingSet.largest.coeffs[0] * relationship[0], mappingSet.largest.coeffs[1] + relationship[1]]
+                    //mapping.attrRange = [mappingSet.largest.map(mappingSet.domain[0])*relationship[0] + relationship[1],
+                    //    mappingSet.largest.map(mappingSet.domain[1])*relationship[0] + relationship[1]];
+                    //mapping.attrRange = [mappingSet.largest.map(mapping.dataRange[0]),
+                    //    mappingSet.largest.map(mapping.dataRange[1])*relationship[0] + relationship[1]];
+                    mapping.attrRange = [mapping.map(mapping.dataRange[0]), mapping.map(mapping.dataRange[1])];
                 }
             });
         }
@@ -498,9 +503,18 @@ var replaceMaxMappingRange = function(attr, decon) {
 //};
 
 var mappingBelongsToRangeSet = function(domain, range, rangeSet) {
-    return rangeContains(rangeSet.domain, domain) && rangeContains(rangeSet.range, range);
+    //return rangeOverlaps(rangeSet.range, range) && rangeOverlaps(rangeSet.domain, domain);
+    return rangeOverlaps(rangeSet.domain, domain) && rangeOverlaps(rangeSet.range, range);
 };
 
+var rangeOverlaps = function(range1, range2) {
+    var range1Min = _.min(range1) - 2;
+    var range1Max = _.max(range1) + 2;
+    var range2Min = _.min(range2);
+    var range2Max = _.max(range2);
+
+    return (range1Min <= range2Min && range2Min <= range1Max) || (range1Min <= range2Max && range2Max <= range1Max);
+};
 
 var rangeContains = function(range1, range2) {
     var range1Min = _.min(range1);
@@ -509,6 +523,14 @@ var rangeContains = function(range1, range2) {
     var range2Max = _.max(range2);
 
     return range1Min <= range2Min + 2 && range1Max >= range2Max - 2;
+};
+
+var getTransferSubset = function(deconstruction, transfers) {
+    var newDecon = {
+        "svg": deconstruction.svg,
+        "marks": _.map(transfers, function(transfer) {return deconstruction.getGroupByName(transfer);})
+    };
+    return new Deconstruction(newDecon.svg, newDecon.marks, []);
 };
 
 var main = function () {
@@ -526,6 +548,8 @@ var main = function () {
             "groups": []
         };
 
+        test.sourceDecon = getTransferSubset(test.sourceDecon, _.map(test.transfers, function(transfer) {return transfer[0];}));
+        test.targetDecon = getTransferSubset(test.targetDecon, _.map(test.transfers, function(transfer) {return transfer[1];}));
         test.sourceDecon = replaceMaxMappingRanges(test.sourceDecon);
         test.targetDecon = replaceMaxMappingRanges(test.targetDecon);
 
