@@ -81,7 +81,7 @@ var tests = {
             ['ylabels', 'ylabels']
         ]
     },
-    bar_2_economist_bar: {
+    food_bar_2_economist_bar: {
         source_file: './data/food_bars.json',
         target_file: './data/bostock_bars_economist.json',
         transfers: [
@@ -89,9 +89,24 @@ var tests = {
             ['xlabels', 'ylabels'],
             ['ylabels', 'xlabels'],
             ['yticks', 'xticks'],
-            //['xaxis', 'yaxis'],
-            //['yaxis', 'xaxis'],
+            ['xaxis', 'yaxis'],
+            ['yaxis', 'xaxis'],
             ['xticks', 'yticks']
+        ],
+        source_url: "http://misoproject.com/d3-chart/examples/basic.html",
+        target_url: "http://bl.ocks.org/cpudney/raw/2248382/"
+    },
+    economist_bar_2_food_bar: {
+        target_file: './data/food_bars.json',
+        source_file: './data/bostock_bars_economist.json',
+        transfers: [
+            ['bars', 'bars'],
+            ['ylabels', 'xlabels'],
+            ['xlabels', 'ylabels'],
+            ['xticks', 'yticks'],
+            ['xaxis', 'yaxis'],
+            ['yaxis', 'xaxis'],
+            ['yticks', 'xticks']
         ],
         source_url: "http://misoproject.com/d3-chart/examples/basic.html",
         target_url: "http://bl.ocks.org/cpudney/raw/2248382/"
