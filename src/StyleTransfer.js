@@ -548,15 +548,15 @@ var main = function () {
             "groups": []
         };
 
-        test.sourceDecon = getTransferSubset(test.sourceDecon, _.map(test.transfers, function(transfer) {return transfer[0];}));
-        test.targetDecon = getTransferSubset(test.targetDecon, _.map(test.transfers, function(transfer) {return transfer[1];}));
-        test.sourceDecon = replaceMaxMappingRanges(test.sourceDecon);
-        test.targetDecon = replaceMaxMappingRanges(test.targetDecon);
+        var sourceDecon = getTransferSubset(test.sourceDecon, _.map(test.transfers, function(transfer) {return transfer[0];}));
+        var targetDecon = getTransferSubset(test.targetDecon, _.map(test.transfers, function(transfer) {return transfer[1];}));
+        sourceDecon = replaceMaxMappingRanges(sourceDecon);
+        targetDecon = replaceMaxMappingRanges(targetDecon);
 
         _.each(test.transfers, function (transfer) {
             var result = transferStyle(
-                test.sourceDecon.getGroupByName(transfer[0]),
-                test.targetDecon.getGroupByName(transfer[1])
+                sourceDecon.getGroupByName(transfer[0]),
+                targetDecon.getGroupByName(transfer[1])
             );
             result.updateAttrsFromMappings();
             test.result.groups.push(result);
