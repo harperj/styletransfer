@@ -115,6 +115,131 @@ var getBestMatchingMapping = function(sourceMapping, targetMappings) {
     //return targetMappings[targetMappings.length - 1];
 };
 
+var transferVisStyle = function(sourceVis, targetVis) {
+    //var result = {
+    //    "svg": test.targetDecon.svg,
+    //    "groups": []
+    //};
+
+    var sourceDataBoundGroups = getDataBoundMarks(sourceVis);
+    var targetDataBoundGroups = getDataBoundMarks(targetVis);
+
+    var sourceGroup = _.max(sourceDataBoundGroups, function(group) {
+        return group.numFields;
+    });
+    var targetGroup = _.max(targetDataBoundGroups, function(group) {
+        return group.numFields;
+    });
+
+    sourceGroup = applyAxisRanges(sourceGroup, sourceVis.axes);
+    targetGroup = applyAxisRanges(targetGroup, targetVis.axes);
+
+    var newGroup = transferStyle(sourceGroup, targetGroup);
+    newGroup.updateAttrsFromMappings();
+
+    var newVisAxes = transferAxes(newGroup, targetVis.axes, targetVis);
+    var groups = [newGroup];
+    groups = groups.concat(newVisAxes);
+    var result = new Deconstruction(targetVis.svg, groups);
+    return result;
+};
+
+var transferAxes = function(newGroup, axes, targetVis) {
+    var axisGroups = [];
+
+    var xAxis = _.filter(axes, function(axis) {return axis.orient === "top" || axis.orient === "bottom"});
+    if (xAxis.length > 0) {
+        xAxis = clone(xAxis[0]);
+    }
+    else {
+        xAxis = undefined;
+    }
+
+    var yAxis = _.filter(axes, function(axis) {return axis.orient === "left" || axis.orient === "right"});
+    if (yAxis.length > 0) {
+        yAxis = clone(yAxis[0]);
+    }
+    else {
+        yAxis = undefined;
+    }
+
+    if (xAxis) {
+        var xMapping = Mapping.fromJSON(newGroup.getMappingForAttr("xPosition"));
+        xAxis.scaleDomain = xMapping.dataRange;
+        axisGroups = axisGroups.concat(modifyAxisWithMapping(targetVis, xMapping, 'x'));
+    }
+    if (yAxis) {
+        var yMapping = Mapping.fromJSON(newGroup.getMappingForAttr("yPosition"));
+        yAxis.scaleDomain = yMapping.dataRange;
+        axisGroups = axisGroups.concat(modifyAxisWithMapping(targetVis, yMapping, 'y'));
+    }
+
+    return axisGroups;
+};
+
+var modifyAxisWithMapping = function(targetVis, mapping, axis) {
+    var axisLineGroup = clone(targetVis.getGroupByName(axis + 'axis-line'));
+    axisLineGroup.getMappingForAttr(axis + "Position").params.coeffs = clone(mapping.params.coeffs);
+    for (var i = 0; i < axisLineGroup.attrs[axis + 'Position'].length; ++i) {
+        axisLineGroup.data['domain'][i] = mapping.invert(axisLineGroup.attrs[axis + 'Position'][i]);
+    }
+    axisLineGroup.updateAttrsFromMappings();
+
+    var axisTickGroup = clone(targetVis.getGroupByName(axis + 'axis-ticks'));
+    axisTickGroup.getMappingForAttr(axis + "Position").params.coeffs = clone(mapping.params.coeffs);
+    for (i = 0; i < axisTickGroup.attrs[axis + 'Position'].length; ++i) {
+        axisTickGroup.data['number'][i] = mapping.invert(axisTickGroup.attrs[axis + 'Position'][i]);
+    }
+    axisTickGroup.updateAttrsFromMappings();
+
+    var axisLabelGroup = clone(targetVis.getGroupByName(axis + 'axis-labels'));
+    axisLabelGroup.getMappingForAttr(axis + "Position").params.coeffs = clone(mapping.params.coeffs);
+    for (i = 0; i < axisLabelGroup.attrs[axis + 'Position'].length; ++i) {
+        axisLabelGroup.data['number'][i] = mapping.invert(axisLabelGroup.attrs[axis + 'Position'][i]);
+        axisLabelGroup.nodeAttrs[i].text = Math.round(axisLabelGroup.data['number'][i]).toString();
+    }
+    axisLabelGroup.updateAttrsFromMappings();
+
+    return [axisLineGroup, axisTickGroup, axisLabelGroup];
+};
+
+var applyAxisRanges = function(group, axes) {
+    var xAxis = _.filter(axes, function(axis) {return axis.orient === "top" || axis.orient === "bottom"});
+    if (xAxis.length > 0) {
+        xAxis = xAxis[0];
+    }
+    else {
+        xAxis = undefined;
+    }
+
+    var yAxis = _.filter(axes, function(axis) {return axis.orient === "left" || axis.orient === "right"});
+    if (yAxis.length > 0) {
+        yAxis = yAxis[0];
+    }
+    else {
+        yAxis = undefined;
+    }
+
+    for (var i = 0; i < group.mappings.length; ++i) {
+        var mapping = group.mappings[i];
+        if (xAxis && mapping.attr === "xPosition") {
+            mapping.dataRange = xAxis.scaleDomain;
+            mapping.attrRange = xAxis.scaleRange;
+        }
+        else if (yAxis && mapping.attr === "yPosition") {
+            mapping.dataRange = yAxis.scaleDomain;
+            mapping.attrRange = yAxis.scaleRange;
+        }
+    }
+    return group;
+};
+
+var getDataBoundMarks = function(vis) {
+    return _.filter(vis.groups, function(group) {
+        return typeof group.axis === "undefined";
+    });
+};
+
 var transferStyle = function (sourceGroup, targetGroup) {
     var newVis = clone(sourceGroup);
     newVis.mappings = [];
@@ -655,24 +780,20 @@ var main = function () {
         test.targetDecon = JSON.parse(fs.readFileSync(test.target_file, 'utf8'));
         test.targetDecon = Deconstruction.fromJSON(test.targetDecon);
 
-        test.result = {
-            "svg": test.targetDecon.svg,
-            "groups": []
-        };
+        //var sourceDecon = getTransferSubset(test.sourceDecon, _.map(test.transfers, function(transfer) {return transfer[0];}));
+        //var targetDecon = getTransferSubset(test.targetDecon, _.map(test.transfers, function(transfer) {return transfer[1];}));
+        //sourceDecon = replaceMaxMappingRanges(sourceDecon);
+        //targetDecon = replaceMaxMappingRanges(targetDecon);
 
-        var sourceDecon = getTransferSubset(test.sourceDecon, _.map(test.transfers, function(transfer) {return transfer[0];}));
-        var targetDecon = getTransferSubset(test.targetDecon, _.map(test.transfers, function(transfer) {return transfer[1];}));
-        sourceDecon = replaceMaxMappingRanges(sourceDecon);
-        targetDecon = replaceMaxMappingRanges(targetDecon);
-
-        _.each(test.transfers, function (transfer) {
-            var result = transferStyle(
-                sourceDecon.getGroupByName(transfer[0]),
-                targetDecon.getGroupByName(transfer[1])
-            );
-            result.updateAttrsFromMappings();
-            test.result.groups.push(result);
-        });
+        test.result = transferVisStyle(test.sourceDecon, test.targetDecon);
+        //
+        //_.each(test.transfers, function (transfer) {
+        //    var result = transferStyle(
+        //        sourceDecon.getGroupByName(transfer[0]),
+        //        targetDecon.getGroupByName(transfer[1])
+        //    );
+        //    test.result.groups.push(result);
+        //});
     });
     fs.writeFile('view/data/next.json', JSON.stringify(transferTests));
 };
