@@ -674,7 +674,7 @@ var main = function () {
             test.result.groups.push(result);
         });
     });
-    fs.writeFile('out.json', JSON.stringify(transferTests));
+    fs.writeFile('view/data/next.json', JSON.stringify(transferTests));
 };
 
 if (require.main === module) {
