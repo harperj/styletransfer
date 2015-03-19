@@ -1,88 +1,115 @@
-/**
- * Created by harper on 12/9/14.
- */
-
 var tests = {
     vertical_bars: {
-        source_file: './data/miso_bars.json',
-        target_file: './data/cpudney_bars.json',
+        source_file: './data/bostock_bars.json',
+        target_file: './data/miso_bars.json',
         transfers: [
             ['bars', 'bars'],
             ['yticks', 'yticks'],
             ['ylabels', 'ylabels'],
-            ['xlabels', 'xlabels']
+            ['xlabels', 'xlabels'],
+            ['yaxis', 'yaxis']
         ],
         source_url: "http://misoproject.com/d3-chart/examples/basic.html",
         target_url: "http://bl.ocks.org/cpudney/raw/2248382/"
     },
     vertical_bars_rev: {
-        source_file: './data/cpudney_bars.json',
-        target_file: './data/miso_bars.json',
+        target_file: './data/bostock_bars.json',
+        source_file: './data/miso_bars.json',
         transfers: [
             ['bars', 'bars'],
-            ['yticks', 'yticks']
-        ]
-    },
-    horizontal_bars: {
-        source_file: './data/simplehoriz_bars.json',
-        target_file: './data/dutoit_bars.json',
-        transfers: [['bars', 'bars']],
-        source_url: "http://hdnrnzk.me/2012/07/04/creating-a-bar-graph-using-d3js/",
-        target_url: "http://bl.ocks.org/leondutoit/raw/6436923"
-    },
-    horizontal_bars_rev: {
-        source_file: './data/dutoit_bars.json',
-        target_file: './data/simplehoriz_bars.json',
-        transfers: [['bars', 'bars']],
-    },
-    negative_bars: {
-        source_file: './data/negative_bars.json',
-        target_file: './data/dutoit_bars.json',
-        transfers: [
-            ['bars', 'bars'],
-            ['xticks', 'xticks'],
-            ['xlabels', 'xlabels']
-        ]
-    },
-    negative_bars_rev: {
-        source_file: './data/dutoit_bars.json',
-        target_file: './data/negative_bars.json',
-        transfers: [
-            ['bars', 'bars'],
-            ['xticks', 'xticks'],
-            ['xlabels', 'xlabels']
-        ]
-    },
-    bar_2_scatter: {
-        source_file: './data/cpudney_bars.json',
-        target_file: './data/cereal_scatter.json',
-        transfers: [
-            ['bars', 'dots'],
-            ['yticks', 'yticks'],
-            ['xticks', 'xticks']
-        ]
-    },
-    scatter: {
-        source_file: './data/vallandingham_scatter.json',
-        target_file: './data/cereal_scatter.json',
-        transfers: [
-            ['dots', 'dots'],
             ['yticks', 'yticks'],
             ['ylabels', 'ylabels'],
-            ['xticks', 'xticks'],
             ['xlabels', 'xlabels'],
-        ]
+            ['yaxis', 'yaxis']
+        ],
+        source_url: "http://misoproject.com/d3-chart/examples/basic.html",
+        target_url: "http://bl.ocks.org/cpudney/raw/2248382/"
     },
-    scatter_rev: {
+    scatter_plots: {
         source_file: './data/cereal_scatter.json',
         target_file: './data/vallandingham_scatter.json',
         transfers: [
             ['dots', 'dots'],
-            ['yticks', 'yticks'],
-            ['ylabels', 'ylabels'],
+            ['xaxis', 'xaxis'],
+            ['yaxis', 'yaxis'],
             ['xticks', 'xticks'],
+            ['yticks', 'yticks'],
             ['xlabels', 'xlabels'],
+            ['ylabels', 'ylabels']
         ]
+    },
+    scatter_plots_rev: {
+        target_file: './data/cereal_scatter.json',
+        source_file: './data/vallandingham_scatter.json',
+        transfers: [
+            ['dots', 'dots'],
+            ['xaxis', 'xaxis'],
+            ['yaxis', 'yaxis'],
+            ['xticks', 'xticks'],
+            ['yticks', 'yticks'],
+            ['xlabels', 'xlabels'],
+            ['ylabels', 'ylabels']
+        ]
+    },
+    bar_2_dotplot: {
+        source_file: './data/leondutoit_bars.json',
+        target_file: './data/leondutoit_dots.json',
+        transfers: [
+            ['bars', 'dots'],
+            ['xlabels', 'xlabels'],
+            ['barlabels', 'dotlabels'],
+            ['ylabels', 'ylabels']
+        ]
+    },
+    bar_2_dotplot_diffdata: {
+        source_file: './data/food_bars.json',
+        target_file: './data/leondutoit_dots.json',
+        transfers: [
+            ['bars', 'dots'],
+            ['xlabels', 'xlabels'],
+            ['xaxis', 'xaxis'],
+            ['ylabels', 'ylabels']
+        ]
+    },
+    food_to_leondutoit_bars: {
+        source_file: './data/food_bars.json',
+        target_file: './data/dutoit_bars.json',
+        transfers: [
+            ['bars', 'bars'],
+            ['xaxis', 'xaxis'],
+            ['xlabels', 'xlabels'],
+            ['ylabels', 'ylabels']
+        ]
+    },
+    food_bar_2_economist_bar: {
+        source_file: './data/food_bars.json',
+        target_file: './data/bostock_bars_economist.json',
+        transfers: [
+            ['bars', 'bars'],
+            ['xlabels', 'ylabels'],
+            ['ylabels', 'xlabels'],
+            ['yticks', 'xticks'],
+            ['xaxis', 'yaxis'],
+            ['yaxis', 'xaxis'],
+            ['xticks', 'yticks']
+        ],
+        source_url: "http://misoproject.com/d3-chart/examples/basic.html",
+        target_url: "http://bl.ocks.org/cpudney/raw/2248382/"
+    },
+    economist_bar_2_food_bar: {
+        target_file: './data/food_bars.json',
+        source_file: './data/bostock_bars_economist.json',
+        transfers: [
+            ['bars', 'bars'],
+            ['ylabels', 'xlabels'],
+            ['xlabels', 'ylabels'],
+            ['xticks', 'yticks'],
+            ['xaxis', 'yaxis'],
+            ['yaxis', 'xaxis'],
+            ['yticks', 'xticks']
+        ],
+        source_url: "http://misoproject.com/d3-chart/examples/basic.html",
+        target_url: "http://bl.ocks.org/cpudney/raw/2248382/"
     }
 };
 

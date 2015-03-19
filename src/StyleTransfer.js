@@ -11,7 +11,7 @@ var clone = require('clone');
 var ss = require('simple-statistics');
 
 var config = require('./config');
-var transferTests = require('./tests-axisfix');
+var transferTests = require('./tests');
 
 var loadDeconstructedVis = function (filename) {
     var file = fs.readFileSync(filename, 'utf8');
