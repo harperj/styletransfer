@@ -349,34 +349,6 @@ var propagateMappings = function (newMapping, sourceNextMapping, targetNextMappi
     return propagatedMappings;
 };
 
-//var zeroWidthScale = function(vis) {
-//    var scale = {};
-//    if (vis.getMappingForAttr("xPosition") && vis.getMappingForAttr("width")) {
-//        var intercept = vis.getMappingForAttr("width").getZeroVal();
-//        scale.xMin = vis.getMappingForAttr("xPosition").map(intercept);
-//        scale.xMax = _.max(vis.attrs["xPosition"]);
-//    }
-//    else {
-//        scale.xMin = _.min(vis.attrs["xPosition"]);
-//        scale.xMax = _.max(vis.attrs["xPosition"]);
-//    }
-//
-//    if (vis.getMappingForAttr("yPosition") && vis.getMappingForAttr("height")) {
-//        var intercept = vis.getMappingForAttr("height").getZeroVal();
-//        scale.yMin = _.min(vis.attrs["yPosition"]);
-//        scale.yMax = vis.getMappingForAttr("yPosition").map(intercept);
-//    }
-//    else {
-//        scale.yMin = _.min(vis.attrs["yPosition"]);
-//        scale.yMax = _.max(vis.attrs["yPosition"]);
-//    }
-//
-//    scale.maxWidth = _.max(vis.attrs["width"]);
-//    scale.maxHeight = _.max(vis.attrs["height"]);
-//
-//    return scale;
-//};
-
 var getNonDerivedMappings = function(mappingList) {
     var nonDerived = [];
     _.each(mappingList, function (mapping, i) {
@@ -451,6 +423,11 @@ var getScale = function(vis, mapping) {
     if (mapping.attrRange && mapping.dataRange) {
         attrRange = mapping.attrRange;
         dataRange = mapping.dataRange;
+
+        if (attrRange[0] > attrRange[1]) {
+            attrRange = [mapping.attrRange[1], mapping.attrRange[0]];
+            dataRange = [mapping.dataRange[1], mapping.dataRange[0]];
+        }
     }
     else {
         var bbox = vis.getMarkBoundingBox();
