@@ -37,20 +37,20 @@ var tests = {
             ['xlabels', 'xlabels'],
             ['ylabels', 'ylabels']
         ]
-    }
-    //scatter_plots_rev: {
-    //    target_file: './data/cereal_scatter.json',
-    //    source_file: './data/vallandingham_scatter.json',
-    //    transfers: [
-    //        ['dots', 'dots'],
-    //        ['xaxis', 'xaxis'],
-    //        ['yaxis', 'yaxis'],
-    //        ['xticks', 'xticks'],
-    //        ['yticks', 'yticks'],
-    //        ['xlabels', 'xlabels'],
-    //        ['ylabels', 'ylabels']
-    //    ]
-    //},
+    },
+    scatter_plots_rev: {
+        target_file: './data/weiglemc_scatter.json',
+        source_file: './data/vallandingham_scatter.json',
+        transfers: [
+            ['dots', 'dots'],
+            ['xaxis', 'xaxis'],
+            ['yaxis', 'yaxis'],
+            ['xticks', 'xticks'],
+            ['yticks', 'yticks'],
+            ['xlabels', 'xlabels'],
+            ['ylabels', 'ylabels']
+        ]
+    },
     //bar_2_dotplot: {
     //    source_file: './data/leondutoit_bars.json',
     //    target_file: './data/leondutoit_dots.json',
@@ -73,14 +73,14 @@ var tests = {
     //},
     //food_to_leondutoit_bars: {
     //    source_file: './data/food_bars.json',
-    //    target_file: './data/dutoit_bars.json',
+    //    target_file: './data/leondutoit_bars.json',
     //    transfers: [
     //        ['bars', 'bars'],
     //        ['xaxis', 'xaxis'],
     //        ['xlabels', 'xlabels'],
     //        ['ylabels', 'ylabels']
     //    ]
-    //},
+    //}
     //food_bar_2_economist_bar: {
     //    source_file: './data/food_bars.json',
     //    target_file: './data/bostock_bars_economist.json',

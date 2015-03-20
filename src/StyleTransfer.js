@@ -9,6 +9,7 @@ var _ = require('lodash');
 var assert = require('assert');
 var clone = require('clone');
 var ss = require('simple-statistics');
+var d3 = require('d3');
 
 var config = require('./config');
 var transferTests = require('./tests');
@@ -80,46 +81,22 @@ var getBestMatchingMapping = function(sourceMapping, targetMappings) {
         }
     }
     return targetMappings[0];
-
-    //targetMappings.sort(function(mappingA, mappingB) {
-    //    var sameTypeA = mappingA.type === sourceMapping.type;
-    //    var sameTypeB = mappingB.type === sourceMapping.type;
-    //
-    //    if (sameTypeA && sameTypeB) {
-    //        var sameSortednessA = (mappingA.data[0] === "deconID" && sourceMapping.data[0] === "deconID");
-    //        var sameSortednessB = (mappingB.data[0] === "deconID" && sourceMapping.data[0] === "deconID");
-    //
-    //        if (sameSortednessA === sameSortednessB) {
-    //            var sameAttrA = (mappingA.attr == sourceMapping.attr);
-    //            var sameAttrB = (mappingB.attr == sourceMapping.attr);
-    //            if (sameAttrA) {
-    //                return 1;
-    //            }
-    //            else if (sameAttrB) {
-    //                return -1;
-    //            }
-    //        }
-    //        else if (sameSortednessA) {
-    //            return 1;
-    //        }
-    //        else if(sameSortednessB) {
-    //            return -1;
-    //        }
-    //    }
-    //    else if (sameTypeA) {
-    //        return 1;
-    //    }
-    //
-    //    return -1;
-    //});
-    //return targetMappings[targetMappings.length - 1];
 };
 
+function arraysEqual(a, b) {
+    if (a === b) return true;
+    if (a == null || b == null) return false;
+    if (a.length != b.length) return false;
+
+    for (var i = 0; i < a.length; ++i) {
+        if (a[i] !== b[i]) return false;
+    }
+    return true;
+}
+
 var transferVisStyle = function(sourceVis, targetVis) {
-    //var result = {
-    //    "svg": test.targetDecon.svg,
-    //    "groups": []
-    //};
+    sourceVis = applyAxisRanges(sourceVis, sourceVis.axes);
+    targetVis = applyAxisRanges(targetVis, targetVis.axes);
 
     var sourceDataBoundGroups = getDataBoundMarks(sourceVis);
     var targetDataBoundGroups = getDataBoundMarks(targetVis);
@@ -131,52 +108,108 @@ var transferVisStyle = function(sourceVis, targetVis) {
         return group.numFields;
     });
 
-    sourceGroup = applyAxisRanges(sourceGroup, sourceVis.axes);
-    targetGroup = applyAxisRanges(targetGroup, targetVis.axes);
-
     var newGroup = transferStyle(sourceGroup, targetGroup);
-    newGroup.updateAttrsFromMappings();
 
-    var newVisAxes = transferAxes(newGroup, targetVis.axes, targetVis);
     var groups = [newGroup];
-    groups = groups.concat(newVisAxes);
+
+    targetVis.axes.forEach(function(axis) {
+        //if (axis.scaleRange[0] > axis.scaleRange[1]) {
+        //    axis.scaleRange = [axis.scaleRange[1], axis.scaleRange[0]];
+        //    axis.scaleDomain = [axis.scaleDomain[1], axis.scaleDomain[0]];
+        //}
+
+        newGroup.mappings.forEach(function(mapping) {
+            if (arraysEqual(mapping.attrRange, axis.scaleRange)) {
+                console.log("found axis overlap");
+                var axisGroups = modifyAxisWithMapping(targetVis, mapping, mapping.attr === "xPosition" ? "x" : "y");
+                groups = groups.concat(axisGroups);
+            }
+        });
+    });
+
+
+    //// if x axis maps to x axis
+    //if (arraysEqual(sourceGroup.getMappingForAttr('xPosition').dataRange, newGroup.getMappingForAttr('xPosition').dataRange)) {
+    //    groups.push(transferStyle(sourceVis.getGroupByName('xaxis-ticks'), targetVis.getGroupByName('xaxis-ticks')));
+    //    groups.push(transferStyle(sourceVis.getGroupByName('xaxis-line'), targetVis.getGroupByName('xaxis-line')));
+    //    groups.push(transferStyle(sourceVis.getGroupByName('xaxis-labels'), targetVis.getGroupByName('xaxis-labels')));
+    //}
+    //else {
+    //    groups.push(transferStyle(sourceVis.getGroupByName('xaxis-ticks'), targetVis.getGroupByName('yaxis-ticks')));
+    //    groups.push(transferStyle(sourceVis.getGroupByName('xaxis-line'), targetVis.getGroupByName('yaxis-line')));
+    //    groups.push(transferStyle(sourceVis.getGroupByName('xaxis-labels'), targetVis.getGroupByName('yaxis-labels')));
+    //}
+    //if (arraysEqual(sourceGroup.getMappingForAttr('yPosition').dataRange, newGroup.getMappingForAttr('yPosition').dataRange)) {
+    //    groups.push(transferStyle(sourceVis.getGroupByName('yaxis-ticks'), targetVis.getGroupByName('yaxis-ticks')));
+    //    groups.push(transferStyle(sourceVis.getGroupByName('yaxis-line'), targetVis.getGroupByName('yaxis-line')));
+    //    groups.push(transferStyle(sourceVis.getGroupByName('yaxis-labels'), targetVis.getGroupByName('yaxis-labels')));
+    //}
+    //else {
+    //    groups.push(transferStyle(sourceVis.getGroupByName('yaxis-ticks'), targetVis.getGroupByName('xaxis-ticks')));
+    //    groups.push(transferStyle(sourceVis.getGroupByName('yaxis-line'), targetVis.getGroupByName('xaxis-line')));
+    //    groups.push(transferStyle(sourceVis.getGroupByName('yaxis-labels'), targetVis.getGroupByName('xaxis-labels')));
+    //}
+    //
+    //var newVisAxes = transferAxes(newGroup, sourceVis, targetVis);
+    //var groups = [newGroup];
+    //groups = groups.concat(newVisAxes);
+
+
     var result = new Deconstruction(targetVis.svg, groups);
     return result;
 };
 
-var transferAxes = function(newGroup, axes, targetVis) {
-    var axisGroups = [];
-
-    var xAxis = _.filter(axes, function(axis) {return axis.orient === "top" || axis.orient === "bottom"});
-    if (xAxis.length > 0) {
-        xAxis = clone(xAxis[0]);
+var getAxis = function(vis, axis) {
+    if (axis === "x") {
+        var xAxis = _.filter(vis.axes, function(axis) {return axis.orient === "top" || axis.orient === "bottom"});
+        if (xAxis.length > 0) {
+            xAxis = clone(xAxis[0]);
+        }
+        else {
+            xAxis = undefined;
+        }
+        return xAxis;
     }
-    else {
-        xAxis = undefined;
+    else if (axis === "y") {
+        var yAxis = _.filter(vis.axes, function(axis) {return axis.orient === "left" || axis.orient === "right"});
+        if (yAxis.length > 0) {
+            yAxis = clone(yAxis[0]);
+        }
+        else {
+            yAxis = undefined;
+        }
+        return yAxis;
     }
-
-    var yAxis = _.filter(axes, function(axis) {return axis.orient === "left" || axis.orient === "right"});
-    if (yAxis.length > 0) {
-        yAxis = clone(yAxis[0]);
-    }
-    else {
-        yAxis = undefined;
-    }
-
-    if (xAxis) {
-        var xMapping = Mapping.fromJSON(newGroup.getMappingForAttr("xPosition"));
-        xAxis.scaleDomain = xMapping.dataRange;
-        axisGroups = axisGroups.concat(modifyAxisWithMapping(targetVis, xMapping, 'x'));
-    }
-    if (yAxis) {
-        var yMapping = Mapping.fromJSON(newGroup.getMappingForAttr("yPosition"));
-        yAxis.scaleDomain = yMapping.dataRange;
-        axisGroups = axisGroups.concat(modifyAxisWithMapping(targetVis, yMapping, 'y'));
-    }
-
-    return axisGroups;
 };
 
+//var transferAxes = function(newGroup, sourceVis, targetVis) {
+//    var axisGroups = [];
+//
+//    var sourceAxis = getAxis(sourceVis, 'x');
+//    var targetAxis = getAxis(targetVis, 'x');
+//    if (targetAxis) {
+//        //var xMapping = Mapping.fromJSON(newGroup.getMappingForAttr("xPosition"));
+//        //xAxis.scaleDomain = xMapping.dataRange;
+//        //axisGroups = axisGroups.concat(modifyAxisWithMapping(targetVis, xMapping, 'x'));
+//        var newAxisDomain = sourceAxis.scaleDomain;
+//        var newAxisRange = targetAxis.scaleRange;
+//        if (typeof newAxisDomain[0] === "number") {
+//            var newScale = d3.scale.linear().domain(newAxisDomain).range(newAxisRange);
+//            newScale.ticks.apply(newScale, targetAxis.tickArguments)
+//        }
+//    }
+//
+//    sourceAxis = getAxis(sourceVis, 'y');
+//    targetAxis = getAxis(targetVis, 'y');
+//    if (yAxis) {
+//        var yMapping = Mapping.fromJSON(newGroup.getMappingForAttr("yPosition"));
+//        yAxis.scaleDomain = yMapping.dataRange;
+//        axisGroups = axisGroups.concat(modifyAxisWithMapping(targetVis, yMapping, 'y'));
+//    }
+//
+//    return axisGroups;
+//};
+//
 var modifyAxisWithMapping = function(targetVis, mapping, axis) {
     var axisLineGroup = clone(targetVis.getGroupByName(axis + 'axis-line'));
     axisLineGroup.getMappingForAttr(axis + "Position").params.coeffs = clone(mapping.params.coeffs);
@@ -203,35 +236,27 @@ var modifyAxisWithMapping = function(targetVis, mapping, axis) {
     return [axisLineGroup, axisTickGroup, axisLabelGroup];
 };
 
-var applyAxisRanges = function(group, axes) {
-    var xAxis = _.filter(axes, function(axis) {return axis.orient === "top" || axis.orient === "bottom"});
-    if (xAxis.length > 0) {
-        xAxis = xAxis[0];
-    }
-    else {
-        xAxis = undefined;
-    }
 
-    var yAxis = _.filter(axes, function(axis) {return axis.orient === "left" || axis.orient === "right"});
-    if (yAxis.length > 0) {
-        yAxis = yAxis[0];
-    }
-    else {
-        yAxis = undefined;
-    }
+var applyAxisRanges = function(vis) {
+    var xAxis = getAxis(vis, 'x');
+    var yAxis = getAxis(vis, 'y');
 
-    for (var i = 0; i < group.mappings.length; ++i) {
-        var mapping = group.mappings[i];
-        if (xAxis && mapping.attr === "xPosition") {
-            mapping.dataRange = xAxis.scaleDomain;
-            mapping.attrRange = xAxis.scaleRange;
-        }
-        else if (yAxis && mapping.attr === "yPosition") {
-            mapping.dataRange = yAxis.scaleDomain;
-            mapping.attrRange = yAxis.scaleRange;
+    for (var i = 0; i < vis.groups.length; ++i) {
+        var group = vis.groups[i];
+        for (var j = 0; j < group.mappings.length; ++j) {
+            var mapping = group.mappings[j];
+            if (xAxis && mapping.attr === "xPosition" && group.name !== "yaxis-line") {
+                //TODO update to only set this as range if subset
+                mapping.dataRange = xAxis.scaleDomain;
+                mapping.attrRange = xAxis.scaleRange;
+            }
+            else if (yAxis && mapping.attr === "yPosition" && group.name !== "xaxis-line") {
+                mapping.dataRange = yAxis.scaleDomain;
+                mapping.attrRange = yAxis.scaleRange;
+            }
         }
     }
-    return group;
+    return vis;
 };
 
 var getDataBoundMarks = function(vis) {
@@ -281,6 +306,7 @@ var transferStyle = function (sourceGroup, targetGroup) {
         });
     }
     transferUnmapped(targetGroup, newVis);
+    newVis.updateAttrsFromMappings();
     return newVis;
 
     //
@@ -396,8 +422,8 @@ var transferMapping = function (sourceMapping, targetMapping, sourceVis, targetV
 var transferMappingNominal = function(sourceMapping, targetMapping) {
     var newMapping = new Mapping(sourceMapping.data, targetMapping.attr, "nominal", {});
     var params = {};
-    var sourceDataVals = _.keys(sourceMapping);
-    var targetDataVals = _.keys(targetMapping);
+    var sourceDataVals = _.keys(sourceMapping.params);
+    var targetDataVals = _.keys(targetMapping.params);
 
     for (var i = 0; i < sourceDataVals.length; ++i) {
         if (targetDataVals.length < i + 1) {
@@ -413,6 +439,8 @@ var transferMappingNominal = function(sourceMapping, targetMapping) {
     }
 
     newMapping.params = params;
+
+
     return newMapping;
 };
 
@@ -479,7 +507,14 @@ var transferIntervalMapping = function (sourceMapping, targetMapping, sourceVis,
             attrMin: _.min(targetAttrVals),
             coeffs: coeffs
         };
-        return new Mapping(sourceMapping.data, targetMapping.attr, 'linear', params)
+        var mapping = new Mapping(sourceMapping.data, targetMapping.attr, 'linear', params);
+        mapping.dataRange = sourceMapping.dataRange;
+        if (targetMapping.attrRange)
+        mapping.attrRange = [
+            targetMapping.attrRange[0],
+            (targetMapping.attrRange[1]  / targetAttrVals.length) * sourceAttrVals.length
+        ];
+        return mapping;
     }
 };
 
@@ -524,7 +559,7 @@ var transferUnmapped = function (sourceVis, transferredVis) {
 
     for (var i = 0; i < transferredVis.nodeAttrs.length; ++i) {
         for (var nodeAttr in sourceVis.nodeAttrs[0]) {
-            if (nodeAttr !== "text") {
+            if (nodeAttr !== "text" && nodeAttr !== "fill" && nodeAttr !== "stroke" && nodeAttr !== "opacity") {
                 transferredVis.nodeAttrs[i][nodeAttr] = sourceVis.nodeAttrs[0][nodeAttr];
             }
         }
@@ -551,7 +586,10 @@ var transferMappingLinear = function (sourceMapping, targetMapping, sourceScale,
         [sourceScale.dataRange[1], targetScale.attrRange[1]]
     ]);
 
-    return newMapping;
+    newMapping.dataRange = sourceMapping.dataRange;
+    newMapping.attrRange = targetMapping.attrRange;
+
+    return Mapping.fromJSON(newMapping);
 };
 
 var findRelationship = function (mapping1, mapping2) {
