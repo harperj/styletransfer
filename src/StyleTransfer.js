@@ -2,6 +2,7 @@
  * Created by harper on 11/25/14.
  */
 
+var Deconstruct = require('d3-decon-lib').Deconstruct;
 var Deconstruction = require('d3-decon-lib').Deconstruction;
 var Mapping = require('d3-decon-lib').Mapping;
 var fs = require('fs');
@@ -117,46 +118,39 @@ var transferVisStyle = function(sourceVis, targetVis) {
         //    axis.scaleRange = [axis.scaleRange[1], axis.scaleRange[0]];
         //    axis.scaleDomain = [axis.scaleDomain[1], axis.scaleDomain[0]];
         //}
+        var axisDrawn = false;
 
         newGroup.mappings.forEach(function(mapping) {
-            if (arraysEqual(mapping.attrRange, axis.scaleRange)) {
+            if (mappingWithinAxis(mapping, axis) && !axisDrawn) {
+                axisDrawn = true;
                 console.log("found axis overlap");
                 var axisGroups = modifyAxisWithMapping(targetVis, mapping, mapping.attr === "xPosition" ? "x" : "y");
                 groups = groups.concat(axisGroups);
             }
+            else if (mappingExtendedAxis(mapping, axis, targetVis) && !axisDrawn) {
+                axisDrawn = true;
+                var extendedAxisGroups = extendAxisGroups(axis, mapping, sourceVis, targetVis);
+                groups = groups.concat(extendedAxisGroups);
+
+            }
         });
     });
 
-
-    //// if x axis maps to x axis
-    //if (arraysEqual(sourceGroup.getMappingForAttr('xPosition').dataRange, newGroup.getMappingForAttr('xPosition').dataRange)) {
-    //    groups.push(transferStyle(sourceVis.getGroupByName('xaxis-ticks'), targetVis.getGroupByName('xaxis-ticks')));
-    //    groups.push(transferStyle(sourceVis.getGroupByName('xaxis-line'), targetVis.getGroupByName('xaxis-line')));
-    //    groups.push(transferStyle(sourceVis.getGroupByName('xaxis-labels'), targetVis.getGroupByName('xaxis-labels')));
-    //}
-    //else {
-    //    groups.push(transferStyle(sourceVis.getGroupByName('xaxis-ticks'), targetVis.getGroupByName('yaxis-ticks')));
-    //    groups.push(transferStyle(sourceVis.getGroupByName('xaxis-line'), targetVis.getGroupByName('yaxis-line')));
-    //    groups.push(transferStyle(sourceVis.getGroupByName('xaxis-labels'), targetVis.getGroupByName('yaxis-labels')));
-    //}
-    //if (arraysEqual(sourceGroup.getMappingForAttr('yPosition').dataRange, newGroup.getMappingForAttr('yPosition').dataRange)) {
-    //    groups.push(transferStyle(sourceVis.getGroupByName('yaxis-ticks'), targetVis.getGroupByName('yaxis-ticks')));
-    //    groups.push(transferStyle(sourceVis.getGroupByName('yaxis-line'), targetVis.getGroupByName('yaxis-line')));
-    //    groups.push(transferStyle(sourceVis.getGroupByName('yaxis-labels'), targetVis.getGroupByName('yaxis-labels')));
-    //}
-    //else {
-    //    groups.push(transferStyle(sourceVis.getGroupByName('yaxis-ticks'), targetVis.getGroupByName('xaxis-ticks')));
-    //    groups.push(transferStyle(sourceVis.getGroupByName('yaxis-line'), targetVis.getGroupByName('xaxis-line')));
-    //    groups.push(transferStyle(sourceVis.getGroupByName('yaxis-labels'), targetVis.getGroupByName('xaxis-labels')));
-    //}
-    //
-    //var newVisAxes = transferAxes(newGroup, sourceVis, targetVis);
-    //var groups = [newGroup];
-    //groups = groups.concat(newVisAxes);
-
-
     var result = new Deconstruction(targetVis.svg, groups);
     return result;
+};
+
+var mappingExtendedAxis = function(mapping, axis) {
+    var axisAttr = axis.orient === "left" || axis.orient === "right" ? "yPosition" : "xPosition";
+    if (mapping.params.interval && axisAttr === mapping.attr) {
+        return true;
+    }
+};
+
+var mappingWithinAxis = function(mapping, axis) {
+    var rangeContained = rangeContains(axis.scaleRange, mapping.attrRange);
+    var axisAttr = axis.orient === "left" || axis.orient === "right" ? "yPosition" : "xPosition";
+    return mapping.attr === axisAttr && rangeContained;
 };
 
 var getAxis = function(vis, axis) {
@@ -229,11 +223,105 @@ var modifyAxisWithMapping = function(targetVis, mapping, axis) {
     axisLabelGroup.getMappingForAttr(axis + "Position").params.coeffs = clone(mapping.params.coeffs);
     for (i = 0; i < axisLabelGroup.attrs[axis + 'Position'].length; ++i) {
         axisLabelGroup.data['number'][i] = mapping.invert(axisLabelGroup.attrs[axis + 'Position'][i]);
-        axisLabelGroup.nodeAttrs[i].text = Math.round(axisLabelGroup.data['number'][i]).toString();
     }
+
+    for (i = 0; i < axisLabelGroup.attrs[axis + 'Position'].length; ++i) {
+        if (_.max(axisLabelGroup.data['number']) < 5)
+            axisLabelGroup.nodeAttrs[i].text = (Math.round(axisLabelGroup.data['number'][i] * 100) / 100).toString();
+        else {
+            axisLabelGroup.nodeAttrs[i].text = Math.round(axisLabelGroup.data['number'][i]).toString();
+        }
+    }
+
     axisLabelGroup.updateAttrsFromMappings();
 
     return [axisLineGroup, axisTickGroup, axisLabelGroup];
+};
+
+var extendAxisGroups = function(axis, mapping, sourceVis, targetVis) {
+    var interval = mapping.params.interval;
+    var length = mapping.params.interval * mapping.dataRange.length;
+
+    var axisLineGroup = clone(targetVis.getGroupByName(axis.axis + '-line'));
+    var oldMinVal = _.min(axisLineGroup.attrs[axis.axis[0] + 'Position']);
+    var oldMaxVal = _.max(axisLineGroup.data['axis']);
+    var newMaxVal = oldMinVal + length;
+    for (var i = 0; i < axisLineGroup.attrs[axis.axis[0] + 'Position'].length; ++i) {
+        if (axisLineGroup.data['axis'][i] === oldMaxVal) {
+            axisLineGroup.data['axis'][i] = newMaxVal;
+        }
+    }
+    axisLineGroup.updateAttrsFromMappings();
+
+    var axisTickGroup = clone(targetVis.getGroupByName(axis.axis + '-ticks'));
+    axisTickGroup = extendTicks(axisTickGroup, axis, mapping, targetVis);
+
+    var axisLabelGroup = clone(targetVis.getGroupByName(axis.axis + '-labels'));
+    axisLabelGroup = extendLabels(axisLabelGroup, axis, mapping);
+    //var targetAxisLabelGroup = clone(targetVis.getGroupByName(axis.axis + '-labels'));
+    //axisLabelGroup = transferStyle(axisLabelGroup, targetAxisLabelGroup);
+    //for (i = 0; i < axisLabelGroup.attrs[axis.axis[0] + 'Position'].length; ++i) {
+    //    axisLabelGroup.nodeAttrs[i] = clone(targetAxisLabelGroup.nodeAttrs[0]);
+    //    axisLabelGroup.nodeAttrs[i].text = mapping.dataRange[i];
+    //}
+
+
+    return [axisLineGroup, axisTickGroup, axisLabelGroup];
+};
+
+var extendTicks = function(tickGroup, axis, mapping, targetVis) {
+    var tickValues = mapping.dataRange;
+    var maxDeconID = _.max(tickGroup.ids);
+    var deconInterval = mapping.params.dataInterval;
+
+    while (tickGroup.ids.length >= tickValues.length) {
+        tickGroup.removeLastDataRow();
+    }
+    while (tickGroup.ids.length <= tickValues.length) {
+        tickGroup.addData({
+            string: tickValues[0],
+            deconID: maxDeconID + deconInterval
+        });
+        maxDeconID += deconInterval;
+    }
+
+    for (var i = 0; i < tickGroup.ids.length; ++i) {
+        tickGroup.data["string"][i] = tickValues[i];
+    }
+
+    tickGroup.updateAttrsFromMappings();
+
+    return tickGroup;
+};
+
+var extendLabels = function(labelGroup, axis, mapping, targetVis) {
+    var labelValues = mapping.dataRange;
+    var maxDeconID = _.max(labelGroup.ids);
+    var deconInterval = labelGroup.ids[1]-labelGroup.ids[0];
+
+    while (labelGroup.ids.length >= labelValues.length) {
+        labelGroup.removeLastDataRow();
+    }
+    while (labelGroup.ids.length <= labelValues.length) {
+        labelGroup.addData({
+            string: labelValues[0],
+            deconID: maxDeconID + deconInterval
+        });
+        maxDeconID += deconInterval;
+    }
+
+    for (var i = 0; i < labelGroup.ids.length; ++i) {
+        labelGroup.data["string"][i] = labelValues[i];
+        var axisAttr = axis.axis[0] + "Position";
+        labelGroup.attrs[axisAttr][i] = labelGroup.getMappingForAttr(axisAttr).map(labelGroup.ids[i]);
+        labelGroup.nodeAttrs[i].text = labelValues[i];
+    }
+
+    labelGroup.mappings = Deconstruct.extractMappings(labelGroup);
+    labelGroup.updateAttrsFromMappings();
+    labelGroup.resetNonMapped();
+
+    return labelGroup;
 };
 
 
@@ -248,11 +336,16 @@ var applyAxisRanges = function(vis) {
             if (xAxis && mapping.attr === "xPosition" && group.name !== "yaxis-line") {
                 //TODO update to only set this as range if subset
                 mapping.dataRange = xAxis.scaleDomain;
-                mapping.attrRange = xAxis.scaleRange;
+                //mapping.attrRange = xAxis.scaleRange;
+                if (typeof(mapping.dataRange[0]) === "number" && mapping.dataRange.length === 2)
+                    mapping.attrRange = [mapping.map(mapping.dataRange[0]), mapping.map(mapping.dataRange[1])];
+                else
+                    mapping.attrRange = xAxis.scaleRange;
             }
             else if (yAxis && mapping.attr === "yPosition" && group.name !== "xaxis-line") {
                 mapping.dataRange = yAxis.scaleDomain;
-                mapping.attrRange = yAxis.scaleRange;
+                //mapping.attrRange = yAxis.scaleRange;
+                mapping.attrRange = [mapping.map(mapping.dataRange[0]), mapping.map(mapping.dataRange[1])];
             }
         }
     }
@@ -457,7 +550,7 @@ var getScale = function(vis, mapping) {
             dataRange = [mapping.dataRange[1], mapping.dataRange[0]];
         }
     }
-    else {
+    else if (mapping.type === "linear") {
         var bbox = vis.getMarkBoundingBox();
         if (mapping.attr == "yPosition") {
             attrRange = [bbox.y + bbox.height, bbox.y];
@@ -505,7 +598,9 @@ var transferIntervalMapping = function (sourceMapping, targetMapping, sourceVis,
 
         var params = {
             attrMin: _.min(targetAttrVals),
-            coeffs: coeffs
+            coeffs: coeffs,
+            interval: targetInterval,
+            dataInterval: sourceDataInterval
         };
         var mapping = new Mapping(sourceMapping.data, targetMapping.attr, 'linear', params);
         mapping.dataRange = sourceMapping.dataRange;
@@ -769,6 +864,11 @@ var rangeOverlaps = function(range1, range2) {
 };
 
 var rangeContains = function(range1, range2) {
+
+    if (!range1 || !range2 || range1.length !== 2 || range2.length !== 2) {
+        return false;
+    }
+
     var range1Min = _.min(range1);
     var range1Max = _.max(range1);
     var range2Min = _.min(range2);
