@@ -1,122 +1,44 @@
-var tests = {
-    scatter_plots: {
-        source_file: './data/weiglemc_scatter.json',
-        target_file: './data/vallandingham_scatter.json',
-        transfers: [
-            ['dots', 'dots'],
-            ['xaxis', 'xaxis'],
-            ['yaxis', 'yaxis'],
-            ['xticks', 'xticks'],
-            ['yticks', 'yticks'],
-            ['xlabels', 'xlabels'],
-            ['ylabels', 'ylabels']
-        ]
+var tests = [
+    //{
+    //    source_file: './data/weiglemc_scatter.json',
+    //    target_file: './data/vallandingham_scatter.json'
+    //},
+    //{
+    //    target_file: './data/weiglemc_scatter.json',
+    //    source_file: './data/vallandingham_scatter.json'
+    //},
+    //{
+    //    source_file: './data/dowson_bars.json',
+    //    target_file: './data/mbostock_bars.json'
+    //},
+    //{
+    //    target_file: './data/dowson_bars.json',
+    //    source_file: './data/mbostock_bars.json'
+    //},
+    {
+        source_file: './data/leondutoit_bars.json',
+        target_file: './data/npr_bars.json'
     },
-    scatter_plots_rev: {
-        target_file: './data/weiglemc_scatter.json',
-        source_file: './data/vallandingham_scatter.json',
-        transfers: [
-            ['dots', 'dots'],
-            ['xaxis', 'xaxis'],
-            ['yaxis', 'yaxis'],
-            ['xticks', 'xticks'],
-            ['yticks', 'yticks'],
-            ['xlabels', 'xlabels'],
-            ['ylabels', 'ylabels']
-        ]
-    },
-    vertical_bars: {
-        source_file: './data/dowson_bars.json',
-        target_file: './data/mbostock_bars.json'
-    },
-    vertical_bars_rev: {
-        target_file: './data/dowson_bars.json',
-        source_file: './data/mbostock_bars.json'
-    },
-    vertical_bars_2: {
-        source_file: './data/mbostock_bars.json',
-        target_file: './data/mbostock_bars_economist.json'
-    },
-    bar_2_dotplot: {
-        source_file: './data/mbostock_bars.json',
-        target_file: './data/leondutoit_dots.json',
-        transfers: [
-            ['bars', 'dots'],
-            ['xlabels', 'xlabels'],
-            ['barlabels', 'dotlabels'],
-            ['ylabels', 'ylabels']
-        ]
-    },
-    bar_2_dotplot_2: {
-        source_file: './data/dowson_bars.json',
-        target_file: './data/leondutoit_dots.json',
-        transfers: [
-            ['bars', 'dots'],
-            ['xlabels', 'xlabels'],
-            ['barlabels', 'dotlabels'],
-            ['ylabels', 'ylabels']
-        ]
-    },
-    //bar_2_economist_bar: {
+    //{
     //    source_file: './data/leondutoit_bars.json',
-    //    target_file: './data/mbostock_bars_economist.json',
-    //    transfers: [
-    //        ['bars', 'dots'],
-    //        ['xlabels', 'xlabels'],
-    //        ['barlabels', 'dotlabels'],
-    //        ['ylabels', 'ylabels']
-    //    ]
-    //}
-    //bar_2_dotplot_diffdata: {
-    //    source_file: './data/food_bars.json',
-    //    target_file: './data/leondutoit_dots.json',
-    //    transfers: [
-    //        ['bars', 'dots'],
-    //        ['xlabels', 'xlabels'],
-    //        ['xaxis', 'xaxis'],
-    //        ['ylabels', 'ylabels']
-    //    ]
+    //    target_file: './data/mbostock_neg_bars.json'
     //},
-    //food_to_leondutoit_bars: {
-    //    source_file: './data/food_bars.json',
+    //{
     //    target_file: './data/leondutoit_bars.json',
-    //    transfers: [
-    //        ['bars', 'bars'],
-    //        ['xaxis', 'xaxis'],
-    //        ['xlabels', 'xlabels'],
-    //        ['ylabels', 'ylabels']
-    //    ]
-    //}
-    //food_bar_2_economist_bar: {
-    //    source_file: './data/food_bars.json',
-    //    target_file: './data/bostock_bars_economist.json',
-    //    transfers: [
-    //        ['bars', 'bars'],
-    //        ['xlabels', 'ylabels'],
-    //        ['ylabels', 'xlabels'],
-    //        ['yticks', 'xticks'],
-    //        ['xaxis', 'yaxis'],
-    //        ['yaxis', 'xaxis'],
-    //        ['xticks', 'yticks']
-    //    ],
-    //    source_url: "http://misoproject.com/d3-chart/examples/basic.html",
-    //    target_url: "http://bl.ocks.org/cpudney/raw/2248382/"
+    //    source_file: './data/mbostock_bars_3.json'
     //},
-    //economist_bar_2_food_bar: {
-    //    target_file: './data/food_bars.json',
-    //    source_file: './data/bostock_bars_economist.json',
-    //    transfers: [
-    //        ['bars', 'bars'],
-    //        ['ylabels', 'xlabels'],
-    //        ['xlabels', 'ylabels'],
-    //        ['xticks', 'yticks'],
-    //        ['xaxis', 'yaxis'],
-    //        ['yaxis', 'xaxis'],
-    //        ['yticks', 'xticks']
-    //    ],
-    //    source_url: "http://misoproject.com/d3-chart/examples/basic.html",
-    //    target_url: "http://bl.ocks.org/cpudney/raw/2248382/"
+    //{
+    //    target_file: './data/leondutoit_bars.json',
+    //    source_file: './data/mbostock_bars_3.json'
+    //},
+    //{
+    //    source_file: './data/mbostock_bars.json',
+    //    target_file: './data/leondutoit_dots.json',
+    //},
+    //{
+    //    source_file: './data/dowson_bars.json',
+    //    target_file: './data/leondutoit_dots.json',
     //}
-};
+];
 
 module.exports = tests;

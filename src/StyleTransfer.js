@@ -137,6 +137,7 @@ var transferVisStyle = function(sourceVis, targetVis) {
     });
 
     var result = new Deconstruction(targetVis.svg, groups);
+    result.svg = result.getMarkBoundingBox(targetVis.svg);
     return result;
 };
 
@@ -366,6 +367,9 @@ var transferStyle = function (sourceGroup, targetGroup) {
     // them if they've already been dealt with.
     var sourceProcessedMappings = [];
     var targetProcessedMappings = [];
+
+    //var sourceMappedAttrs = _.uniq(_.map(sourceGroup.mappings, function(mapping) { return mapping.attr; }));
+    //var targetMappedAttrs = _.uniq(_.map(targetGroup.mappings, function(mapping) { return mapping.attr; }));
 
     while (sourceProcessedMappings.length < sourceGroup.mappings.length) {
         var sourceNextMappings = getMinRanked(sourceGroup.mappings, sourceProcessedMappings);
@@ -886,7 +890,7 @@ var getTransferSubset = function(deconstruction, transfers) {
 };
 
 var main = function () {
-    _.each(transferTests, function (test, testName) {
+    _.each(transferTests, function (test) {
         //var sourceDecon = loadDeconstructedVis(test.source_file);
         //var targetDecon = loadDeconstructedVis(test.target_file);
 

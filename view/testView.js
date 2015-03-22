@@ -35,9 +35,9 @@ $(function () {
 var loadResults = function (value) {
     $("#transfers").empty();
     $.getJSON("data/" + value, function (tests) {
-        _.each(tests, function (test, testName) {
+        _.each(tests, function (test, i) {
             var testDiv = $('<div class="resultRow"></div>');
-            var header = $("<h2>" + replaceAll(testName, '_', ' ') + "</h2>");
+            var header = $("<h2>Test " + i + "</h2>");
 
             testDiv.append(header);
             $("#transfers").append(testDiv);
