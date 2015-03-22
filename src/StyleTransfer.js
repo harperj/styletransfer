@@ -254,20 +254,6 @@ var modifyAxisWithMapping = function(targetVis, newMapping, axis) {
 };
 
 var extendAxisGroups = function(axis, mapping, sourceVis, targetVis) {
-    var interval = mapping.params.interval;
-    var length = mapping.params.interval * mapping.dataRange.length;
-
-    var axisLineGroup = clone(targetVis.getGroupByName(axis.axis + '-line'));
-    var oldMinVal = _.min(axisLineGroup.attrs[axis.axis[0] + 'Position']);
-    var oldMaxVal = _.max(axisLineGroup.data['axis']);
-    var newMaxVal = oldMinVal + length;
-    for (var i = 0; i < axisLineGroup.attrs[axis.axis[0] + 'Position'].length; ++i) {
-        if (axisLineGroup.data['axis'][i] === oldMaxVal) {
-            axisLineGroup.data['axis'][i] = newMaxVal;
-        }
-    }
-    axisLineGroup.updateAttrsFromMappings();
-
     var axisTickGroup = clone(targetVis.getGroupByName(axis.axis + '-ticks'));
     axisTickGroup = extendTicks(axisTickGroup, axis, mapping, targetVis);
 
@@ -280,6 +266,21 @@ var extendAxisGroups = function(axis, mapping, sourceVis, targetVis) {
     //    axisLabelGroup.nodeAttrs[i].text = mapping.dataRange[i];
     //}
 
+    var axisLineGroup = clone(targetVis.getGroupByName(axis.axis + '-line'));
+
+    var interval = mapping.params.interval;
+    var length = mapping.params.interval * (mapping.dataRange.length - 1);
+    length += mapping.params.interval / 4;
+
+    var oldMinVal = _.min(axisLineGroup.attrs[axis.axis[0] + 'Position']);
+    var oldMaxVal = _.max(axisLineGroup.data['axis']);
+    var newMaxVal = oldMinVal + length;
+    for (var i = 0; i < axisLineGroup.attrs[axis.axis[0] + 'Position'].length; ++i) {
+        if (axisLineGroup.data['axis'][i] === oldMaxVal) {
+            axisLineGroup.data['axis'][i] = newMaxVal;
+        }
+    }
+    axisLineGroup.updateAttrsFromMappings();
 
     return [axisLineGroup, axisTickGroup, axisLabelGroup];
 };
@@ -289,10 +290,10 @@ var extendTicks = function(tickGroup, axis, mapping, targetVis) {
     var maxDeconID = _.max(tickGroup.ids);
     var deconInterval = mapping.params.dataInterval;
 
-    while (tickGroup.ids.length >= tickValues.length) {
+    while (tickGroup.ids.length > tickValues.length) {
         tickGroup.removeLastDataRow();
     }
-    while (tickGroup.ids.length <= tickValues.length) {
+    while (tickGroup.ids.length < tickValues.length) {
         tickGroup.addData({
             string: tickValues[0],
             deconID: maxDeconID + deconInterval
@@ -314,10 +315,10 @@ var extendLabels = function(labelGroup, axis, mapping, targetVis) {
     var maxDeconID = _.max(labelGroup.ids);
     var deconInterval = labelGroup.ids[1]-labelGroup.ids[0];
 
-    while (labelGroup.ids.length >= labelValues.length) {
+    while (labelGroup.ids.length > labelValues.length) {
         labelGroup.removeLastDataRow();
     }
-    while (labelGroup.ids.length <= labelValues.length) {
+    while (labelGroup.ids.length < labelValues.length) {
         labelGroup.addData({
             string: labelValues[0],
             deconID: maxDeconID + deconInterval
