@@ -563,10 +563,10 @@ var getScale = function(vis, mapping) {
         attrRange = mapping.attrRange;
         dataRange = mapping.dataRange;
 
-        if (attrRange[0] > attrRange[1]) {
-            attrRange = [mapping.attrRange[1], mapping.attrRange[0]];
-            dataRange = [mapping.dataRange[1], mapping.dataRange[0]];
-        }
+        //if (attrRange[0] > attrRange[1]) {
+        //    attrRange = [mapping.attrRange[1], mapping.attrRange[0]];
+        //    dataRange = [mapping.dataRange[1], mapping.dataRange[0]];
+        //}
     }
     else if (mapping.type === "linear") {
         var bbox = vis.getMarkBoundingBox();
