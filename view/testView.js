@@ -112,30 +112,35 @@ var renderVis = function (decon, svgNode) {
 };
 
 var fixTextElements = function(group, svgNode) {
-    var textElementIDs = _.filter(group.ids, function(id) {
-        return group.attrs['shape'][id] === "text";
-    });
+    var textElementInds = [];
+    for (var k = 0; k < group.ids.length; ++k) {
+        if (group.attrs['shape'][k] === "text") {
+            textElementInds.push(k);
+        }
+    }
 
     var widthScaleFactor = 1;
     var heightScaleFactor = 1;
 
-    if (textElementIDs.length > 0) {
-        var maxTextWidth = _.max(textElementIDs, function(id) {
-            return group.attrs['width'][id];
+    if (textElementInds.length > 0) {
+        var textWidths = _.map(textElementInds, function(ind) {
+            return group.attrs['width'][ind];
         });
-        var maxTextHeight = _.max(textElementIDs, function(id) {
-            return group.attrs['height'][id];
+        var textHeights = _.map(textElementInds, function(ind) {
+            return group.attrs['height'][ind];
         });
+        var maxTextWidth = _.max(textWidths);
+        var maxTextHeight = _.max(textHeights);
 
-        for (var i = 0; i < textElementIDs.length; ++i) {
+        for (var i = 0; i < textElementInds.length; ++i) {
             var newNode = getNewNodeFromShape('text');
             var attrs = {};
             _.each(_.keys(group.attrs), function(attrName) {
-                attrs[attrName] = group.attrs[attrName][textElementIDs[i]];
+                attrs[attrName] = group.attrs[attrName][textElementInds[i]];
             });
 
             svgNode.appendChild(newNode);
-            transferNonSpatialAttrs(newNode, group.nodeAttrs[textElementIDs[i]], attrs);
+            transferNonSpatialAttrs(newNode, group.nodeAttrs[textElementInds[i]], attrs);
             var bbox = transformedBoundingBox(newNode);
             $(newNode).remove();
             if (bbox.width > maxTextWidth) {
@@ -151,6 +156,13 @@ var fixTextElements = function(group, svgNode) {
                 }
             }
         }
+    }
+
+    if (widthScaleFactor < heightScaleFactor) {
+        heightScaleFactor = widthScaleFactor;
+    }
+    else {
+        widthScaleFactor = heightScaleFactor;
     }
 
     group.textScale = {
