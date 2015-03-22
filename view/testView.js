@@ -72,7 +72,7 @@ var createVisContainer = function (container, decon) {
 
     var svg = d3.select(container)
         .append("svg")
-        .attr("width", "90%")
+        .attr("height", "500px")
         .attr("viewBox", "0 0 " + svgWidth + " " + svgHeight)
         .attr("preserveAspectRatio", "xMidYMid")
         .node();
@@ -97,6 +97,8 @@ var renderVis = function (decon, svgNode) {
             }
         }
         else {
+            vis = fixTextElements(vis, svgNode);
+
             for (var i = 0; i < vis.ids.length; ++i) {
                 var attrs = getAttrsFromInd(vis, i);
                 var data = getDataFromInd(vis, i);
@@ -107,6 +109,55 @@ var renderVis = function (decon, svgNode) {
             }
         }
     }
+};
+
+var fixTextElements = function(group, svgNode) {
+    var textElementIDs = _.filter(group.ids, function(id) {
+        return group.attrs['shape'][id] === "text";
+    });
+
+    var widthScaleFactor = 1;
+    var heightScaleFactor = 1;
+
+    if (textElementIDs.length > 0) {
+        var maxTextWidth = _.max(textElementIDs, function(id) {
+            return group.attrs['width'][id];
+        });
+        var maxTextHeight = _.max(textElementIDs, function(id) {
+            return group.attrs['height'][id];
+        });
+
+        for (var i = 0; i < textElementIDs.length; ++i) {
+            var newNode = getNewNodeFromShape('text');
+            var attrs = {};
+            _.each(_.keys(group.attrs), function(attrName) {
+                attrs[attrName] = group.attrs[attrName][textElementIDs[i]];
+            });
+
+            svgNode.appendChild(newNode);
+            transferNonSpatialAttrs(newNode, group.nodeAttrs[textElementIDs[i]], attrs);
+            var bbox = transformedBoundingBox(newNode);
+            $(newNode).remove();
+            if (bbox.width > maxTextWidth) {
+                var elWidthScale =  maxTextWidth / bbox.width;
+                if (elWidthScale < widthScaleFactor) {
+                    widthScaleFactor = elWidthScale;
+                }
+            }
+            if (bbox.height > maxTextHeight) {
+                var elHeightScale = maxTextHeight / bbox.height;
+                if (elHeightScale < heightScaleFactor) {
+                    heightScaleFactor = elHeightScale;
+                }
+            }
+        }
+    }
+
+    group.textScale = {
+        width: widthScaleFactor,
+        height: heightScaleFactor
+    };
+    return group;
 };
 
 var getDeconToIndMapping = function (data) {
@@ -198,7 +249,7 @@ var transferNonSpatialAttrs = function (newNode, nodeAttrs, attrs) {
     d3.select(newNode).style("vector-effect", "non-scaling-stroke");
 };
 
-var transferSpatialAttrs = function (newNode, svg, attrs) {
+var transferSpatialAttrs = function (newNode, svg, attrs, group) {
     var newNodeBoundingBox = transformedBoundingBox(newNode);
     var newScale = svg.createSVGTransform();
     var widthScale = attrs['width'] / newNodeBoundingBox.width;
@@ -210,14 +261,16 @@ var transferSpatialAttrs = function (newNode, svg, attrs) {
     //    heightScale = 1;
     //}
     if (attrs['shape'] === "text") {
-        widthScaleDiff = 1 - widthScale;
-        heightScaleDiff = 1 - heightScale;
-        if (widthScaleDiff > heightScaleDiff) {
-            heightScale = widthScale;
-        }
-        else {
-            widthScale = heightScale;
-        }
+        widthScale = group.textScale.width;
+        heightScale = group.textScale.height;
+        //widthScaleDiff = 1 - widthScale;
+        //heightScaleDiff = 1 - heightScale;
+        //if (widthScaleDiff > heightScaleDiff) {
+        //    heightScale = widthScale;
+        //}
+        //else {
+        //    widthScale = heightScale;
+        //}
     }
 
     if (isNaN(widthScale)) {
@@ -299,14 +352,14 @@ var createLine = function (data, attrs, svg) {
     return newNode;
 };
 
-function drawNode(attrs, data, nodeAttrs, schema, svg) {
+function drawNode(attrs, data, nodeAttrs, group, svg) {
     var newNode = getNewNodeFromShape(attrs['shape']);
 
     transferNonSpatialAttrs(newNode, nodeAttrs, attrs);
 
     svg.appendChild(newNode);
 
-    transferSpatialAttrs(newNode, svg, attrs);
+    transferSpatialAttrs(newNode, svg, attrs, group);
 
     newNode.__data__ = data;
     newNode.__attrs__ = attrs;

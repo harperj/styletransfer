@@ -30,7 +30,7 @@ var getSemiologyRanking = function (mapping) {
     }
 };
 
-var getMinRanked = function (mappingArray, skipList, requireLinear) {
+var getMinRanked = function (mappingArray, skipList, requireLinear, skipListType) {
     if (!skipList) {
         skipList = [];
     }
@@ -42,11 +42,19 @@ var getMinRanked = function (mappingArray, skipList, requireLinear) {
 
         var skipNotLinear = requireLinear && mapping.type !== "linear";
 
-        if (rank < min && !_.contains(skipList, mapping) && !skipNotLinear) {
+        var skipListContained = false;
+        if (skipListType === "data") {
+            skipListContained = _.includes(skipList, mapping.data[0]);
+        }
+        else {
+            skipListContained = _.includes(skipList, mapping.attr)
+        }
+
+        if (rank < min && !skipListContained && !skipNotLinear) {
             min = rank;
             minMappings = [mapping];
         }
-        else if (rank === min && !_.contains(skipList, mapping)) {
+        else if (rank === min && !skipListContained) {
             minMappings.push(mapping);
         }
     });
@@ -346,7 +354,12 @@ var applyAxisRanges = function(vis) {
             else if (yAxis && mapping.attr === "yPosition" && group.name !== "xaxis-line") {
                 mapping.dataRange = yAxis.scaleDomain;
                 //mapping.attrRange = yAxis.scaleRange;
-                mapping.attrRange = [mapping.map(mapping.dataRange[0]), mapping.map(mapping.dataRange[1])];
+                if (mapping.dataRange.length === 2 && !isNaN(+mapping.dataRange[0]) && !isNaN(+mapping.dataRange[1])) {
+                    mapping.attrRange = [mapping.map(mapping.dataRange[0]), mapping.map(mapping.dataRange[1])];
+                }
+                else {
+                    mapping.attrRange = yAxis.scaleRange;
+                }
             }
         }
     }
@@ -365,15 +378,15 @@ var transferStyle = function (sourceGroup, targetGroup) {
 
     // These arrays keep track of already processed mappings so we don't try to transfer
     // them if they've already been dealt with.
-    var sourceProcessedMappings = [];
-    var targetProcessedMappings = [];
+    var sourceProcessedData = [];
+    var targetProcessedAttrs= [];
 
-    //var sourceMappedAttrs = _.uniq(_.map(sourceGroup.mappings, function(mapping) { return mapping.attr; }));
-    //var targetMappedAttrs = _.uniq(_.map(targetGroup.mappings, function(mapping) { return mapping.attr; }));
+    var sourceMappedData = _.uniq(_.map(sourceGroup.mappings, function(mapping) { return mapping.data[0]; }));
+    var targetMappedAttrs = _.uniq(_.map(targetGroup.mappings, function(mapping) { return mapping.attr; }));
 
-    while (sourceProcessedMappings.length < sourceGroup.mappings.length) {
-        var sourceNextMappings = getMinRanked(sourceGroup.mappings, sourceProcessedMappings);
-        var targetNextMappings = getMinRanked(targetGroup.mappings, targetProcessedMappings);
+    while (sourceProcessedData.length < sourceMappedData.length) {
+        var sourceNextMappings = getMinRanked(sourceGroup.mappings, sourceProcessedData, false, "data");
+        var targetNextMappings = getMinRanked(targetGroup.mappings, targetProcessedAttrs, false, "attr");
 
         // Since we're basing the loop on source mappings, make sure to still break if we run out of target mappings
         if (targetNextMappings.length === 0) {
@@ -382,7 +395,7 @@ var transferStyle = function (sourceGroup, targetGroup) {
 
         // For each of the highest ranked source mappings, we'll find its best match on the highest ranked target mappings.
         _.each(sourceNextMappings, function(sourceMapping) {
-            targetNextMappings = getMinRanked(targetGroup.mappings, targetProcessedMappings);
+            targetNextMappings = getMinRanked(targetGroup.mappings, targetProcessedAttrs, false, "attr");
             if (targetNextMappings.length === 0) {
                 return;
             }
@@ -392,12 +405,12 @@ var transferStyle = function (sourceGroup, targetGroup) {
             if (newMapping)
                 newVis.mappings.push(newMapping);
 
-            sourceProcessedMappings.push(sourceMapping);
-            targetProcessedMappings.push(targetMapping);
+            sourceProcessedData.push(sourceMapping.data[0]);
+            targetProcessedAttrs.push(targetMapping.attr);
 
             if (sourceMapping.type !== "nominal" && targetMapping.type !== "nominal") {
                 var propagated = propagateMappings(newMapping, sourceMapping, targetMapping,
-                    sourceProcessedMappings, targetProcessedMappings, sourceGroup, targetGroup);
+                    sourceProcessedData, targetProcessedAttrs, sourceGroup, targetGroup);
                 newVis.mappings = newVis.mappings.concat(propagated);
             }
         });
@@ -439,7 +452,8 @@ var transferStyle = function (sourceGroup, targetGroup) {
     //return newVis;
 };
 
-var propagateMappings = function (newMapping, sourceNextMapping, targetNextMapping, sourceProcessedMappings, targetProcessedMappings, sourceVis, targetVis) {
+var propagateMappings = function (newMapping, sourceNextMapping, targetNextMapping,
+                                  sourceProcessedData, targetProcessedAttrs, sourceVis, targetVis) {
     var propagatedMappings = [];
 
     // find other target mappings with the same data field
@@ -447,7 +461,7 @@ var propagateMappings = function (newMapping, sourceNextMapping, targetNextMappi
     _.each(targetVis.mappings, function (mapping) {
         if (mapping.data[0] === targetNextMapping.data[0]
             && mapping.type === "linear"
-            && !_.contains(targetProcessedMappings, mapping)) {
+            && !_.contains(targetProcessedAttrs, mapping.attr)) {
 
             sameDataMappings.push(mapping);
         }
@@ -458,15 +472,15 @@ var propagateMappings = function (newMapping, sourceNextMapping, targetNextMappi
         var newMappingCoeffs = propagateCoeffs(newMapping, rel);
         var newPropagatedMapping = new Mapping(sourceNextMapping.data, mapping.attr, "linear", {coeffs: newMappingCoeffs});
         propagatedMappings.push(newPropagatedMapping);
-        targetProcessedMappings.push(mapping);
+        targetProcessedAttrs.push(mapping.attr);
     });
 
     _.each(sourceVis.mappings, function (mapping) {
         if (mapping.data[0] === sourceNextMapping.data[0]
             && mapping.type === "linear"
-            && !_.contains(sourceProcessedMappings, mapping)) {
+            && !_.contains(sourceProcessedData, mapping.data[0])) {
 
-            sourceProcessedMappings.push(mapping);
+            sourceProcessedData.push(mapping.data[0]);
         }
     });
     return propagatedMappings;
@@ -607,12 +621,20 @@ var transferIntervalMapping = function (sourceMapping, targetMapping, sourceVis,
             dataInterval: sourceDataInterval
         };
         var mapping = new Mapping(sourceMapping.data, targetMapping.attr, 'linear', params);
-        mapping.dataRange = sourceMapping.dataRange;
-        if (targetMapping.attrRange)
-        mapping.attrRange = [
-            targetMapping.attrRange[0],
-            (targetMapping.attrRange[1]  / targetAttrVals.length) * sourceAttrVals.length
-        ];
+        if (sourceMapping.dataRange) {
+            mapping.dataRange = clone(sourceMapping.dataRange);
+        }
+        else {
+            mapping.dataRange = clone(sourceData);
+        }
+        //if (targetMapping.attrRange)
+        //mapping.attrRange = [
+        //    targetMapping.attrRange[0],
+        //    (targetMapping.attrRange[1]  / targetAttrVals.length) * sourceAttrVals.length
+        //];
+        mapping.attrRange = _.map(mapping.dataRange, function(dataItem, i) {
+            return params.attrMin + i * params.interval;
+        });
         return mapping;
     }
 };
