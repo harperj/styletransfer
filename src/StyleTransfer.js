@@ -213,25 +213,31 @@ var getAxis = function(vis, axis) {
 //    return axisGroups;
 //};
 //
-var modifyAxisWithMapping = function(targetVis, mapping, axis) {
+var modifyAxisWithMapping = function(targetVis, newMapping, axis) {
+    var range = newMapping.axisAttrRange ? newMapping.axisAttrRange : newMapping.attrRange;
+    var domain = newMapping.axisDataRange ? newMapping.axisDataRange : newMapping.dataRange;
+    var targetAxisMapping = new Mapping("mappingData", "mappingAttr", "linear", {}, domain, range);
+    targetAxisMapping.params.coeffs = getLinearCoeffs([[domain[0], range[0]], [domain[1], range[1]]]);
+
+
     var axisLineGroup = clone(targetVis.getGroupByName(axis + 'axis-line'));
-    axisLineGroup.getMappingForAttr(axis + "Position").params.coeffs = clone(mapping.params.coeffs);
+    axisLineGroup.getMappingForAttr(axis + "Position").params.coeffs = clone(targetAxisMapping.params.coeffs);
     for (var i = 0; i < axisLineGroup.attrs[axis + 'Position'].length; ++i) {
-        axisLineGroup.data['domain'][i] = mapping.invert(axisLineGroup.attrs[axis + 'Position'][i]);
+        axisLineGroup.data['domain'][i] = targetAxisMapping.invert(axisLineGroup.attrs[axis + 'Position'][i]);
     }
     axisLineGroup.updateAttrsFromMappings();
 
     var axisTickGroup = clone(targetVis.getGroupByName(axis + 'axis-ticks'));
-    axisTickGroup.getMappingForAttr(axis + "Position").params.coeffs = clone(mapping.params.coeffs);
+    axisTickGroup.getMappingForAttr(axis + "Position").params.coeffs = clone(targetAxisMapping.params.coeffs);
     for (i = 0; i < axisTickGroup.attrs[axis + 'Position'].length; ++i) {
-        axisTickGroup.data['number'][i] = mapping.invert(axisTickGroup.attrs[axis + 'Position'][i]);
+        axisTickGroup.data['number'][i] = targetAxisMapping.invert(axisTickGroup.attrs[axis + 'Position'][i]);
     }
     axisTickGroup.updateAttrsFromMappings();
 
     var axisLabelGroup = clone(targetVis.getGroupByName(axis + 'axis-labels'));
-    axisLabelGroup.getMappingForAttr(axis + "Position").params.coeffs = clone(mapping.params.coeffs);
+    axisLabelGroup.getMappingForAttr(axis + "Position").params.coeffs = clone(targetAxisMapping.params.coeffs);
     for (i = 0; i < axisLabelGroup.attrs[axis + 'Position'].length; ++i) {
-        axisLabelGroup.data['number'][i] = mapping.invert(axisLabelGroup.attrs[axis + 'Position'][i]);
+        axisLabelGroup.data['number'][i] = targetAxisMapping.invert(axisLabelGroup.attrs[axis + 'Position'][i]);
     }
 
     for (i = 0; i < axisLabelGroup.attrs[axis + 'Position'].length; ++i) {
@@ -345,20 +351,30 @@ var applyAxisRanges = function(vis) {
             if (xAxis && mapping.attr === "xPosition" && group.name !== "yaxis-line") {
                 //TODO update to only set this as range if subset
                 mapping.dataRange = xAxis.scaleDomain;
-                //mapping.attrRange = xAxis.scaleRange;
-                if (typeof(mapping.dataRange[0]) === "number" && mapping.dataRange.length === 2)
+                //mapping.attrRange = yAxis.scaleRange;
+                if (mapping.dataRange.length === 2 && !isNaN(+mapping.dataRange[0]) && !isNaN(+mapping.dataRange[1])) {
                     mapping.attrRange = [mapping.map(mapping.dataRange[0]), mapping.map(mapping.dataRange[1])];
-                else
+                    mapping.axisAttrRange = xAxis.scaleRange;
+                    mapping.axisDataRange = xAxis.scaleDomain;
+                }
+                else {
                     mapping.attrRange = xAxis.scaleRange;
+                    mapping.axisAttrRange = xAxis.scaleRange;
+                    mapping.axisDataRange = xAxis.scaleDomain;
+                }
             }
             else if (yAxis && mapping.attr === "yPosition" && group.name !== "xaxis-line") {
                 mapping.dataRange = yAxis.scaleDomain;
                 //mapping.attrRange = yAxis.scaleRange;
                 if (mapping.dataRange.length === 2 && !isNaN(+mapping.dataRange[0]) && !isNaN(+mapping.dataRange[1])) {
                     mapping.attrRange = [mapping.map(mapping.dataRange[0]), mapping.map(mapping.dataRange[1])];
+                    mapping.axisAttrRange = yAxis.scaleRange;
+                    mapping.axisDataRange = yAxis.scaleDomain;
                 }
                 else {
                     mapping.attrRange = yAxis.scaleRange;
+                    mapping.axisAttrRange = yAxis.scaleRange;
+                    mapping.axisDataRange = yAxis.scaleDomain;
                 }
             }
         }
@@ -707,10 +723,14 @@ var transferMappingLinear = function (sourceMapping, targetMapping, sourceScale,
         [sourceScale.dataRange[1], targetScale.attrRange[1]]
     ]);
 
+    newMapping = Mapping.fromJSON(newMapping);
+
     newMapping.dataRange = sourceMapping.dataRange;
     newMapping.attrRange = targetMapping.attrRange;
+    newMapping.axisAttrRange = targetMapping.axisAttrRange;
+    newMapping.axisDataRange = targetMapping.axisDataRange;
 
-    return Mapping.fromJSON(newMapping);
+    return newMapping;
 };
 
 var findRelationship = function (mapping1, mapping2) {
