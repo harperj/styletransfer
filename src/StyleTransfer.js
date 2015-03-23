@@ -304,7 +304,7 @@ var extendAxisGroups = function(axis, mapping, sourceVis, targetVis) {
 var extendTicks = function(tickGroup, axis, mapping, targetVis) {
     var tickValues = mapping.dataRange;
     var maxDeconID = _.max(tickGroup.ids);
-    var deconInterval = mapping.params.dataInterval;
+    var deconInterval = tickGroup.ids[1]-tickGroup.ids[0];
 
     while (tickGroup.ids.length > tickValues.length) {
         tickGroup.removeLastDataRow();
@@ -319,6 +319,8 @@ var extendTicks = function(tickGroup, axis, mapping, targetVis) {
 
     for (var i = 0; i < tickGroup.ids.length; ++i) {
         tickGroup.data["string"][i] = tickValues[i];
+        var axisAttr = axis.axis[0] + "Position";
+        tickGroup.attrs[axisAttr][i] = tickGroup.getMappingForAttr(axisAttr).map(tickGroup.ids[i]);
     }
 
     tickGroup.updateAttrsFromMappings();
