@@ -132,7 +132,7 @@ var transferVisStyle = function(sourceVis, targetVis) {
             if (mappingWithinAxis(mapping, axis) && !axisDrawn) {
                 axisDrawn = true;
                 console.log("found axis overlap");
-                var axisGroups = modifyAxisWithMapping(targetVis, mapping, mapping.attr === "xPosition" ? "x" : "y");
+                var axisGroups = modifyAxisWithMapping(targetVis, mapping, mapping.attr === "xPosition" ? "x" : "y", axis, newGroup);
                 groups = groups.concat(axisGroups);
             }
             else if (mappingExtendedAxis(mapping, axis, targetVis) && !axisDrawn) {
@@ -213,28 +213,44 @@ var getAxis = function(vis, axis) {
 //    return axisGroups;
 //};
 //
-var modifyAxisWithMapping = function(targetVis, newMapping, axis) {
+var modifyAxisWithMapping = function(targetVis, newMapping, axis, axisObj, newGroup) {
     var range = newMapping.axisAttrRange ? newMapping.axisAttrRange : newMapping.attrRange;
     var domain = newMapping.axisDataRange ? newMapping.axisDataRange : newMapping.dataRange;
     var targetAxisMapping = new Mapping("mappingData", "mappingAttr", "linear", {}, domain, range);
     targetAxisMapping.params.coeffs = getLinearCoeffs([[domain[0], range[0]], [domain[1], range[1]]]);
-
-
     var axisLineGroup = clone(targetVis.getGroupByName(axis + 'axis-line'));
+    var axisTickGroup = clone(targetVis.getGroupByName(axis + 'axis-ticks'));
+    var axisLabelGroup = clone(targetVis.getGroupByName(axis + 'axis-labels'));
+
+
+    if (axisObj.orient === "bottom") {
+        var newGroupBBox = newGroup.getMarkBoundingBox();
+        var newGroupMax = newGroupBBox.y + newGroupBBox.height;
+        var axisLineBBox = axisLineGroup.getMarkBoundingBox();
+        var axisLineMin = axisLineBBox.y;
+        var targetGroupBBox = newMapping.targetGroup.getMarkBoundingBox();
+        var padding = axisLineMin - (targetGroupBBox.y + targetGroupBBox.height);
+
+        if (newGroupMax > axisLineMin) {
+            axisTickGroup.attrs['yPosition'] = _.map(axisTickGroup.attrs['yPosition'], function(yPos) {return yPos + (newGroupMax - axisLineMin) + padding;});
+            axisLabelGroup.attrs['yPosition'] = _.map(axisLabelGroup.attrs['yPosition'], function(yPos) {return yPos + (newGroupMax - axisLineMin) + padding;});
+            axisLineGroup.attrs['yPosition'] = _.map(axisLineGroup.attrs['yPosition'], function(yPos) {return yPos + (newGroupMax - axisLineMin) + padding;});
+            axisLineGroup.getMapping('tick', 'yPosition').params.coeffs[1] += (newGroupMax - axisLineMin) + padding;
+        }
+    }
+
     axisLineGroup.getMappingForAttr(axis + "Position").params.coeffs = clone(targetAxisMapping.params.coeffs);
     for (var i = 0; i < axisLineGroup.attrs[axis + 'Position'].length; ++i) {
         axisLineGroup.data['domain'][i] = targetAxisMapping.invert(axisLineGroup.attrs[axis + 'Position'][i]);
     }
     axisLineGroup.updateAttrsFromMappings();
 
-    var axisTickGroup = clone(targetVis.getGroupByName(axis + 'axis-ticks'));
     axisTickGroup.getMappingForAttr(axis + "Position").params.coeffs = clone(targetAxisMapping.params.coeffs);
     for (i = 0; i < axisTickGroup.attrs[axis + 'Position'].length; ++i) {
         axisTickGroup.data['number'][i] = targetAxisMapping.invert(axisTickGroup.attrs[axis + 'Position'][i]);
     }
     axisTickGroup.updateAttrsFromMappings();
 
-    var axisLabelGroup = clone(targetVis.getGroupByName(axis + 'axis-labels'));
     axisLabelGroup.getMappingForAttr(axis + "Position").params.coeffs = clone(targetAxisMapping.params.coeffs);
     for (i = 0; i < axisLabelGroup.attrs[axis + 'Position'].length; ++i) {
         axisLabelGroup.data['number'][i] = targetAxisMapping.invert(axisLabelGroup.attrs[axis + 'Position'][i]);
@@ -419,6 +435,9 @@ var transferStyle = function (sourceGroup, targetGroup) {
 
             var targetMapping = getBestMatchingMapping(sourceMapping, targetNextMappings);
             var newMapping = transferMapping(sourceMapping, targetMapping, sourceGroup, targetGroup);
+            newMapping.sourceGroup = sourceGroup;
+            newMapping.targetGroup = targetGroup;
+
             if (newMapping)
                 newVis.mappings.push(newMapping);
 
