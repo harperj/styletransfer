@@ -718,18 +718,37 @@ var transferMappingLinear = function (sourceMapping, targetMapping, sourceScale,
         params: {}
     };
 
+    if (sourceScale.dataRange[0] > sourceScale.dataRange[1]) {
+        sourceScale.attrRange = [sourceScale.attrRange[1], sourceScale.attrRange[0]];
+        sourceScale.dataRange = [sourceScale.dataRange[1], sourceScale.dataRange[0]];
+        sourceMapping.axisAttrRange = [sourceMapping.axisAttrRange[1], sourceMapping.axisAttrRange[0]];
+        sourceMapping.axisDataRange = [sourceMapping.axisDataRange[1], sourceMapping.axisDataRange[0]];
+    }
+    if (targetScale.dataRange[0] > targetScale.dataRange[1]) {
+        targetScale.attrRange = [targetScale.attrRange[1], targetScale.attrRange[0]];
+        targetScale.dataRange = [targetScale.dataRange[1], targetScale.dataRange[0]];
+        targetMapping.axisAttrRange = [targetMapping.axisAttrRange[1], targetMapping.axisAttrRange[0]];
+        targetMapping.axisDataRange = [targetMapping.axisDataRange[1], targetMapping.axisDataRange[0]];
+    }
+
     //var sourceMap = new Mapping(sourceMapping.data, sourceMapping.attr, sourceMapping.type, sourceMapping.params);
     newMapping.params.coeffs = getLinearCoeffs([
         [sourceScale.dataRange[0], targetScale.attrRange[0]],
         [sourceScale.dataRange[1], targetScale.attrRange[1]]
     ]);
-
     newMapping = Mapping.fromJSON(newMapping);
-
     newMapping.dataRange = sourceMapping.dataRange;
     newMapping.attrRange = targetMapping.attrRange;
+
+    var newAxisMapping = new Mapping("data", "attr", "linear", {});
+    newAxisMapping.params.coeffs = getLinearCoeffs([
+        [sourceMapping.axisDataRange[0], targetMapping.axisAttrRange[0]],
+        [sourceMapping.axisDataRange[1], targetMapping.axisAttrRange[1]]
+    ]);
+
     newMapping.axisAttrRange = targetMapping.axisAttrRange;
-    newMapping.axisDataRange = targetMapping.axisDataRange;
+    newMapping.axisDataRange = [newAxisMapping.invert(targetMapping.axisAttrRange[0]),
+                                newAxisMapping.invert(targetMapping.axisAttrRange[1])];
 
     return newMapping;
 };
