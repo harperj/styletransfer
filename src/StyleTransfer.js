@@ -56,37 +56,6 @@ var getMinRanked = function (mappingArray, skipList, requireLinear, skipListType
     return minMappings;
 };
 
-var getBestMatchingMapping = function(sourceMapping, targetMappings) {
-    var sameTypeMappings = _.filter(targetMappings, function(targetMapping) {
-        return targetMapping.type === sourceMapping.type;
-    });
-
-    if (sameTypeMappings.length === 1) {
-        return sameTypeMappings[0];
-    }
-    else {
-        var sameSortednessMappings = _.filter(sameTypeMappings, function(mapping) {
-            if (sourceMapping.data[0] === "deconID") {
-                return mapping.data[0] === "deconID";
-            }
-            return mapping.data[0] !== "deconID";
-        });
-
-        if (sameSortednessMappings.length === 1) {
-            return sameSortednessMappings[0];
-        }
-        else {
-            var sameAttrMappings = _.filter(sameTypeMappings, function(mapping) {
-                return mapping.attr === sourceMapping.attr;
-            });
-            if (sameAttrMappings.length > 0) {
-                return sameAttrMappings[0];
-            }
-        }
-    }
-    return targetMappings[0];
-};
-
 function arraysEqual(a, b) {
     if (a === b) return true;
     if (a == null || b == null) return false;
@@ -451,72 +420,6 @@ var transferStyle = function (sourceGroup, targetGroup) {
     transferUnmapped(targetGroup, newVis);
     newVis.updateAttrsFromMappings();
     return newVis;
-
-    //
-    //while (sourceProcessedMappings.length < sourceGroup.mappings.length) {
-    //    var sourceNextMapping = getMinRanked(sourceGroup.mappings, sourceProcessedMappings);
-    //    var targetNextMapping;
-    //
-    //    if (sourceNextMapping.type === "linear") {
-    //        targetNextMapping = getMinRanked(targetGroup.mappings, targetProcessedMappings, true);
-    //    }
-    //    else {
-    //        targetNextMapping = getMinRanked(targetGroup.mappings, targetProcessedMappings);
-    //    }
-    //
-    //    if (!targetNextMapping) {
-    //        break;
-    //    }
-    //
-    //    var newMapping = transferMapping(sourceNextMapping, targetNextMapping, sourceGroup, targetGroup);
-    //    if (newMapping)
-    //        newVis.mappings.push(newMapping);
-    //
-    //    sourceProcessedMappings.push(sourceNextMapping);
-    //    targetProcessedMappings.push(targetNextMapping);
-    //
-    //    if (sourceNextMapping.type !== "nominal" && targetNextMapping.type !== "nominal") {
-    //        var propagated = propagateMappings(newMapping, sourceNextMapping, targetNextMapping, sourceProcessedMappings, targetProcessedMappings, sourceGroup, targetGroup);
-    //        newVis.mappings = newVis.mappings.concat(propagated);
-    //    }
-    //}
-    //transferUnmapped(targetGroup, newVis);
-    //
-    //return newVis;
-};
-
-var propagateMappings = function (newMapping, sourceNextMapping, targetNextMapping,
-                                  sourceProcessedData, targetProcessedAttrs, sourceVis, targetVis) {
-    var propagatedMappings = [];
-
-    // find other target mappings with the same data field
-    var sameDataMappings = [];
-    _.each(targetVis.mappings, function (mapping) {
-        if (mapping.data[0] === targetNextMapping.data[0]
-            && mapping.type === "linear"
-            && !_.contains(targetProcessedAttrs, mapping.attr)) {
-
-            sameDataMappings.push(mapping);
-        }
-    });
-
-    _.each(sameDataMappings, function (mapping) {
-        var rel = findRelationship(targetNextMapping, mapping);
-        var newMappingCoeffs = propagateCoeffs(newMapping, rel);
-        var newPropagatedMapping = new Mapping(sourceNextMapping.data, mapping.attr, "linear", {coeffs: newMappingCoeffs});
-        propagatedMappings.push(newPropagatedMapping);
-        targetProcessedAttrs.push(mapping.attr);
-    });
-
-    _.each(sourceVis.mappings, function (mapping) {
-        if (mapping.data[0] === sourceNextMapping.data[0]
-            && mapping.type === "linear"
-            && !_.contains(sourceProcessedData, mapping.data[0])) {
-
-            sourceProcessedData.push(mapping.data[0]);
-        }
-    });
-    return propagatedMappings;
 };
 
 var getNonDerivedMappings = function(mappingList) {
@@ -531,42 +434,248 @@ var getNonDerivedMappings = function(mappingList) {
     return nonDerived;
 };
 
-var transferMapping = function (sourceMapping, targetMapping, sourceVis, targetVis) {
-    var sourceNonDerived = getNonDerivedMappings(sourceVis.getMappingsForAttr(sourceMapping.attr));
-    var targetNonDerived = getNonDerivedMappings(targetVis.getMappingsForAttr(targetMapping.attr));
-    if (sourceMapping.data[0] === "deconID") {
-        sourceMapping = sourceNonDerived.length > 0 ? sourceNonDerived[0] : sourceMapping;
-    }
-    if (targetMapping.data[0] === "deconID") {
-        targetMapping = targetNonDerived.length > 0 ? targetNonDerived[0] : targetMapping;
-    }
+var getNonAxisGroups = function(decon) {
+    return _.filter(decon.groups, function(group) {
+        return !group.axis;
+    });
+};
 
+var getRankedDataFields = function(sourceDecon) {
+    var nonAxisGroups = getNonAxisGroups(sourceDecon);
+    var sourceMappings = _.map(nonAxisGroups, function(group) {
+        return _.map(group.mappings, function(mapping) {
+            mapping.group = group;
+            return mapping;
+        });
+    });
 
-    var sourceScale = getScale(sourceVis, sourceMapping);
-    var targetScale = getScale(targetVis, targetMapping);
-    if (sourceMapping.type === "linear" && targetMapping.type == "linear") {
-        // If enabled, we'll transfer layouts with regular intervals by hacking deconID mappings
-        if (config.regular_interval_layout) {
-            if(sourceNonDerived.length == 0 && targetNonDerived.length == 0) {
-                var newMapping = transferIntervalMapping(sourceMapping, targetMapping, sourceVis, targetVis);
-                if (newMapping) {
-                    return newMapping;
-                }
-            }
+    var mappingsByDataField = _.groupBy(_.flatten(sourceMappings), function(mapping) {return mapping.type === "linear" ? mapping.data[0] : mapping.data; });
+    var dataFieldsRanked = _.map(mappingsByDataField, function(mappings, fieldName) {
+        var maxRankMapping = _.max(mappings, function(mapping) {
+            return getSemiologyRanking(mapping);
+        });
+
+        var dataRange;
+        if (maxRankMapping.type === "linear") {
+            dataRange = [maxRankMapping.invert(maxRankMapping.attrRange[0]), maxRankMapping.invert(maxRankMapping.attrRange[1])];
+        }
+        else {
+            dataRange = _.keys(maxRankMapping.params);
         }
 
-        return transferMappingLinear(sourceMapping, targetMapping, sourceScale, targetScale);
+        return {
+            fieldName: fieldName,
+            rank: getSemiologyRanking(maxRankMapping),
+            mappingType: maxRankMapping.type,
+            dataRange: dataRange,
+            group: maxRankMapping.group
+        };
+    });
+    dataFieldsRanked = _.sortBy(dataFieldsRanked, function(dataField) {
+        return dataField.rank;
+    });
+    return dataFieldsRanked;
+};
+
+var getRankedMappings = function(targetVis) {
+    var targetMappings = _.map(getNonAxisGroups(targetVis), function(group) {
+        return _.map(group.mappings, function(mapping) {
+            mapping.group = group;
+            return mapping;
+        });
+    });
+
+    targetMappings = _.flatten(targetMappings);
+
+    var rankedMappings = _.map(targetMappings, function(mapping) {
+        mapping.rank = getSemiologyRanking(mapping);
+        return mapping;
+    });
+    return _.sortBy(rankedMappings, function(mapping) { return mapping.rank; });
+};
+
+var getHighestRanked = function(rankedList, skipList) {
+    var remainingList = _.filter(rankedList, function(item) {
+        return _.contains(skipList, item);
+    });
+
+    var highestRank = _.min(remainingList, function(item) { return item.rank; });
+    var highestRanked = _.filter(remainingList, function(item) { return item.rank === highestRank;});
+    return highestRanked;
+};
+
+
+var getBestMatchingMapping = function(sourceField, targetMappings) {
+    var sameTypeMappings = _.filter(targetMappings, function(targetMapping) {
+        return targetMapping.type === sourceField.mappingType;
+    });
+
+    if (sameTypeMappings.length === 1) {
+        return sameTypeMappings[0];
     }
-    else if(sourceMapping.type === "nominal" && targetMapping.type == "nominal") {
-        var newMapping = transferMappingNominal(sourceMapping, targetMapping);
+    else if(sourceField.mappingType === "linear") {
+        return targetMappings[0];
+    }
+    else {
+        return null;
+    }
+};
+
+var transferMappings = function (sourceVis, targetVis) {
+    // Rank source data, target mappings.  Filter out axes and deconID mappings.
+    var rankedSourceData = getRankedDataFields(sourceVis);
+    rankedSourceData = _.filter(rankedSourceData, function(dataField) { return dataField.fieldName !== "deconID"; });
+    var rankedTargetMappings = getRankedMappings(targetVis);
+    rankedTargetMappings = _.filter(rankedTargetMappings, function(mapping) {
+        return mapping.type === "linear" ? mapping.data[0] !== "deconID" : mapping.data !== "deconID";
+    });
+
+
+    var transferredData = [];
+    var transferredMappings = [];
+
+    var newMappings = [];
+
+    for (var i = 0; i < rankedSourceData.length; ++i) {
+        var sourceDataField = rankedSourceData[i];
+        var targetMapping = getHighestRankedMatch(sourceDataField, rankedTargetMappings, transferredMappings);
+        if (targetMapping) {
+            var newMapping = transferMapping(sourceDataField, targetMapping);
+            transferredMappings.push(targetMapping);
+            newMappings.push(newMapping);
+            var propagated = propagateMappings(sourceDataField, targetMapping, rankedTargetMappings, transferredMappings);
+            newMappings = newMappings.concat(propagated);
+        }
+    }
+
+    var groupedNewMappings = groupMappingsByTargetGroup(newMappings);
+    var groups = [];
+    _.each(groupedNewMappings, function(mappingGroup) {
+        var newMarkGroup = clone(mappingGroup.targetGroup);
+        newMarkGroup.mappings = mappingGroup.mappings;
+
+        newMarkGroup.data = newMarkGroup.mappings[0].sourceGroup.data;
+
+        newMarkGroup.updateAttrsFromMappings();
+        groups.push(newMarkGroup);
+    });
+
+    return new Deconstruction(targetVis.svg, groups);
+};
+
+var groupMappingsByTargetGroup = function(mappings) {
+    var mappingGroups = [];
+
+    mappings.forEach(function(mapping) {
+        var foundGroup = false;
+        mappingGroups.forEach(function(mappingGroup) {
+            if (mappingGroup.targetGroup === mapping.targetGroup) {
+                mappingGroup.mappings.push(mapping);
+                foundGroup = true;
+            }
+        });
+
+        if (!foundGroup) {
+            mappingGroups.push({
+                targetGroup: mapping.targetGroup,
+                mappings: [mapping]
+            });
+        }
+    });
+
+    return mappingGroups;
+};
+
+var propagateMappings = function (newMapping, transferredMapping, allMappings, skipList) {
+    var propagatedMappings = [];
+
+    var remainingMappings = _.filter(allMappings, function(item) {
+        return _.contains(skipList, item);
+    });
+
+    // find other target mappings with the same data field
+    var sameDataMappings = _.filter(remainingMappings, function(mapping) {
+        var mappingData = mapping.type === "linear" ? mapping.data[0] : mapping.data;
+        var newMappingData = newMapping.type === "linear" ? newMapping.data[0] : newMapping.data;
+        return mappingData === newMappingData;
+    });
+    //_.each(remainingMappings, function (mapping) {
+    //    if (mapping.data[0] === targetNextMapping.data[0]
+    //        && mapping.type === "linear"
+    //        && !_.contains(targetProcessedAttrs, mapping.attr)) {
+    //
+    //        sameDataMappings.push(mapping);
+    //    }
+    //});
+
+    _.each(sameDataMappings, function (sameDataMapping) {
+        var rel = findRelationship(transferredMapping, sameDataMapping);
+        var propagatedMappingCoeffs = propagateCoeffs(newMapping, rel);
+        var newPropagatedMapping = new Mapping(newMapping.data, transferredMapping.attr, "linear", {coeffs: propagatedMappingCoeffs});
+        propagatedMappings.push(newPropagatedMapping);
+        skipList.push(transferredMapping.attr);
+    });
+
+    return propagatedMappings;
+};
+
+var getHighestRankedMatch = function(dataField, mappings, skipList) {
+    if (!skipList) {
+        skipList = [];
+    }
+
+    var remainingList = _.filter(mappings, function(item) {
+        return !_.contains(skipList, item);
+    });
+
+    var ranks = _.uniq(_.map(remainingList, function(mapping) {return mapping.rank;})).sort();
+
+    for (var i = 0; i < ranks.length; ++i) {
+        var thisRankMappings = _.filter(remainingList, function(item) { return item.rank === ranks[i]; });
+        var mapping = getBestMatchingMapping(dataField, thisRankMappings);
+        if (mapping) {
+            return mapping;
+        }
+    }
+
+    return undefined;
+};
+
+var transferMapping = function (sourceField, targetMapping, sourceVis, targetVis) {
+    //var sourceNonDerived = getNonDerivedMappings(sourceVis.getMappingsForAttr(sourceMapping.attr));
+    //var targetNonDerived = getNonDerivedMappings(targetVis.getMappingsForAttr(targetMapping.attr));
+    //if (sourceMapping.data[0] === "deconID") {
+    //    sourceMapping = sourceNonDerived.length > 0 ? sourceNonDerived[0] : sourceMapping;
+    //}
+    //if (targetMapping.data[0] === "deconID") {
+    //    targetMapping = targetNonDerived.length > 0 ? targetNonDerived[0] : targetMapping;
+    //}
+
+    //var sourceScale = getScale(sourceVis, sourceMapping);
+    //var targetScale = getScale(targetVis, targetMapping);
+    if (sourceField.mappingType === "linear" && targetMapping.type == "linear") {
+        //// If enabled, we'll transfer layouts with regular intervals by hacking deconID mappings
+        //if (config.regular_interval_layout) {
+        //    if(sourceNonDerived.length == 0 && targetNonDerived.length == 0) {
+        //        var newMapping = transferIntervalMapping(sourceMapping, targetMapping, sourceVis, targetVis);
+        //        if (newMapping) {
+        //            return newMapping;
+        //        }
+        //    }
+        //}
+
+        return transferMappingLinear(sourceField, targetMapping);
+    }
+    else if(sourceField.mappingType === "nominal" && targetMapping.type == "nominal") {
+        var newMapping = transferMappingNominal(sourceField, targetMapping);
         return newMapping;
     }
 };
 
-var transferMappingNominal = function(sourceMapping, targetMapping) {
-    var newMapping = new Mapping(sourceMapping.data, targetMapping.attr, "nominal", {});
+var transferMappingNominal = function(sourceField, targetMapping) {
+    var newMapping = new Mapping(sourceField.fieldName, targetMapping.attr, "nominal", {});
     var params = {};
-    var sourceDataVals = _.keys(sourceMapping.params);
+    var sourceDataVals = sourceField.dataRange;
     var targetDataVals = _.keys(targetMapping.params);
 
     for (var i = 0; i < sourceDataVals.length; ++i) {
@@ -583,6 +692,10 @@ var transferMappingNominal = function(sourceMapping, targetMapping) {
     }
 
     newMapping.params = params;
+    newMapping.dataRange = sourceDataVals;
+    newMapping.attrRange = _.values(params);
+    newMapping.targetGroup = targetMapping.group;
+    newMapping.sourceGroup = sourceField.group;
 
 
     return newMapping;
@@ -726,45 +839,49 @@ var getLinearCoeffs = function (pairs) {
     return [line.m(), line.b()];
 };
 
-var transferMappingLinear = function (sourceMapping, targetMapping, sourceScale, targetScale) {
+var transferMappingLinear = function (sourceField, targetMapping) {
     var newMapping = {
         type: "linear",
-        data: sourceMapping.data,
+        data: [sourceField.fieldName],
         attr: targetMapping.attr,
         params: {}
     };
 
-    if (sourceScale.dataRange[0] > sourceScale.dataRange[1]) {
-        sourceScale.attrRange = [sourceScale.attrRange[1], sourceScale.attrRange[0]];
-        sourceScale.dataRange = [sourceScale.dataRange[1], sourceScale.dataRange[0]];
-        sourceMapping.axisAttrRange = [sourceMapping.axisAttrRange[1], sourceMapping.axisAttrRange[0]];
-        sourceMapping.axisDataRange = [sourceMapping.axisDataRange[1], sourceMapping.axisDataRange[0]];
+    targetMapping.dataRange = [targetMapping.invert(targetMapping.attrRange[0]), targetMapping.invert(targetMapping.attrRange[1])];
+
+    if (sourceField.dataRange[0] > sourceField.dataRange[1]) {
+        //sourceField.attrRange = [sourceField.attrRange[1], sourceField.attrRange[0]];
+        sourceField.dataRange = [sourceField.dataRange[1], sourceField.dataRange[0]];
+        //sourceField.axisAttrRange = [sourceField.axisAttrRange[1], sourceField.axisAttrRange[0]];
+        //sourceField.axisDataRange = [sourceField.axisDataRange[1], sourceField.axisDataRange[0]];
     }
-    if (targetScale.dataRange[0] > targetScale.dataRange[1]) {
-        targetScale.attrRange = [targetScale.attrRange[1], targetScale.attrRange[0]];
-        targetScale.dataRange = [targetScale.dataRange[1], targetScale.dataRange[0]];
-        targetMapping.axisAttrRange = [targetMapping.axisAttrRange[1], targetMapping.axisAttrRange[0]];
-        targetMapping.axisDataRange = [targetMapping.axisDataRange[1], targetMapping.axisDataRange[0]];
+    if (targetMapping.dataRange[0] > targetMapping.dataRange[1]) {
+        targetMapping.attrRange = [targetMapping.attrRange[1], targetMapping.attrRange[0]];
+        //targetMapping.dataRange = [targetMapping.dataRange[1], targetMapping.dataRange[0]];
+        //targetMapping.axisAttrRange = [targetMapping.axisAttrRange[1], targetMapping.axisAttrRange[0]];
+        //targetMapping.axisDataRange = [targetMapping.axisDataRange[1], targetMapping.axisDataRange[0]];
     }
 
     //var sourceMap = new Mapping(sourceMapping.data, sourceMapping.attr, sourceMapping.type, sourceMapping.params);
     newMapping.params.coeffs = getLinearCoeffs([
-        [sourceScale.dataRange[0], targetScale.attrRange[0]],
-        [sourceScale.dataRange[1], targetScale.attrRange[1]]
+        [sourceField.dataRange[0], targetMapping.attrRange[0]],
+        [sourceField.dataRange[1], targetMapping.attrRange[1]]
     ]);
     newMapping = Mapping.fromJSON(newMapping);
-    newMapping.dataRange = sourceMapping.dataRange;
+    newMapping.dataRange = sourceField.dataRange;
     newMapping.attrRange = targetMapping.attrRange;
-
-    var newAxisMapping = new Mapping("data", "attr", "linear", {});
-    newAxisMapping.params.coeffs = getLinearCoeffs([
-        [sourceMapping.axisDataRange[0], targetMapping.axisAttrRange[0]],
-        [sourceMapping.axisDataRange[1], targetMapping.axisAttrRange[1]]
-    ]);
-
-    newMapping.axisAttrRange = targetMapping.axisAttrRange;
-    newMapping.axisDataRange = [newAxisMapping.invert(targetMapping.axisAttrRange[0]),
-                                newAxisMapping.invert(targetMapping.axisAttrRange[1])];
+    newMapping.targetGroup = targetMapping.group;
+    newMapping.sourceGroup = sourceField.group;
+    //
+    //var newAxisMapping = new Mapping("data", "attr", "linear", {});
+    //newAxisMapping.params.coeffs = getLinearCoeffs([
+    //    [sourceField.axisDataRange[0], targetMapping.axisAttrRange[0]],
+    //    [sourceField.axisDataRange[1], targetMapping.axisAttrRange[1]]
+    //]);
+    //
+    //newMapping.axisAttrRange = targetMapping.axisAttrRange;
+    //newMapping.axisDataRange = [newAxisMapping.invert(targetMapping.axisAttrRange[0]),
+    //                            newAxisMapping.invert(targetMapping.axisAttrRange[1])];
 
     return newMapping;
 };
@@ -982,9 +1099,10 @@ var main = function () {
         test.sourceDecon = loadDeconstructedVis(test.source_file);
         test.targetDecon = loadDeconstructedVis(test.target_file);
 
-        test.result = transferVisStyle(test.sourceDecon, test.targetDecon);
+        test.result = transferMappings(test.sourceDecon, test.targetDecon);
+        //test.result = transferVisStyle(test.sourceDecon, test.targetDecon);
     });
-    fs.writeFile('view/data/next.json', JSON.stringify(transferTests));
+    fs.writeFile('view/data/next.json', CircularJSON.stringify(transferTests));
 };
 
 if (require.main === module) {
