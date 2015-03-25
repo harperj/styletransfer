@@ -11,15 +11,10 @@ var assert = require('assert');
 var clone = require('clone');
 var ss = require('simple-statistics');
 var d3 = require('d3');
+var CircularJSON = require('circular-json');
 
 var config = require('./config');
 var transferTests = require('./tests');
-
-var loadDeconstructedVis = function (filename) {
-    var file = fs.readFileSync(filename, 'utf8');
-    var decon = JSON.parse(file);
-    return Deconstruction.fromJSON(decon);
-};
 
 var getSemiologyRanking = function (mapping) {
     if (mapping.type === "linear") {
@@ -798,13 +793,13 @@ var propagateCoeffs = function (mapping, relationship) {
     var transferredCoeff2 = d * a + b;
     return [transferredCoeff1, transferredCoeff2];
 };
-
-var replaceMaxMappingRanges = function (decon) {
-    decon = replaceMaxMappingRange('xPosition', decon);
-    decon = replaceMaxMappingRange('yPosition', decon);
-    return decon;
-};
-
+//
+//var replaceMaxMappingRanges = function (decon) {
+//    decon = replaceMaxMappingRange('xPosition', decon);
+//    decon = replaceMaxMappingRange('yPosition', decon);
+//    return decon;
+//};
+//
 //var replaceMaxMappingRange = function (attr, decon) {
 //    var allMappings = decon.getAllMappingsForAttr(attr);
 //    _.each(allMappings, function (mapping1) {
@@ -831,79 +826,79 @@ var replaceMaxMappingRanges = function (decon) {
 //
 //    return decon;
 //};
-
-var replaceMaxMappingRange = function(attr, decon) {
-    var allMappings = decon.getAllMappingsForAttr(attr);
-    var allMappingsSorted = _.sortBy(allMappings, function(mapping) {
-        var mappingRange = mapping.group.getAttrRange(attr);
-        return Math.abs(mappingRange[1] - mappingRange[0]);
-    });
-    allMappingsSorted = allMappingsSorted.reverse();
-
-    var mappingSets = [];
-
-    allMappingsSorted.forEach(function(mapping) {
-        if (mapping.type == "linear" && mapping.data[0] !== "deconID" && mapping.data[0] !== "tick") {
-            var mappingDomain = mapping.group.getDataRange(mapping.data);
-            var mappingRange = [mapping.map(mappingDomain[0]), mapping.map(mappingDomain[1])];
-            var foundSet = false;
-
-            mappingSets.forEach(function (rangeSet) {
-                if (mappingBelongsToRangeSet(mappingDomain, mappingRange, rangeSet)) {
-                    rangeSet.mappings.push(mapping);
-                    foundSet = true;
-                }
-            });
-
-            if (!foundSet) {
-                mappingSets.push({
-                    domain: mappingDomain,
-                    range: mappingRange,
-                    mappings: [mapping],
-                    largest: mapping
-                });
-            }
-        }
-    });
-
-
-    mappingSets.forEach(function(mappingSet) {
-        if (mappingSet.mappings.length >= 1) {
-            mappingSet.mappings.forEach(function (mapping) {
-                mapping.dataRange = mappingSet.domain;
-                //mapping.dataRange = mapping.group.getDataRange(mapping.data);
-                var minMappedVal = mapping.map(mappingSet.domain[0]);
-                var minLargestMappedVal = mappingSet.largest.map(mappingSet.domain[0]);
-                var maxMappedVal = mapping.map(mappingSet.domain[1]);
-                var maxLargestMappedVal = mappingSet.largest.map(mappingSet.domain[1]);
-                var minDifference = Math.abs(minMappedVal - minLargestMappedVal);
-                var maxDifference = Math.abs(maxMappedVal - maxLargestMappedVal);
-
-                // if the difference is small, we have the same mapping
-                if (minDifference < 2 && maxDifference < 2) {
-                    mapping.attrRange = mappingSet.range;
-                }
-                else {
-                    // different mapping.  what's the relationship?
-                    var relationship = findRelationship(mappingSet.largest, mapping);
-                    //var adjustedCoeffs = [mappingSet.largest.coeffs[0] * relationship[0], mappingSet.largest.coeffs[1] + relationship[1]]
-                    //mapping.attrRange = [mappingSet.largest.map(mappingSet.domain[0])*relationship[0] + relationship[1],
-                    //    mappingSet.largest.map(mappingSet.domain[1])*relationship[0] + relationship[1]];
-                    //mapping.attrRange = [mappingSet.largest.map(mapping.dataRange[0]),
-                    //    mappingSet.largest.map(mapping.dataRange[1])*relationship[0] + relationship[1]];
-                    mapping.attrRange = [mapping.map(mapping.dataRange[0]), mapping.map(mapping.dataRange[1])];
-                }
-            });
-        }
-    });
-
-    _.each(decon.getAllMappingsForAttr(attr), function (mapping) {
-        delete mapping.group;
-    });
-
-    return decon;
-};
-
+//
+//var replaceMaxMappingRange = function(attr, decon) {
+//    var allMappings = decon.getAllMappingsForAttr(attr);
+//    var allMappingsSorted = _.sortBy(allMappings, function(mapping) {
+//        var mappingRange = mapping.group.getAttrRange(attr);
+//        return Math.abs(mappingRange[1] - mappingRange[0]);
+//    });
+//    allMappingsSorted = allMappingsSorted.reverse();
+//
+//    var mappingSets = [];
+//
+//    allMappingsSorted.forEach(function(mapping) {
+//        if (mapping.type == "linear" && mapping.data[0] !== "deconID" && mapping.data[0] !== "tick") {
+//            var mappingDomain = mapping.group.getDataRange(mapping.data);
+//            var mappingRange = [mapping.map(mappingDomain[0]), mapping.map(mappingDomain[1])];
+//            var foundSet = false;
+//
+//            mappingSets.forEach(function (rangeSet) {
+//                if (mappingBelongsToRangeSet(mappingDomain, mappingRange, rangeSet)) {
+//                    rangeSet.mappings.push(mapping);
+//                    foundSet = true;
+//                }
+//            });
+//
+//            if (!foundSet) {
+//                mappingSets.push({
+//                    domain: mappingDomain,
+//                    range: mappingRange,
+//                    mappings: [mapping],
+//                    largest: mapping
+//                });
+//            }
+//        }
+//    });
+//
+//
+//    mappingSets.forEach(function(mappingSet) {
+//        if (mappingSet.mappings.length >= 1) {
+//            mappingSet.mappings.forEach(function (mapping) {
+//                mapping.dataRange = mappingSet.domain;
+//                //mapping.dataRange = mapping.group.getDataRange(mapping.data);
+//                var minMappedVal = mapping.map(mappingSet.domain[0]);
+//                var minLargestMappedVal = mappingSet.largest.map(mappingSet.domain[0]);
+//                var maxMappedVal = mapping.map(mappingSet.domain[1]);
+//                var maxLargestMappedVal = mappingSet.largest.map(mappingSet.domain[1]);
+//                var minDifference = Math.abs(minMappedVal - minLargestMappedVal);
+//                var maxDifference = Math.abs(maxMappedVal - maxLargestMappedVal);
+//
+//                // if the difference is small, we have the same mapping
+//                if (minDifference < 2 && maxDifference < 2) {
+//                    mapping.attrRange = mappingSet.range;
+//                }
+//                else {
+//                    // different mapping.  what's the relationship?
+//                    var relationship = findRelationship(mappingSet.largest, mapping);
+//                    //var adjustedCoeffs = [mappingSet.largest.coeffs[0] * relationship[0], mappingSet.largest.coeffs[1] + relationship[1]]
+//                    //mapping.attrRange = [mappingSet.largest.map(mappingSet.domain[0])*relationship[0] + relationship[1],
+//                    //    mappingSet.largest.map(mappingSet.domain[1])*relationship[0] + relationship[1]];
+//                    //mapping.attrRange = [mappingSet.largest.map(mapping.dataRange[0]),
+//                    //    mappingSet.largest.map(mapping.dataRange[1])*relationship[0] + relationship[1]];
+//                    mapping.attrRange = [mapping.map(mapping.dataRange[0]), mapping.map(mapping.dataRange[1])];
+//                }
+//            });
+//        }
+//    });
+//
+//    _.each(decon.getAllMappingsForAttr(attr), function (mapping) {
+//        delete mapping.group;
+//    });
+//
+//    return decon;
+//};
+//
 //var getMappingSets = function(attr, decon) {
 //    var allMappings = decon.getAllMappingsForAttr(attr);
 //    var allMappingsSorted = _.sortBy(allMappings, function(mapping) {
@@ -935,21 +930,21 @@ var replaceMaxMappingRange = function(attr, decon) {
 //    });
 //    return rangeSets;
 //};
-
-var mappingBelongsToRangeSet = function(domain, range, rangeSet) {
-    //return rangeOverlaps(rangeSet.range, range) && rangeOverlaps(rangeSet.domain, domain);
-    return rangeOverlaps(rangeSet.domain, domain) && rangeOverlaps(rangeSet.range, range);
-};
-
-var rangeOverlaps = function(range1, range2) {
-    var range1Min = _.min(range1) - 2;
-    var range1Max = _.max(range1) + 2;
-    var range2Min = _.min(range2);
-    var range2Max = _.max(range2);
-
-    return (range1Min <= range2Min && range2Min <= range1Max) || (range1Min <= range2Max && range2Max <= range1Max);
-};
-
+//
+//var mappingBelongsToRangeSet = function(domain, range, rangeSet) {
+//    //return rangeOverlaps(rangeSet.range, range) && rangeOverlaps(rangeSet.domain, domain);
+//    return rangeOverlaps(rangeSet.domain, domain) && rangeOverlaps(rangeSet.range, range);
+//};
+//
+//var rangeOverlaps = function(range1, range2) {
+//    var range1Min = _.min(range1) - 2;
+//    var range1Max = _.max(range1) + 2;
+//    var range2Min = _.min(range2);
+//    var range2Max = _.max(range2);
+//
+//    return (range1Min <= range2Min && range2Min <= range1Max) || (range1Min <= range2Max && range2Max <= range1Max);
+//};
+//
 var rangeContains = function(range1, range2) {
 
     if (!range1 || !range2 || range1.length !== 2 || range2.length !== 2) {
@@ -963,39 +958,31 @@ var rangeContains = function(range1, range2) {
 
     return range1Min <= range2Min + 2 && range1Max >= range2Max - 2;
 };
+//
+//var getTransferSubset = function(deconstruction, transfers) {
+//    var newDecon = {
+//        "svg": deconstruction.svg,
+//        "marks": _.map(transfers, function(transfer) {return deconstruction.getGroupByName(transfer);})
+//    };
+//    return new Deconstruction(newDecon.svg, newDecon.marks, []);
+//};
 
-var getTransferSubset = function(deconstruction, transfers) {
-    var newDecon = {
-        "svg": deconstruction.svg,
-        "marks": _.map(transfers, function(transfer) {return deconstruction.getGroupByName(transfer);})
-    };
-    return new Deconstruction(newDecon.svg, newDecon.marks, []);
+var loadDeconstructedVis = function (filename) {
+    var file = fs.readFileSync(filename, 'utf8');
+    var decon = JSON.parse(file);
+    return Deconstruction.fromJSON(decon);
 };
+
 
 var main = function () {
     _.each(transferTests, function (test) {
         //var sourceDecon = loadDeconstructedVis(test.source_file);
         //var targetDecon = loadDeconstructedVis(test.target_file);
 
-        test.sourceDecon = JSON.parse(fs.readFileSync(test.source_file, 'utf8'));
-        test.sourceDecon = Deconstruction.fromJSON(test.sourceDecon);
-        test.targetDecon = JSON.parse(fs.readFileSync(test.target_file, 'utf8'));
-        test.targetDecon = Deconstruction.fromJSON(test.targetDecon);
-
-        //var sourceDecon = getTransferSubset(test.sourceDecon, _.map(test.transfers, function(transfer) {return transfer[0];}));
-        //var targetDecon = getTransferSubset(test.targetDecon, _.map(test.transfers, function(transfer) {return transfer[1];}));
-        //sourceDecon = replaceMaxMappingRanges(sourceDecon);
-        //targetDecon = replaceMaxMappingRanges(targetDecon);
+        test.sourceDecon = loadDeconstructedVis(test.source_file);
+        test.targetDecon = loadDeconstructedVis(test.target_file);
 
         test.result = transferVisStyle(test.sourceDecon, test.targetDecon);
-        //
-        //_.each(test.transfers, function (transfer) {
-        //    var result = transferStyle(
-        //        sourceDecon.getGroupByName(transfer[0]),
-        //        targetDecon.getGroupByName(transfer[1])
-        //    );
-        //    test.result.groups.push(result);
-        //});
     });
     fs.writeFile('view/data/next.json', JSON.stringify(transferTests));
 };

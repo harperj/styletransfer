@@ -11,6 +11,7 @@
   "license": "BSD",
   "devDependencies": {
     "bootstrap": "^3.3.1",
+    "circular-json": "^0.1.6",
     "clone": "0.1.18",
     "d3": "^3.5.3",
     "d3-decon-lib": "git://github.com/harperj/d3-decon-lib",
