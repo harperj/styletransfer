@@ -451,7 +451,7 @@ var getRankedDataFields = function(sourceDecon) {
 
     var mappingsByDataField = _.groupBy(_.flatten(sourceMappings), function(mapping) {return mapping.type === "linear" ? mapping.data[0] : mapping.data; });
     var dataFieldsRanked = _.map(mappingsByDataField, function(mappings, fieldName) {
-        var maxRankMapping = _.max(mappings, function(mapping) {
+        var maxRankMapping = _.min(mappings, function(mapping) {
             return getSemiologyRanking(mapping);
         });
 
@@ -543,7 +543,7 @@ var transferMappings = function (sourceVis, targetVis) {
             var newMapping = transferMapping(sourceDataField, targetMapping);
             transferredMappings.push(targetMapping);
             newMappings.push(newMapping);
-            var propagated = propagateMappings(sourceDataField, targetMapping, rankedTargetMappings, transferredMappings);
+            var propagated = propagateMappings(newMapping, targetMapping, rankedTargetMappings, transferredMappings);
             newMappings = newMappings.concat(propagated);
         }
     }
@@ -551,16 +551,43 @@ var transferMappings = function (sourceVis, targetVis) {
     var groupedNewMappings = groupMappingsByTargetGroup(newMappings);
     var groups = [];
     _.each(groupedNewMappings, function(mappingGroup) {
-        var newMarkGroup = clone(mappingGroup.targetGroup);
-        newMarkGroup.mappings = mappingGroup.mappings;
+        var newMarkGroup = clone(mappingGroup.mappings[0].sourceGroup);
+        newMarkGroup.mappings = clone(mappingGroup.mappings);
 
-        newMarkGroup.data = newMarkGroup.mappings[0].sourceGroup.data;
+        newMarkGroup.data = clone(newMarkGroup.mappings[0].sourceGroup.data);
 
         newMarkGroup.updateAttrsFromMappings();
+        transferUnmapped(mappingGroup.targetGroup, newMarkGroup);
         groups.push(newMarkGroup);
     });
 
-    return new Deconstruction(targetVis.svg, groups);
+
+    targetVis.axes.forEach(function(axis) {
+        //if (axis.scaleRange[0] > axis.scaleRange[1]) {
+        //    axis.scaleRange = [axis.scaleRange[1], axis.scaleRange[0]];
+        //    axis.scaleDomain = [axis.scaleDomain[1], axis.scaleDomain[0]];
+        //}
+        var axisDrawn = false;
+
+        groups[0].mappings.forEach(function(mapping) {
+            if (mappingWithinAxis(mapping, axis) && !axisDrawn) {
+                axisDrawn = true;
+                console.log("found axis overlap");
+                var axisGroups = modifyAxisWithMapping(targetVis, mapping, mapping.attr === "xPosition" ? "x" : "y", axis, groups[0]);
+                groups = groups.concat(axisGroups);
+            }
+            else if (mappingExtendedAxis(mapping, axis, targetVis) && !axisDrawn) {
+                axisDrawn = true;
+                var extendedAxisGroups = extendAxisGroups(axis, mapping, sourceVis, targetVis);
+                groups = groups.concat(extendedAxisGroups);
+
+            }
+        });
+    });
+
+    var newDecon =  new Deconstruction(clone(targetVis.svg), groups);
+    newDecon.svg = clone(newDecon.getMarkBoundingBox(targetVis.svg));
+    return newDecon;
 };
 
 var groupMappingsByTargetGroup = function(mappings) {
@@ -590,14 +617,14 @@ var propagateMappings = function (newMapping, transferredMapping, allMappings, s
     var propagatedMappings = [];
 
     var remainingMappings = _.filter(allMappings, function(item) {
-        return _.contains(skipList, item);
+        return !_.contains(skipList, item);
     });
 
     // find other target mappings with the same data field
     var sameDataMappings = _.filter(remainingMappings, function(mapping) {
         var mappingData = mapping.type === "linear" ? mapping.data[0] : mapping.data;
-        var newMappingData = newMapping.type === "linear" ? newMapping.data[0] : newMapping.data;
-        return mappingData === newMappingData;
+        var transferredMappingData = transferredMapping.type === "linear" ? transferredMapping.data[0] : transferredMapping.data;
+        return mappingData === transferredMappingData;
     });
     //_.each(remainingMappings, function (mapping) {
     //    if (mapping.data[0] === targetNextMapping.data[0]
@@ -611,9 +638,10 @@ var propagateMappings = function (newMapping, transferredMapping, allMappings, s
     _.each(sameDataMappings, function (sameDataMapping) {
         var rel = findRelationship(transferredMapping, sameDataMapping);
         var propagatedMappingCoeffs = propagateCoeffs(newMapping, rel);
-        var newPropagatedMapping = new Mapping(newMapping.data, transferredMapping.attr, "linear", {coeffs: propagatedMappingCoeffs});
+        var newPropagatedMapping = new Mapping(newMapping.data, sameDataMapping.attr, "linear", {coeffs: propagatedMappingCoeffs});
+        newPropagatedMapping.targetGroup = sameDataMapping.group;
         propagatedMappings.push(newPropagatedMapping);
-        skipList.push(transferredMapping.attr);
+        skipList.push(transferredMapping);
     });
 
     return propagatedMappings;
@@ -653,7 +681,7 @@ var transferMapping = function (sourceField, targetMapping, sourceVis, targetVis
 
     //var sourceScale = getScale(sourceVis, sourceMapping);
     //var targetScale = getScale(targetVis, targetMapping);
-    if (sourceField.mappingType === "linear" && targetMapping.type == "linear") {
+    if (targetMapping.type == "linear") {
         //// If enabled, we'll transfer layouts with regular intervals by hacking deconID mappings
         //if (config.regular_interval_layout) {
         //    if(sourceNonDerived.length == 0 && targetNonDerived.length == 0) {
@@ -666,7 +694,7 @@ var transferMapping = function (sourceField, targetMapping, sourceVis, targetVis
 
         return transferMappingLinear(sourceField, targetMapping);
     }
-    else if(sourceField.mappingType === "nominal" && targetMapping.type == "nominal") {
+    else if(targetMapping.type == "nominal") {
         var newMapping = transferMappingNominal(sourceField, targetMapping);
         return newMapping;
     }
@@ -675,14 +703,14 @@ var transferMapping = function (sourceField, targetMapping, sourceVis, targetVis
 var transferMappingNominal = function(sourceField, targetMapping) {
     var newMapping = new Mapping(sourceField.fieldName, targetMapping.attr, "nominal", {});
     var params = {};
-    var sourceDataVals = sourceField.dataRange;
+    var sourceDataVals = sourceField.type === "nominal" ? sourceField.dataRange : _.uniq(sourceField.group.data[sourceField.fieldName]);
     var targetDataVals = _.keys(targetMapping.params);
 
     for (var i = 0; i < sourceDataVals.length; ++i) {
         if (targetDataVals.length < i + 1) {
-            var rChannel = Math.random() % 255;
-            var gChannel = Math.random() % 255;
-            var bChannel = Math.random() % 255;
+            var rChannel = Math.round((Math.random() * 255) % 255);
+            var gChannel = Math.round((Math.random() * 255) % 255);
+            var bChannel = Math.round((Math.random() * 255) % 255);
             var newAttrVal = "rgb(" + rChannel.toString() + "," + gChannel.toString() + "," + bChannel.toString() + ")";
             params[sourceDataVals[i]] = newAttrVal;
         }
