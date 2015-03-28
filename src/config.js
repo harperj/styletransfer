@@ -14,7 +14,8 @@ var transfer_config = {
         "fill": 4,
         "stroke": 4,
         "opacity": 5,
-        "shape": 6
+        "shape": 6,
+        "text": 8
     },
     semiology_nom: {
         "xPosition": 1,
@@ -25,7 +26,8 @@ var transfer_config = {
         "opacity": 5,
         "width": 6,
         "height": 6,
-        "area": 7
+        "area": 7,
+        "text": 8
     }
 };
 
