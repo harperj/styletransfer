@@ -663,6 +663,9 @@ var createDerivedAxis = function(positionMapping, ticks, labels, line) {
     labels.data[derivedField] = clone(derivedReplacementField.group.data[derivedReplacementField.fieldName]);
     labels.data['string'] = clone(derivedReplacementField.group.data[derivedReplacementField.fieldName]);
     labels.mappings.push(clone(newMapping));
+    labels.nodeAttrs.forEach(function(nodeAttr, i) {
+        nodeAttr.text = labels.data[derivedField][i];
+    });
     labels.addMarksForData();
     labels.updateAttrsFromMappings();
 
