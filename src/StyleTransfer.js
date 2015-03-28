@@ -689,8 +689,17 @@ var createDerivedAxis = function(positionMapping, ticks, labels, line) {
     labels.data['string'] = clone(idField);
     labels.mappings.push(clone(newMapping));
     labels.addMarksForData();
+    var removed = 0;
+    for (var j = 0; j < labels.mappings.length - removed; ++j) {
+        var mapping = labels.mappings[j];
+        var spatial = ["xPosition", "yPosition", "width", "height"];
+        if (_.contains(spatial, mapping.attr) && mapping.type !== "linear") {
+            labels.mappings.splice(j, 1);
+            removed++;
+        }
+    }
+
     labels.updateAttrsFromMappings();
-    //labels.mappings = Deconstruct.extractMappings(labels);
     labels.updateUnmapped();
 
      labels.nodeAttrs.forEach(function(nodeAttr, i) {
