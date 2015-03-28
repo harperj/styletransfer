@@ -254,6 +254,9 @@ var transferNonSpatialAttrs = function (newNode, nodeAttrs, attrs) {
     });
 
     _.each(attrs, function (val, attr) {
+        //if (attr === "text") {
+        //    $(newNode).text(val);
+        //}
         if (val !== null) {
             d3.select(newNode).style(attr, val);
         }

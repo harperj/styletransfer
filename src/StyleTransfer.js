@@ -613,8 +613,11 @@ var transferChart = function (sourceVis, targetVis) {
 
         var newDerivedMappings = transferMappings(rankedSourceDataDerived, rankedTargetMappingsDerived, rankedTargetMappings);
 
+        var constructedDerived = constructDerivedMappings(rankedTargetMappingsDerived, newDerivedMappings,  sourceGroups);
+
         allNewMappings = allNewMappings.concat(newNonDerivedMappings);
         allNewMappings = allNewMappings.concat(newDerivedMappings);
+        allNewMappings = allNewMappings.concat(constructedDerived);
     }
 
     var axisGroups = _.filter(targetVis.groups, function(group) { return isAxis(group.name); });
@@ -632,6 +635,42 @@ var transferChart = function (sourceVis, targetVis) {
     var newDecon =  new Deconstruction(clone(targetVis.svg), groups);
     newDecon.svg = clone(newDecon.getMarkBoundingBox(targetVis.svg));
     return newDecon;
+};
+
+var constructDerivedMappings = function constructDerivedMappings(targetDerived, newDerived, sourceGroups) {
+    var newDerivedMappings = [];
+    _.each(targetDerived, function(derivedMapping) {
+        var alreadyTransferred = false;
+        _.each(newDerived, function(newDerivedMapping) {
+            if (newDerivedMapping.targetAnalog === derivedMapping) {
+                alreadyTransferred = true;
+            }
+        });
+
+        if (!alreadyTransferred) {
+            var derivedRegex = new RegExp("_deriv_" + derivedMapping.attr + "*");
+            var sourceGroup = sourceGroups[0];
+            var sourceGroupFields = _.keys(sourceGroup.data);
+            var matching = _.filter(sourceGroupFields, function(field) {
+                return field.match(derivedRegex) && field.match(derivedRegex).length > 0;
+            });
+            console.log(matching);
+            if (matching.length > 0) {
+                var field = {
+                    fieldName: matching[0],
+                    dataRange: _.uniq(sourceGroup.data[matching[0]]),
+                    type: 'derived',
+                    group: sourceGroup
+                };
+                var newMapping = transferMapping(field, derivedMapping);
+            }
+            if (newMapping) {
+                newMapping.targetAnalog = derivedMapping;
+                newDerived.push(newMapping);
+            }
+        }
+    });
+    return newDerived;
 };
 
 var createAxes = function(axes, targetVis, newMappings) {
@@ -771,14 +810,26 @@ var createLinearAxis = function(positionMapping, axisTicks, axisLabels, axisLine
     axisTicks.updateAttrsFromMappings();
 
     axisLabels.getMappingForAttr(axis + "Position").params.coeffs = clone(newAxisPositionCoeffs);
+
     for (i = 0; i < axisLabels.attrs[axis + 'Position'].length; ++i) {
         axisLabels.data['number'][i] = newAxisPositionMapping.invert(axisLabels.attrs[axis + 'Position'][i]);
     }
-
+    //var textMapping = axisLabels.getMapping("number", "text");
+    //var axisDataField = {
+    //    fieldName: 'number',
+    //    dataRange: clone(axisLabels.data['number']),
+    //    group: axisLabels
+    //};
+    //var newTextMapping = transferMapping(axisDataField, textMapping);
+    //textMapping.params = newTextMapping.params;
+    ////
     for (i = 0; i < axisLabels.attrs[axis + 'Position'].length; ++i) {
-        if (_.max(axisLabels.data['number']) < 5)
+        if (_.max(axisLabels.data['number']) < 5) {
+            axisLabels.attrs['text'][i] = (Math.round(axisLabels.data['number'][i] * 100) / 100).toString();
             axisLabels.nodeAttrs[i].text = (Math.round(axisLabels.data['number'][i] * 100) / 100).toString();
+        }
         else {
+            axisLabels.attrs['text'][i] = Math.round(axisLabels.data['number'][i]).toString();
             axisLabels.nodeAttrs[i].text = Math.round(axisLabels.data['number'][i]).toString();
         }
     }
@@ -858,7 +909,7 @@ var propagateMappings = function (newMapping, transferredMapping, allMappings, s
             newPropagatedMapping.sourceGroup = sourceDataField.group;
             newPropagatedMapping.targetAnalog = sameDataMapping;
             propagatedMappings.push(newPropagatedMapping);
-            skipList.push(transferredMapping);
+            skipList.push(sameDataMapping);
         }
         else if (sameDataMapping.type === "nominal") {
             var newPropagatedMapping = transferMapping(sourceDataField, sameDataMapping);
@@ -866,7 +917,7 @@ var propagateMappings = function (newMapping, transferredMapping, allMappings, s
             newPropagatedMapping.sourceGroup = sourceDataField.group;
             newPropagatedMapping.targetAnalog = sameDataMapping;
             propagatedMappings.push(newPropagatedMapping);
-            skipList.push(transferredMapping);
+            skipList.push(sameDataMapping);
         }
     });
 
@@ -896,7 +947,7 @@ var getHighestRankedMatch = function(dataField, mappings, skipList) {
 };
 
 var transferMapping = function (sourceField, targetMapping) {
-    if (isDerived(targetMapping.data[0]) && isDerived(sourceField.fieldName)) {
+    if (isDerived(targetMapping.getData()) && isDerived(sourceField.fieldName)) {
         return transferIntervalMapping(sourceField, targetMapping);
     }
     else if (targetMapping.type == "linear") {
@@ -914,17 +965,34 @@ var transferMappingNominal = function(sourceField, targetMapping) {
     var sourceDataVals = sourceField.type === "nominal" ? sourceField.dataRange : _.uniq(sourceField.group.data[sourceField.fieldName]);
     var targetDataVals = _.keys(targetMapping.params);
 
-    for (var i = 0; i < sourceDataVals.length; ++i) {
-        if (targetDataVals.length < i + 1) {
-            var rChannel = Math.round((Math.random() * 255) % 255);
-            var gChannel = Math.round((Math.random() * 255) % 255);
-            var bChannel = Math.round((Math.random() * 255) % 255);
-            var newAttrVal = "rgb(" + rChannel.toString() + "," + gChannel.toString() + "," + bChannel.toString() + ")";
-            params[sourceDataVals[i]] = newAttrVal;
+    if (targetMapping.attr === "fill" || targetMapping.attr === "stroke") {
+        for (var i = 0; i < sourceDataVals.length; ++i) {
+            if (targetDataVals.length < i + 1) {
+                var rChannel = Math.round((Math.random() * 255) % 255);
+                var gChannel = Math.round((Math.random() * 255) % 255);
+                var bChannel = Math.round((Math.random() * 255) % 255);
+                var newAttrVal = "rgb(" + rChannel.toString() + "," + gChannel.toString() + "," + bChannel.toString() + ")";
+                params[sourceDataVals[i]] = newAttrVal;
+            }
+            else {
+                params[sourceDataVals[i]] = targetMapping.map(targetDataVals[i]);
+            }
         }
-        else {
-            params[sourceDataVals[i]] = targetMapping.map(targetDataVals[i]);
-        }
+    }
+    else if (targetMapping.attr === "text") {
+        _.each(sourceDataVals, function(sourceDataVal) {
+            var stringVal;
+            if (_.max(sourceDataVals) < 5)
+                stringVal = (Math.round(sourceDataVal * 100) / 100).toString();
+            else {
+                stringVal = Math.round(sourceDataVal).toString();
+            }
+            params[sourceDataVal] = stringVal;
+        });
+        console.log(sourceDataVals);
+    }
+    else {
+        return;
     }
 
     newMapping.params = params;
@@ -987,7 +1055,6 @@ var transferIntervalMapping = function (sourceField, targetMapping) {
     var sourceData = sourceField.group.data[sourceField.fieldName];
     var sourceDataInterval = getArrayInterval(sourceData);
 
-    if (sourceInterval && targetInterval) {
         var coeffs = getLinearCoeffs([
             [_.min(sourceData), _.min(targetAttrVals)],
             [_.min(sourceData) + sourceDataInterval, _.min(targetAttrVals) + targetInterval]
@@ -1018,7 +1085,6 @@ var transferIntervalMapping = function (sourceField, targetMapping) {
             return params.attrMin + i * params.interval;
         });
         return mapping;
-    }
 };
 
 var getArrayInterval = function (arr) {

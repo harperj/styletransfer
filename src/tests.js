@@ -51,14 +51,14 @@ var tests = [
     //    source_file: './data/leondutoit_bars.json',
     //    target_file: './data/mbostock_bars_3.json'
     //},
-    //{
-    //    source_file: './data/mbostock_bars.json',
-    //    target_file: './data/leondutoit_dots.json'
-    //},
-    //{
-    //    source_file: './data/dowson_bars.json',
-    //    target_file: './data/leondutoit_dots.json'
-    //},
+    {
+        source_file: './data/mbostock_bars.json',
+        target_file: './data/leondutoit_dots.json'
+    },
+    {
+        source_file: './data/dowson_bars.json',
+        target_file: './data/leondutoit_dots.json'
+    },
     //{
     //    source_file: './data/my_line.json',
     //    target_file: './data/kuijjer_line.json'
