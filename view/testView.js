@@ -86,7 +86,7 @@ var renderVis = function (decon, svgNode) {
 
         if (vis.data.hasOwnProperty('lineID')) {
             console.log("has a lineID");
-            var lineInds = getDeconToIndMapping(vis.data);
+            var lineInds = getDeconToIndMapping(vis);
             for (var lineDeconID in lineInds) {
                 var inds = lineInds[lineDeconID];
                 var lineData = getDataFromInds(vis, inds);
@@ -172,10 +172,10 @@ var fixTextElements = function(group, svgNode) {
     return group;
 };
 
-var getDeconToIndMapping = function (data) {
+var getDeconToIndMapping = function (vis) {
     var mapping = {};
 
-    _.each(data['deconID'], function (id, ind) {
+    _.each(vis.ids, function (id, ind) {
         if (!mapping.hasOwnProperty(id)) {
             mapping[id] = [ind];
         }
