@@ -791,6 +791,23 @@ var createLinearAxis = function(positionMapping, axisTicks, axisLabels, axisLine
 
     if (!newMappingAnalog) return [];
 
+
+    //if (axisObj.orient === "bottom") {
+//        var newGroupBBox = newGroup.getMarkBoundingBox();
+//        var newGroupMax = newGroupBBox.y + newGroupBBox.height;
+//        var axisLineBBox = axisLineGroup.getMarkBoundingBox();
+//        var axisLineMin = axisLineBBox.y;
+//        var targetGroupBBox = newMapping.targetGroup.getMarkBoundingBox();
+//        var padding = axisLineMin - (targetGroupBBox.y + targetGroupBBox.height);
+//
+//        if (newGroupMax > axisLineMin) {
+//            axisTickGroup.attrs['yPosition'] = _.map(axisTickGroup.attrs['yPosition'], function(yPos) {return yPos + (newGroupMax - axisLineMin) + padding;});
+//            axisLabelGroup.attrs['yPosition'] = _.map(axisLabelGroup.attrs['yPosition'], function(yPos) {return yPos + (newGroupMax - axisLineMin) + padding;});
+//            axisLineGroup.attrs['yPosition'] = _.map(axisLineGroup.attrs['yPosition'], function(yPos) {return yPos + (newGroupMax - axisLineMin) + padding;});
+//            axisLineGroup.getMapping('tick', 'yPosition').params.coeffs[1] += (newGroupMax - axisLineMin) + padding;
+//        }
+//    }
+
     var rel = findRelationship(targetMapping, positionMapping);
     var newAxisPositionCoeffs = propagateCoeffs(newMappingAnalog, rel);
     var newAxisPositionMapping = clone(positionMapping);
@@ -814,6 +831,8 @@ var createLinearAxis = function(positionMapping, axisTicks, axisLabels, axisLine
     for (i = 0; i < axisLabels.attrs[axis + 'Position'].length; ++i) {
         axisLabels.data['number'][i] = newAxisPositionMapping.invert(axisLabels.attrs[axis + 'Position'][i]);
     }
+
+
     //var textMapping = axisLabels.getMapping("number", "text");
     //var axisDataField = {
     //    fieldName: 'number',
@@ -913,10 +932,12 @@ var propagateMappings = function (newMapping, transferredMapping, allMappings, s
         }
         else if (sameDataMapping.type === "nominal") {
             var newPropagatedMapping = transferMapping(sourceDataField, sameDataMapping);
-            newPropagatedMapping.targetGroup = sameDataMapping.group;
-            newPropagatedMapping.sourceGroup = sourceDataField.group;
-            newPropagatedMapping.targetAnalog = sameDataMapping;
-            propagatedMappings.push(newPropagatedMapping);
+            if (newPropagatedMapping) {
+                newPropagatedMapping.targetGroup = sameDataMapping.group;
+                newPropagatedMapping.sourceGroup = sourceDataField.group;
+                newPropagatedMapping.targetAnalog = sameDataMapping;
+                propagatedMappings.push(newPropagatedMapping);
+            }
             skipList.push(sameDataMapping);
         }
     });
