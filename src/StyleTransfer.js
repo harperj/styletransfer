@@ -543,6 +543,9 @@ var groupMappings = function(newMappings) {
     var groups = [];
     _.each(groupedNewMappings, function(mappingGroup) {
         var newMarkGroup = clone(mappingGroup.mappings[0].sourceGroup);
+        for (var i = 0; i < mappingGroup.mappings.length; ++i) {
+            mappingGroup.mappings[i].newGroup = newMarkGroup;
+        }
         newMarkGroup.mappings = clone(mappingGroup.mappings);
 
         newMarkGroup.data = clone(newMarkGroup.mappings[0].sourceGroup.data);
@@ -629,7 +632,7 @@ var transferChart = function (sourceVis, targetVis) {
         return group.name[0] + group.name[5];
     });
 
-    var newAxisGroups = createAxes(axes, targetVis, allNewMappings);
+    var newAxisGroups = createAxes(axes, targetVis, allNewMappings, groups);
     groups = groups.concat(newAxisGroups);
 
     var newDecon =  new Deconstruction(clone(targetVis.svg), groups);
@@ -673,7 +676,7 @@ var constructDerivedMappings = function constructDerivedMappings(targetDerived, 
     return newDerived;
 };
 
-var createAxes = function(axes, targetVis, newMappings) {
+var createAxes = function(axes, targetVis, newMappings, newGroups) {
     var axisMarkGroups = [];
     _.each(axes, function(axis) {
         axis = _.groupBy(axis, function(group) { return group.name.split("-")[1]; });
@@ -684,18 +687,65 @@ var createAxes = function(axes, targetVis, newMappings) {
         var mappingPositionAttr = ticks.name[0] + "Position";
         var positionMappings = ticks.getMappingsForAttr(mappingPositionAttr);
         var linearPositionMapping = _.filter(positionMappings, function(mapping) { return mapping.type === "linear" && !isDerived(mapping.data[0]); });
+
         if (linearPositionMapping.length > 0) {
-            axisMarkGroups = axisMarkGroups.concat(createLinearAxis(linearPositionMapping, ticks, labels, line, targetVis, newMappings));
+            axisMarkGroups.push(createLinearAxis(linearPositionMapping, ticks, labels, line, targetVis, newMappings));
         }
         else {
             var derivedPositionMapping = positionMappings[0];
-            axisMarkGroups = axisMarkGroups.concat(createDerivedAxis(derivedPositionMapping, ticks, labels, line));
+            var newAxis = createDerivedAxis(derivedPositionMapping, ticks, labels, line, newMappings);
+            if (newAxis.length === 3) {
+                axisMarkGroups.push(newAxis);
+            }
         }
     });
-    return axisMarkGroups;
+
+    //var axisBBox = getBoundingBoxFromGroups(axisMarkGroups, targetVis);
+    for (var i = 0; i < axisMarkGroups.length; ++i) {
+        var axis = axisMarkGroups[0];
+        var ticks = axis[0];
+        var labels = axis[1];
+        var line = axis[2];
+
+        //var otherAxes = [];
+        //for (var j = 0; j < axisMarkGroups.length; ++j) {
+        //    if (j !== i && axisMarkGroups[j][0].name[0] !== ticks.name[0]) {
+        //        otherAxes.push(axisMarkGroups[j]);
+        //    }
+        //}
+        //
+        //var otherAxisBBox = getBoundingBoxFromGroups(_.flatten(otherAxes), targetVis);
+        if (ticks.name[0] === 'x' && labels.attrs.yPosition[0] > ticks.attrs.yPosition[0]) {
+            // bottom oriented axis
+            var visBoundingBox = targetVis.getMarkBoundingBox();
+
+            var axisLineBBox = line.getMarkBoundingBox();
+            var axisLineMin = axisLineBBox.y;
+            var newGroupBBox = getBoundingBoxFromGroups(newGroups);
+            var targetNonAxisGroups = _.filter(targetVis.groups, function(group) { return !group.name; });
+            var targetNonAxisBBox = getBoundingBoxFromGroups(targetNonAxisGroups);
+            var padding = axisLineMin - (targetNonAxisBBox.y + targetNonAxisBBox.height);
+            var newGroupMax = newGroupBBox.y + newGroupBBox.height;
+
+            if (newGroupMax > axisLineMin) {
+                ticks.attrs['yPosition'] = _.map(ticks.attrs['yPosition'], function(yPos) {return yPos + (newGroupMax - axisLineMin + padding);});
+                labels.attrs['yPosition'] = _.map(labels.attrs['yPosition'], function(yPos) {return yPos + (newGroupMax - axisLineMin) + padding;});
+                line.attrs['yPosition'] = _.map(line.attrs['yPosition'], function(yPos) {return yPos + (newGroupMax - axisLineMin) + padding;});
+                //line.getMapping('tick', 'yPosition').params.coeffs[1] += (newGroupMax - axisLineMin) + padding;
+            }
+        }
+    }
+
+    return _.flatten(axisMarkGroups);
 };
 
-var createDerivedAxis = function(positionMapping, ticks, labels, line) {
+var getBoundingBoxFromGroups = function getBoundingBoxFromGroups(groups) {
+    var decon = new Deconstruction({x: 0, y: 0, width: 0, height: 0}, groups);
+    decon.svg = decon.getMarkBoundingBox({x: 0, y: 0, width: 0, height: 0});
+    return decon.svg;
+};
+
+var createDerivedAxis = function(positionMapping, ticks, labels, line, newMappings) {
     var attrName = ticks.name[0] + "Position";
     var tickPositionMapping = _.findWhere(ticks.mappings, function(mapping) {return mapping.attr === attrName;});
     ticks.mappings = _.without(ticks.mappings, tickPositionMapping);
@@ -703,21 +753,33 @@ var createDerivedAxis = function(positionMapping, ticks, labels, line) {
     var derivedReplacementField;
     if (_.contains(_.keys(ticks.replacedData), tickPositionMapping.data[0])) {
         derivedReplacementField = ticks.replacedData[tickPositionMapping.data[0]];
+        if (!derivedReplacementField) return [];
     }
     else {
-        return [];
+        var newDerivedMapping = _.filter(newMappings, function(mapping) { return isDerived(mapping.getData())})[0];
+        derivedReplacementField = {
+            fieldName: newDerivedMapping.getData(),
+            type: "derived",
+            group: newDerivedMapping.newGroup
+        };
+        tickPositionMapping.data[0] = newDerivedMapping.getData();
     }
+    tickPositionMapping.group = ticks;
 
     var derivedField = tickPositionMapping.data[0];
-
-    tickPositionMapping.group = ticks;
-    ticks.data[derivedField] = clone(derivedReplacementField.group.data[derivedReplacementField.fieldName]);
+    if (derivedField) {
+        ticks.data[derivedField] = clone(derivedReplacementField.group.data[derivedReplacementField.fieldName]);
+    }
+    else {
+        derivedField = derivedReplacementField.fieldName;
+        ticks.data[derivedField] = clone(derivedReplacementField.group.data[derivedReplacementField.fieldName]);
+    }
     var idField = findIdentifierField(derivedReplacementField.group.data);
 
     if (!idField) idField = clone(derivedReplacementField.group.data[derivedReplacementField.fieldName]);
     ticks.data['string'] = clone(idField);
 
-    var newMapping = transferIntervalMapping(ticks.replacedData[derivedField], tickPositionMapping);
+    var newMapping = transferIntervalMapping(derivedReplacementField, tickPositionMapping);
     ticks.mappings.push(newMapping);
     ticks.addMarksForData();
     ticks.updateAttrsFromMappings();
@@ -856,7 +918,7 @@ var createLinearAxis = function(positionMapping, axisTicks, axisLabels, axisLine
     axisLabels.updateAttrsFromMappings();
 
 
-    return [axisLine, axisTicks, axisLabels];
+    return [axisTicks, axisLabels, axisLine];
 };
 
 var findSetForMapping = function(mapping, mappingSets) {
