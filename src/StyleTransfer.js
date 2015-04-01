@@ -484,7 +484,7 @@ var getBestMatchingMapping = function(sourceField, targetMappings) {
         return targetMapping.type === sourceField.mappingType;
     });
 
-    if (sameTypeMappings.length === 1) {
+    if (sameTypeMappings.length >= 1) {
         return sameTypeMappings[0];
     }
     else if(sourceField.mappingType === "linear") {
@@ -676,6 +676,12 @@ var constructDerivedMappings = function constructDerivedMappings(targetDerived, 
     return newDerived;
 };
 
+var getBoundingBoxFromGroups = function getBoundingBoxFromGroups(groups) {
+    var decon = new Deconstruction({x: 0, y: 0, width: 0, height: 0}, groups);
+    decon.svg = decon.getMarkBoundingBox({x: 0, y: 0, width: 0, height: 0});
+    return decon.svg;
+};
+
 var createAxes = function(axes, targetVis, newMappings, newGroups) {
     var axisMarkGroups = [];
     _.each(axes, function(axis) {
@@ -702,28 +708,22 @@ var createAxes = function(axes, targetVis, newMappings, newGroups) {
 
     //var axisBBox = getBoundingBoxFromGroups(axisMarkGroups, targetVis);
     for (var i = 0; i < axisMarkGroups.length; ++i) {
-        var axis = axisMarkGroups[0];
+        var axis = axisMarkGroups[i];
+        if (axis.length === 0) continue;
         var ticks = axis[0];
         var labels = axis[1];
         var line = axis[2];
+        var newGroupBBox = getBoundingBoxFromGroups(newGroups);
+        var targetNonAxisGroups = _.filter(targetVis.groups, function(group) { return !group.name; });
+        var targetNonAxisBBox = getBoundingBoxFromGroups(targetNonAxisGroups);
 
-        //var otherAxes = [];
-        //for (var j = 0; j < axisMarkGroups.length; ++j) {
-        //    if (j !== i && axisMarkGroups[j][0].name[0] !== ticks.name[0]) {
-        //        otherAxes.push(axisMarkGroups[j]);
-        //    }
-        //}
-        //
-        //var otherAxisBBox = getBoundingBoxFromGroups(_.flatten(otherAxes), targetVis);
+        var newDecon = new Deconstruction({width: 0, height:0, x:0, y:0}, newGroups);
+        var visBoundingBox = newDecon.getMarkBoundingBox();
+
         if (ticks.name[0] === 'x' && labels.attrs.yPosition[0] > ticks.attrs.yPosition[0]) {
             // bottom oriented axis
-            var visBoundingBox = targetVis.getMarkBoundingBox();
-
             var axisLineBBox = line.getMarkBoundingBox();
             var axisLineMin = axisLineBBox.y;
-            var newGroupBBox = getBoundingBoxFromGroups(newGroups);
-            var targetNonAxisGroups = _.filter(targetVis.groups, function(group) { return !group.name; });
-            var targetNonAxisBBox = getBoundingBoxFromGroups(targetNonAxisGroups);
             var padding = axisLineMin - (targetNonAxisBBox.y + targetNonAxisBBox.height);
             var newGroupMax = newGroupBBox.y + newGroupBBox.height;
 
@@ -734,15 +734,15 @@ var createAxes = function(axes, targetVis, newMappings, newGroups) {
                 //line.getMapping('tick', 'yPosition').params.coeffs[1] += (newGroupMax - axisLineMin) + padding;
             }
         }
+        if (ticks.name[0] === 'y' && labels.attrs.xPosition[0] < ticks.attrs.xPosition[0]) {
+            if (ticks.attrs.width[0] > 100) {
+                ticks.attrs['xPosition'] = _.map(ticks.attrs['xPosition'], function(xPos, i) {return 0.5 * newGroupBBox.width + (xPos - ticks.attrs['width'][0]/2);});
+                ticks.attrs['width'] = _.map(ticks.attrs['width'], function(width) { return newGroupBBox.width; });
+            }
+        }
     }
 
     return _.flatten(axisMarkGroups);
-};
-
-var getBoundingBoxFromGroups = function getBoundingBoxFromGroups(groups) {
-    var decon = new Deconstruction({x: 0, y: 0, width: 0, height: 0}, groups);
-    decon.svg = decon.getMarkBoundingBox({x: 0, y: 0, width: 0, height: 0});
-    return decon.svg;
 };
 
 var createDerivedAxis = function(positionMapping, ticks, labels, line, newMappings) {
@@ -1002,6 +1002,14 @@ var propagateMappings = function (newMapping, transferredMapping, allMappings, s
             }
             skipList.push(sameDataMapping);
         }
+        else if(sameDataMapping.type === "derived") {
+            var newPropagatedMapping = new Mapping(newMapping.data, sameDataMapping.attr, "derived", {coeffs: sameDataMapping.params.coeffs});
+            newPropagatedMapping.targetGroup = sameDataMapping.group;
+            newPropagatedMapping.sourceGroup = sourceDataField.group;
+            newPropagatedMapping.targetAnalog = sameDataMapping;
+            propagatedMappings.push(newPropagatedMapping);
+            skipList.push(sameDataMapping);
+        }
     });
 
     return propagatedMappings;
@@ -1062,17 +1070,24 @@ var transferMappingNominal = function(sourceField, targetMapping) {
             }
         }
     }
-    else if (targetMapping.attr === "text") {
+    else if (targetMapping.attr === 'text') {
         _.each(sourceDataVals, function(sourceDataVal) {
             var stringVal;
-            if (_.max(sourceDataVals) < 5)
-                stringVal = (Math.round(sourceDataVal * 100) / 100).toString();
+            if (typeof sourceDataVal === 'number') {
+                if (_.max(sourceDataVals) < 1) {
+                    stringVal = (Math.round(sourceDataVal * 1000) / 1000).toString();
+                }
+                else if (_.max(sourceDataVals) < 5)
+                    stringVal = (Math.round(sourceDataVal * 100) / 100).toString();
+                else {
+                    stringVal = Math.round(sourceDataVal).toString();
+                }
+            }
             else {
-                stringVal = Math.round(sourceDataVal).toString();
+                stringVal = sourceDataVal.toString();
             }
             params[sourceDataVal] = stringVal;
         });
-        console.log(sourceDataVals);
     }
     else {
         return;

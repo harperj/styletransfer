@@ -244,6 +244,7 @@ function getDataFromInds(schema, inds) {
 }
 
 var transferNonSpatialAttrs = function (newNode, nodeAttrs, attrs) {
+
     _.each(nodeAttrs, function (val, attr) {
         if (attr === "text") {
             $(newNode).text(val);
@@ -254,9 +255,9 @@ var transferNonSpatialAttrs = function (newNode, nodeAttrs, attrs) {
     });
 
     _.each(attrs, function (val, attr) {
-        //if (attr === "text") {
-        //    $(newNode).text(val);
-        //}
+        if (attr === "text" && !$(newNode).text()) {
+            $(newNode).text(val);
+        }
         if (val !== null) {
             d3.select(newNode).style(attr, val);
         }
