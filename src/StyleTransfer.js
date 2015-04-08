@@ -1219,7 +1219,13 @@ var transferUnmapped = function (sourceVis, transferredVis) {
     _.each(sourceVis.attrs, function (valArray, attr) {
         if (!_.contains(mappedAttrs, attr)) {
             for (var i = 0; i < transferredVis.attrs[attr].length; ++i) {
-                transferredVis.attrs[attr][i] = valArray[0];
+                if (typeof valArray[0] === 'number') {
+                    transferredVis.attrs[attr][i] = _.chain(valArray).sum() / valArray.length;
+                }
+                else {
+                    transferredVis.attrs[attr][i] = _.chain(valArray).countBy().pairs().max(_.last).head().value();
+                }
+                //transferredVis.attrs[attr][i] = valArray[0];
             }
         }
     });
