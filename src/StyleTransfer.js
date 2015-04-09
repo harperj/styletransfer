@@ -746,6 +746,7 @@ var createAxes = function(axes, targetVis, newMappings, newGroups) {
 };
 
 var createDerivedAxis = function(positionMapping, ticks, labels, line, newMappings) {
+    var oldNumTicks = ticks.ids.length;
     var attrName = ticks.name[0] + "Position";
     var tickPositionMapping = _.findWhere(ticks.mappings, function(mapping) {return mapping.attr === attrName;});
     ticks.mappings = _.without(ticks.mappings, tickPositionMapping);
@@ -807,18 +808,20 @@ var createDerivedAxis = function(positionMapping, ticks, labels, line, newMappin
         nodeAttr.text = labels.data['string'][i];
     });
 
-    var length = newMapping.params.interval * (ticks.data[derivedField].length - 1);
-    length += newMapping.params.interval / 4;
+    //var length = newMapping.params.interval * (ticks.data[derivedField].length);
+    //length += newMapping.params.interval / 8;
     var oldMinVal = _.min(line.attrs[attrName]);
     var oldMaxVal = _.max(line.data['axis']);
-    var newMaxVal = oldMinVal + length;
+    var oldLength = oldMaxVal - oldMinVal;
+    var newLength = oldLength - (oldNumTicks * newMapping.params.interval) + (ticks.data[derivedField].length * newMapping.params.interval);
+    var newMaxVal = oldMinVal + newLength;
+
     for (var i = 0; i < line.attrs[attrName].length; ++i) {
         if (line.data['axis'][i] === oldMaxVal) {
             line.data['axis'][i] = newMaxVal;
         }
     }
     line.updateAttrsFromMappings();
-
 
     return [ticks, labels, line];
 };
