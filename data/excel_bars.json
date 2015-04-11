@@ -1,1 +1,2198 @@
-{"svg":{"width":600,"height":500},"axes":[{"orient":"bottom","innerTickSize":6,"outerTickSize":6,"tickPadding":3,"tickArguments":[10],"tickValues":null,"ticks":["Following","Memento","Insomnia","Batman Begins","Prestige","Dark Knight"],"axis":"xaxis","scaleDomain":["Following","Memento","Insomnia","Batman Begins","Prestige","Dark Knight"],"offset":{"x":100,"y":400},"scaleRange":[110,188,266,344,422,500],"boundingBox":{"height":94.21875,"width":407.015625,"y":400,"x":134.515625}},{"orient":"left","innerTickSize":-480,"outerTickSize":0,"tickPadding":3,"tickArguments":{"0":5},"tickValues":null,"ticks":[0,100000,200000,300000,400000,500000],"axis":"yaxis","scaleDomain":[0,534858.444],"offset":{"x":100,"y":20},"scaleRange":[400,20],"boundingBox":{"height":387.84375,"width":531.546875,"y":20,"x":48.453125}}],"groups":[{"data":{"string":["Following","Memento","Insomnia","Batman Begins","Prestige","Dark Knight"],"_deriv_xPosition_0":[0,1,2,3,4,5]},"attrs":{"font-family":["'Open Sans'","'Open Sans'","'Open Sans'","'Open Sans'","'Open Sans'","'Open Sans'"],"font-size":["12px","12px","12px","12px","12px","12px"],"opacity":[1,1,1,1,1,1],"fill":["none","none","none","none","none","none"],"fill-opacity":[1,1,1,1,1,1],"stroke":["rgb(128,128,128)","rgb(128,128,128)","rgb(128,128,128)","rgb(128,128,128)","rgb(128,128,128)","rgb(128,128,128)"],"stroke-width":["2px","2px","2px","2px","2px","2px"],"shape":["line","line","line","line","line","line"],"xPosition":[145,223,301,379,457,535],"yPosition":[403,403,403,403,403,403],"area":[0,0,0,0,0,0],"width":[0,0,0,0,0,0],"height":[6,6,6,6,6,6],"text":[0,0,0,0,0,0],"rotation":[0,0,0,0,0,0]},"numFields":2,"ids":[7,10,13,16,19,22],"mappings":[{"data":["_deriv_xPosition_0"],"attr":"xPosition","type":"derived","params":{"attrMin":145,"attrMax":535,"coeffs":[78.00000000000003,145.00000000000017],"err":1},"group":"~0~groups~0"}],"nodeAttrs":[{"y2":"6","x2":"0","text":""},{"y2":"6","x2":"0","text":""},{"y2":"6","x2":"0","text":""},{"y2":"6","x2":"0","text":""},{"y2":"6","x2":"0","text":""},{"y2":"6","x2":"0","text":""}],"name":"xaxis-ticks","axis":"xaxis"},{"data":{"string":["Following","Memento","Insomnia","Batman Begins","Prestige","Dark Knight"],"_deriv_xPosition_1":[0,1,2,3,4,5],"_deriv_yPosition_1":[4,2,0,1,5,3],"_deriv_height_1":[4,2,0,1,5,3]},"attrs":{"font-family":["'Open Sans'","'Open Sans'","'Open Sans'","'Open Sans'","'Open Sans'","'Open Sans'"],"font-size":["12px","12px","12px","12px","12px","12px"],"opacity":[1,1,1,1,1,1],"fill":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"fill-opacity":[1,1,1,1,1,1],"stroke":["none","none","none","none","none","none"],"stroke-width":[1,1,1,1,1,1],"shape":["text","text","text","text","text","text"],"xPosition":[143.0234375,221.0234375,299.0234375,377.0234375,455.0234375,533.0234375],"yPosition":[436.5390625,437.15625,435.9609375,452.109375,432.5859375,442.84375],"area":[903.157470703125,924.1611328125,883.483154296875,1433.03466796875,768.627685546875,1117.7138671875],"width":[17.015625,17.015625,17.015625,17.015625,17.015625,17.015625],"height":[53.078125,54.3125,51.921875,84.21875,45.171875,65.6875],"text":["Following","Memento","Insomnia","Batman Begins","Prestige","Dark Knight"],"rotation":[0,0,0,0,0,0]},"numFields":4,"ids":[8,11,14,17,20,23],"mappings":[{"data":"string","attr":"yPosition","type":"nominal","params":{"Following":436.5390625,"Memento":437.15625,"Insomnia":435.9609375,"Batman Begins":452.109375,"Prestige":432.5859375,"Dark Knight":442.84375},"attrRange":[436.5390625,437.15625,435.9609375,452.109375,432.5859375,442.84375],"group":"~0~groups~1"},{"data":"string","attr":"area","type":"nominal","params":{"Following":903.157470703125,"Memento":924.1611328125,"Insomnia":883.483154296875,"Batman Begins":1433.03466796875,"Prestige":768.627685546875,"Dark Knight":1117.7138671875},"attrRange":[903.157470703125,924.1611328125,883.483154296875,1433.03466796875,768.627685546875,1117.7138671875],"group":"~0~groups~1"},{"data":"string","attr":"height","type":"nominal","params":{"Following":53.078125,"Memento":54.3125,"Insomnia":51.921875,"Batman Begins":84.21875,"Prestige":45.171875,"Dark Knight":65.6875},"attrRange":[53.078125,54.3125,51.921875,84.21875,45.171875,65.6875],"group":"~0~groups~1"},{"data":"string","attr":"text","type":"nominal","params":{"Following":"Following","Memento":"Memento","Insomnia":"Insomnia","Batman Begins":"Batman Begins","Prestige":"Prestige","Dark Knight":"Dark Knight"},"attrRange":["Following","Memento","Insomnia","Batman Begins","Prestige","Dark Knight"],"group":"~0~groups~1"},{"data":"_deriv_xPosition_1","attr":"yPosition","type":"nominal","params":{"0":436.5390625,"1":437.15625,"2":435.9609375,"3":452.109375,"4":432.5859375,"5":442.84375},"attrRange":[436.5390625,437.15625,435.9609375,452.109375,432.5859375,442.84375],"group":"~0~groups~1"},{"data":"_deriv_xPosition_1","attr":"area","type":"nominal","params":{"0":903.157470703125,"1":924.1611328125,"2":883.483154296875,"3":1433.03466796875,"4":768.627685546875,"5":1117.7138671875},"attrRange":[903.157470703125,924.1611328125,883.483154296875,1433.03466796875,768.627685546875,1117.7138671875],"group":"~0~groups~1"},{"data":"_deriv_xPosition_1","attr":"height","type":"nominal","params":{"0":53.078125,"1":54.3125,"2":51.921875,"3":84.21875,"4":45.171875,"5":65.6875},"attrRange":[53.078125,54.3125,51.921875,84.21875,45.171875,65.6875],"group":"~0~groups~1"},{"data":"_deriv_xPosition_1","attr":"text","type":"nominal","params":{"0":"Following","1":"Memento","2":"Insomnia","3":"Batman Begins","4":"Prestige","5":"Dark Knight"},"attrRange":["Following","Memento","Insomnia","Batman Begins","Prestige","Dark Knight"],"group":"~0~groups~1"},{"data":"_deriv_yPosition_1","attr":"yPosition","type":"nominal","params":{"0":435.9609375,"1":452.109375,"2":437.15625,"3":442.84375,"4":436.5390625,"5":432.5859375},"attrRange":[435.9609375,452.109375,437.15625,442.84375,436.5390625,432.5859375],"group":"~0~groups~1"},{"data":"_deriv_yPosition_1","attr":"area","type":"nominal","params":{"0":883.483154296875,"1":1433.03466796875,"2":924.1611328125,"3":1117.7138671875,"4":903.157470703125,"5":768.627685546875},"attrRange":[883.483154296875,1433.03466796875,924.1611328125,1117.7138671875,903.157470703125,768.627685546875],"group":"~0~groups~1"},{"data":"_deriv_yPosition_1","attr":"height","type":"nominal","params":{"0":51.921875,"1":84.21875,"2":54.3125,"3":65.6875,"4":53.078125,"5":45.171875},"attrRange":[51.921875,84.21875,54.3125,65.6875,53.078125,45.171875],"group":"~0~groups~1"},{"data":"_deriv_yPosition_1","attr":"text","type":"nominal","params":{"0":"Insomnia","1":"Batman Begins","2":"Memento","3":"Dark Knight","4":"Following","5":"Prestige"},"attrRange":["Insomnia","Batman Begins","Memento","Dark Knight","Following","Prestige"],"group":"~0~groups~1"},{"data":"_deriv_height_1","attr":"yPosition","type":"nominal","params":{"0":435.9609375,"1":452.109375,"2":437.15625,"3":442.84375,"4":436.5390625,"5":432.5859375},"attrRange":[435.9609375,452.109375,437.15625,442.84375,436.5390625,432.5859375],"group":"~0~groups~1"},{"data":"_deriv_height_1","attr":"area","type":"nominal","params":{"0":883.483154296875,"1":1433.03466796875,"2":924.1611328125,"3":1117.7138671875,"4":903.157470703125,"5":768.627685546875},"attrRange":[883.483154296875,1433.03466796875,924.1611328125,1117.7138671875,903.157470703125,768.627685546875],"group":"~0~groups~1"},{"data":"_deriv_height_1","attr":"height","type":"nominal","params":{"0":51.921875,"1":84.21875,"2":54.3125,"3":65.6875,"4":53.078125,"5":45.171875},"attrRange":[51.921875,84.21875,54.3125,65.6875,53.078125,45.171875],"group":"~0~groups~1"},{"data":"_deriv_height_1","attr":"text","type":"nominal","params":{"0":"Insomnia","1":"Batman Begins","2":"Memento","3":"Dark Knight","4":"Following","5":"Prestige"},"attrRange":["Insomnia","Batman Begins","Memento","Dark Knight","Following","Prestige"],"group":"~0~groups~1"},{"data":["_deriv_xPosition_1"],"attr":"xPosition","type":"derived","params":{"attrMin":143.0234375,"attrMax":533.0234375,"coeffs":[78,143.02343750000014],"err":1},"group":"~0~groups~1"}],"nodeAttrs":[{"dy":".71em","y":"9","x":"0","transform":"rotate(-90) translate(-10, -15)","style":"text-anchor: end;","text":"Following"},{"dy":".71em","y":"9","x":"0","transform":"rotate(-90) translate(-10, -15)","style":"text-anchor: end;","text":"Memento"},{"dy":".71em","y":"9","x":"0","transform":"rotate(-90) translate(-10, -15)","style":"text-anchor: end;","text":"Insomnia"},{"dy":".71em","y":"9","x":"0","transform":"rotate(-90) translate(-10, -15)","style":"text-anchor: end;","text":"Batman Begins"},{"dy":".71em","y":"9","x":"0","transform":"rotate(-90) translate(-10, -15)","style":"text-anchor: end;","text":"Prestige"},{"dy":".71em","y":"9","x":"0","transform":"rotate(-90) translate(-10, -15)","style":"text-anchor: end;","text":"Dark Knight"}],"name":"xaxis-labels","axis":"xaxis"},{"data":{"number":[0,100000,200000,300000,400000,500000],"_deriv_yPosition_2":[5,4,3,2,1,0]},"attrs":{"font-family":["'Open Sans'","'Open Sans'","'Open Sans'","'Open Sans'","'Open Sans'","'Open Sans'"],"font-size":["12px","12px","12px","12px","12px","12px"],"opacity":[1,1,1,1,1,1],"fill":["none","none","none","none","none","none"],"fill-opacity":[1,1,1,1,1,1],"stroke":["rgb(128,128,128)","rgb(128,128,128)","rgb(128,128,128)","rgb(128,128,128)","rgb(128,128,128)","rgb(128,128,128)"],"stroke-width":["2px","2px","2px","2px","2px","2px"],"shape":["line","line","line","line","line","line"],"xPosition":[340,340,340,340,340,340],"yPosition":[400,328.9531555175781,257.90631103515625,186.8594970703125,115.81266021728516,44.76582336425781],"area":[0,0,0,0,0,0],"width":[480,480,480,480,480,480],"height":[0,0,0,0,0,0],"text":[0,0,0,0,0,0],"rotation":[0,0,0,0,0,0]},"numFields":2,"ids":[27,30,33,36,39,42],"mappings":[{"data":["number"],"attr":"yPosition","type":"linear","params":{"attrMin":44.76582336425781,"attrMax":400,"coeffs":[-0.0007104683380126955,399.9999923706055],"err":0.9999999999999966},"attrRange":[20,400],"group":"~0~groups~2"}],"nodeAttrs":[{"x2":"480","y2":"0","text":""},{"x2":"480","y2":"0","text":""},{"x2":"480","y2":"0","text":""},{"x2":"480","y2":"0","text":""},{"x2":"480","y2":"0","text":""},{"x2":"480","y2":"0","text":""}],"name":"yaxis-ticks","axis":"yaxis"},{"data":{"number":[0,100000,200000,300000,400000,500000],"_deriv_yPosition_3":[5,4,3,2,1,0]},"attrs":{"font-family":["'Open Sans'","'Open Sans'","'Open Sans'","'Open Sans'","'Open Sans'","'Open Sans'"],"font-size":["12px","12px","12px","12px","12px","12px"],"opacity":[1,1,1,1,1,1],"fill":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"fill-opacity":[1,1,1,1,1,1],"stroke":["none","none","none","none","none","none"],"stroke-width":[1,1,1,1,1,1],"shape":["text","text","text","text","text","text"],"xPosition":[89.8828125,72.7265625,72.7265625,72.7265625,72.7265625,72.7265625],"yPosition":[399.3359375,328.2890930175781,257.2422561645508,186.1954345703125,115.14859771728516,44.10176086425781],"area":[242.206787109375,826.055419921875,826.0546791553497,826.055419921875,826.055419921875,826.055419921875],"width":[14.234375,48.546875,48.546875,48.546875,48.546875,48.546875],"height":[17.015625,17.015625,17.015609741210938,17.015625,17.015625,17.015625],"text":["0K","100000K","200000K","300000K","400000K","500000K"],"rotation":[0,0,0,0,0,0]},"numFields":2,"ids":[28,31,34,37,40,43],"mappings":[{"data":"number","attr":"text","type":"nominal","params":{"0":"0K","100000":"100000K","200000":"200000K","300000":"300000K","400000":"400000K","500000":"500000K"},"attrRange":["0K","100000K","200000K","300000K","400000K","500000K"],"group":"~0~groups~3"},{"data":"_deriv_yPosition_3","attr":"text","type":"nominal","params":{"0":"500000K","1":"400000K","2":"300000K","3":"200000K","4":"100000K","5":"0K"},"attrRange":["500000K","400000K","300000K","200000K","100000K","0K"],"group":"~0~groups~3"},{"data":["number"],"attr":"yPosition","type":"linear","params":{"attrMin":44.10176086425781,"attrMax":399.3359375,"coeffs":[-0.0007104683401925224,399.33593168712804],"err":0.9999999999999984},"attrRange":[20,400],"group":"~0~groups~3"}],"nodeAttrs":[{"dy":".32em","x":"-3","y":"0","style":"text-anchor: end;","text":"0K"},{"dy":".32em","x":"-3","y":"0","style":"text-anchor: end;","text":"100000K"},{"dy":".32em","x":"-3","y":"0","style":"text-anchor: end;","text":"200000K"},{"dy":".32em","x":"-3","y":"0","style":"text-anchor: end;","text":"300000K"},{"dy":".32em","x":"-3","y":"0","style":"text-anchor: end;","text":"400000K"},{"dy":".32em","x":"-3","y":"0","style":"text-anchor: end;","text":"500000K"}],"name":"yaxis-labels","axis":"yaxis"},{"data":{"Title":["Following","Memento","Insomnia","Batman Begins","Prestige","Dark Knight"],"Year":[1998,2000,2002,2005,2006,2008],"Domestic RunningTime":[71,116,118,140,130,152],"BoxOffice":[48.482,25544.867,67355.513,206852.432,53089.891,534858.444],"_deriv_xPosition_0":[0,1,2,3,4,5],"_deriv_yPosition_4":[5,3,2,4,1,0],"_deriv_height_4":[0,1,4,2,3,5]},"attrs":{"font-family":["Times","Times","Times","Times","Times","Times"],"font-size":["16px","16px","16px","16px","16px","16px"],"opacity":[1,1,1,1,1,1],"fill":["url(#grad1)","url(#grad1)","url(#grad1)","url(#grad1)","url(#grad1)","url(#grad1)"],"fill-opacity":[1,1,1,1,1,1],"stroke":["none","none","none","none","none","none"],"stroke-width":[1,1,1,1,1,1],"shape":["rect","rect","rect","rect","rect","rect"],"xPosition":[145,223,301,379,457,535],"yPosition":[399.98277282714844,390.9255828857422,376.07301330566406,326.5189437866211,381.1406555175781,210],"area":[1.205902099609375,635.2091979980469,1674.8890686035156,5143.673934936523,1320.1541137695312,13300],"width":[35,35,35,35,35,35],"height":[0.034454345703125,18.148834228515625,47.853973388671875,146.9621124267578,37.71868896484375,380],"text":[0,0,0,0,0,0],"rotation":[0,0,0,0,0,0]},"numFields":7,"ids":[45,46,47,48,49,50],"mappings":[{"data":["_deriv_xPosition_0"],"attr":"xPosition","type":"derived","params":{"attrMin":145,"attrMax":535,"coeffs":[78.00000000000003,145.00000000000017],"err":1},"group":"~0~groups~4"},{"data":["BoxOffice"],"attr":"yPosition","type":"linear","params":{"attrMin":210,"attrMax":399.98277282714844,"coeffs":[-0.0003552341687409489,399.9999949717758],"err":0.999999999999999},"attrRange":[20,400],"group":"~0~groups~4"},{"data":["BoxOffice"],"attr":"area","type":"linear","params":{"attrMin":1.205902099609375,"attrMax":13300,"coeffs":[0.02486639181186644,0.00035197569286538055],"err":0.999999999999999},"attrRange":[1.205902099609375,13300],"group":"~0~groups~4"},{"data":["BoxOffice"],"attr":"height","type":"linear","params":{"attrMin":0.034454345703125,"attrMax":380,"coeffs":[0.0007104683374818983,0.00001005644836737929],"err":0.999999999999999},"attrRange":[0.034454345703125,380],"group":"~0~groups~4"}],"nodeAttrs":[{"class":"bar","fill":"url(#grad1)","x":"27.5","width":"35","y":"379.9655550731102","height":"0.03444492688981882","text":""},{"class":"bar","fill":"url(#grad1)","x":"105.5","width":"35","y":"361.8511803096821","height":"18.148819690317907","text":""},{"class":"bar","fill":"url(#grad1)","x":"183.5","width":"35","y":"332.14603933597056","height":"47.853960664029444","text":""},{"class":"bar","fill":"url(#grad1)","x":"261.5","width":"35","y":"233.03789247085345","height":"146.96210752914655","text":""},{"class":"bar","fill":"url(#grad1)","x":"339.5","width":"35","y":"342.28131236159373","height":"37.718687638406266","text":""},{"class":"bar","fill":"url(#grad1)","x":"417.5","width":"35","y":"0","height":"380","text":""}]},{"data":{"axis":[0,0,480,480],"tick":[0,6,6,0],"lineID":[0,1,2,3]},"attrs":{"font-family":["'Open Sans'","'Open Sans'","'Open Sans'","'Open Sans'"],"font-size":["12px","12px","12px","12px"],"opacity":[1,1,1,1],"fill":["none","none","none","none"],"fill-opacity":[1,1,1,1],"stroke":["rgb(128,128,128)","rgb(128,128,128)","rgb(128,128,128)","rgb(128,128,128)"],"stroke-width":["2px","2px","2px","2px"],"shape":["linePoint","linePoint","linePoint","linePoint"],"xPosition":[100,100,580,580],"yPosition":[406,400,400,406],"area":[0,0,0,0],"width":[0,0,0,0],"height":[0,0,0,0],"text":[0,0,0,0],"rotation":[0,0,0,0]},"numFields":3,"ids":[24,24,24,24],"mappings":[{"data":["axis"],"attr":"xPosition","type":"linear","params":{"attrMin":100,"attrMax":580,"coeffs":[0.9999999999999999,100],"err":1},"attrRange":[100,580],"group":"~0~groups~5"},{"data":["tick"],"attr":"yPosition","type":"linear","params":{"attrMin":400,"attrMax":406,"coeffs":[-1,406],"err":1},"group":"~0~groups~5"}],"nodeAttrs":[{"class":"domain","d":"M0,6V0H480V6","text":""},{"class":"domain","d":"M0,6V0H480V6","text":""},{"class":"domain","d":"M0,6V0H480V6","text":""},{"class":"domain","d":"M0,6V0H480V6","text":""}],"name":"xaxis-line","axis":"xaxis"},{"data":{"domain":[534858.444,534858.444,0,0],"tick":[0,0,0,0],"lineID":[0,1,2,3]},"attrs":{"font-family":["'Open Sans'","'Open Sans'","'Open Sans'","'Open Sans'"],"font-size":["12px","12px","12px","12px"],"opacity":[1,1,1,1],"fill":["none","none","none","none"],"fill-opacity":[1,1,1,1],"stroke":["rgb(128,128,128)","rgb(128,128,128)","rgb(128,128,128)","rgb(128,128,128)"],"stroke-width":["2px","2px","2px","2px"],"shape":["linePoint","linePoint","linePoint","linePoint"],"xPosition":[100,100,100,100],"yPosition":[20,20,400,400],"area":[0,0,0,0],"width":[0,0,0,0],"height":[380,380,380,380],"text":[0,0,0,0],"rotation":[0,0,0,0]},"numFields":3,"ids":[44,44,44,44],"mappings":[{"data":["domain"],"attr":"yPosition","type":"linear","params":{"attrMin":20,"attrMax":400,"coeffs":[-0.0007104683571191783,400],"err":1},"attrRange":[20,400],"group":"~0~groups~6"}],"nodeAttrs":[{"class":"domain","d":"M0,0H0V380H0","text":""},{"class":"domain","d":"M0,0H0V380H0","text":""},{"class":"domain","d":"M0,0H0V380H0","text":""},{"class":"domain","d":"M0,0H0V380H0","text":""}],"name":"yaxis-line","axis":"yaxis"}],"mappingSets":{"font-family":[],"font-size":[],"opacity":[],"fill":[],"fill-opacity":[],"stroke":[],"stroke-width":[],"shape":[],"xPosition":[{"mappingRefs":[{"data":"axis","attr":"xPosition","type":"linear","range":[100,580],"groupID":5}],"attributes":[100,580],"type":"linear"}],"yPosition":[{"mappingRefs":[{"data":"string","attr":"yPosition","type":"nominal","range":[436.5390625,437.15625,435.9609375,452.109375,432.5859375,442.84375],"groupID":1}],"attributes":[436.5390625,437.15625,435.9609375,452.109375,432.5859375,442.84375],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_xPosition_1","attr":"yPosition","type":"nominal","range":[436.5390625,437.15625,435.9609375,452.109375,432.5859375,442.84375],"groupID":1}],"attributes":[436.5390625,437.15625,435.9609375,452.109375,432.5859375,442.84375],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_yPosition_1","attr":"yPosition","type":"nominal","range":[435.9609375,452.109375,437.15625,442.84375,436.5390625,432.5859375],"groupID":1}],"attributes":[435.9609375,452.109375,437.15625,442.84375,436.5390625,432.5859375],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_height_1","attr":"yPosition","type":"nominal","range":[435.9609375,452.109375,437.15625,442.84375,436.5390625,432.5859375],"groupID":1}],"attributes":[435.9609375,452.109375,437.15625,442.84375,436.5390625,432.5859375],"type":"nominal"},{"mappingRefs":[{"data":"number","attr":"yPosition","type":"linear","range":[44.76582336425781,400],"groupID":2},{"data":"number","attr":"yPosition","type":"linear","range":[44.10176086425781,399.3359375],"groupID":3},{"data":"BoxOffice","attr":"yPosition","type":"linear","range":[210,399.98277282714844],"groupID":4},{"data":"domain","attr":"yPosition","type":"linear","range":[20,400],"groupID":6}],"attributes":[20,400],"type":"linear"}],"area":[{"mappingRefs":[{"data":"string","attr":"area","type":"nominal","range":[903.157470703125,924.1611328125,883.483154296875,1433.03466796875,768.627685546875,1117.7138671875],"groupID":1}],"attributes":[903.157470703125,924.1611328125,883.483154296875,1433.03466796875,768.627685546875,1117.7138671875],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_xPosition_1","attr":"area","type":"nominal","range":[903.157470703125,924.1611328125,883.483154296875,1433.03466796875,768.627685546875,1117.7138671875],"groupID":1}],"attributes":[903.157470703125,924.1611328125,883.483154296875,1433.03466796875,768.627685546875,1117.7138671875],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_yPosition_1","attr":"area","type":"nominal","range":[883.483154296875,1433.03466796875,924.1611328125,1117.7138671875,903.157470703125,768.627685546875],"groupID":1}],"attributes":[883.483154296875,1433.03466796875,924.1611328125,1117.7138671875,903.157470703125,768.627685546875],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_height_1","attr":"area","type":"nominal","range":[883.483154296875,1433.03466796875,924.1611328125,1117.7138671875,903.157470703125,768.627685546875],"groupID":1}],"attributes":[883.483154296875,1433.03466796875,924.1611328125,1117.7138671875,903.157470703125,768.627685546875],"type":"nominal"},{"mappingRefs":[{"data":"BoxOffice","attr":"area","type":"linear","range":[1.205902099609375,13300],"groupID":4}],"attributes":[1.205902099609375,13300],"type":"linear"}],"width":[],"height":[{"mappingRefs":[{"data":"string","attr":"height","type":"nominal","range":[53.078125,54.3125,51.921875,84.21875,45.171875,65.6875],"groupID":1}],"attributes":[53.078125,54.3125,51.921875,84.21875,45.171875,65.6875],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_xPosition_1","attr":"height","type":"nominal","range":[53.078125,54.3125,51.921875,84.21875,45.171875,65.6875],"groupID":1}],"attributes":[53.078125,54.3125,51.921875,84.21875,45.171875,65.6875],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_yPosition_1","attr":"height","type":"nominal","range":[51.921875,84.21875,54.3125,65.6875,53.078125,45.171875],"groupID":1}],"attributes":[51.921875,84.21875,54.3125,65.6875,53.078125,45.171875],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_height_1","attr":"height","type":"nominal","range":[51.921875,84.21875,54.3125,65.6875,53.078125,45.171875],"groupID":1}],"attributes":[51.921875,84.21875,54.3125,65.6875,53.078125,45.171875],"type":"nominal"},{"mappingRefs":[{"data":"BoxOffice","attr":"height","type":"linear","range":[0.034454345703125,380],"groupID":4}],"attributes":[0.034454345703125,380],"type":"linear"}],"text":[{"mappingRefs":[{"data":"string","attr":"text","type":"nominal","range":["Following","Memento","Insomnia","Batman Begins","Prestige","Dark Knight"],"groupID":1}],"attributes":["Following","Memento","Insomnia","Batman Begins","Prestige","Dark Knight"],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_xPosition_1","attr":"text","type":"nominal","range":["Following","Memento","Insomnia","Batman Begins","Prestige","Dark Knight"],"groupID":1}],"attributes":["Following","Memento","Insomnia","Batman Begins","Prestige","Dark Knight"],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_yPosition_1","attr":"text","type":"nominal","range":["Insomnia","Batman Begins","Memento","Dark Knight","Following","Prestige"],"groupID":1}],"attributes":["Insomnia","Batman Begins","Memento","Dark Knight","Following","Prestige"],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_height_1","attr":"text","type":"nominal","range":["Insomnia","Batman Begins","Memento","Dark Knight","Following","Prestige"],"groupID":1}],"attributes":["Insomnia","Batman Begins","Memento","Dark Knight","Following","Prestige"],"type":"nominal"},{"mappingRefs":[{"data":"number","attr":"text","type":"nominal","range":["0K","100000K","200000K","300000K","400000K","500000K"],"groupID":3}],"attributes":["0K","100000K","200000K","300000K","400000K","500000K"],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_yPosition_3","attr":"text","type":"nominal","range":["500000K","400000K","300000K","200000K","100000K","0K"],"groupID":3}],"attributes":["500000K","400000K","300000K","200000K","100000K","0K"],"type":"nominal"}],"rotation":[]},"ids":[]}
+{
+  "svg": {
+    "width": 600,
+    "height": 500
+  },
+  "axes": [
+    {
+      "orient": "bottom",
+      "innerTickSize": 6,
+      "outerTickSize": 6,
+      "tickPadding": 3,
+      "tickArguments": [10],
+      "tickValues": null,
+      "ticks": [
+        "Following",
+        "Memento",
+        "Insomnia",
+        "Batman Begins",
+        "Prestige",
+        "Dark Knight"
+      ],
+      "axis": "xaxis",
+      "scaleDomain": [
+        "Following",
+        "Memento",
+        "Insomnia",
+        "Batman Begins",
+        "Prestige",
+        "Dark Knight"
+      ],
+      "offset": {
+        "x": 100,
+        "y": 400
+      },
+      "scaleRange": [
+        110,
+        188,
+        266,
+        344,
+        422,
+        500
+      ],
+      "boundingBox": {
+        "height": 94.21875,
+        "width": 407.359375,
+        "y": 400,
+        "x": 134.171875
+      }
+    },
+    {
+      "orient": "left",
+      "innerTickSize": -480,
+      "outerTickSize": 0,
+      "tickPadding": 3,
+      "tickArguments": {"0": 5},
+      "tickValues": null,
+      "ticks": [
+        0,
+        100000,
+        200000,
+        300000,
+        400000,
+        500000
+      ],
+      "axis": "yaxis",
+      "scaleDomain": [
+        0,
+        534858.444
+      ],
+      "offset": {
+        "x": 100,
+        "y": 20
+      },
+      "scaleRange": [
+        400,
+        20
+      ],
+      "boundingBox": {
+        "height": 387.84375,
+        "width": 531.546875,
+        "y": 20,
+        "x": 48.453125
+      }
+    }
+  ],
+  "groups": [
+    {
+      "data": {
+        "string": [
+          "Following",
+          "Memento",
+          "Insomnia",
+          "Batman Begins",
+          "Prestige",
+          "Dark Knight"
+        ],
+        "_deriv_xPosition_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "_deriv_yPosition_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "_deriv_width_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "_deriv_height_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'"
+        ],
+        "font-size": [
+          "12px",
+          "12px",
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(128,128,128)",
+          "rgb(128,128,128)",
+          "rgb(128,128,128)",
+          "rgb(128,128,128)",
+          "rgb(128,128,128)",
+          "rgb(128,128,128)"
+        ],
+        "stroke-width": [
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px"
+        ],
+        "shape": [
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line"
+        ],
+        "xPosition": [
+          145,
+          223,
+          301,
+          379,
+          457,
+          535
+        ],
+        "yPosition": [
+          403,
+          403,
+          403,
+          403,
+          403,
+          403
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "height": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        7,
+        10,
+        13,
+        16,
+        19,
+        22
+      ],
+      "mappings": [
+        {
+          "data": ["_deriv_xPosition_0"],
+          "attr": "xPosition",
+          "type": "derived",
+          "params": {
+            "attrMin": 145,
+            "attrMax": 535,
+            "coeffs": [
+              78.00000000000003,
+              145.00000000000017
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~0"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "y2": "6",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "6",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "6",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "6",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "6",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "6",
+          "x2": "0",
+          "text": ""
+        }
+      ],
+      "name": "xaxis-ticks",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "string": [
+          "Following",
+          "Memento",
+          "Insomnia",
+          "Batman Begins",
+          "Prestige",
+          "Dark Knight"
+        ],
+        "_deriv_xPosition_1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "_deriv_yPosition_1": [
+          4,
+          2,
+          0,
+          1,
+          5,
+          3
+        ],
+        "_deriv_width_1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "_deriv_height_1": [
+          4,
+          2,
+          0,
+          1,
+          5,
+          3
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'"
+        ],
+        "font-size": [
+          "12px",
+          "12px",
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text"
+        ],
+        "xPosition": [
+          142.8515625,
+          220.8515625,
+          298.8515625,
+          376.8515625,
+          454.8515625,
+          532.8515625
+        ],
+        "yPosition": [
+          436.5390625,
+          437.15625,
+          435.9609375,
+          452.109375,
+          432.5859375,
+          442.84375
+        ],
+        "area": [
+          921.403076171875,
+          942.8310546875,
+          901.331298828125,
+          1461.98486328125,
+          784.155517578125,
+          1140.2939453125
+        ],
+        "width": [
+          17.359375,
+          17.359375,
+          17.359375,
+          17.359375,
+          17.359375,
+          17.359375
+        ],
+        "height": [
+          53.078125,
+          54.3125,
+          51.921875,
+          84.21875,
+          45.171875,
+          65.6875
+        ],
+        "text": [
+          "Following",
+          "Memento",
+          "Insomnia",
+          "Batman Begins",
+          "Prestige",
+          "Dark Knight"
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        8,
+        11,
+        14,
+        17,
+        20,
+        23
+      ],
+      "mappings": [
+        {
+          "data": "string",
+          "attr": "yPosition",
+          "type": "nominal",
+          "params": {
+            "Following": 436.5390625,
+            "Memento": 437.15625,
+            "Insomnia": 435.9609375,
+            "Batman Begins": 452.109375,
+            "Prestige": 432.5859375,
+            "Dark Knight": 442.84375
+          },
+          "group": "~0~groups~1"
+        },
+        {
+          "data": "string",
+          "attr": "area",
+          "type": "nominal",
+          "params": {
+            "Following": 921.403076171875,
+            "Memento": 942.8310546875,
+            "Insomnia": 901.331298828125,
+            "Batman Begins": 1461.98486328125,
+            "Prestige": 784.155517578125,
+            "Dark Knight": 1140.2939453125
+          },
+          "group": "~0~groups~1"
+        },
+        {
+          "data": "string",
+          "attr": "height",
+          "type": "nominal",
+          "params": {
+            "Following": 53.078125,
+            "Memento": 54.3125,
+            "Insomnia": 51.921875,
+            "Batman Begins": 84.21875,
+            "Prestige": 45.171875,
+            "Dark Knight": 65.6875
+          },
+          "group": "~0~groups~1"
+        },
+        {
+          "data": "string",
+          "attr": "text",
+          "type": "nominal",
+          "params": {
+            "Following": "Following",
+            "Memento": "Memento",
+            "Insomnia": "Insomnia",
+            "Batman Begins": "Batman Begins",
+            "Prestige": "Prestige",
+            "Dark Knight": "Dark Knight"
+          },
+          "group": "~0~groups~1"
+        },
+        {
+          "data": "_deriv_yPosition_1",
+          "attr": "yPosition",
+          "type": "nominal",
+          "params": {
+            "0": 435.9609375,
+            "1": 452.109375,
+            "2": 437.15625,
+            "3": 442.84375,
+            "4": 436.5390625,
+            "5": 432.5859375
+          },
+          "group": "~0~groups~1"
+        },
+        {
+          "data": "_deriv_height_1",
+          "attr": "height",
+          "type": "nominal",
+          "params": {
+            "0": 51.921875,
+            "1": 84.21875,
+            "2": 54.3125,
+            "3": 65.6875,
+            "4": 53.078125,
+            "5": 45.171875
+          },
+          "group": "~0~groups~1"
+        },
+        {
+          "data": ["_deriv_xPosition_1"],
+          "attr": "xPosition",
+          "type": "derived",
+          "params": {
+            "attrMin": 142.8515625,
+            "attrMax": 532.8515625,
+            "coeffs": [
+              78,
+              142.8515625000001
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~1"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "dy": ".71em",
+          "y": "9",
+          "x": "0",
+          "transform": "rotate(-90) translate(-10, -15)",
+          "style": "text-anchor: end;",
+          "text": "Following"
+        },
+        {
+          "dy": ".71em",
+          "y": "9",
+          "x": "0",
+          "transform": "rotate(-90) translate(-10, -15)",
+          "style": "text-anchor: end;",
+          "text": "Memento"
+        },
+        {
+          "dy": ".71em",
+          "y": "9",
+          "x": "0",
+          "transform": "rotate(-90) translate(-10, -15)",
+          "style": "text-anchor: end;",
+          "text": "Insomnia"
+        },
+        {
+          "dy": ".71em",
+          "y": "9",
+          "x": "0",
+          "transform": "rotate(-90) translate(-10, -15)",
+          "style": "text-anchor: end;",
+          "text": "Batman Begins"
+        },
+        {
+          "dy": ".71em",
+          "y": "9",
+          "x": "0",
+          "transform": "rotate(-90) translate(-10, -15)",
+          "style": "text-anchor: end;",
+          "text": "Prestige"
+        },
+        {
+          "dy": ".71em",
+          "y": "9",
+          "x": "0",
+          "transform": "rotate(-90) translate(-10, -15)",
+          "style": "text-anchor: end;",
+          "text": "Dark Knight"
+        }
+      ],
+      "name": "xaxis-labels",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "number": [
+          0,
+          100000,
+          200000,
+          300000,
+          400000,
+          500000
+        ],
+        "_deriv_xPosition_2": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "_deriv_yPosition_2": [
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "_deriv_width_2": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "_deriv_height_2": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'"
+        ],
+        "font-size": [
+          "12px",
+          "12px",
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(128,128,128)",
+          "rgb(128,128,128)",
+          "rgb(128,128,128)",
+          "rgb(128,128,128)",
+          "rgb(128,128,128)",
+          "rgb(128,128,128)"
+        ],
+        "stroke-width": [
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px"
+        ],
+        "shape": [
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line"
+        ],
+        "xPosition": [
+          340,
+          340,
+          340,
+          340,
+          340,
+          340
+        ],
+        "yPosition": [
+          400,
+          328.9531555175781,
+          257.90631103515625,
+          186.8594970703125,
+          115.81266021728516,
+          44.76582336425781
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          480,
+          480,
+          480,
+          480,
+          480,
+          480
+        ],
+        "height": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        27,
+        30,
+        33,
+        36,
+        39,
+        42
+      ],
+      "mappings": [
+        {
+          "data": ["number"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 44.76582336425781,
+            "attrMax": 400,
+            "coeffs": [
+              -0.0007104683380126955,
+              399.9999923706055
+            ],
+            "err": 0.9999999999999966
+          },
+          "dataRange": [
+            0,
+            534858.444
+          ],
+          "attrRange": [
+            399.9999923706055,
+            20.000002589869098
+          ],
+          "group": "~0~groups~2"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "x2": "480",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "480",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "480",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "480",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "480",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "480",
+          "y2": "0",
+          "text": ""
+        }
+      ],
+      "name": "yaxis-ticks",
+      "axis": "yaxis"
+    },
+    {
+      "data": {
+        "number": [
+          0,
+          100000,
+          200000,
+          300000,
+          400000,
+          500000
+        ],
+        "_deriv_xPosition_3": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          0
+        ],
+        "_deriv_yPosition_3": [
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "_deriv_width_3": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "_deriv_height_3": [
+          2,
+          0,
+          1,
+          3,
+          4,
+          5
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'"
+        ],
+        "font-size": [
+          "12px",
+          "12px",
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text"
+        ],
+        "xPosition": [
+          89.8828125,
+          72.7265625,
+          72.7265625,
+          72.7265625,
+          72.7265625,
+          72.7265625
+        ],
+        "yPosition": [
+          399.171875,
+          328.1250305175781,
+          257.0781936645508,
+          186.0313720703125,
+          114.98453521728516,
+          43.93769836425781
+        ],
+        "area": [
+          246.87744140625,
+          841.98486328125,
+          841.9841225147247,
+          841.98486328125,
+          841.98486328125,
+          841.98486328125
+        ],
+        "width": [
+          14.234375,
+          48.546875,
+          48.546875,
+          48.546875,
+          48.546875,
+          48.546875
+        ],
+        "height": [
+          17.34375,
+          17.34375,
+          17.343734741210938,
+          17.34375,
+          17.34375,
+          17.34375
+        ],
+        "text": [
+          "0K",
+          "100000K",
+          "200000K",
+          "300000K",
+          "400000K",
+          "500000K"
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        28,
+        31,
+        34,
+        37,
+        40,
+        43
+      ],
+      "mappings": [
+        {
+          "data": "number",
+          "attr": "text",
+          "type": "nominal",
+          "params": {
+            "0": "0K",
+            "100000": "100000K",
+            "200000": "200000K",
+            "300000": "300000K",
+            "400000": "400000K",
+            "500000": "500000K"
+          },
+          "group": "~0~groups~3"
+        },
+        {
+          "data": ["number"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 43.93769836425781,
+            "attrMax": 399.171875,
+            "coeffs": [
+              -0.0007104683401925224,
+              399.17186918712804
+            ],
+            "err": 0.9999999999999984
+          },
+          "dataRange": [
+            0,
+            534858.444
+          ],
+          "attrRange": [
+            399.17186918712804,
+            19.171878240492845
+          ],
+          "group": "~0~groups~3"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "dy": ".32em",
+          "x": "-3",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "0K"
+        },
+        {
+          "dy": ".32em",
+          "x": "-3",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "100000K"
+        },
+        {
+          "dy": ".32em",
+          "x": "-3",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "200000K"
+        },
+        {
+          "dy": ".32em",
+          "x": "-3",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "300000K"
+        },
+        {
+          "dy": ".32em",
+          "x": "-3",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "400000K"
+        },
+        {
+          "dy": ".32em",
+          "x": "-3",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "500000K"
+        }
+      ],
+      "name": "yaxis-labels",
+      "axis": "yaxis"
+    },
+    {
+      "data": {
+        "Title": [
+          "Following",
+          "Memento",
+          "Insomnia",
+          "Batman Begins",
+          "Prestige",
+          "Dark Knight"
+        ],
+        "Year": [
+          1998,
+          2000,
+          2002,
+          2005,
+          2006,
+          2008
+        ],
+        "Domestic RunningTime": [
+          71,
+          116,
+          118,
+          140,
+          130,
+          152
+        ],
+        "BoxOffice": [
+          48.482,
+          25544.867,
+          67355.513,
+          206852.432,
+          53089.891,
+          534858.444
+        ],
+        "_deriv_xPosition_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "_deriv_yPosition_4": [
+          5,
+          3,
+          2,
+          4,
+          1,
+          0
+        ],
+        "_deriv_width_4": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "_deriv_height_4": [
+          0,
+          1,
+          4,
+          2,
+          3,
+          5
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "url(#grad1)",
+          "url(#grad1)",
+          "url(#grad1)",
+          "url(#grad1)",
+          "url(#grad1)",
+          "url(#grad1)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "rect",
+          "rect",
+          "rect",
+          "rect",
+          "rect",
+          "rect"
+        ],
+        "xPosition": [
+          145,
+          223,
+          301,
+          379,
+          457,
+          535
+        ],
+        "yPosition": [
+          399.98277282714844,
+          390.9255828857422,
+          376.07301330566406,
+          326.5189437866211,
+          381.1406555175781,
+          210
+        ],
+        "area": [
+          1.205902099609375,
+          635.2091979980469,
+          1674.8890686035156,
+          5143.673934936523,
+          1320.1541137695312,
+          13300
+        ],
+        "width": [
+          35,
+          35,
+          35,
+          35,
+          35,
+          35
+        ],
+        "height": [
+          0.034454345703125,
+          18.148834228515625,
+          47.853973388671875,
+          146.9621124267578,
+          37.71868896484375,
+          380
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 8,
+      "ids": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "mappings": [
+        {
+          "data": ["_deriv_xPosition_0"],
+          "attr": "xPosition",
+          "type": "derived",
+          "params": {
+            "attrMin": 145,
+            "attrMax": 535,
+            "coeffs": [
+              78.00000000000003,
+              145.00000000000017
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~4"
+        },
+        {
+          "data": ["BoxOffice"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 210,
+            "attrMax": 399.98277282714844,
+            "coeffs": [
+              -0.0003552341687409489,
+              399.9999949717758
+            ],
+            "err": 0.999999999999999
+          },
+          "dataRange": [
+            0,
+            534858.444
+          ],
+          "attrRange": [
+            399.9999949717758,
+            210.0000002233584
+          ],
+          "group": "~0~groups~4"
+        },
+        {
+          "data": ["BoxOffice"],
+          "attr": "area",
+          "type": "linear",
+          "params": {
+            "attrMin": 1.205902099609375,
+            "attrMax": 13300,
+            "coeffs": [
+              0.02486639181186644,
+              0.00035197569286538055
+            ],
+            "err": 0.999999999999999
+          },
+          "dataRange": [
+            48.482,
+            534858.444
+          ],
+          "attrRange": [
+            1.205924383515774,
+            13299.999984364917
+          ],
+          "group": "~0~groups~4"
+        },
+        {
+          "data": ["BoxOffice"],
+          "attr": "height",
+          "type": "linear",
+          "params": {
+            "attrMin": 0.034454345703125,
+            "attrMax": 380,
+            "coeffs": [
+              0.0007104683374818983,
+              0.00001005644836737929
+            ],
+            "err": 0.999999999999999
+          },
+          "dataRange": [
+            48.482,
+            534858.444
+          ],
+          "attrRange": [
+            0.034454982386164776,
+            379.99999955328343
+          ],
+          "group": "~0~groups~4"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "bar",
+          "fill": "url(#grad1)",
+          "x": "27.5",
+          "width": "35",
+          "y": "379.9655550731102",
+          "height": "0.03444492688981882",
+          "text": ""
+        },
+        {
+          "class": "bar",
+          "fill": "url(#grad1)",
+          "x": "105.5",
+          "width": "35",
+          "y": "361.8511803096821",
+          "height": "18.148819690317907",
+          "text": ""
+        },
+        {
+          "class": "bar",
+          "fill": "url(#grad1)",
+          "x": "183.5",
+          "width": "35",
+          "y": "332.14603933597056",
+          "height": "47.853960664029444",
+          "text": ""
+        },
+        {
+          "class": "bar",
+          "fill": "url(#grad1)",
+          "x": "261.5",
+          "width": "35",
+          "y": "233.03789247085345",
+          "height": "146.96210752914655",
+          "text": ""
+        },
+        {
+          "class": "bar",
+          "fill": "url(#grad1)",
+          "x": "339.5",
+          "width": "35",
+          "y": "342.28131236159373",
+          "height": "37.718687638406266",
+          "text": ""
+        },
+        {
+          "class": "bar",
+          "fill": "url(#grad1)",
+          "x": "417.5",
+          "width": "35",
+          "y": "0",
+          "height": "380",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "data": {
+        "axis": [
+          0,
+          0,
+          480,
+          480
+        ],
+        "tick": [
+          0,
+          6,
+          6,
+          0
+        ],
+        "lineID": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_xPosition_5": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_yPosition_5": [
+          1,
+          2,
+          0,
+          3
+        ],
+        "_deriv_width_5": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_height_5": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'"
+        ],
+        "font-size": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(128,128,128)",
+          "rgb(128,128,128)",
+          "rgb(128,128,128)",
+          "rgb(128,128,128)"
+        ],
+        "stroke-width": [
+          "2px",
+          "2px",
+          "2px",
+          "2px"
+        ],
+        "shape": [
+          "linePoint",
+          "linePoint",
+          "linePoint",
+          "linePoint"
+        ],
+        "xPosition": [
+          100,
+          100,
+          580,
+          580
+        ],
+        "yPosition": [
+          406,
+          400,
+          400,
+          406
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "height": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 7,
+      "ids": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "mappings": [
+        {
+          "data": ["axis"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 100,
+            "attrMax": 580,
+            "coeffs": [
+              0.9999999999999999,
+              100
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            0,
+            480
+          ],
+          "attrRange": [
+            100,
+            580
+          ],
+          "group": "~0~groups~5"
+        },
+        {
+          "data": ["tick"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 400,
+            "attrMax": 406,
+            "coeffs": [
+              -1,
+              406
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~5"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "domain",
+          "d": "M0,6V0H480V6",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,6V0H480V6",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,6V0H480V6",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,6V0H480V6",
+          "text": ""
+        }
+      ],
+      "name": "xaxis-line",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "domain": [
+          534858.444,
+          534858.444,
+          0,
+          0
+        ],
+        "tick": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "lineID": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_xPosition_6": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_yPosition_6": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_width_5": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_height_6": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'",
+          "'Open Sans'"
+        ],
+        "font-size": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(128,128,128)",
+          "rgb(128,128,128)",
+          "rgb(128,128,128)",
+          "rgb(128,128,128)"
+        ],
+        "stroke-width": [
+          "2px",
+          "2px",
+          "2px",
+          "2px"
+        ],
+        "shape": [
+          "linePoint",
+          "linePoint",
+          "linePoint",
+          "linePoint"
+        ],
+        "xPosition": [
+          100,
+          100,
+          100,
+          100
+        ],
+        "yPosition": [
+          20,
+          20,
+          400,
+          400
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "height": [
+          380,
+          380,
+          380,
+          380
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 7,
+      "ids": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "mappings": [
+        {
+          "data": ["domain"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 20,
+            "attrMax": 400,
+            "coeffs": [
+              -0.0007104683571191783,
+              400
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            0,
+            534858.444
+          ],
+          "attrRange": [
+            400,
+            19.999999999999943
+          ],
+          "group": "~0~groups~6"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "domain",
+          "d": "M0,0H0V380H0",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,0H0V380H0",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,0H0V380H0",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,0H0V380H0",
+          "text": ""
+        }
+      ],
+      "name": "yaxis-line",
+      "axis": "yaxis"
+    }
+  ],
+  "mappingSets": {
+    "font-family": [],
+    "font-size": [],
+    "opacity": [],
+    "fill": [],
+    "fill-opacity": [],
+    "stroke": [],
+    "stroke-width": [],
+    "shape": [],
+    "xPosition": [
+      {
+        "mappingRefs": [
+          {
+            "data": "axis",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              100,
+              580
+            ],
+            "groupID": 5
+          }
+        ],
+        "attributes": [
+          100,
+          580
+        ],
+        "type": "linear"
+      }
+    ],
+    "yPosition": [
+      {
+        "mappingRefs": [
+          {
+            "data": "string",
+            "attr": "yPosition",
+            "type": "nominal",
+            "range": [
+              436.5390625,
+              437.15625,
+              435.9609375,
+              452.109375,
+              432.5859375,
+              442.84375
+            ],
+            "groupID": 1
+          }
+        ],
+        "attributes": [
+          436.5390625,
+          437.15625,
+          435.9609375,
+          452.109375,
+          432.5859375,
+          442.84375
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "_deriv_yPosition_1",
+            "attr": "yPosition",
+            "type": "nominal",
+            "range": [
+              435.9609375,
+              452.109375,
+              437.15625,
+              442.84375,
+              436.5390625,
+              432.5859375
+            ],
+            "groupID": 1
+          }
+        ],
+        "attributes": [
+          435.9609375,
+          452.109375,
+          437.15625,
+          442.84375,
+          436.5390625,
+          432.5859375
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              44.76582336425781,
+              400
+            ],
+            "groupID": 2
+          },
+          {
+            "data": "number",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              43.93769836425781,
+              399.171875
+            ],
+            "groupID": 3
+          },
+          {
+            "data": "BoxOffice",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              210,
+              399.98277282714844
+            ],
+            "groupID": 4
+          },
+          {
+            "data": "domain",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              20,
+              400
+            ],
+            "groupID": 6
+          }
+        ],
+        "attributes": [
+          20,
+          400
+        ],
+        "type": "linear"
+      }
+    ],
+    "area": [
+      {
+        "mappingRefs": [
+          {
+            "data": "string",
+            "attr": "area",
+            "type": "nominal",
+            "range": [
+              921.403076171875,
+              942.8310546875,
+              901.331298828125,
+              1461.98486328125,
+              784.155517578125,
+              1140.2939453125
+            ],
+            "groupID": 1
+          }
+        ],
+        "attributes": [
+          921.403076171875,
+          942.8310546875,
+          901.331298828125,
+          1461.98486328125,
+          784.155517578125,
+          1140.2939453125
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "BoxOffice",
+            "attr": "area",
+            "type": "linear",
+            "range": [
+              1.205902099609375,
+              13300
+            ],
+            "groupID": 4
+          }
+        ],
+        "attributes": [
+          1.205902099609375,
+          13300
+        ],
+        "type": "linear"
+      }
+    ],
+    "width": [],
+    "height": [
+      {
+        "mappingRefs": [
+          {
+            "data": "string",
+            "attr": "height",
+            "type": "nominal",
+            "range": [
+              53.078125,
+              54.3125,
+              51.921875,
+              84.21875,
+              45.171875,
+              65.6875
+            ],
+            "groupID": 1
+          }
+        ],
+        "attributes": [
+          53.078125,
+          54.3125,
+          51.921875,
+          84.21875,
+          45.171875,
+          65.6875
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "_deriv_height_1",
+            "attr": "height",
+            "type": "nominal",
+            "range": [
+              51.921875,
+              84.21875,
+              54.3125,
+              65.6875,
+              53.078125,
+              45.171875
+            ],
+            "groupID": 1
+          }
+        ],
+        "attributes": [
+          51.921875,
+          84.21875,
+          54.3125,
+          65.6875,
+          53.078125,
+          45.171875
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "BoxOffice",
+            "attr": "height",
+            "type": "linear",
+            "range": [
+              0.034454345703125,
+              380
+            ],
+            "groupID": 4
+          }
+        ],
+        "attributes": [
+          0.034454345703125,
+          380
+        ],
+        "type": "linear"
+      }
+    ],
+    "text": [
+      {
+        "mappingRefs": [
+          {
+            "data": "string",
+            "attr": "text",
+            "type": "nominal",
+            "range": [
+              "Following",
+              "Memento",
+              "Insomnia",
+              "Batman Begins",
+              "Prestige",
+              "Dark Knight"
+            ],
+            "groupID": 1
+          }
+        ],
+        "attributes": [
+          "Following",
+          "Memento",
+          "Insomnia",
+          "Batman Begins",
+          "Prestige",
+          "Dark Knight"
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "text",
+            "type": "nominal",
+            "range": [
+              "0K",
+              "100000K",
+              "200000K",
+              "300000K",
+              "400000K",
+              "500000K"
+            ],
+            "groupID": 3
+          }
+        ],
+        "attributes": [
+          "0K",
+          "100000K",
+          "200000K",
+          "300000K",
+          "400000K",
+          "500000K"
+        ],
+        "type": "nominal"
+      }
+    ],
+    "rotation": []
+  },
+  "ids": []
+}
