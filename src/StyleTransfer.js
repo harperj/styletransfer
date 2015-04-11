@@ -875,7 +875,7 @@ var transferUnmapped = function (sourceVis, transferredVis) {
     mappedAttrs = _.uniq(mappedAttrs);
 
     _.each(sourceVis.attrs, function (valArray, attr) {
-        if (!_.contains(mappedAttrs, attr)) {
+        if (!_.contains(mappedAttrs, attr) && transferredVis.attrs.hasOwnProperty(attr)) {
             for (var i = 0; i < transferredVis.attrs[attr].length; ++i) {
                 if (typeof valArray[0] === 'number') {
                     transferredVis.attrs[attr][i] = _.chain(valArray).sum() / valArray.length;
