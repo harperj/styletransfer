@@ -81,8 +81,15 @@ var createVisContainer = function (container, decon) {
 
 
 var renderVis = function (decon, svgNode) {
-    for (var j = 0; j < decon.groups.length; ++j) {
-        var vis = decon.groups[j];
+    var groups = decon.groups;
+    groups = _.sortBy(groups, function(group) {
+        var ids = group.ids;
+        return _.sum(ids) / ids.length;
+    });
+
+
+    for (var j = 0; j < groups.length; ++j) {
+        var vis = groups[j];
 
         if (vis.data.hasOwnProperty('lineID')) {
             console.log("has a lineID");
