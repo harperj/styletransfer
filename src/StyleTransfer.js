@@ -887,14 +887,14 @@ var createLinearAxis = function(positionMapping, axisTicks, axisLabels, axisLine
 
     axisTicks.getMappingForAttr(axis + "Position").params.coeffs = clone(newAxisPositionCoeffs);
     for (i = 0; i < axisTicks.attrs[axis + 'Position'].length; ++i) {
-        axisTicks.data['number'][i] = newAxisPositionMapping.invert(axisTicks.attrs[axis + 'Position'][i]);
+        axisTicks.data['number'][i] = newAxisPositionMapping.invert(Math.round(axisTicks.attrs[axis + 'Position'][i]));
     }
     axisTicks.updateAttrsFromMappings();
 
     axisLabels.getMappingForAttr(axis + "Position").params.coeffs = clone(newAxisPositionCoeffs);
 
     for (i = 0; i < axisLabels.attrs[axis + 'Position'].length; ++i) {
-        axisLabels.data['number'][i] = newAxisPositionMapping.invert(axisLabels.attrs[axis + 'Position'][i]);
+        axisLabels.data['number'][i] = newAxisPositionMapping.invert(Math.round(axisLabels.attrs[axis + 'Position'][i]));
     }
 
 
@@ -1093,7 +1093,14 @@ var transferMappingNominal = function(sourceField, targetMapping) {
         });
     }
     else {
-        return;
+        for (var j = 0; j < sourceDataVals.length; ++j) {
+            if (targetDataVals.length >= j + 1) {
+                params[sourceDataVals[j]] = targetMapping.map(targetDataVals[j]);
+            }
+            else {
+                return;
+            }
+        }
     }
 
     newMapping.params = params;
