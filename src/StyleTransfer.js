@@ -707,48 +707,8 @@ var transferMappingNominal = function(sourceField, targetMapping) {
     var sourceDataVals = sourceField.type === "nominal" ? sourceField.dataRange : _.uniq(sourceField.group.data[sourceField.fieldName]);
     var targetDataVals = _.keys(targetMapping.params);
 
-    if (targetMapping.attr === "fill" || targetMapping.attr === "stroke") {
-        for (var i = 0; i < sourceDataVals.length; ++i) {
-            if (targetDataVals.length < i + 1) {
-                var rChannel = Math.round((Math.random() * 255) % 255);
-                var gChannel = Math.round((Math.random() * 255) % 255);
-                var bChannel = Math.round((Math.random() * 255) % 255);
-                var newAttrVal = "rgb(" + rChannel.toString() + "," + gChannel.toString() + "," + bChannel.toString() + ")";
-                params[sourceDataVals[i]] = newAttrVal;
-            }
-            else {
-                params[sourceDataVals[i]] = targetMapping.map(targetDataVals[i]);
-            }
-        }
-    }
-    else if (targetMapping.attr === 'text') {
-        _.each(sourceDataVals, function(sourceDataVal) {
-            var stringVal;
-            if (typeof sourceDataVal === 'number') {
-                if (_.max(sourceDataVals) < 1) {
-                    stringVal = (Math.round(sourceDataVal * 1000) / 1000).toString();
-                }
-                else if (_.max(sourceDataVals) < 5)
-                    stringVal = (Math.round(sourceDataVal * 100) / 100).toString();
-                else {
-                    stringVal = Math.round(sourceDataVal).toString();
-                }
-            }
-            else {
-                stringVal = sourceDataVal.toString();
-            }
-            params[sourceDataVal] = stringVal;
-        });
-    }
-    else {
-        for (var j = 0; j < sourceDataVals.length; ++j) {
-            if (targetDataVals.length >= j + 1) {
-                params[sourceDataVals[j]] = targetMapping.map(targetDataVals[j]);
-            }
-            else {
-                return;
-            }
-        }
+    for (var j = 0; j < sourceDataVals.length; ++j) {
+        params[sourceDataVals[j]] = targetMapping.map(targetDataVals[j % targetDataVals.length]);
     }
 
     newMapping.params = params;

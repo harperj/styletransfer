@@ -84,7 +84,10 @@ var renderVis = function (decon, svgNode) {
     var groups = decon.groups;
     groups = _.sortBy(groups, function(group) {
         var ids = group.ids;
-        return _.sum(ids) / ids.length;
+        var val = 0;
+        if (group.axis) val = -10;
+        return val;
+        //return _.sum(ids) / ids.length;
     });
 
 
