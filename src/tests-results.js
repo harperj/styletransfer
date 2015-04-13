@@ -20,6 +20,14 @@ var tests = [
         target_file: './data/purple_scatter.json'
     },
     {
+        source_file: './data/purple_scatter.json',
+        target_file: './data/weiglemc_scatter.json'
+    },
+    {
+        source_file: './data/weiglemc_scatter.json',
+        target_file: './data/purple_scatter.json'
+    },
+    {
         source_file: './data/5308_bars.json',
         target_file: './data/mbostock_bars.json'
     },
@@ -58,6 +66,14 @@ var tests = [
     {
         source_file: './data/excel_bars.json',
         target_file: './data/5308_bars.json'
+    },
+    {
+        source_file: './data/kuijjer_line.json',
+        target_file: './data/my_line.json'
+    },
+    {
+        source_file: './data/my_line.json',
+        target_file: './data/kuijjer_line.json'
     }
 ];
 

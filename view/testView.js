@@ -45,17 +45,20 @@ var loadResults = function (value) {
             var resultRowDiv = $('<div class="row">');
             testDiv.append(resultRowDiv);
 
+            //var vis1Div = $('<div class="result-container row">');
             var vis1Div = $('<div class="result-container col-md-4">');
             resultRowDiv.append(vis1Div);
             createVisContainer(vis1Div[0], test.sourceDecon);
             vis1Div.append($("<h3>Source Vis</h3>"));
 
+            //var vis2Div = $('<div class="result-container row">');
             var vis2Div = $('<div class="result-container col-md-4">');
             resultRowDiv.append(vis2Div);
             createVisContainer(vis2Div[0], test.targetDecon);
             vis2Div.append($("<h3>Target Vis</h3>"));
 
             var result1Div = $('<div class="result-container col-md-4">');
+            //var result1Div = $('<div class="result-container row">');
             resultRowDiv.append(result1Div);
             createVisContainer(result1Div[0], test.result);
             result1Div.append($("<h3>Result</h3>"));
@@ -69,10 +72,17 @@ var loadResults = function (value) {
 var createVisContainer = function (container, decon) {
     var svgWidth = decon.svg ? decon.svg.width : 1000;
     var svgHeight = decon.svg ? decon.svg.height : 1000;
+    //var svgWidth = 1000;
+    //var svgHeight = 600;
 
     var svg = d3.select(container)
         .append("svg")
-        .attr("height", "500px")
+        //.attr("width", svgWidth)
+        //.attr("height", svgHeight)
+        //.style("border", "1px solid black")
+        //.attr("height", "500px")
+        .attr("height", svgHeight / 5)
+        .attr("width", svgWidth / 5)
         .attr("viewBox", "0 0 " + svgWidth + " " + svgHeight)
         .attr("preserveAspectRatio", "xMidYMid")
         .node();

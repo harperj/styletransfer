@@ -14,7 +14,7 @@ var d3 = require('d3');
 var CircularJSON = require('circular-json');
 
 var config = require('./config');
-var transferTests = require('./tests-similaraspect');
+var transferTests = require('./tests');
 
 var getSemiologyRanking = function (mapping) {
     if (mapping.type === "linear") {
@@ -305,11 +305,19 @@ var constructDerivedMappings = function constructDerivedMappings(targetDerived, 
             var matching = _.filter(sourceGroupFields, function(field) {
                 return field.match(derivedRegex) && field.match(derivedRegex).length > 0;
             });
-            console.log(matching);
-            if (matching.length > 0) {
+
+            var fieldName;
+            if (newDerived.length > 0) {
+                fieldName = newDerived[0].getData();
+            }
+            else if (matching.length > 0) {
+                fieldName = matching[0]
+            }
+
+            if (fieldName) {
                 var field = {
-                    fieldName: matching[0],
-                    dataRange: _.uniq(sourceGroup.data[matching[0]]),
+                    fieldName: fieldName,
+                    dataRange: _.uniq(sourceGroup.data[fieldName]),
                     type: 'derived',
                     group: sourceGroup
                 };
@@ -556,7 +564,7 @@ var createLinearAxis = function(positionMapping, axisTicks, axisLabels, axisLine
     //textMapping.params = newTextMapping.params;
     ////
     for (i = 0; i < axisLabels.attrs[axis + 'Position'].length; ++i) {
-        if (_.max(axisLabels.data['number']) < 5) {
+        if (_.max(axisLabels.data['number']) < 10) {
             axisLabels.attrs['text'][i] = (Math.round(axisLabels.data['number'][i] * 100) / 100).toString();
             axisLabels.nodeAttrs[i].text = (Math.round(axisLabels.data['number'][i] * 100) / 100).toString();
         }
@@ -707,8 +715,15 @@ var transferMappingNominal = function(sourceField, targetMapping) {
     var sourceDataVals = sourceField.type === "nominal" ? sourceField.dataRange : _.uniq(sourceField.group.data[sourceField.fieldName]);
     var targetDataVals = _.keys(targetMapping.params);
 
-    for (var j = 0; j < sourceDataVals.length; ++j) {
-        params[sourceDataVals[j]] = targetMapping.map(targetDataVals[j % targetDataVals.length]);
+    if (targetMapping.attr !== "text") {
+        for (var j = 0; j < sourceDataVals.length; ++j) {
+            params[sourceDataVals[j]] = targetMapping.map(targetDataVals[j % targetDataVals.length]);
+        }
+    }
+    else {
+        for (var j = 0; j < sourceDataVals.length; ++j) {
+            params[sourceDataVals[j]] = sourceDataVals[j].toString();
+        }
     }
 
     newMapping.params = params;
