@@ -1,0 +1,2220 @@
+{
+  "svg": {
+    "width": 960,
+    "height": 500
+  },
+  "axes": [
+    {
+      "orient": "bottom",
+      "innerTickSize": -450,
+      "outerTickSize": 0,
+      "tickPadding": 3,
+      "tickArguments": [10],
+      "tickValues": null,
+      "ticks": [
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45
+      ],
+      "axis": "xaxis",
+      "scaleDomain": [
+        10,
+        45
+      ],
+      "offset": {
+        "x": 60,
+        "y": 470
+      },
+      "scaleRange": [
+        60,
+        940
+      ],
+      "boundingBox": {
+        "height": 481.84375,
+        "width": 906.71875,
+        "y": 20,
+        "x": 46.640625
+      }
+    },
+    {
+      "orient": "left",
+      "innerTickSize": -880,
+      "outerTickSize": 0,
+      "tickPadding": 3,
+      "tickArguments": {"0": 3},
+      "tickValues": [
+        250,
+        350,
+        450
+      ],
+      "ticks": "~0~axes~1~tickValues",
+      "axis": "yaxis",
+      "scaleDomain": [
+        200,
+        460
+      ],
+      "offset": {
+        "x": 60,
+        "y": 20
+      },
+      "scaleRange": [
+        470,
+        20
+      ],
+      "boundingBox": {
+        "height": 450,
+        "width": 923.046875,
+        "y": 20,
+        "x": 16.953125
+      }
+    }
+  ],
+  "groups": [
+    {
+      "data": {
+        "number": [
+          10,
+          15,
+          20,
+          25,
+          30,
+          35,
+          40,
+          45
+        ],
+        "_deriv_xPosition_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "_deriv_yPosition_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "_deriv_width_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "_deriv_height_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif"
+        ],
+        "font-size": [
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px"
+        ],
+        "shape": [
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line"
+        ],
+        "xPosition": [
+          60,
+          185.71429443359375,
+          311.4285888671875,
+          437.1428527832031,
+          562.857177734375,
+          688.5714111328125,
+          814.2857055664062,
+          940
+        ],
+        "yPosition": [
+          245,
+          245,
+          245,
+          245,
+          245,
+          245,
+          245,
+          245
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "height": [
+          450,
+          450,
+          450,
+          450,
+          450,
+          450,
+          450,
+          450
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        3,
+        6,
+        9,
+        12,
+        15,
+        18,
+        21,
+        24
+      ],
+      "mappings": [
+        {
+          "data": ["number"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 60,
+            "attrMax": 940,
+            "coeffs": [
+              25.142856779552638,
+              -191.42855762300047
+            ],
+            "err": 0.9999999999999973
+          },
+          "dataRange": [
+            10,
+            45
+          ],
+          "attrRange": [
+            60.00001017252589,
+            939.9999974568682
+          ],
+          "group": "~0~groups~0"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        }
+      ],
+      "name": "xaxis-ticks",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "number": [
+          10,
+          15,
+          20,
+          25,
+          30,
+          35,
+          40,
+          45
+        ],
+        "_deriv_xPosition_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "_deriv_yPosition_1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "_deriv_width_1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "_deriv_height_1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Arial",
+          "Arial",
+          "Arial",
+          "Arial",
+          "Arial",
+          "Arial",
+          "Arial",
+          "Arial"
+        ],
+        "font-size": [
+          "24px",
+          "24px",
+          "24px",
+          "24px",
+          "24px",
+          "24px",
+          "24px",
+          "24px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text"
+        ],
+        "xPosition": [
+          60,
+          185.71429443359375,
+          311.4285888671875,
+          437.1428527832031,
+          562.857177734375,
+          688.5714111328125,
+          814.2857055664062,
+          940
+        ],
+        "yPosition": [
+          488.640625,
+          488.640625,
+          488.640625,
+          488.640625,
+          488.640625,
+          488.640625,
+          488.640625,
+          488.640625
+        ],
+        "area": [
+          705.5419921875,
+          705.5419921875,
+          705.5419921875,
+          705.5419921875,
+          705.5419921875,
+          705.5419921875,
+          705.5419921875,
+          705.5419921875
+        ],
+        "width": [
+          26.71875,
+          26.71875,
+          26.71875,
+          26.71875,
+          26.71875,
+          26.71875,
+          26.71875,
+          26.71875
+        ],
+        "height": [
+          26.40625,
+          26.40625,
+          26.40625,
+          26.40625,
+          26.40625,
+          26.40625,
+          26.40625,
+          26.40625
+        ],
+        "text": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45"
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        4,
+        7,
+        10,
+        13,
+        16,
+        19,
+        22,
+        25
+      ],
+      "mappings": [
+        {
+          "data": "number",
+          "attr": "text",
+          "type": "nominal",
+          "params": {
+            "10": "10",
+            "15": "15",
+            "20": "20",
+            "25": "25",
+            "30": "30",
+            "35": "35",
+            "40": "40",
+            "45": "45"
+          },
+          "group": "~0~groups~1"
+        },
+        {
+          "data": ["number"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 60,
+            "attrMax": 940,
+            "coeffs": [
+              25.142856779552638,
+              -191.42855762300047
+            ],
+            "err": 0.9999999999999973
+          },
+          "dataRange": [
+            10,
+            45
+          ],
+          "attrRange": [
+            60.00001017252589,
+            939.9999974568682
+          ],
+          "group": "~0~groups~1"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "10"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "15"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "20"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "25"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "30"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "35"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "40"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "45"
+        }
+      ],
+      "name": "xaxis-labels",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "number": [
+          250,
+          350,
+          450
+        ],
+        "_deriv_xPosition_2": [
+          0,
+          1,
+          2
+        ],
+        "_deriv_yPosition_2": [
+          2,
+          1,
+          0
+        ],
+        "_deriv_width_2": [
+          0,
+          1,
+          2
+        ],
+        "_deriv_height_2": [
+          0,
+          1,
+          2
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "sans-serif",
+          "sans-serif",
+          "sans-serif"
+        ],
+        "font-size": [
+          "11px",
+          "11px",
+          "11px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          "2px",
+          "2px",
+          "2px"
+        ],
+        "shape": [
+          "line",
+          "line",
+          "line"
+        ],
+        "xPosition": [
+          500,
+          500,
+          500
+        ],
+        "yPosition": [
+          383.4615478515625,
+          210.38461303710938,
+          37.30769348144531
+        ],
+        "area": [
+          0,
+          0,
+          0
+        ],
+        "width": [
+          880,
+          880,
+          880
+        ],
+        "height": [
+          0,
+          0,
+          0
+        ],
+        "text": [
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        29,
+        32,
+        35
+      ],
+      "mappings": [
+        {
+          "data": ["number"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 37.30769348144531,
+            "attrMax": 383.4615478515625,
+            "coeffs": [
+              -1.7307692718505863,
+              816.1538632710772
+            ],
+            "err": 0.9999999999999993
+          },
+          "dataRange": [
+            200,
+            460
+          ],
+          "attrRange": [
+            470.0000089009599,
+            19.99999821980748
+          ],
+          "group": "~0~groups~2"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "x2": "880",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "880",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "880",
+          "y2": "0",
+          "text": ""
+        }
+      ],
+      "name": "yaxis-ticks",
+      "axis": "yaxis"
+    },
+    {
+      "data": {
+        "number": [
+          250,
+          350,
+          450
+        ],
+        "_deriv_xPosition_3": [
+          0,
+          1,
+          2
+        ],
+        "_deriv_yPosition_2": [
+          2,
+          1,
+          0
+        ],
+        "_deriv_width_3": [
+          0,
+          1,
+          2
+        ],
+        "_deriv_height_3": [
+          0,
+          1,
+          2
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Arial",
+          "Arial",
+          "Arial"
+        ],
+        "font-size": [
+          "24px",
+          "24px",
+          "24px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "text",
+          "text",
+          "text"
+        ],
+        "xPosition": [
+          36.9765625,
+          36.9765625,
+          36.9765625
+        ],
+        "yPosition": [
+          382.7427978515625,
+          209.66586303710938,
+          36.588942527770996
+        ],
+        "area": [
+          1057.48779296875,
+          1057.48779296875,
+          1057.4878693521023
+        ],
+        "width": [
+          40.046875,
+          40.046875,
+          40.046875
+        ],
+        "height": [
+          26.40625,
+          26.40625,
+          26.406251907348633
+        ],
+        "text": [
+          "250",
+          "350",
+          "450"
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        30,
+        33,
+        36
+      ],
+      "mappings": [
+        {
+          "data": "number",
+          "attr": "text",
+          "type": "nominal",
+          "params": {
+            "250": "250",
+            "350": "350",
+            "450": "450"
+          },
+          "group": "~0~groups~3"
+        },
+        {
+          "data": ["number"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 36.588942527770996,
+            "attrMax": 382.7427978515625,
+            "coeffs": [
+              -1.7307692766189577,
+              815.4351146221156
+            ],
+            "err": 0.9999999999999994
+          },
+          "dataRange": [
+            200,
+            460
+          ],
+          "attrRange": [
+            469.2812592983241,
+            19.28124737739506
+          ],
+          "group": "~0~groups~3"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "dy": ".32em",
+          "x": "-3",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "250"
+        },
+        {
+          "dy": ".32em",
+          "x": "-3",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "350"
+        },
+        {
+          "dy": ".32em",
+          "x": "-3",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "450"
+        }
+      ],
+      "name": "yaxis-labels",
+      "axis": "yaxis"
+    },
+    {
+      "data": {
+        "x": [
+          432,
+          214,
+          282,
+          380,
+          350,
+          300,
+          415,
+          298,
+          324,
+          416,
+          356,
+          246,
+          390,
+          405,
+          294
+        ],
+        "y": [
+          20,
+          22,
+          12,
+          13,
+          17,
+          20,
+          16,
+          19,
+          30,
+          31,
+          40,
+          43,
+          32,
+          14,
+          16
+        ],
+        "cat": [
+          "a",
+          "a",
+          "a",
+          "a",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c",
+          "c",
+          "d",
+          "d",
+          "c",
+          "a",
+          "d"
+        ],
+        "_deriv_xPosition_4": [
+          2,
+          3,
+          13,
+          6,
+          14,
+          4,
+          7,
+          0,
+          5,
+          1,
+          8,
+          9,
+          12,
+          10,
+          11
+        ],
+        "_deriv_yPosition_4": [
+          0,
+          9,
+          6,
+          13,
+          12,
+          3,
+          10,
+          4,
+          8,
+          5,
+          7,
+          14,
+          2,
+          11,
+          1
+        ],
+        "_deriv_width_4": [
+          2,
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "_deriv_height_4": [
+          12,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          13,
+          14
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif"
+        ],
+        "font-size": [
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)"
+        ],
+        "stroke-width": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "shape": [
+          "rect",
+          "rect",
+          "rect",
+          "rect",
+          "star",
+          "star",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "diamond",
+          "diamond",
+          "circle",
+          "rect",
+          "diamond"
+        ],
+        "xPosition": [
+          311.4285888671875,
+          361.71429443359375,
+          110.28570938110352,
+          135.42857360839844,
+          236,
+          311.4285888671875,
+          210.85714721679688,
+          286.28570556640625,
+          562.857177734375,
+          588,
+          814.2857055664062,
+          889.7142944335938,
+          613.1428833007812,
+          160.57142639160156,
+          210.85714721679688
+        ],
+        "yPosition": [
+          68.46154022216797,
+          445.76922607421875,
+          328.0769348144531,
+          158.46153259277344,
+          210.38461303710938,
+          296.9230651855469,
+          97.88461303710938,
+          300.3846130371094,
+          255.38461303710938,
+          96.15384674072266,
+          200,
+          390.3846130371094,
+          141.1538429260254,
+          115.19230651855469,
+          307.30767822265625
+        ],
+        "area": [
+          1600,
+          1600,
+          1599.9996948242188,
+          1600,
+          1600,
+          1600,
+          1600,
+          1600,
+          1600,
+          1600,
+          1600,
+          1600,
+          1599.9996948242188,
+          1600,
+          1600
+        ],
+        "width": [
+          40,
+          40,
+          39.99999237060547,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40
+        ],
+        "height": [
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          39.99999237060547,
+          40,
+          40
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 7,
+      "ids": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ],
+      "mappings": [
+        {
+          "data": ["y"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 110.28570938110352,
+            "attrMax": 889.7142944335938,
+            "coeffs": [
+              25.142857451558637,
+              -191.42857188023368
+            ],
+            "err": 0.9999999999999976
+          },
+          "dataRange": [
+            10,
+            45
+          ],
+          "attrRange": [
+            60.0000026353527,
+            940.0000134399049
+          ],
+          "group": "~0~groups~4"
+        },
+        {
+          "data": ["x"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 68.46154022216797,
+            "attrMax": 445.76922607421875,
+            "coeffs": [
+              -1.7307692159392962,
+              816.1538385469971
+            ],
+            "err": 0.9999999999999976
+          },
+          "dataRange": [
+            200,
+            460
+          ],
+          "attrRange": [
+            469.99999535913787,
+            19.999999214920877
+          ],
+          "group": "~0~groups~4"
+        },
+        {
+          "data": "cat",
+          "attr": "shape",
+          "type": "nominal",
+          "params": {
+            "a": "rect",
+            "b": "star",
+            "c": "circle",
+            "d": "diamond"
+          }
+
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "dot",
+          "r": "20",
+          "cx": "251.42857142857142",
+          "cy": "48.46153846153844",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "20",
+          "cx": "301.7142857142857",
+          "cy": "425.7692307692308",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "20",
+          "cx": "50.285714285714285",
+          "cy": "308.0769230769231",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "20",
+          "cx": "75.42857142857143",
+          "cy": "138.46153846153848",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "20",
+          "cx": "176",
+          "cy": "190.38461538461542",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "20",
+          "cx": "251.42857142857142",
+          "cy": "276.92307692307696",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "20",
+          "cx": "150.85714285714286",
+          "cy": "77.8846153846154",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "20",
+          "cx": "226.28571428571428",
+          "cy": "280.3846153846154",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "20",
+          "cx": "502.85714285714283",
+          "cy": "235.38461538461536",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "20",
+          "cx": "528",
+          "cy": "76.15384615384613",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "20",
+          "cx": "754.2857142857142",
+          "cy": "180",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "20",
+          "cx": "829.7142857142857",
+          "cy": "370.38461538461536",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "20",
+          "cx": "553.1428571428571",
+          "cy": "121.15384615384617",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "20",
+          "cx": "100.57142857142857",
+          "cy": "95.19230769230771",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "20",
+          "cx": "150.85714285714286",
+          "cy": "287.30769230769226",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "data": {
+        "domain": [
+          10,
+          10,
+          45,
+          45
+        ],
+        "tick": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "lineID": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_xPosition_5": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_yPosition_5": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_width_5": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_height_5": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif"
+        ],
+        "font-size": [
+          "11px",
+          "11px",
+          "11px",
+          "11px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          "2px",
+          "2px",
+          "2px",
+          "2px"
+        ],
+        "shape": [
+          "linePoint",
+          "linePoint",
+          "linePoint",
+          "linePoint"
+        ],
+        "xPosition": [
+          60,
+          60,
+          940,
+          940
+        ],
+        "yPosition": [
+          470,
+          470,
+          470,
+          470
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          880,
+          880,
+          880,
+          880
+        ],
+        "height": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 7,
+      "ids": [
+        26,
+        26,
+        26,
+        26
+      ],
+      "mappings": [
+        {
+          "data": ["domain"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 60,
+            "attrMax": 940,
+            "coeffs": [
+              25.142857142857153,
+              -191.42857142857176
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            10,
+            45
+          ],
+          "attrRange": [
+            59.99999999999977,
+            940
+          ],
+          "group": "~0~groups~5"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "domain",
+          "d": "M0,0V0H880V0",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,0V0H880V0",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,0V0H880V0",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,0V0H880V0",
+          "text": ""
+        }
+      ],
+      "name": "xaxis-line",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "domain": [
+          460,
+          460,
+          200,
+          200
+        ],
+        "tick": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "lineID": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_xPosition_6": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_yPosition_6": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_width_6": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_height_6": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif"
+        ],
+        "font-size": [
+          "11px",
+          "11px",
+          "11px",
+          "11px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          "2px",
+          "2px",
+          "2px",
+          "2px"
+        ],
+        "shape": [
+          "linePoint",
+          "linePoint",
+          "linePoint",
+          "linePoint"
+        ],
+        "xPosition": [
+          60,
+          60,
+          60,
+          60
+        ],
+        "yPosition": [
+          20,
+          20,
+          470,
+          470
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "height": [
+          450,
+          450,
+          450,
+          450
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 7,
+      "ids": [
+        37,
+        37,
+        37,
+        37
+      ],
+      "mappings": [
+        {
+          "data": ["domain"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 20,
+            "attrMax": 470,
+            "coeffs": [
+              -1.7307692307692306,
+              816.1538461538462
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            200,
+            460
+          ],
+          "attrRange": [
+            470.00000000000006,
+            20.000000000000114
+          ],
+          "group": "~0~groups~6"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "domain",
+          "d": "M0,0H0V450H0",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,0H0V450H0",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,0H0V450H0",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,0H0V450H0",
+          "text": ""
+        }
+      ],
+      "name": "yaxis-line",
+      "axis": "yaxis"
+    }
+  ],
+  "mappingSets": {
+    "font-family": [],
+    "font-size": [],
+    "font-weight": [],
+    "opacity": [],
+    "fill": [],
+    "fill-opacity": [],
+    "stroke": [],
+    "stroke-width": [],
+    "shape": [
+      {
+        "mappingRefs": [
+          {
+            "data": "cat",
+            "attr": "shape",
+            "type": "nominal",
+            "range": [
+              "rect",
+              "circle",
+              "diamond",
+              "star"
+            ],
+            "groupID": 4
+          }
+        ],
+        "attributes": [
+          "rect",
+          "circle",
+          "diamond",
+          "star"
+        ],
+        "type": "nominal"
+      }
+    ],
+    "xPosition": [
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              60,
+              940
+            ],
+            "groupID": 0
+          },
+          {
+            "data": "number",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              60,
+              940
+            ],
+            "groupID": 1
+          },
+          {
+            "data": "y",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              110.28570938110352,
+              889.7142944335938
+            ],
+            "groupID": 4
+          },
+          {
+            "data": "domain",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              60,
+              940
+            ],
+            "groupID": 5
+          }
+        ],
+        "attributes": [
+          60,
+          940
+        ],
+        "type": "linear"
+      }
+    ],
+    "yPosition": [
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              37.30769348144531,
+              383.4615478515625
+            ],
+            "groupID": 2
+          },
+          {
+            "data": "number",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              36.588942527770996,
+              382.7427978515625
+            ],
+            "groupID": 3
+          },
+          {
+            "data": "x",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              68.46154022216797,
+              445.76922607421875
+            ],
+            "groupID": 4
+          },
+          {
+            "data": "domain",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              20,
+              470
+            ],
+            "groupID": 6
+          }
+        ],
+        "attributes": [
+          20,
+          470
+        ],
+        "type": "linear"
+      }
+    ],
+    "area": [],
+    "width": [],
+    "height": [],
+    "text": [
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "text",
+            "type": "nominal",
+            "range": [
+              "10",
+              "15",
+              "20",
+              "25",
+              "30",
+              "35",
+              "40",
+              "45"
+            ],
+            "groupID": 1
+          }
+        ],
+        "attributes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45"
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "text",
+            "type": "nominal",
+            "range": [
+              "250",
+              "350",
+              "450"
+            ],
+            "groupID": 3
+          }
+        ],
+        "attributes": [
+          "250",
+          "350",
+          "450"
+        ],
+        "type": "nominal"
+      }
+    ],
+    "rotation": []
+  },
+  "ids": []
+}
