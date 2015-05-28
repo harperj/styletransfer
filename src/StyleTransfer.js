@@ -14,7 +14,7 @@ var d3 = require('d3');
 var CircularJSON = require('circular-json');
 
 var config = require('./config');
-var transferTests = require('./tests-results1');
+var transferTests = require('./tests-results');
 
 var getSemiologyRanking = function (mapping) {
     if (mapping.type === "linear") {
@@ -143,15 +143,73 @@ var getBestMatchingMapping = function(sourceField, targetMappings) {
     }
 };
 
+//var transferMappings = function(rankedSourceData, rankedTargetMappings) {
+//    var transferredMappings = [];
+//
+//    var newMappings = [];
+//
+//    for (var i = 0; i < rankedSourceData.length; ++i) {
+//        var sourceDataField = rankedSourceData[i];
+//        var targetMapping = getHighestRankedMatch(sourceDataField, rankedTargetMappings, transferredMappings);
+//        if (targetMapping) {
+//            var newMapping = transferMapping(sourceDataField, targetMapping);
+//            newMapping.targetAnalog = targetMapping;
+//            transferredMappings.push(targetMapping);
+//            newMappings.push(newMapping);
+//            var propagated = propagateMappings(newMapping, targetMapping, rankedTargetMappings, transferredMappings, sourceDataField);
+//            newMappings = newMappings.concat(propagated);
+//        }
+//    }
+//    return newMappings;
+//};
+
+var getBestMatchingField = function(targetMapping, sourceFields) {
+    var sameTypeFields = _.filter(sourceFields, function(sourceField) {
+        return targetMapping.type === sourceField.mappingType;
+    });
+
+    if (sameTypeFields.length >= 1) {
+        return sameTypeFields[0];
+    }
+    else if(targetMapping.type === "linear") {
+        return sourceFields[0];
+    }
+    else {
+        return null;
+    }
+};
+
+var getHighestRankedMatchingData = function(targetMapping, rankedSourceData, transferredMappings, skipList) {
+    if (!skipList) {
+        skipList = [];
+    }
+
+    var remainingList = _.filter(rankedSourceData, function(item) {
+        return !_.contains(skipList, item);
+    });
+
+    var ranks = _.uniq(_.map(remainingList, function(field) {return field.rank;})).sort();
+
+    for (var i = 0; i < ranks.length; ++i) {
+        var thisRankFields = _.filter(remainingList, function(item) { return item.rank === ranks[i]; });
+        var field = getBestMatchingField(targetMapping, thisRankFields);
+        if (field) {
+            return field;
+        }
+    }
+
+    return undefined;
+};
+
 var transferMappings = function(rankedSourceData, rankedTargetMappings) {
     var transferredMappings = [];
 
     var newMappings = [];
 
-    for (var i = 0; i < rankedSourceData.length; ++i) {
-        var sourceDataField = rankedSourceData[i];
-        var targetMapping = getHighestRankedMatch(sourceDataField, rankedTargetMappings, transferredMappings);
-        if (targetMapping) {
+    for (var i = 0; i < rankedTargetMappings.length; ++i) {
+        var targetMapping = rankedTargetMappings[i];
+        var sourceDataField = getHighestRankedMatchingData(targetMapping, rankedSourceData, transferredMappings);
+        if (sourceDataField) {
             var newMapping = transferMapping(sourceDataField, targetMapping);
             newMapping.targetAnalog = targetMapping;
             transferredMappings.push(targetMapping);
