@@ -14,7 +14,7 @@ var d3 = require('d3');
 var CircularJSON = require('circular-json');
 
 var config = require('./config');
-var transferTests = require('./tests');
+var transferTests = require('./tests-results1');
 
 var getSemiologyRanking = function (mapping) {
     if (mapping.type === "linear") {
@@ -563,6 +563,26 @@ var createLinearAxis = function(positionMapping, axisTicks, axisLabels, axisLine
     //var newTextMapping = transferMapping(axisDataField, textMapping);
     //textMapping.params = newTextMapping.params;
     ////
+
+    var removed = 0;
+    for (var j = 0; j < axisLabels.mappings.length - removed; ++j) {
+        var mapping = axisLabels.mappings[j];
+        var spatial = ["xPosition", "yPosition", "width", "height"];
+        if (_.contains(spatial, mapping.attr) && mapping.type !== "linear") {
+            axisLabels.mappings.splice(j, 1);
+            removed++;
+        }
+    }
+    removed = 0;
+    for (var j = 0; j < axisTicks.mappings.length - removed; ++j) {
+        mapping = axisTicks.mappings[j];
+        spatial = ["xPosition", "yPosition", "width", "height"];
+        if (_.contains(spatial, mapping.attr) && mapping.type !== "linear") {
+            axisTicks.mappings.splice(j, 1);
+            removed++;
+        }
+    }
+
     for (i = 0; i < axisLabels.attrs[axis + 'Position'].length; ++i) {
         if (_.max(axisLabels.data['number']) < 10) {
             axisLabels.attrs['text'][i] = (Math.round(axisLabels.data['number'][i] * 100) / 100).toString();
