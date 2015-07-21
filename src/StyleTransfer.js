@@ -203,16 +203,17 @@ var getHighestRankedMatchingData = function(targetMapping, rankedSourceData, tra
 
 var transferMappings = function(rankedSourceData, rankedTargetMappings) {
     var transferredMappings = [];
-
+    var transferredData = [];
     var newMappings = [];
 
     for (var i = 0; i < rankedTargetMappings.length; ++i) {
         var targetMapping = rankedTargetMappings[i];
-        var sourceDataField = getHighestRankedMatchingData(targetMapping, rankedSourceData, transferredMappings);
+        var sourceDataField = getHighestRankedMatchingData(targetMapping, rankedSourceData, transferredMappings, transferredData);
         if (sourceDataField) {
             var newMapping = transferMapping(sourceDataField, targetMapping);
             newMapping.targetAnalog = targetMapping;
             transferredMappings.push(targetMapping);
+            transferredData.push(sourceDataField);
             newMappings.push(newMapping);
             var propagated = propagateMappings(newMapping, targetMapping, rankedTargetMappings, transferredMappings, sourceDataField);
             newMappings = newMappings.concat(propagated);
