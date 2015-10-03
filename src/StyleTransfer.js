@@ -1,18 +1,15 @@
-/**
- * Created by harper on 11/25/14.
- */
-
-var Deconstruct = require('d3-decon-lib').Deconstruct;
-var Deconstruction = require('d3-decon-lib').Deconstruction;
-var Mapping = require('d3-decon-lib').Mapping;
+var libDecon = require('d3-decon-lib');
+var Deconstruct = libDecon.Deconstruct;
+var Deconstruction = libDecon.Deconstruction;
+var Mapping = libDecon.Mapping;
 var fs = require('fs');
+
 var _ = require('lodash');
 var assert = require('assert');
 var clone = require('clone');
 var ss = require('simple-statistics');
 var d3 = require('d3');
 var CircularJSON = require('circular-json');
-var csv = require('fast-csv');
 
 var config = require('./config');
 var transferTests = require('./tests');
@@ -314,7 +311,6 @@ var transferChart = function (sourceData, targetVis) {
     var axisGroups = _.filter(targetVis.groups, function(group) { return isAxis(group.name); });
     axisGroups = propagateDataToAxes(allNewMappings, axisGroups, rankedSourceData);
 
-    console.log(allNewMappings);
     var groups = groupMappings(allNewMappings);
 
     var axes = _.groupBy(axisGroups, function(group) {
@@ -1048,25 +1044,6 @@ var loadDeconstructedVis = function (filename) {
     return Deconstruction.fromJSON(decon);
 };
 
-var loadCSVData = function(filename) {
-    var dataSet = {};
-    var csvData = fs.readFileSync(filename, "utf8");
-    csvData = csvData.split("\n");
-    csvData = _.map(csvData, function(row) {
-        return row.split(",");
-    });
-    var cols = csvData[0];
-    for (var i = 0; i < cols.length; ++i) {
-        var colName = cols[i];
-        dataSet[colName] = [];
-        for (var j = 1; j < csvData.length; ++j) {
-            dataSet[colName].push(csvData[j][i]);
-        }
-    }
-    console.log(dataSet);
-    return dataSet;
-};
-
 var loadJSONData = function(filename) {
     var file = fs.readFileSync(filename, 'utf8');
     var dataset = JSON.parse(file);
@@ -1110,12 +1087,12 @@ var main = function () {
     _.each(transferTests, function (test) {
         var sourceData;
         test.sourceDecon = {};
+
         if (typeof test.source_type === "undefined" || test.source_type === "deconstruction") {
             test.sourceDecon = loadDeconstructedVis(test.source_file);
+
+            // FIXME: extractDataFromVis currently non-functional.
             sourceData = extractDataFromVis(test.sourceDecon);
-        }
-        else if (test.source_type === "csv_data") {
-            sourceData = loadCSVData(test.source_file);
         }
         else if (test.source_type === "json_data") {
             sourceData = loadJSONData(test.source_file);
