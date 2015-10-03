@@ -1,0 +1,37 @@
+{
+  "data": {
+    "share": [12, 23, 47, 6, 52, 19],
+    "share_accum": [0, 12, 35, 82, 88, 140],
+    "name": ["Joan", "Jeff", "Scott", "Susanne", "Octavia", "Harmon"]
+  },
+  "attrs": {
+    "shape": ["arc", "arc", "arc", "arc", "arc", "arc"],
+    "outerRadius": [30, 30, 30, 30, 30, 30],
+    "innerRadius": [0, 0, 0, 0, 0, 0],
+    "arcLength": [0.474, 0.908, 1.86, 0.237, 2.05, 0.751],
+    "arcStart": [0, 0.474, 1.38, 3.24, 3.48, 5.53],
+    "xPosition": [100, 100, 100, 100, 100, 100],
+    "yPosition": [100, 100, 100, 100, 100, 100]
+  },
+  "mappings": [
+    {
+      "data": ["share"],
+      "attrs": "arcLength",
+      "type": "linear",
+      "params": {
+        "attrMin": 0.237,
+        "attrMax": 1.86,
+        "coeffs": [0.0395, 0]
+      }
+    },
+    {
+      "data": ["share_accum"],
+      "attrs": "arcStart",
+      "params": {
+        "attrMin": 0,
+        "attrMax": 5.53,
+        "coeffs": [0.0395, 0]
+      }
+    }
+  ]
+}

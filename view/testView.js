@@ -309,10 +309,10 @@ var transferSpatialAttrs = function (newNode, svg, attrs, group) {
         //}
     }
 
-    if (isNaN(widthScale)) {
+    if (isNaN(widthScale) || widthScale == Infinity) {
         widthScale = 1;
     }
-    if (isNaN(heightScale)) {
+    if (isNaN(heightScale) || heightScale == Infinity) {
         heightScale = 1;
     }
     newScale.setScale(widthScale, heightScale);

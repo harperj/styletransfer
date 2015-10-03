@@ -1,1 +1,4375 @@
-{"svg":{"width":900,"height":450},"axes":[{"orient":"top","innerTickSize":-350,"outerTickSize":-350,"tickPadding":3,"tickArguments":{"0":5},"tickValues":null,"ticks":[0,10,20,30],"axis":"xaxis","scaleDomain":[0,37.6],"offset":{"x":250,"y":50},"scaleRange":[250,840],"boundingBox":{"height":370,"width":594.578125,"y":30,"x":245.421875}},{"orient":"left","innerTickSize":6,"outerTickSize":6,"tickPadding":3,"tickArguments":[10],"tickValues":null,"ticks":["Namibia","Macedonia, FYR","Armenia","Bosnia and Herzegovina","Lesotho","South Africa","Spain","Latvia","Lithuania","Estonia","Serbia","Georgia","Yemen, Rep.","Slovak Republic","Dominican Republic","Tunisia","Albania","Ireland","Jordan","Greece"],"axis":"yaxis","scaleDomain":["Namibia","Macedonia, FYR","Armenia","Bosnia and Herzegovina","Lesotho","South Africa","Spain","Latvia","Lithuania","Estonia","Serbia","Georgia","Yemen, Rep.","Slovak Republic","Dominican Republic","Tunisia","Albania","Ireland","Jordan","Greece"],"offset":{"x":250,"y":65},"scaleRange":[67,86,105,124,143,162,181,200,219,238,257,276,295,314,333,352,371,390,409,428],"boundingBox":{"height":383.015625,"width":189.25,"y":47.609375,"x":60.75}}],"groups":[{"data":{"number":[0,10,20,30],"_deriv_xPosition_0":[0,1,2,3],"_deriv_yPosition_0":[0,1,2,3],"_deriv_width_0":[0,1,2,3],"_deriv_height_0":[0,1,2,3]},"attrs":{"font-family":["Times","Times","Times","Times"],"font-size":["16px","16px","16px","16px"],"font-weight":["normal","normal","normal","normal"],"opacity":[1,1,1,1],"fill":["none","none","none","none"],"fill-opacity":[1,1,1,1],"stroke":["none","none","none","none"],"stroke-width":[1,1,1,1],"shape":["line","line","line","line"],"xPosition":[250,406.9148864746094,563.8297729492188,720.7446899414062],"yPosition":[225,225,225,225],"area":[0,0,0,0],"width":[0,0,0,0],"height":[350,350,350,350],"text":["","","",""],"rotation":[0,0,0,0]},"numFields":5,"ids":[3,6,9,12],"mappings":[{"data":["number"],"attr":"xPosition","type":"linear","params":{"attrMin":250,"attrMax":720.7446899414062,"coeffs":[15.691489562988282,249.99999389648445],"err":0.9999999999999978},"dataRange":[0,37.6],"attrRange":[249.99999389648445,840.000001464844],"group":"~0~groups~0"}],"nodeAttrs":[{"y2":"350","x2":"0","text":""},{"y2":"350","x2":"0","text":""},{"y2":"350","x2":"0","text":""},{"y2":"350","x2":"0","text":""}],"name":"xaxis-ticks","axis":"xaxis"},{"data":{"number":[0,10,20,30],"_deriv_xPosition_0":[0,1,2,3],"_deriv_yPosition_1":[0,1,2,3],"_deriv_width_1":[0,1,2,3],"_deriv_height_1":[0,1,2,3]},"attrs":{"font-family":["'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif"],"font-size":["16px","16px","16px","16px"],"font-weight":["normal","normal","normal","normal"],"opacity":[1,1,1,1],"fill":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"fill-opacity":[1,1,1,1],"stroke":["none","none","none","none"],"stroke-width":[1,1,1,1],"shape":["text","text","text","text"],"xPosition":[250,406.9148864746094,563.8297729492188,720.7446899414062],"yPosition":[41,41,41,41],"area":[201.4375,402.875,402.875,402.875],"width":[9.15625,18.3125,18.3125,18.3125],"height":[22,22,22,22],"text":["0","10","20","30"],"rotation":[0,0,0,0]},"numFields":5,"ids":[4,7,10,13],"mappings":[{"data":"number","attr":"text","type":"nominal","params":{"0":"0","10":"10","20":"20","30":"30"},"group":"~0~groups~1"},{"data":["number"],"attr":"xPosition","type":"linear","params":{"attrMin":250,"attrMax":720.7446899414062,"coeffs":[15.691489562988282,249.99999389648445],"err":0.9999999999999978},"dataRange":[0,37.6],"attrRange":[249.99999389648445,840.000001464844],"group":"~0~groups~1"}],"nodeAttrs":[{"dy":"0em","y":"-3","x":"0","style":"text-anchor: middle;","text":"0"},{"dy":"0em","y":"-3","x":"0","style":"text-anchor: middle;","text":"10"},{"dy":"0em","y":"-3","x":"0","style":"text-anchor: middle;","text":"20"},{"dy":"0em","y":"-3","x":"0","style":"text-anchor: middle;","text":"30"}],"name":"xaxis-labels","axis":"xaxis"},{"data":{"country":["Namibia","Macedonia, FYR","Armenia","Bosnia and Herzegovina","Lesotho","South Africa","Spain","Latvia","Lithuania","Estonia","Serbia","Georgia","Yemen, Rep.","Slovak Republic","Dominican Republic","Tunisia","Albania","Ireland","Jordan","Greece"],"rate":[37.6,32,28.6,27.2,25.3,24.7,20.1,18.7,17.8,16.9,16.6,16.5,14.6,14.4,14.2,14.2,13.8,13.6,12.9,12.5],"_deriv_xPosition_2":[19,18,17,16,14,15,13,12,11,10,9,8,7,6,5,4,3,2,1,0],"_deriv_yPosition_2":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"_deriv_width_2":[11,0,1,2,3,4,5,6,7,8,9,12,13,14,15,16,17,18,19,10],"_deriv_height_2":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]},"attrs":{"font-family":["Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times"],"font-size":["16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px"],"font-weight":["normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal"],"opacity":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"fill":["rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)","rgb(0,128,0)"],"fill-opacity":[0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142,0.899999976158142],"stroke":["none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none"],"stroke-width":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"shape":["circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle"],"xPosition":[840,752.127685546875,698.776611328125,676.8084716796875,646.9946899414062,637.5797729492188,565.39892578125,543.4308471679688,529.3084716796875,515.1861572265625,510.47874450683594,508.90956115722656,479.09576416015625,475.95745849609375,472.81915283203125,472.81915283203125,466.54254150390625,463.40423583984375,452.42022705078125,446.14361572265625],"yPosition":[59.5,78.5,97.5,116.5,135.5,154.5,173.5,192.5,211.5,230.5,249.5,268.5,287.5,306.5,325.5,344.5,363.5,382.5,401.5,420.5],"area":[324,324,324,324,324,324,324,324,324,324,324.00054931640625,323.99945068359375,324,324,324,324,324,324,324,324],"width":[18,18,18,18,18,18,18,18,18,18,18.000030517578125,17.999969482421875,18,18,18,18,18,18,18,18],"height":[18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18],"text":["","","","","","","","","","","","","","","","","","","",""],"rotation":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"numFields":6,"ids":[17,20,23,26,29,32,35,38,41,44,47,50,53,56,59,62,65,68,71,74],"mappings":[{"data":["rate"],"attr":"xPosition","type":"linear","params":{"attrMin":446.14361572265625,"attrMax":840,"coeffs":[15.691489489157961,249.99999548772928],"err":0.9999999999999738},"dataRange":[0,37.6],"attrRange":[249.99999548772928,840.0000002800687],"group":"~0~groups~2"},{"data":["_deriv_yPosition_2"],"attr":"yPosition","type":"derived","params":{"attrMin":59.5,"attrMax":420.5,"coeffs":[19.000000000000007,59.49999999999999],"err":1},"group":"~0~groups~2"}],"nodeAttrs":[{"r":"9","cx":"590","cy":"9.5","id":"bar0","text":""},{"r":"9","cx":"502.1276595744681","cy":"28.5","id":"bar1","text":""},{"r":"9","cx":"448.77659574468083","cy":"47.5","id":"bar2","text":""},{"r":"9","cx":"426.80851063829783","cy":"66.5","id":"bar3","text":""},{"r":"9","cx":"396.99468085106383","cy":"85.5","id":"bar4","text":""},{"r":"9","cx":"387.57978723404256","cy":"104.5","id":"bar5","text":""},{"r":"9","cx":"315.3989361702128","cy":"123.5","id":"bar6","text":""},{"r":"9","cx":"293.4308510638298","cy":"142.5","id":"bar7","text":""},{"r":"9","cx":"279.3085106382979","cy":"161.5","id":"bar8","text":""},{"r":"9","cx":"265.18617021276594","cy":"180.5","id":"bar9","text":""},{"r":"9","cx":"260.47872340425533","cy":"199.5","id":"bar10","text":""},{"r":"9","cx":"258.9095744680851","cy":"218.5","id":"bar11","text":""},{"r":"9","cx":"229.09574468085106","cy":"237.5","id":"bar12","text":""},{"r":"9","cx":"225.95744680851064","cy":"256.5","id":"bar13","text":""},{"r":"9","cx":"222.8191489361702","cy":"275.5","id":"bar14","text":""},{"r":"9","cx":"222.8191489361702","cy":"294.5","id":"bar15","text":""},{"r":"9","cx":"216.54255319148936","cy":"313.5","id":"bar16","text":""},{"r":"9","cx":"213.40425531914892","cy":"332.5","id":"bar17","text":""},{"r":"9","cx":"202.42021276595744","cy":"351.5","id":"bar18","text":""},{"r":"9","cx":"196.14361702127658","cy":"370.5","id":"bar19","text":""}]},{"data":{"country":["Namibia","Macedonia, FYR","Armenia","Bosnia and Herzegovina","Lesotho","South Africa","Spain","Latvia","Lithuania","Estonia","Serbia","Georgia","Yemen, Rep.","Slovak Republic","Dominican Republic","Tunisia","Albania","Ireland","Jordan","Greece"],"rate":[37.6,32,28.6,27.2,25.3,24.7,20.1,18.7,17.8,16.9,16.6,16.5,14.6,14.4,14.2,14.2,13.8,13.6,12.9,12.5],"_deriv_xPosition_3":[19,18,17,16,14,15,13,12,11,10,9,8,7,6,5,4,3,2,1,0],"_deriv_yPosition_2":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"_deriv_width_3":[1,0,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"_deriv_height_3":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]},"attrs":{"font-family":["'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif"],"font-size":["16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px"],"font-weight":["normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal"],"opacity":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"fill":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"fill-opacity":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"stroke":["none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none"],"stroke-width":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"shape":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"xPosition":[878,790.125,736.78125,714.8125,685,675.578125,603.40625,581.4375,567.3125,553.1875,548.484375,546.90625,517.09375,513.953125,510.8125,510.8125,504.546875,501.40625,490.421875,484.140625],"yPosition":[59.8046875,78.8046875,97.8046875,116.8046875,135.8046875,154.8046875,173.8046875,192.8046875,211.8046875,230.8046875,249.8046875,268.8046875,287.8046875,306.8046875,325.8046875,344.8046875,363.8046875,382.8046875,401.8046875,420.8046875],"area":[698.30810546875,403.1611328125,698.30810546875,698.30810546875,698.30810546875,698.30810546875,698.30810546875,698.30810546875,698.30810546875,698.30810546875,698.30810546875,698.30810546875,698.30810546875,698.30810546875,698.30810546875,698.30810546875,698.30810546875,698.30810546875,698.30810546875,698.30810546875],"width":[31.71875,18.3125,31.71875,31.71875,31.71875,31.71875,31.71875,31.71875,31.71875,31.71875,31.71875,31.71875,31.71875,31.71875,31.71875,31.71875,31.71875,31.71875,31.71875,31.71875],"height":[22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625],"text":["37.6","32","28.6","27.2","25.3","24.7","20.1","18.7","17.8","16.9","16.6","16.5","14.6","14.4","14.2","14.2","13.8","13.6","12.9","12.5"],"rotation":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"numFields":6,"ids":[18,21,24,27,30,33,36,39,42,45,48,51,54,57,60,63,66,69,72,75],"mappings":[{"data":"rate","attr":"text","type":"nominal","params":{"32":"32","37.6":"37.6","28.6":"28.6","27.2":"27.2","25.3":"25.3","24.7":"24.7","20.1":"20.1","18.7":"18.7","17.8":"17.8","16.9":"16.9","16.6":"16.6","16.5":"16.5","14.6":"14.6","14.4":"14.4","14.2":"14.2","13.8":"13.8","13.6":"13.6","12.9":"12.9","12.5":"12.5"},"group":"~0~groups~3"},{"data":["rate"],"attr":"xPosition","type":"linear","params":{"attrMin":484.140625,"attrMax":878,"coeffs":[15.691610199914766,287.99846147967145],"err":0.9999999985445193},"dataRange":[0,37.6],"attrRange":[287.99846147967145,878.0030049964666],"group":"~0~groups~3"},{"data":["_deriv_yPosition_2"],"attr":"yPosition","type":"derived","params":{"attrMin":59.8046875,"attrMax":420.8046875,"coeffs":[19.000000000000007,59.80468749999995],"err":1},"group":"~0~groups~3"}],"nodeAttrs":[{"x":"628","y":"-5","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"37.6"},{"x":"540.1276595744681","y":"14","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"32"},{"x":"486.77659574468083","y":"33","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"28.6"},{"x":"464.80851063829783","y":"52","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"27.2"},{"x":"434.99468085106383","y":"71","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"25.3"},{"x":"425.57978723404256","y":"90","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"24.7"},{"x":"353.3989361702128","y":"109","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"20.1"},{"x":"331.4308510638298","y":"128","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"18.7"},{"x":"317.3085106382979","y":"147","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"17.8"},{"x":"303.18617021276594","y":"166","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"16.9"},{"x":"298.47872340425533","y":"185","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"16.6"},{"x":"296.9095744680851","y":"204","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"16.5"},{"x":"267.09574468085106","y":"223","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"14.6"},{"x":"263.95744680851067","y":"242","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"14.4"},{"x":"260.8191489361702","y":"261","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"14.2"},{"x":"260.8191489361702","y":"280","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"14.2"},{"x":"254.54255319148936","y":"299","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"13.8"},{"x":"251.40425531914892","y":"318","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"13.6"},{"x":"240.42021276595744","y":"337","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"12.9"},{"x":"234.14361702127658","y":"356","text-anchor":"middle","dy":"1.3em","dx":"0em","id":"precise-value","text":"12.5"}]},{"data":{"string":["Namibia","Macedonia, FYR","Armenia","Bosnia and Herzegovina","Lesotho","South Africa","Spain","Latvia","Lithuania","Estonia","Serbia","Georgia","Yemen, Rep.","Slovak Republic","Dominican Republic","Tunisia","Albania","Ireland","Jordan","Greece"],"_deriv_xPosition_4":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"_deriv_yPosition_2":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"_deriv_width_4":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"_deriv_height_4":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]},"attrs":{"font-family":["Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times","Times"],"font-size":["16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px"],"font-weight":["normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal"],"opacity":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"fill":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"fill-opacity":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"stroke":["none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none"],"stroke-width":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"shape":["line","line","line","line","line","line","line","line","line","line","line","line","line","line","line","line","line","line","line","line"],"xPosition":[247,247,247,247,247,247,247,247,247,247,247,247,247,247,247,247,247,247,247,247],"yPosition":[59.5,78.5,97.5,116.5,135.5,154.5,173.5,192.5,211.5,230.5,249.5,268.5,287.5,306.5,325.5,344.5,363.5,382.5,401.5,420.5],"area":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"width":[6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6],"height":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"text":["","","","","","","","","","","","","","","","","","","",""],"rotation":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"numFields":5,"ids":[78,81,84,87,90,93,96,99,102,105,108,111,114,117,120,123,126,129,132,135],"mappings":[{"data":["_deriv_yPosition_2"],"attr":"yPosition","type":"derived","params":{"attrMin":59.5,"attrMax":420.5,"coeffs":[19.000000000000007,59.49999999999999],"err":1},"group":"~0~groups~4"}],"nodeAttrs":[{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""}],"name":"yaxis-ticks","axis":"yaxis"},{"data":{"string":["Namibia","Macedonia, FYR","Armenia","Bosnia and Herzegovina","Lesotho","South Africa","Spain","Latvia","Lithuania","Estonia","Serbia","Georgia","Yemen, Rep.","Slovak Republic","Dominican Republic","Tunisia","Albania","Ireland","Jordan","Greece"],"_deriv_xPosition_5":[3,14,1,13,12,5,8,2,0,4,11,16,9,15,19,17,18,10,7,6],"_deriv_yPosition_5":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"_deriv_width_5":[6,7,10,18,17,19,15,9,16,11,4,0,2,8,5,12,13,1,14,3],"_deriv_height_3":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]},"attrs":{"font-family":["'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif","'Open Sans', sans-serif"],"font-size":["16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px","16px"],"font-weight":["normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal"],"opacity":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"fill":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"fill-opacity":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"stroke":["none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none","none"],"stroke-width":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"shape":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"xPosition":[209.6796875,182.3203125,209.359375,150.875,211.140625,195.734375,220.3203125,219.09375,206.34375,213.6953125,217.4765625,211.734375,194.6875,183.015625,166.6875,214.4375,213.1796875,214.7265625,216.5,214.6328125],"yPosition":[58.6171875,77.6171875,96.6171875,115.6171875,134.6171875,153.6171875,172.6171875,191.6171875,210.6171875,229.6171875,248.6171875,267.6171875,286.6171875,305.6171875,324.6171875,343.6171875,362.6171875,381.6171875,400.6171875,419.6171875],"area":[1379.072509765625,2583.739990234375,1393.17626953125,3968.31640625,1314.74560546875,1993.10205078125,910.552490234375,964.5595703125,1525.9580078125,1202.259521484375,1035.766357421875,1288.60205078125,2039.197265625,2553.12451171875,3272.072265625,1169.580078125,1224.963134765625,1156.852294921875,1078.765625,1160.980224609375],"width":[62.640625,117.359375,63.28125,180.25,59.71875,90.53125,41.359375,43.8125,69.3125,54.609375,47.046875,58.53125,92.625,115.96875,148.625,53.125,55.640625,52.546875,49,52.734375],"height":[22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625,22.015625],"text":["Namibia","Macedonia, FYR","Armenia","Bosnia and Herzegovina","Lesotho","South Africa","Spain","Latvia","Lithuania","Estonia","Serbia","Georgia","Yemen, Rep.","Slovak Republic","Dominican Republic","Tunisia","Albania","Ireland","Jordan","Greece"],"rotation":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"numFields":5,"ids":[79,82,85,88,91,94,97,100,103,106,109,112,115,118,121,124,127,130,133,136],"mappings":[{"data":"string","attr":"xPosition","type":"nominal","params":{"Namibia":209.6796875,"Macedonia, FYR":182.3203125,"Armenia":209.359375,"Bosnia and Herzegovina":150.875,"Lesotho":211.140625,"South Africa":195.734375,"Spain":220.3203125,"Latvia":219.09375,"Lithuania":206.34375,"Estonia":213.6953125,"Serbia":217.4765625,"Georgia":211.734375,"Yemen, Rep.":194.6875,"Slovak Republic":183.015625,"Dominican Republic":166.6875,"Tunisia":214.4375,"Albania":213.1796875,"Ireland":214.7265625,"Jordan":216.5,"Greece":214.6328125},"group":"~0~groups~5"},{"data":"string","attr":"area","type":"nominal","params":{"Namibia":1379.072509765625,"Macedonia, FYR":2583.739990234375,"Armenia":1393.17626953125,"Bosnia and Herzegovina":3968.31640625,"Lesotho":1314.74560546875,"South Africa":1993.10205078125,"Spain":910.552490234375,"Latvia":964.5595703125,"Lithuania":1525.9580078125,"Estonia":1202.259521484375,"Serbia":1035.766357421875,"Georgia":1288.60205078125,"Yemen, Rep.":2039.197265625,"Slovak Republic":2553.12451171875,"Dominican Republic":3272.072265625,"Tunisia":1169.580078125,"Albania":1224.963134765625,"Ireland":1156.852294921875,"Jordan":1078.765625,"Greece":1160.980224609375},"group":"~0~groups~5"},{"data":"string","attr":"width","type":"nominal","params":{"Namibia":62.640625,"Macedonia, FYR":117.359375,"Armenia":63.28125,"Bosnia and Herzegovina":180.25,"Lesotho":59.71875,"South Africa":90.53125,"Spain":41.359375,"Latvia":43.8125,"Lithuania":69.3125,"Estonia":54.609375,"Serbia":47.046875,"Georgia":58.53125,"Yemen, Rep.":92.625,"Slovak Republic":115.96875,"Dominican Republic":148.625,"Tunisia":53.125,"Albania":55.640625,"Ireland":52.546875,"Jordan":49,"Greece":52.734375},"group":"~0~groups~5"},{"data":"string","attr":"text","type":"nominal","params":{"Namibia":"Namibia","Macedonia, FYR":"Macedonia, FYR","Armenia":"Armenia","Bosnia and Herzegovina":"Bosnia and Herzegovina","Lesotho":"Lesotho","South Africa":"South Africa","Spain":"Spain","Latvia":"Latvia","Lithuania":"Lithuania","Estonia":"Estonia","Serbia":"Serbia","Georgia":"Georgia","Yemen, Rep.":"Yemen, Rep.","Slovak Republic":"Slovak Republic","Dominican Republic":"Dominican Republic","Tunisia":"Tunisia","Albania":"Albania","Ireland":"Ireland","Jordan":"Jordan","Greece":"Greece"},"group":"~0~groups~5"},{"data":"_deriv_xPosition_5","attr":"xPosition","type":"nominal","params":{"0":206.34375,"1":209.359375,"2":219.09375,"3":209.6796875,"4":213.6953125,"5":195.734375,"6":214.6328125,"7":216.5,"8":220.3203125,"9":194.6875,"10":214.7265625,"11":217.4765625,"12":211.140625,"13":150.875,"14":182.3203125,"15":183.015625,"16":211.734375,"17":214.4375,"18":213.1796875,"19":166.6875},"group":"~0~groups~5"},{"data":"_deriv_width_5","attr":"width","type":"nominal","params":{"0":58.53125,"1":52.546875,"2":92.625,"3":52.734375,"4":47.046875,"5":148.625,"6":62.640625,"7":117.359375,"8":115.96875,"9":43.8125,"10":63.28125,"11":54.609375,"12":53.125,"13":55.640625,"14":49,"15":41.359375,"16":69.3125,"17":59.71875,"18":180.25,"19":90.53125},"group":"~0~groups~5"},{"data":["_deriv_yPosition_5"],"attr":"yPosition","type":"derived","params":{"attrMin":58.6171875,"attrMax":419.6171875,"coeffs":[19.000000000000007,58.61718749999997],"err":1},"group":"~0~groups~5"}],"nodeAttrs":[{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Namibia"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Macedonia, FYR"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Armenia"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Bosnia and Herzegovina"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Lesotho"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"South Africa"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Spain"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Latvia"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Lithuania"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Estonia"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Serbia"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Georgia"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Yemen, Rep."},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Slovak Republic"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Dominican Republic"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Tunisia"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Albania"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Ireland"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Jordan"},{"dy":".32em","x":"-9","y":"0","text-anchor":"middle","style":"text-anchor: end;","text":"Greece"}],"name":"yaxis-labels","axis":"yaxis"},{"data":{"domain":[0,0,37.6,37.6],"tick":[0,-350,-350,0],"lineID":[0,1,2,3],"_deriv_xPosition_6":[0,1,2,3],"_deriv_yPosition_6":[1,2,0,3],"_deriv_width_6":[0,1,2,3],"_deriv_height_0":[0,1,2,3]},"attrs":{"font-family":["Times","Times","Times","Times"],"font-size":["16px","16px","16px","16px"],"font-weight":["normal","normal","normal","normal"],"opacity":[1,1,1,1],"fill":["none","none","none","none"],"fill-opacity":[1,1,1,1],"stroke":["rgb(255,255,255)","rgb(255,255,255)","rgb(255,255,255)","rgb(255,255,255)"],"stroke-width":[1,1,1,1],"shape":["linePoint","linePoint","linePoint","linePoint"],"xPosition":[250,250,840,840],"yPosition":[400,50,50,400],"area":[206500,206500,206500,206500],"width":[590,590,590,590],"height":[350,350,350,350],"text":["","","",""],"rotation":[0,0,0,0]},"numFields":7,"ids":[14,14,14,14],"mappings":[{"data":["domain"],"attr":"xPosition","type":"linear","params":{"attrMin":250,"attrMax":840,"coeffs":[15.691489361702128,250.0000000000001],"err":1},"dataRange":[0,37.6],"attrRange":[250.0000000000001,840.0000000000001],"group":"~0~groups~6"},{"data":["tick"],"attr":"yPosition","type":"linear","params":{"attrMin":50,"attrMax":400,"coeffs":[1,400],"err":1},"group":"~0~groups~6"}],"nodeAttrs":[{"class":"domain","d":"M0,350V0H590V350","text":""},{"class":"domain","d":"M0,350V0H590V350","text":""},{"class":"domain","d":"M0,350V0H590V350","text":""},{"class":"domain","d":"M0,350V0H590V350","text":""}],"name":"xaxis-line","axis":"xaxis"},{"data":{"axis":[0,0,350,350],"tick":[0,6,6,0],"lineID":[0,1,2,3],"_deriv_xPosition_7":[0,3,1,2],"_deriv_yPosition_7":[0,1,2,3],"_deriv_width_0":[0,1,2,3],"_deriv_height_7":[0,1,2,3]},"attrs":{"font-family":["Times","Times","Times","Times"],"font-size":["16px","16px","16px","16px"],"font-weight":["normal","normal","normal","normal"],"opacity":[1,1,1,1],"fill":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"fill-opacity":[1,1,1,1],"stroke":["none","none","none","none"],"stroke-width":[1,1,1,1],"shape":["linePoint","linePoint","linePoint","linePoint"],"xPosition":[244,250,250,244],"yPosition":[65,65,415,415],"area":[0,0,0,0],"width":[0,0,0,0],"height":[0,0,0,0],"text":["","","",""],"rotation":[0,0,0,0]},"numFields":7,"ids":[137,137,137,137],"mappings":[{"data":["tick"],"attr":"xPosition","type":"linear","params":{"attrMin":244,"attrMax":250,"coeffs":[1,244],"err":1},"group":"~0~groups~7"},{"data":["axis"],"attr":"yPosition","type":"linear","params":{"attrMin":65,"attrMax":415,"coeffs":[0.9999999999999996,65.00000000000006],"err":1},"dataRange":[0,350],"attrRange":[65.00000000000006,414.9999999999999],"group":"~0~groups~7"}],"nodeAttrs":[{"class":"domain","d":"M-6,0H0V350H-6","style":"display: none;","text":""},{"class":"domain","d":"M-6,0H0V350H-6","style":"display: none;","text":""},{"class":"domain","d":"M-6,0H0V350H-6","style":"display: none;","text":""},{"class":"domain","d":"M-6,0H0V350H-6","style":"display: none;","text":""}],"name":"yaxis-line","axis":"yaxis"}],"mappingSets":{"font-family":[],"font-size":[],"font-weight":[],"opacity":[],"fill":[],"fill-opacity":[],"stroke":[],"stroke-width":[],"shape":[],"xPosition":[{"mappingRefs":[{"data":"number","attr":"xPosition","type":"linear","range":[250,720.7446899414062],"groupID":0},{"data":"number","attr":"xPosition","type":"linear","range":[250,720.7446899414062],"groupID":1},{"data":"rate","attr":"xPosition","type":"linear","range":[446.14361572265625,840],"groupID":2},{"data":"rate","attr":"xPosition","type":"linear","range":[484.140625,878],"groupID":3},{"data":"domain","attr":"xPosition","type":"linear","range":[250,840],"groupID":6}],"attributes":[250,878],"type":"linear"},{"mappingRefs":[{"data":"string","attr":"xPosition","type":"nominal","range":[209.6796875,182.3203125,209.359375,150.875,211.140625,195.734375,220.3203125,219.09375,206.34375,213.6953125,217.4765625,211.734375,194.6875,183.015625,166.6875,214.4375,213.1796875,214.7265625,216.5,214.6328125],"groupID":5}],"attributes":[209.6796875,182.3203125,209.359375,150.875,211.140625,195.734375,220.3203125,219.09375,206.34375,213.6953125,217.4765625,211.734375,194.6875,183.015625,166.6875,214.4375,213.1796875,214.7265625,216.5,214.6328125],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_xPosition_5","attr":"xPosition","type":"nominal","range":[206.34375,209.359375,219.09375,209.6796875,213.6953125,195.734375,214.6328125,216.5,220.3203125,194.6875,214.7265625,217.4765625,211.140625,150.875,182.3203125,183.015625,211.734375,214.4375,213.1796875,166.6875],"groupID":5}],"attributes":[206.34375,209.359375,219.09375,209.6796875,213.6953125,195.734375,214.6328125,216.5,220.3203125,194.6875,214.7265625,217.4765625,211.140625,150.875,182.3203125,183.015625,211.734375,214.4375,213.1796875,166.6875],"type":"nominal"}],"yPosition":[{"mappingRefs":[{"data":"axis","attr":"yPosition","type":"linear","range":[65,415],"groupID":7}],"attributes":[65,415],"type":"linear"}],"area":[{"mappingRefs":[{"data":"string","attr":"area","type":"nominal","range":[1379.072509765625,2583.739990234375,1393.17626953125,3968.31640625,1314.74560546875,1993.10205078125,910.552490234375,964.5595703125,1525.9580078125,1202.259521484375,1035.766357421875,1288.60205078125,2039.197265625,2553.12451171875,3272.072265625,1169.580078125,1224.963134765625,1156.852294921875,1078.765625,1160.980224609375],"groupID":5}],"attributes":[1379.072509765625,2583.739990234375,1393.17626953125,3968.31640625,1314.74560546875,1993.10205078125,910.552490234375,964.5595703125,1525.9580078125,1202.259521484375,1035.766357421875,1288.60205078125,2039.197265625,2553.12451171875,3272.072265625,1169.580078125,1224.963134765625,1156.852294921875,1078.765625,1160.980224609375],"type":"nominal"}],"width":[{"mappingRefs":[{"data":"string","attr":"width","type":"nominal","range":[62.640625,117.359375,63.28125,180.25,59.71875,90.53125,41.359375,43.8125,69.3125,54.609375,47.046875,58.53125,92.625,115.96875,148.625,53.125,55.640625,52.546875,49,52.734375],"groupID":5}],"attributes":[62.640625,117.359375,63.28125,180.25,59.71875,90.53125,41.359375,43.8125,69.3125,54.609375,47.046875,58.53125,92.625,115.96875,148.625,53.125,55.640625,52.546875,49,52.734375],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_width_5","attr":"width","type":"nominal","range":[58.53125,52.546875,92.625,52.734375,47.046875,148.625,62.640625,117.359375,115.96875,43.8125,63.28125,54.609375,53.125,55.640625,49,41.359375,69.3125,59.71875,180.25,90.53125],"groupID":5}],"attributes":[58.53125,52.546875,92.625,52.734375,47.046875,148.625,62.640625,117.359375,115.96875,43.8125,63.28125,54.609375,53.125,55.640625,49,41.359375,69.3125,59.71875,180.25,90.53125],"type":"nominal"}],"height":[],"text":[{"mappingRefs":[{"data":"number","attr":"text","type":"nominal","range":["0","10","20","30"],"groupID":1}],"attributes":["0","10","20","30"],"type":"nominal"},{"mappingRefs":[{"data":"rate","attr":"text","type":"nominal","range":["32","37.6","28.6","27.2","25.3","24.7","20.1","18.7","17.8","16.9","16.6","16.5","14.6","14.4","14.2","13.8","13.6","12.9","12.5"],"groupID":3}],"attributes":["32","37.6","28.6","27.2","25.3","24.7","20.1","18.7","17.8","16.9","16.6","16.5","14.6","14.4","14.2","13.8","13.6","12.9","12.5"],"type":"nominal"},{"mappingRefs":[{"data":"string","attr":"text","type":"nominal","range":["Namibia","Macedonia, FYR","Armenia","Bosnia and Herzegovina","Lesotho","South Africa","Spain","Latvia","Lithuania","Estonia","Serbia","Georgia","Yemen, Rep.","Slovak Republic","Dominican Republic","Tunisia","Albania","Ireland","Jordan","Greece"],"groupID":5}],"attributes":["Namibia","Macedonia, FYR","Armenia","Bosnia and Herzegovina","Lesotho","South Africa","Spain","Latvia","Lithuania","Estonia","Serbia","Georgia","Yemen, Rep.","Slovak Republic","Dominican Republic","Tunisia","Albania","Ireland","Jordan","Greece"],"type":"nominal"}],"rotation":[]},"ids":[]}
+{
+  "svg": {
+    "width": 900,
+    "height": 450
+  },
+  "axes": [
+    {
+      "orient": "top",
+      "innerTickSize": -350,
+      "outerTickSize": -350,
+      "tickPadding": 3,
+      "tickArguments": {"0": 5},
+      "tickValues": null,
+      "ticks": [
+        0,
+        10,
+        20,
+        30
+      ],
+      "axis": "xaxis",
+      "scaleDomain": [
+        0,
+        37.6
+      ],
+      "offset": {
+        "x": 250,
+        "y": 50
+      },
+      "scaleRange": [
+        250,
+        840
+      ],
+      "boundingBox": {
+        "height": 370,
+        "width": 594.578125,
+        "y": 30,
+        "x": 245.421875
+      }
+    },
+    {
+      "orient": "left",
+      "innerTickSize": 6,
+      "outerTickSize": 6,
+      "tickPadding": 3,
+      "tickArguments": [10],
+      "tickValues": null,
+      "ticks": [
+        "Namibia",
+        "Macedonia, FYR",
+        "Armenia",
+        "Bosnia and Herzegovina",
+        "Lesotho",
+        "South Africa",
+        "Spain",
+        "Latvia",
+        "Lithuania",
+        "Estonia",
+        "Serbia",
+        "Georgia",
+        "Yemen, Rep.",
+        "Slovak Republic",
+        "Dominican Republic",
+        "Tunisia",
+        "Albania",
+        "Ireland",
+        "Jordan",
+        "Greece"
+      ],
+      "axis": "yaxis",
+      "scaleDomain": [
+        "Namibia",
+        "Macedonia, FYR",
+        "Armenia",
+        "Bosnia and Herzegovina",
+        "Lesotho",
+        "South Africa",
+        "Spain",
+        "Latvia",
+        "Lithuania",
+        "Estonia",
+        "Serbia",
+        "Georgia",
+        "Yemen, Rep.",
+        "Slovak Republic",
+        "Dominican Republic",
+        "Tunisia",
+        "Albania",
+        "Ireland",
+        "Jordan",
+        "Greece"
+      ],
+      "offset": {
+        "x": 250,
+        "y": 65
+      },
+      "scaleRange": [
+        67,
+        86,
+        105,
+        124,
+        143,
+        162,
+        181,
+        200,
+        219,
+        238,
+        257,
+        276,
+        295,
+        314,
+        333,
+        352,
+        371,
+        390,
+        409,
+        428
+      ],
+      "boundingBox": {
+        "height": 383.015625,
+        "width": 189.25,
+        "y": 47.609375,
+        "x": 60.75
+      }
+    }
+  ],
+  "groups": [
+    {
+      "data": {
+        "number": [
+          0,
+          10,
+          20,
+          30
+        ],
+        "_deriv_xPosition_0": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_yPosition_0": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_width_0": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_height_0": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Times",
+          "Times",
+          "Times",
+          "Times"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "line",
+          "line",
+          "line",
+          "line"
+        ],
+        "xPosition": [
+          250,
+          406.9148864746094,
+          563.8297729492188,
+          720.7446899414062
+        ],
+        "yPosition": [
+          225,
+          225,
+          225,
+          225
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "height": [
+          350,
+          350,
+          350,
+          350
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "mappings": [
+        {
+          "data": ["number"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 250,
+            "attrMax": 720.7446899414062,
+            "coeffs": [
+              15.691489562988282,
+              249.99999389648445
+            ],
+            "err": 0.9999999999999978
+          },
+          "dataRange": [
+            0,
+            37.6
+          ],
+          "attrRange": [
+            249.99999389648445,
+            840.000001464844
+          ],
+          "group": "~0~groups~0"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "y2": "350",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "350",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "350",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "350",
+          "x2": "0",
+          "text": ""
+        }
+      ],
+      "name": "xaxis-ticks",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "number": [
+          0,
+          10,
+          20,
+          30
+        ],
+        "_deriv_xPosition_0": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_yPosition_1": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_width_1": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_height_1": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "text",
+          "text",
+          "text",
+          "text"
+        ],
+        "xPosition": [
+          250,
+          406.9148864746094,
+          563.8297729492188,
+          720.7446899414062
+        ],
+        "yPosition": [
+          41,
+          41,
+          41,
+          41
+        ],
+        "area": [
+          201.4375,
+          402.875,
+          402.875,
+          402.875
+        ],
+        "width": [
+          9.15625,
+          18.3125,
+          18.3125,
+          18.3125
+        ],
+        "height": [
+          22,
+          22,
+          22,
+          22
+        ],
+        "text": [
+          "0",
+          "10",
+          "20",
+          "30"
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        4,
+        7,
+        10,
+        13
+      ],
+      "mappings": [
+        {
+          "data": "number",
+          "attr": "text",
+          "type": "nominal",
+          "params": {
+            "0": "0",
+            "10": "10",
+            "20": "20",
+            "30": "30"
+          },
+          "group": "~0~groups~1"
+        },
+        {
+          "data": ["number"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 250,
+            "attrMax": 720.7446899414062,
+            "coeffs": [
+              15.691489562988282,
+              249.99999389648445
+            ],
+            "err": 0.9999999999999978
+          },
+          "dataRange": [
+            0,
+            37.6
+          ],
+          "attrRange": [
+            249.99999389648445,
+            840.000001464844
+          ],
+          "group": "~0~groups~1"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "dy": "0em",
+          "y": "-3",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "0"
+        },
+        {
+          "dy": "0em",
+          "y": "-3",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "10"
+        },
+        {
+          "dy": "0em",
+          "y": "-3",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "20"
+        },
+        {
+          "dy": "0em",
+          "y": "-3",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "30"
+        }
+      ],
+      "name": "xaxis-labels",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "country": [
+          "Namibia",
+          "Macedonia, FYR",
+          "Armenia",
+          "Bosnia and Herzegovina",
+          "Lesotho",
+          "South Africa",
+          "Spain",
+          "Latvia",
+          "Lithuania",
+          "Estonia",
+          "Serbia",
+          "Georgia",
+          "Yemen, Rep.",
+          "Slovak Republic",
+          "Dominican Republic",
+          "Tunisia",
+          "Albania",
+          "Ireland",
+          "Jordan",
+          "Greece"
+        ],
+        "rate": [
+          37.6,
+          32,
+          28.6,
+          27.2,
+          25.3,
+          24.7,
+          20.1,
+          18.7,
+          17.8,
+          16.9,
+          16.6,
+          16.5,
+          14.6,
+          14.4,
+          14.2,
+          14.2,
+          13.8,
+          13.6,
+          12.9,
+          12.5
+        ],
+        "_deriv_xPosition_2": [
+          19,
+          18,
+          17,
+          16,
+          14,
+          15,
+          13,
+          12,
+          11,
+          10,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "_deriv_yPosition_2": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "_deriv_width_2": [
+          11,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          10
+        ],
+        "_deriv_height_2": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)",
+          "rgb(0,128,0)"
+        ],
+        "fill-opacity": [
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142,
+          0.899999976158142
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle"
+        ],
+        "xPosition": [
+          840,
+          752.127685546875,
+          698.776611328125,
+          676.8084716796875,
+          646.9946899414062,
+          637.5797729492188,
+          565.39892578125,
+          543.4308471679688,
+          529.3084716796875,
+          515.1861572265625,
+          510.47874450683594,
+          508.90956115722656,
+          479.09576416015625,
+          475.95745849609375,
+          472.81915283203125,
+          472.81915283203125,
+          466.54254150390625,
+          463.40423583984375,
+          452.42022705078125,
+          446.14361572265625
+        ],
+        "yPosition": [
+          59.5,
+          78.5,
+          97.5,
+          116.5,
+          135.5,
+          154.5,
+          173.5,
+          192.5,
+          211.5,
+          230.5,
+          249.5,
+          268.5,
+          287.5,
+          306.5,
+          325.5,
+          344.5,
+          363.5,
+          382.5,
+          401.5,
+          420.5
+        ],
+        "area": [
+          324,
+          324,
+          324,
+          324,
+          324,
+          324,
+          324,
+          324,
+          324,
+          324,
+          324.00054931640625,
+          323.99945068359375,
+          324,
+          324,
+          324,
+          324,
+          324,
+          324,
+          324,
+          324
+        ],
+        "width": [
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18.000030517578125,
+          17.999969482421875,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18
+        ],
+        "height": [
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 6,
+      "ids": [
+        17,
+        20,
+        23,
+        26,
+        29,
+        32,
+        35,
+        38,
+        41,
+        44,
+        47,
+        50,
+        53,
+        56,
+        59,
+        62,
+        65,
+        68,
+        71,
+        74
+      ],
+      "mappings": [
+        {
+          "data": ["rate"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 446.14361572265625,
+            "attrMax": 840,
+            "coeffs": [
+              15.691489489157961,
+              249.99999548772928
+            ],
+            "err": 0.9999999999999738
+          },
+          "dataRange": [
+            0,
+            37.6
+          ],
+          "attrRange": [
+            249.99999548772928,
+            840.0000002800687
+          ],
+          "group": "~0~groups~2"
+        },
+        {
+          "data": ["_deriv_yPosition_2"],
+          "attr": "yPosition",
+          "type": "derived",
+          "params": {
+            "attrMin": 59.5,
+            "attrMax": 420.5,
+            "coeffs": [
+              19.000000000000007,
+              59.49999999999999
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~2"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "r": "9",
+          "cx": "590",
+          "cy": "9.5",
+          "id": "bar0",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "502.1276595744681",
+          "cy": "28.5",
+          "id": "bar1",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "448.77659574468083",
+          "cy": "47.5",
+          "id": "bar2",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "426.80851063829783",
+          "cy": "66.5",
+          "id": "bar3",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "396.99468085106383",
+          "cy": "85.5",
+          "id": "bar4",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "387.57978723404256",
+          "cy": "104.5",
+          "id": "bar5",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "315.3989361702128",
+          "cy": "123.5",
+          "id": "bar6",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "293.4308510638298",
+          "cy": "142.5",
+          "id": "bar7",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "279.3085106382979",
+          "cy": "161.5",
+          "id": "bar8",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "265.18617021276594",
+          "cy": "180.5",
+          "id": "bar9",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "260.47872340425533",
+          "cy": "199.5",
+          "id": "bar10",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "258.9095744680851",
+          "cy": "218.5",
+          "id": "bar11",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "229.09574468085106",
+          "cy": "237.5",
+          "id": "bar12",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "225.95744680851064",
+          "cy": "256.5",
+          "id": "bar13",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "222.8191489361702",
+          "cy": "275.5",
+          "id": "bar14",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "222.8191489361702",
+          "cy": "294.5",
+          "id": "bar15",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "216.54255319148936",
+          "cy": "313.5",
+          "id": "bar16",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "213.40425531914892",
+          "cy": "332.5",
+          "id": "bar17",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "202.42021276595744",
+          "cy": "351.5",
+          "id": "bar18",
+          "text": ""
+        },
+        {
+          "r": "9",
+          "cx": "196.14361702127658",
+          "cy": "370.5",
+          "id": "bar19",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "data": {
+        "country": [
+          "Namibia",
+          "Macedonia, FYR",
+          "Armenia",
+          "Bosnia and Herzegovina",
+          "Lesotho",
+          "South Africa",
+          "Spain",
+          "Latvia",
+          "Lithuania",
+          "Estonia",
+          "Serbia",
+          "Georgia",
+          "Yemen, Rep.",
+          "Slovak Republic",
+          "Dominican Republic",
+          "Tunisia",
+          "Albania",
+          "Ireland",
+          "Jordan",
+          "Greece"
+        ],
+        "rate": [
+          37.6,
+          32,
+          28.6,
+          27.2,
+          25.3,
+          24.7,
+          20.1,
+          18.7,
+          17.8,
+          16.9,
+          16.6,
+          16.5,
+          14.6,
+          14.4,
+          14.2,
+          14.2,
+          13.8,
+          13.6,
+          12.9,
+          12.5
+        ],
+        "_deriv_xPosition_3": [
+          19,
+          18,
+          17,
+          16,
+          14,
+          15,
+          13,
+          12,
+          11,
+          10,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "_deriv_yPosition_2": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "_deriv_width_3": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "_deriv_height_3": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text"
+        ],
+        "xPosition": [
+          878,
+          790.125,
+          736.78125,
+          714.8125,
+          685,
+          675.578125,
+          603.40625,
+          581.4375,
+          567.3125,
+          553.1875,
+          548.484375,
+          546.90625,
+          517.09375,
+          513.953125,
+          510.8125,
+          510.8125,
+          504.546875,
+          501.40625,
+          490.421875,
+          484.140625
+        ],
+        "yPosition": [
+          59.8046875,
+          78.8046875,
+          97.8046875,
+          116.8046875,
+          135.8046875,
+          154.8046875,
+          173.8046875,
+          192.8046875,
+          211.8046875,
+          230.8046875,
+          249.8046875,
+          268.8046875,
+          287.8046875,
+          306.8046875,
+          325.8046875,
+          344.8046875,
+          363.8046875,
+          382.8046875,
+          401.8046875,
+          420.8046875
+        ],
+        "area": [
+          698.30810546875,
+          403.1611328125,
+          698.30810546875,
+          698.30810546875,
+          698.30810546875,
+          698.30810546875,
+          698.30810546875,
+          698.30810546875,
+          698.30810546875,
+          698.30810546875,
+          698.30810546875,
+          698.30810546875,
+          698.30810546875,
+          698.30810546875,
+          698.30810546875,
+          698.30810546875,
+          698.30810546875,
+          698.30810546875,
+          698.30810546875,
+          698.30810546875
+        ],
+        "width": [
+          31.71875,
+          18.3125,
+          31.71875,
+          31.71875,
+          31.71875,
+          31.71875,
+          31.71875,
+          31.71875,
+          31.71875,
+          31.71875,
+          31.71875,
+          31.71875,
+          31.71875,
+          31.71875,
+          31.71875,
+          31.71875,
+          31.71875,
+          31.71875,
+          31.71875,
+          31.71875
+        ],
+        "height": [
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625
+        ],
+        "text": [
+          "37.6",
+          "32",
+          "28.6",
+          "27.2",
+          "25.3",
+          "24.7",
+          "20.1",
+          "18.7",
+          "17.8",
+          "16.9",
+          "16.6",
+          "16.5",
+          "14.6",
+          "14.4",
+          "14.2",
+          "14.2",
+          "13.8",
+          "13.6",
+          "12.9",
+          "12.5"
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 6,
+      "ids": [
+        18,
+        21,
+        24,
+        27,
+        30,
+        33,
+        36,
+        39,
+        42,
+        45,
+        48,
+        51,
+        54,
+        57,
+        60,
+        63,
+        66,
+        69,
+        72,
+        75
+      ],
+      "mappings": [
+        {
+          "data": "rate",
+          "attr": "text",
+          "type": "nominal",
+          "params": {
+            "32": "32",
+            "37.6": "37.6",
+            "28.6": "28.6",
+            "27.2": "27.2",
+            "25.3": "25.3",
+            "24.7": "24.7",
+            "20.1": "20.1",
+            "18.7": "18.7",
+            "17.8": "17.8",
+            "16.9": "16.9",
+            "16.6": "16.6",
+            "16.5": "16.5",
+            "14.6": "14.6",
+            "14.4": "14.4",
+            "14.2": "14.2",
+            "13.8": "13.8",
+            "13.6": "13.6",
+            "12.9": "12.9",
+            "12.5": "12.5"
+          },
+          "group": "~0~groups~3"
+        },
+        {
+          "data": ["rate"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 484.140625,
+            "attrMax": 878,
+            "coeffs": [
+              15.691610199914766,
+              287.99846147967145
+            ],
+            "err": 0.9999999985445193
+          },
+          "dataRange": [
+            0,
+            37.6
+          ],
+          "attrRange": [
+            287.99846147967145,
+            878.0030049964666
+          ],
+          "group": "~0~groups~3"
+        },
+        {
+          "data": ["_deriv_yPosition_2"],
+          "attr": "yPosition",
+          "type": "derived",
+          "params": {
+            "attrMin": 59.8046875,
+            "attrMax": 420.8046875,
+            "coeffs": [
+              19.000000000000007,
+              59.80468749999995
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~3"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "x": "628",
+          "y": "-5",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "37.6"
+        },
+        {
+          "x": "540.1276595744681",
+          "y": "14",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "32"
+        },
+        {
+          "x": "486.77659574468083",
+          "y": "33",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "28.6"
+        },
+        {
+          "x": "464.80851063829783",
+          "y": "52",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "27.2"
+        },
+        {
+          "x": "434.99468085106383",
+          "y": "71",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "25.3"
+        },
+        {
+          "x": "425.57978723404256",
+          "y": "90",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "24.7"
+        },
+        {
+          "x": "353.3989361702128",
+          "y": "109",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "20.1"
+        },
+        {
+          "x": "331.4308510638298",
+          "y": "128",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "18.7"
+        },
+        {
+          "x": "317.3085106382979",
+          "y": "147",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "17.8"
+        },
+        {
+          "x": "303.18617021276594",
+          "y": "166",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "16.9"
+        },
+        {
+          "x": "298.47872340425533",
+          "y": "185",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "16.6"
+        },
+        {
+          "x": "296.9095744680851",
+          "y": "204",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "16.5"
+        },
+        {
+          "x": "267.09574468085106",
+          "y": "223",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "14.6"
+        },
+        {
+          "x": "263.95744680851067",
+          "y": "242",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "14.4"
+        },
+        {
+          "x": "260.8191489361702",
+          "y": "261",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "14.2"
+        },
+        {
+          "x": "260.8191489361702",
+          "y": "280",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "14.2"
+        },
+        {
+          "x": "254.54255319148936",
+          "y": "299",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "13.8"
+        },
+        {
+          "x": "251.40425531914892",
+          "y": "318",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "13.6"
+        },
+        {
+          "x": "240.42021276595744",
+          "y": "337",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "12.9"
+        },
+        {
+          "x": "234.14361702127658",
+          "y": "356",
+          "text-anchor": "middle",
+          "dy": "1.3em",
+          "dx": "0em",
+          "id": "precise-value",
+          "text": "12.5"
+        }
+      ]
+    },
+    {
+      "data": {
+        "string": [
+          "Namibia",
+          "Macedonia, FYR",
+          "Armenia",
+          "Bosnia and Herzegovina",
+          "Lesotho",
+          "South Africa",
+          "Spain",
+          "Latvia",
+          "Lithuania",
+          "Estonia",
+          "Serbia",
+          "Georgia",
+          "Yemen, Rep.",
+          "Slovak Republic",
+          "Dominican Republic",
+          "Tunisia",
+          "Albania",
+          "Ireland",
+          "Jordan",
+          "Greece"
+        ],
+        "_deriv_xPosition_4": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "_deriv_yPosition_2": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "_deriv_width_4": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "_deriv_height_4": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line"
+        ],
+        "xPosition": [
+          247,
+          247,
+          247,
+          247,
+          247,
+          247,
+          247,
+          247,
+          247,
+          247,
+          247,
+          247,
+          247,
+          247,
+          247,
+          247,
+          247,
+          247,
+          247,
+          247
+        ],
+        "yPosition": [
+          59.5,
+          78.5,
+          97.5,
+          116.5,
+          135.5,
+          154.5,
+          173.5,
+          192.5,
+          211.5,
+          230.5,
+          249.5,
+          268.5,
+          287.5,
+          306.5,
+          325.5,
+          344.5,
+          363.5,
+          382.5,
+          401.5,
+          420.5
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "height": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        78,
+        81,
+        84,
+        87,
+        90,
+        93,
+        96,
+        99,
+        102,
+        105,
+        108,
+        111,
+        114,
+        117,
+        120,
+        123,
+        126,
+        129,
+        132,
+        135
+      ],
+      "mappings": [
+        {
+          "data": ["_deriv_yPosition_2"],
+          "attr": "yPosition",
+          "type": "derived",
+          "params": {
+            "attrMin": 59.5,
+            "attrMax": 420.5,
+            "coeffs": [
+              19.000000000000007,
+              59.49999999999999
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~4"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        }
+      ],
+      "name": "yaxis-ticks",
+      "axis": "yaxis"
+    },
+    {
+      "data": {
+        "string": [
+          "Namibia",
+          "Macedonia, FYR",
+          "Armenia",
+          "Bosnia and Herzegovina",
+          "Lesotho",
+          "South Africa",
+          "Spain",
+          "Latvia",
+          "Lithuania",
+          "Estonia",
+          "Serbia",
+          "Georgia",
+          "Yemen, Rep.",
+          "Slovak Republic",
+          "Dominican Republic",
+          "Tunisia",
+          "Albania",
+          "Ireland",
+          "Jordan",
+          "Greece"
+        ],
+        "_deriv_xPosition_5": [
+          3,
+          14,
+          1,
+          13,
+          12,
+          5,
+          8,
+          2,
+          0,
+          4,
+          11,
+          16,
+          9,
+          15,
+          19,
+          17,
+          18,
+          10,
+          7,
+          6
+        ],
+        "_deriv_yPosition_5": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "_deriv_width_5": [
+          6,
+          7,
+          10,
+          18,
+          17,
+          19,
+          15,
+          9,
+          16,
+          11,
+          4,
+          0,
+          2,
+          8,
+          5,
+          12,
+          13,
+          1,
+          14,
+          3
+        ],
+        "_deriv_height_3": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif",
+          "'Open Sans', sans-serif"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text"
+        ],
+        "xPosition": [
+          209.6796875,
+          182.3203125,
+          209.359375,
+          150.875,
+          211.140625,
+          195.734375,
+          220.3203125,
+          219.09375,
+          206.34375,
+          213.6953125,
+          217.4765625,
+          211.734375,
+          194.6875,
+          183.015625,
+          166.6875,
+          214.4375,
+          213.1796875,
+          214.7265625,
+          216.5,
+          214.6328125
+        ],
+        "yPosition": [
+          58.6171875,
+          77.6171875,
+          96.6171875,
+          115.6171875,
+          134.6171875,
+          153.6171875,
+          172.6171875,
+          191.6171875,
+          210.6171875,
+          229.6171875,
+          248.6171875,
+          267.6171875,
+          286.6171875,
+          305.6171875,
+          324.6171875,
+          343.6171875,
+          362.6171875,
+          381.6171875,
+          400.6171875,
+          419.6171875
+        ],
+        "area": [
+          1379.072509765625,
+          2583.739990234375,
+          1393.17626953125,
+          3968.31640625,
+          1314.74560546875,
+          1993.10205078125,
+          910.552490234375,
+          964.5595703125,
+          1525.9580078125,
+          1202.259521484375,
+          1035.766357421875,
+          1288.60205078125,
+          2039.197265625,
+          2553.12451171875,
+          3272.072265625,
+          1169.580078125,
+          1224.963134765625,
+          1156.852294921875,
+          1078.765625,
+          1160.980224609375
+        ],
+        "width": [
+          62.640625,
+          117.359375,
+          63.28125,
+          180.25,
+          59.71875,
+          90.53125,
+          41.359375,
+          43.8125,
+          69.3125,
+          54.609375,
+          47.046875,
+          58.53125,
+          92.625,
+          115.96875,
+          148.625,
+          53.125,
+          55.640625,
+          52.546875,
+          49,
+          52.734375
+        ],
+        "height": [
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625,
+          22.015625
+        ],
+        "text": [
+          "Namibia",
+          "Macedonia, FYR",
+          "Armenia",
+          "Bosnia and Herzegovina",
+          "Lesotho",
+          "South Africa",
+          "Spain",
+          "Latvia",
+          "Lithuania",
+          "Estonia",
+          "Serbia",
+          "Georgia",
+          "Yemen, Rep.",
+          "Slovak Republic",
+          "Dominican Republic",
+          "Tunisia",
+          "Albania",
+          "Ireland",
+          "Jordan",
+          "Greece"
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        79,
+        82,
+        85,
+        88,
+        91,
+        94,
+        97,
+        100,
+        103,
+        106,
+        109,
+        112,
+        115,
+        118,
+        121,
+        124,
+        127,
+        130,
+        133,
+        136
+      ],
+      "mappings": [
+        {
+          "data": "string",
+          "attr": "xPosition",
+          "type": "nominal",
+          "params": {
+            "Namibia": 209.6796875,
+            "Macedonia, FYR": 182.3203125,
+            "Armenia": 209.359375,
+            "Bosnia and Herzegovina": 150.875,
+            "Lesotho": 211.140625,
+            "South Africa": 195.734375,
+            "Spain": 220.3203125,
+            "Latvia": 219.09375,
+            "Lithuania": 206.34375,
+            "Estonia": 213.6953125,
+            "Serbia": 217.4765625,
+            "Georgia": 211.734375,
+            "Yemen, Rep.": 194.6875,
+            "Slovak Republic": 183.015625,
+            "Dominican Republic": 166.6875,
+            "Tunisia": 214.4375,
+            "Albania": 213.1796875,
+            "Ireland": 214.7265625,
+            "Jordan": 216.5,
+            "Greece": 214.6328125
+          },
+          "group": "~0~groups~5"
+        },
+        {
+          "data": "string",
+          "attr": "area",
+          "type": "nominal",
+          "params": {
+            "Namibia": 1379.072509765625,
+            "Macedonia, FYR": 2583.739990234375,
+            "Armenia": 1393.17626953125,
+            "Bosnia and Herzegovina": 3968.31640625,
+            "Lesotho": 1314.74560546875,
+            "South Africa": 1993.10205078125,
+            "Spain": 910.552490234375,
+            "Latvia": 964.5595703125,
+            "Lithuania": 1525.9580078125,
+            "Estonia": 1202.259521484375,
+            "Serbia": 1035.766357421875,
+            "Georgia": 1288.60205078125,
+            "Yemen, Rep.": 2039.197265625,
+            "Slovak Republic": 2553.12451171875,
+            "Dominican Republic": 3272.072265625,
+            "Tunisia": 1169.580078125,
+            "Albania": 1224.963134765625,
+            "Ireland": 1156.852294921875,
+            "Jordan": 1078.765625,
+            "Greece": 1160.980224609375
+          },
+          "group": "~0~groups~5"
+        },
+        {
+          "data": "string",
+          "attr": "width",
+          "type": "nominal",
+          "params": {
+            "Namibia": 62.640625,
+            "Macedonia, FYR": 117.359375,
+            "Armenia": 63.28125,
+            "Bosnia and Herzegovina": 180.25,
+            "Lesotho": 59.71875,
+            "South Africa": 90.53125,
+            "Spain": 41.359375,
+            "Latvia": 43.8125,
+            "Lithuania": 69.3125,
+            "Estonia": 54.609375,
+            "Serbia": 47.046875,
+            "Georgia": 58.53125,
+            "Yemen, Rep.": 92.625,
+            "Slovak Republic": 115.96875,
+            "Dominican Republic": 148.625,
+            "Tunisia": 53.125,
+            "Albania": 55.640625,
+            "Ireland": 52.546875,
+            "Jordan": 49,
+            "Greece": 52.734375
+          },
+          "group": "~0~groups~5"
+        },
+        {
+          "data": "string",
+          "attr": "text",
+          "type": "nominal",
+          "params": {
+            "Namibia": "Namibia",
+            "Macedonia, FYR": "Macedonia, FYR",
+            "Armenia": "Armenia",
+            "Bosnia and Herzegovina": "Bosnia and Herzegovina",
+            "Lesotho": "Lesotho",
+            "South Africa": "South Africa",
+            "Spain": "Spain",
+            "Latvia": "Latvia",
+            "Lithuania": "Lithuania",
+            "Estonia": "Estonia",
+            "Serbia": "Serbia",
+            "Georgia": "Georgia",
+            "Yemen, Rep.": "Yemen, Rep.",
+            "Slovak Republic": "Slovak Republic",
+            "Dominican Republic": "Dominican Republic",
+            "Tunisia": "Tunisia",
+            "Albania": "Albania",
+            "Ireland": "Ireland",
+            "Jordan": "Jordan",
+            "Greece": "Greece"
+          },
+          "group": "~0~groups~5"
+        },
+        {
+          "data": "_deriv_xPosition_5",
+          "attr": "xPosition",
+          "type": "nominal",
+          "params": {
+            "0": 206.34375,
+            "1": 209.359375,
+            "2": 219.09375,
+            "3": 209.6796875,
+            "4": 213.6953125,
+            "5": 195.734375,
+            "6": 214.6328125,
+            "7": 216.5,
+            "8": 220.3203125,
+            "9": 194.6875,
+            "10": 214.7265625,
+            "11": 217.4765625,
+            "12": 211.140625,
+            "13": 150.875,
+            "14": 182.3203125,
+            "15": 183.015625,
+            "16": 211.734375,
+            "17": 214.4375,
+            "18": 213.1796875,
+            "19": 166.6875
+          },
+          "group": "~0~groups~5"
+        },
+        {
+          "data": "_deriv_width_5",
+          "attr": "width",
+          "type": "nominal",
+          "params": {
+            "0": 58.53125,
+            "1": 52.546875,
+            "2": 92.625,
+            "3": 52.734375,
+            "4": 47.046875,
+            "5": 148.625,
+            "6": 62.640625,
+            "7": 117.359375,
+            "8": 115.96875,
+            "9": 43.8125,
+            "10": 63.28125,
+            "11": 54.609375,
+            "12": 53.125,
+            "13": 55.640625,
+            "14": 49,
+            "15": 41.359375,
+            "16": 69.3125,
+            "17": 59.71875,
+            "18": 180.25,
+            "19": 90.53125
+          },
+          "group": "~0~groups~5"
+        },
+        {
+          "data": ["_deriv_yPosition_5"],
+          "attr": "yPosition",
+          "type": "derived",
+          "params": {
+            "attrMin": 58.6171875,
+            "attrMax": 419.6171875,
+            "coeffs": [
+              19.000000000000007,
+              58.61718749999997
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~5"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Namibia"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Macedonia, FYR"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Armenia"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Bosnia and Herzegovina"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Lesotho"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "South Africa"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Spain"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Latvia"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Lithuania"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Estonia"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Serbia"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Georgia"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Yemen, Rep."
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Slovak Republic"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Dominican Republic"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Tunisia"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Albania"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Ireland"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Jordan"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "text-anchor": "middle",
+          "style": "text-anchor: end;",
+          "text": "Greece"
+        }
+      ],
+      "name": "yaxis-labels",
+      "axis": "yaxis"
+    },
+    {
+      "data": {
+        "domain": [
+          0,
+          0,
+          37.6,
+          37.6
+        ],
+        "tick": [
+          0,
+          -350,
+          -350,
+          0
+        ],
+        "lineID": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_xPosition_6": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_yPosition_6": [
+          1,
+          2,
+          0,
+          3
+        ],
+        "_deriv_width_6": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_height_0": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Times",
+          "Times",
+          "Times",
+          "Times"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(255,255,255)",
+          "rgb(255,255,255)",
+          "rgb(255,255,255)",
+          "rgb(255,255,255)"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "linePoint",
+          "linePoint",
+          "linePoint",
+          "linePoint"
+        ],
+        "xPosition": [
+          250,
+          250,
+          840,
+          840
+        ],
+        "yPosition": [
+          400,
+          50,
+          50,
+          400
+        ],
+        "area": [
+          206500,
+          206500,
+          206500,
+          206500
+        ],
+        "width": [
+          590,
+          590,
+          590,
+          590
+        ],
+        "height": [
+          350,
+          350,
+          350,
+          350
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 7,
+      "ids": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "mappings": [
+        {
+          "data": ["domain"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 250,
+            "attrMax": 840,
+            "coeffs": [
+              15.691489361702128,
+              250.0000000000001
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            0,
+            37.6
+          ],
+          "attrRange": [
+            250.0000000000001,
+            840.0000000000001
+          ],
+          "group": "~0~groups~6"
+        },
+        {
+          "data": ["tick"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 50,
+            "attrMax": 400,
+            "coeffs": [
+              1,
+              400
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~6"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "domain",
+          "d": "M0,350V0H590V350",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,350V0H590V350",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,350V0H590V350",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,350V0H590V350",
+          "text": ""
+        }
+      ],
+      "name": "xaxis-line",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "axis": [
+          0,
+          0,
+          350,
+          350
+        ],
+        "tick": [
+          0,
+          6,
+          6,
+          0
+        ],
+        "lineID": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_xPosition_7": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "_deriv_yPosition_7": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_width_0": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_height_7": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Times",
+          "Times",
+          "Times",
+          "Times"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "linePoint",
+          "linePoint",
+          "linePoint",
+          "linePoint"
+        ],
+        "xPosition": [
+          244,
+          250,
+          250,
+          244
+        ],
+        "yPosition": [
+          65,
+          65,
+          415,
+          415
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "height": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 7,
+      "ids": [
+        137,
+        137,
+        137,
+        137
+      ],
+      "mappings": [
+        {
+          "data": ["tick"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 244,
+            "attrMax": 250,
+            "coeffs": [
+              1,
+              244
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~7"
+        },
+        {
+          "data": ["axis"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 65,
+            "attrMax": 415,
+            "coeffs": [
+              0.9999999999999996,
+              65.00000000000006
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            0,
+            350
+          ],
+          "attrRange": [
+            65.00000000000006,
+            414.9999999999999
+          ],
+          "group": "~0~groups~7"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "domain",
+          "d": "M-6,0H0V350H-6",
+          "style": "display: none;",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M-6,0H0V350H-6",
+          "style": "display: none;",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M-6,0H0V350H-6",
+          "style": "display: none;",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M-6,0H0V350H-6",
+          "style": "display: none;",
+          "text": ""
+        }
+      ],
+      "name": "yaxis-line",
+      "axis": "yaxis"
+    }
+  ],
+  "mappingSets": {
+    "font-family": [],
+    "font-size": [],
+    "font-weight": [],
+    "opacity": [],
+    "fill": [],
+    "fill-opacity": [],
+    "stroke": [],
+    "stroke-width": [],
+    "shape": [],
+    "xPosition": [
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              250,
+              720.7446899414062
+            ],
+            "groupID": 0
+          },
+          {
+            "data": "number",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              250,
+              720.7446899414062
+            ],
+            "groupID": 1
+          },
+          {
+            "data": "rate",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              446.14361572265625,
+              840
+            ],
+            "groupID": 2
+          },
+          {
+            "data": "rate",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              484.140625,
+              878
+            ],
+            "groupID": 3
+          },
+          {
+            "data": "domain",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              250,
+              840
+            ],
+            "groupID": 6
+          }
+        ],
+        "attributes": [
+          250,
+          878
+        ],
+        "type": "linear"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "string",
+            "attr": "xPosition",
+            "type": "nominal",
+            "range": [
+              209.6796875,
+              182.3203125,
+              209.359375,
+              150.875,
+              211.140625,
+              195.734375,
+              220.3203125,
+              219.09375,
+              206.34375,
+              213.6953125,
+              217.4765625,
+              211.734375,
+              194.6875,
+              183.015625,
+              166.6875,
+              214.4375,
+              213.1796875,
+              214.7265625,
+              216.5,
+              214.6328125
+            ],
+            "groupID": 5
+          }
+        ],
+        "attributes": [
+          209.6796875,
+          182.3203125,
+          209.359375,
+          150.875,
+          211.140625,
+          195.734375,
+          220.3203125,
+          219.09375,
+          206.34375,
+          213.6953125,
+          217.4765625,
+          211.734375,
+          194.6875,
+          183.015625,
+          166.6875,
+          214.4375,
+          213.1796875,
+          214.7265625,
+          216.5,
+          214.6328125
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "_deriv_xPosition_5",
+            "attr": "xPosition",
+            "type": "nominal",
+            "range": [
+              206.34375,
+              209.359375,
+              219.09375,
+              209.6796875,
+              213.6953125,
+              195.734375,
+              214.6328125,
+              216.5,
+              220.3203125,
+              194.6875,
+              214.7265625,
+              217.4765625,
+              211.140625,
+              150.875,
+              182.3203125,
+              183.015625,
+              211.734375,
+              214.4375,
+              213.1796875,
+              166.6875
+            ],
+            "groupID": 5
+          }
+        ],
+        "attributes": [
+          206.34375,
+          209.359375,
+          219.09375,
+          209.6796875,
+          213.6953125,
+          195.734375,
+          214.6328125,
+          216.5,
+          220.3203125,
+          194.6875,
+          214.7265625,
+          217.4765625,
+          211.140625,
+          150.875,
+          182.3203125,
+          183.015625,
+          211.734375,
+          214.4375,
+          213.1796875,
+          166.6875
+        ],
+        "type": "nominal"
+      }
+    ],
+    "yPosition": [
+      {
+        "mappingRefs": [
+          {
+            "data": "axis",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              65,
+              415
+            ],
+            "groupID": 7
+          }
+        ],
+        "attributes": [
+          65,
+          415
+        ],
+        "type": "linear"
+      }
+    ],
+    "area": [
+      {
+        "mappingRefs": [
+          {
+            "data": "string",
+            "attr": "area",
+            "type": "nominal",
+            "range": [
+              1379.072509765625,
+              2583.739990234375,
+              1393.17626953125,
+              3968.31640625,
+              1314.74560546875,
+              1993.10205078125,
+              910.552490234375,
+              964.5595703125,
+              1525.9580078125,
+              1202.259521484375,
+              1035.766357421875,
+              1288.60205078125,
+              2039.197265625,
+              2553.12451171875,
+              3272.072265625,
+              1169.580078125,
+              1224.963134765625,
+              1156.852294921875,
+              1078.765625,
+              1160.980224609375
+            ],
+            "groupID": 5
+          }
+        ],
+        "attributes": [
+          1379.072509765625,
+          2583.739990234375,
+          1393.17626953125,
+          3968.31640625,
+          1314.74560546875,
+          1993.10205078125,
+          910.552490234375,
+          964.5595703125,
+          1525.9580078125,
+          1202.259521484375,
+          1035.766357421875,
+          1288.60205078125,
+          2039.197265625,
+          2553.12451171875,
+          3272.072265625,
+          1169.580078125,
+          1224.963134765625,
+          1156.852294921875,
+          1078.765625,
+          1160.980224609375
+        ],
+        "type": "nominal"
+      }
+    ],
+    "width": [
+      {
+        "mappingRefs": [
+          {
+            "data": "string",
+            "attr": "width",
+            "type": "nominal",
+            "range": [
+              62.640625,
+              117.359375,
+              63.28125,
+              180.25,
+              59.71875,
+              90.53125,
+              41.359375,
+              43.8125,
+              69.3125,
+              54.609375,
+              47.046875,
+              58.53125,
+              92.625,
+              115.96875,
+              148.625,
+              53.125,
+              55.640625,
+              52.546875,
+              49,
+              52.734375
+            ],
+            "groupID": 5
+          }
+        ],
+        "attributes": [
+          62.640625,
+          117.359375,
+          63.28125,
+          180.25,
+          59.71875,
+          90.53125,
+          41.359375,
+          43.8125,
+          69.3125,
+          54.609375,
+          47.046875,
+          58.53125,
+          92.625,
+          115.96875,
+          148.625,
+          53.125,
+          55.640625,
+          52.546875,
+          49,
+          52.734375
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "_deriv_width_5",
+            "attr": "width",
+            "type": "nominal",
+            "range": [
+              58.53125,
+              52.546875,
+              92.625,
+              52.734375,
+              47.046875,
+              148.625,
+              62.640625,
+              117.359375,
+              115.96875,
+              43.8125,
+              63.28125,
+              54.609375,
+              53.125,
+              55.640625,
+              49,
+              41.359375,
+              69.3125,
+              59.71875,
+              180.25,
+              90.53125
+            ],
+            "groupID": 5
+          }
+        ],
+        "attributes": [
+          58.53125,
+          52.546875,
+          92.625,
+          52.734375,
+          47.046875,
+          148.625,
+          62.640625,
+          117.359375,
+          115.96875,
+          43.8125,
+          63.28125,
+          54.609375,
+          53.125,
+          55.640625,
+          49,
+          41.359375,
+          69.3125,
+          59.71875,
+          180.25,
+          90.53125
+        ],
+        "type": "nominal"
+      }
+    ],
+    "height": [],
+    "text": [
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "text",
+            "type": "nominal",
+            "range": [
+              "0",
+              "10",
+              "20",
+              "30"
+            ],
+            "groupID": 1
+          }
+        ],
+        "attributes": [
+          "0",
+          "10",
+          "20",
+          "30"
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "rate",
+            "attr": "text",
+            "type": "nominal",
+            "range": [
+              "32",
+              "37.6",
+              "28.6",
+              "27.2",
+              "25.3",
+              "24.7",
+              "20.1",
+              "18.7",
+              "17.8",
+              "16.9",
+              "16.6",
+              "16.5",
+              "14.6",
+              "14.4",
+              "14.2",
+              "13.8",
+              "13.6",
+              "12.9",
+              "12.5"
+            ],
+            "groupID": 3
+          }
+        ],
+        "attributes": [
+          "32",
+          "37.6",
+          "28.6",
+          "27.2",
+          "25.3",
+          "24.7",
+          "20.1",
+          "18.7",
+          "17.8",
+          "16.9",
+          "16.6",
+          "16.5",
+          "14.6",
+          "14.4",
+          "14.2",
+          "13.8",
+          "13.6",
+          "12.9",
+          "12.5"
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "string",
+            "attr": "text",
+            "type": "nominal",
+            "range": [
+              "Namibia",
+              "Macedonia, FYR",
+              "Armenia",
+              "Bosnia and Herzegovina",
+              "Lesotho",
+              "South Africa",
+              "Spain",
+              "Latvia",
+              "Lithuania",
+              "Estonia",
+              "Serbia",
+              "Georgia",
+              "Yemen, Rep.",
+              "Slovak Republic",
+              "Dominican Republic",
+              "Tunisia",
+              "Albania",
+              "Ireland",
+              "Jordan",
+              "Greece"
+            ],
+            "groupID": 5
+          }
+        ],
+        "attributes": [
+          "Namibia",
+          "Macedonia, FYR",
+          "Armenia",
+          "Bosnia and Herzegovina",
+          "Lesotho",
+          "South Africa",
+          "Spain",
+          "Latvia",
+          "Lithuania",
+          "Estonia",
+          "Serbia",
+          "Georgia",
+          "Yemen, Rep.",
+          "Slovak Republic",
+          "Dominican Republic",
+          "Tunisia",
+          "Albania",
+          "Ireland",
+          "Jordan",
+          "Greece"
+        ],
+        "type": "nominal"
+      }
+    ],
+    "rotation": []
+  },
+  "ids": []
+}

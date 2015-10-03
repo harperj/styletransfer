@@ -1,1 +1,2824 @@
-{"svg":{"width":960,"height":500},"axes":[{"orient":"bottom","innerTickSize":-450,"outerTickSize":0,"tickPadding":3,"tickArguments":[10],"tickValues":null,"ticks":[0,1,2,3,4,5,6,7,8,9,10,11,12,13],"axis":"xaxis","scaleDomain":[0,13],"offset":{"x":40,"y":470},"scaleRange":[40,940],"boundingBox":{"height":482.046875,"width":917.375,"y":20,"x":33.5625}},{"orient":"left","innerTickSize":-900,"outerTickSize":0,"tickPadding":3,"tickArguments":[10],"tickValues":null,"ticks":[15,20,25,30,35,40],"axis":"yaxis","scaleDomain":[11,44],"offset":{"x":40,"y":20},"scaleRange":[470,20],"boundingBox":{"height":450,"width":928.609375,"y":20,"x":11.390625}}],"groups":[{"data":{"number":[0,1,2,3,4,5,6,7,8,9,10,11,12,13],"_deriv_xPosition_0":[0,1,2,3,4,5,6,7,8,9,10,11,12,13],"_deriv_yPosition_0":[0,1,2,3,4,5,6,7,8,9,10,11,12,13],"_deriv_width_0":[0,1,2,3,4,5,6,7,8,9,10,11,12,13],"_deriv_height_0":[0,1,2,3,4,5,6,7,8,9,10,11,12,13]},"attrs":{"font-family":["sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif"],"font-size":["11px","11px","11px","11px","11px","11px","11px","11px","11px","11px","11px","11px","11px","11px"],"font-weight":["normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal"],"opacity":[1,1,1,1,1,1,1,1,1,1,1,1,1,1],"fill":["none","none","none","none","none","none","none","none","none","none","none","none","none","none"],"fill-opacity":[1,1,1,1,1,1,1,1,1,1,1,1,1,1],"stroke":["rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)"],"stroke-width":["2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px"],"shape":["line","line","line","line","line","line","line","line","line","line","line","line","line","line"],"xPosition":[40,109.23076629638672,178.46153259277344,247.6923065185547,316.9230651855469,386.1538391113281,455.3846130371094,524.6153564453125,593.8461303710938,663.076904296875,732.3076782226562,801.5384521484375,870.7692260742188,940],"yPosition":[245,245,245,245,245,245,245,245,245,245,245,245,245,245],"area":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],"width":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],"height":[450,450,450,450,450,450,450,450,450,450,450,450,450,450],"text":["","","","","","","","","","","","","",""],"rotation":[0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"numFields":5,"ids":[3,6,9,12,15,18,21,24,27,30,33,36,39,42],"mappings":[{"data":["number"],"attr":"xPosition","type":"linear","params":{"attrMin":40,"attrMax":940,"coeffs":[69.23076867742853,39.99999433244986],"err":0.9999999999999991},"dataRange":[0,13],"attrRange":[39.99999433244986,939.9999871390207],"group":"~0~groups~0"}],"nodeAttrs":[{"y2":"-450","x2":"0","text":""},{"y2":"-450","x2":"0","text":""},{"y2":"-450","x2":"0","text":""},{"y2":"-450","x2":"0","text":""},{"y2":"-450","x2":"0","text":""},{"y2":"-450","x2":"0","text":""},{"y2":"-450","x2":"0","text":""},{"y2":"-450","x2":"0","text":""},{"y2":"-450","x2":"0","text":""},{"y2":"-450","x2":"0","text":""},{"y2":"-450","x2":"0","text":""},{"y2":"-450","x2":"0","text":""},{"y2":"-450","x2":"0","text":""},{"y2":"-450","x2":"0","text":""}],"name":"xaxis-ticks","axis":"xaxis"},{"data":{"number":[0,1,2,3,4,5,6,7,8,9,10,11,12,13],"_deriv_xPosition_0":[0,1,2,3,4,5,6,7,8,9,10,11,12,13],"_deriv_yPosition_1":[0,1,2,3,4,5,6,7,8,9,10,11,12,13],"_deriv_width_1":[1,7,4,2,3,8,0,5,6,9,11,12,13,10],"_deriv_height_1":[0,1,2,3,4,5,6,7,8,9,10,11,12,13]},"attrs":{"font-family":["Impact","Impact","Impact","Impact","Impact","Impact","Impact","Impact","Impact","Impact","Impact","Impact","Impact","Impact"],"font-size":["24px","24px","24px","24px","24px","24px","24px","24px","24px","24px","24px","24px","24px","24px"],"font-weight":["normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal"],"opacity":[1,1,1,1,1,1,1,1,1,1,1,1,1,1],"fill":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"fill-opacity":[1,1,1,1,1,1,1,1,1,1,1,1,1,1],"stroke":["none","none","none","none","none","none","none","none","none","none","none","none","none","none"],"stroke-width":[1,1,1,1,1,1,1,1,1,1,1,1,1,1],"shape":["text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"xPosition":[40,109.23076629638672,178.46153259277344,247.6923065185547,316.9230651855469,386.1538391113281,455.3846130371094,524.6153564453125,593.8461303710938,663.076904296875,732.3076782226562,801.5384521484375,870.7692260742188,940],"yPosition":[487.5390625,487.5390625,487.5390625,487.5390625,487.5390625,487.5390625,487.5390625,487.5390625,487.5390625,487.5390625,487.5390625,487.5390625,487.5390625,487.5390625],"area":[373.576171875,265.67431640625,350.0009765625,369.94921875,348.1875,374.48291015625,377.203125,272.92822265625,372.66943359375,377.203125,639.25048828125,530.44189453125,614.7685546875,634.716796875],"width":[12.875,9.15625,12.0625,12.75,12,12.90625,13,9.40625,12.84375,13,22.03125,18.28125,21.1875,21.875],"height":[29.015625,29.015625,29.015625,29.015625,29.015625,29.015625,29.015625,29.015625,29.015625,29.015625,29.015625,29.015625,29.015625,29.015625],"text":["0","1","2","3","4","5","6","7","8","9","10","11","12","13"],"rotation":[0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"numFields":5,"ids":[4,7,10,13,16,19,22,25,28,31,34,37,40,43],"mappings":[{"data":"number","attr":"text","type":"nominal","params":{"0":"0","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9","10":"10","11":"11","12":"12","13":"13"},"group":"~0~groups~1"},{"data":["number"],"attr":"xPosition","type":"linear","params":{"attrMin":40,"attrMax":940,"coeffs":[69.23076867742853,39.99999433244986],"err":0.9999999999999991},"dataRange":[0,13],"attrRange":[39.99999433244986,939.9999871390207],"group":"~0~groups~1"}],"nodeAttrs":[{"dy":".71em","y":"10","x":"0","style":"text-anchor: middle;","text":"0"},{"dy":".71em","y":"10","x":"0","style":"text-anchor: middle;","text":"1"},{"dy":".71em","y":"10","x":"0","style":"text-anchor: middle;","text":"2"},{"dy":".71em","y":"10","x":"0","style":"text-anchor: middle;","text":"3"},{"dy":".71em","y":"10","x":"0","style":"text-anchor: middle;","text":"4"},{"dy":".71em","y":"10","x":"0","style":"text-anchor: middle;","text":"5"},{"dy":".71em","y":"10","x":"0","style":"text-anchor: middle;","text":"6"},{"dy":".71em","y":"10","x":"0","style":"text-anchor: middle;","text":"7"},{"dy":".71em","y":"10","x":"0","style":"text-anchor: middle;","text":"8"},{"dy":".71em","y":"10","x":"0","style":"text-anchor: middle;","text":"9"},{"dy":".71em","y":"10","x":"0","style":"text-anchor: middle;","text":"10"},{"dy":".71em","y":"10","x":"0","style":"text-anchor: middle;","text":"11"},{"dy":".71em","y":"10","x":"0","style":"text-anchor: middle;","text":"12"},{"dy":".71em","y":"10","x":"0","style":"text-anchor: middle;","text":"13"}],"name":"xaxis-labels","axis":"xaxis"},{"data":{"number":[15,20,25,30,35,40],"_deriv_xPosition_2":[0,1,2,3,4,5],"_deriv_yPosition_2":[5,4,3,2,1,0],"_deriv_width_2":[0,1,2,3,4,5],"_deriv_height_2":[0,1,2,3,4,5]},"attrs":{"font-family":["sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif"],"font-size":["11px","11px","11px","11px","11px","11px"],"font-weight":["normal","normal","normal","normal","normal","normal"],"opacity":[1,1,1,1,1,1],"fill":["none","none","none","none","none","none"],"fill-opacity":[1,1,1,1,1,1],"stroke":["rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)"],"stroke-width":["2px","2px","2px","2px","2px","2px"],"shape":["line","line","line","line","line","line"],"xPosition":[490,490,490,490,490,490],"yPosition":[415.4545593261719,347.2727355957031,279.0909118652344,210.90908813476562,142.72726440429688,74.54545593261719],"area":[0,0,0,0,0,0],"width":[900,900,900,900,900,900],"height":[0,0,0,0,0,0],"text":["","","","","",""],"rotation":[0,0,0,0,0,0]},"numFields":5,"ids":[47,50,53,56,59,62],"mappings":[{"data":["number"],"attr":"yPosition","type":"linear","params":{"attrMin":74.54545593261719,"attrMax":415.4545593261719,"coeffs":[-13.636364310128346,620.0000210716612],"err":0.9999999999999987},"dataRange":[11,44],"attrRange":[470.00001366024935,19.999991426013935],"group":"~0~groups~2"}],"nodeAttrs":[{"x2":"900","y2":"0","text":""},{"x2":"900","y2":"0","text":""},{"x2":"900","y2":"0","text":""},{"x2":"900","y2":"0","text":""},{"x2":"900","y2":"0","text":""},{"x2":"900","y2":"0","text":""}],"name":"yaxis-ticks","axis":"yaxis"},{"data":{"number":[15,20,25,30,35,40],"_deriv_xPosition_3":[4,3,2,1,5,0],"_deriv_yPosition_3":[5,4,3,2,1,0],"_deriv_width_3":[0,5,1,2,3,4],"_deriv_height_3":[4,0,1,2,3,5]},"attrs":{"font-family":["Impact","Impact","Impact","Impact","Impact","Impact"],"font-size":["24px","24px","24px","24px","24px","24px"],"font-weight":["normal","normal","normal","normal","normal","normal"],"opacity":[1,1,1,1,1,1],"fill":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"fill-opacity":[1,1,1,1,1,1],"stroke":["none","none","none","none","none","none"],"stroke-width":[1,1,1,1,1,1],"shape":["text","text","text","text","text","text"],"xPosition":[25.984375,24.5390625,24.53125,24.203125,24.1953125,24.5703125],"yPosition":[413.6342468261719,345.4524230957031,277.2705993652344,209.08877563476562,140.90695571899414,72.72514343261719],"area":[639.25048828125,723.123779296875,723.5771484375,742.61865234375,743.0718261003494,721.310302734375],"width":[22.03125,24.921875,24.9375,25.59375,25.609375,24.859375],"height":[29.015625,29.015625,29.015625,29.015625,29.01561737060547,29.015625],"text":["15","20","25","30","35","40"],"rotation":[0,0,0,0,0,0]},"numFields":5,"ids":[48,51,54,57,60,63],"mappings":[{"data":"number","attr":"xPosition","type":"nominal","params":{"15":25.984375,"20":24.5390625,"25":24.53125,"30":24.203125,"35":24.1953125,"40":24.5703125},"group":"~0~groups~3"},{"data":"number","attr":"area","type":"nominal","params":{"15":639.25048828125,"20":723.123779296875,"25":723.5771484375,"30":742.61865234375,"35":743.0718261003494,"40":721.310302734375},"group":"~0~groups~3"},{"data":"number","attr":"width","type":"nominal","params":{"15":22.03125,"20":24.921875,"25":24.9375,"30":25.59375,"35":25.609375,"40":24.859375},"group":"~0~groups~3"},{"data":"number","attr":"text","type":"nominal","params":{"15":"15","20":"20","25":"25","30":"30","35":"35","40":"40"},"group":"~0~groups~3"},{"data":"_deriv_xPosition_3","attr":"xPosition","type":"nominal","params":{"0":24.5703125,"1":24.203125,"2":24.53125,"3":24.5390625,"4":25.984375,"5":24.1953125},"group":"~0~groups~3"},{"data":"_deriv_width_3","attr":"width","type":"nominal","params":{"0":22.03125,"1":24.9375,"2":25.59375,"3":25.609375,"4":24.859375,"5":24.921875},"group":"~0~groups~3"},{"data":["number"],"attr":"yPosition","type":"linear","params":{"attrMin":72.72514343261719,"attrMax":413.6342468261719,"coeffs":[-13.636364244733535,618.1797074090867],"err":0.999999999999999},"dataRange":[11,44],"attrRange":[468.17970071701785,18.17968064081117],"group":"~0~groups~3"}],"nodeAttrs":[{"dy":".32em","x":"-3","y":"0","style":"text-anchor: end;","text":"15"},{"dy":".32em","x":"-3","y":"0","style":"text-anchor: end;","text":"20"},{"dy":".32em","x":"-3","y":"0","style":"text-anchor: end;","text":"25"},{"dy":".32em","x":"-3","y":"0","style":"text-anchor: end;","text":"30"},{"dy":".32em","x":"-3","y":"0","style":"text-anchor: end;","text":"35"},{"dy":".32em","x":"-3","y":"0","style":"text-anchor: end;","text":"40"}],"name":"yaxis-labels","axis":"yaxis"},{"data":{"x":[11.5,11.3,12,11,8.8,9,11.5,7,1,7,3.9,1.3],"y":[20,22,12,13,17,20,16,19,30,31,40,43],"_deriv_xPosition_4":[8,11,10,7,9,4,5,3,1,0,6,2],"_deriv_yPosition_4":[11,10,9,8,1,0,5,7,4,6,3,2],"_deriv_width_4":[7,9,0,1,2,3,4,5,6,8,10,11],"_deriv_height_4":[0,1,2,3,4,5,6,7,8,9,10,11]},"attrs":{"font-family":["sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif","sans-serif"],"font-size":["11px","11px","11px","11px","11px","11px","11px","11px","11px","11px","11px","11px"],"font-weight":["normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal"],"opacity":[0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75],"fill":["rgb(128,0,128)","rgb(128,0,128)","rgb(128,0,128)","rgb(128,0,128)","rgb(128,0,128)","rgb(128,0,128)","rgb(128,0,128)","rgb(128,0,128)","rgb(128,0,128)","rgb(128,0,128)","rgb(128,0,128)","rgb(128,0,128)"],"fill-opacity":[1,1,1,1,1,1,1,1,1,1,1,1],"stroke":["none","none","none","none","none","none","none","none","none","none","none","none"],"stroke-width":[1,1,1,1,1,1,1,1,1,1,1,1],"shape":["circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle"],"xPosition":[836.1538696289062,822.3076782226562,870.7692260742188,801.5384521484375,649.2307739257812,663.076904296875,836.1538696289062,524.6153717041016,109.23076629638672,524.6153717041016,310,130],"yPosition":[347.2727355957031,320,456.3636474609375,442.7272644042969,388.18182373046875,347.2727355957031,401.81817626953125,360.9090881347656,210.90908813476562,197.27272033691406,74.54545593261719,33.6363639831543],"area":[1024,1024,1024,1024,1024,1024,1024,1023.9990234375,1024,1023.9990234375,1024,1024],"width":[32,32,32,32,32,32,32,31.999969482421875,32,31.999969482421875,32,32],"height":[32,32,32,32,32,32,32,32,32,32,32,32],"text":["","","","","","","","","","","",""],"rotation":[0,0,0,0,0,0,0,0,0,0,0,0]},"numFields":6,"ids":[65,66,67,68,69,70,71,72,73,74,75,76],"mappings":[{"data":["x"],"attr":"xPosition","type":"linear","params":{"attrMin":109.23076629638672,"attrMax":870.7692260742188,"coeffs":[69.23076980796735,39.999993410923494],"err":0.9999999999999976},"dataRange":[0,13],"attrRange":[39.999993410923494,940.000000914499],"group":"~0~groups~4"},{"data":["y"],"attr":"yPosition","type":"linear","params":{"attrMin":33.6363639831543,"attrMax":456.3636474609375,"coeffs":[-13.63636374311334,620.0000032399944],"err":0.9999999999999979},"dataRange":[11,44],"attrRange":[470.0000020657476,19.999998543007337],"group":"~0~groups~4"}],"nodeAttrs":[{"class":"dot","r":"16","cx":"796.1538461538461","cy":"327.2727272727273","text":""},{"class":"dot","r":"16","cx":"782.3076923076924","cy":"300.00000000000006","text":""},{"class":"dot","r":"16","cx":"830.7692307692308","cy":"436.3636363636364","text":""},{"class":"dot","r":"16","cx":"761.5384615384615","cy":"422.72727272727275","text":""},{"class":"dot","r":"16","cx":"609.2307692307693","cy":"368.18181818181813","text":""},{"class":"dot","r":"16","cx":"623.0769230769231","cy":"327.2727272727273","text":""},{"class":"dot","r":"16","cx":"796.1538461538461","cy":"381.8181818181818","text":""},{"class":"dot","r":"16","cx":"484.6153846153846","cy":"340.9090909090909","text":""},{"class":"dot","r":"16","cx":"69.23076923076924","cy":"190.90909090909088","text":""},{"class":"dot","r":"16","cx":"484.6153846153846","cy":"177.27272727272725","text":""},{"class":"dot","r":"16","cx":"270","cy":"54.54545454545455","text":""},{"class":"dot","r":"16","cx":"90","cy":"13.636363636363624","text":""}]},{"data":{"domain":[0,0,13,13],"tick":[0,0,0,0],"lineID":[0,1,2,3],"_deriv_xPosition_5":[0,1,2,3],"_deriv_yPosition_5":[0,1,2,3],"_deriv_width_5":[0,1,2,3],"_deriv_height_5":[0,1,2,3]},"attrs":{"font-family":["sans-serif","sans-serif","sans-serif","sans-serif"],"font-size":["11px","11px","11px","11px"],"font-weight":["normal","normal","normal","normal"],"opacity":[1,1,1,1],"fill":["none","none","none","none"],"fill-opacity":[1,1,1,1],"stroke":["rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)"],"stroke-width":["2px","2px","2px","2px"],"shape":["linePoint","linePoint","linePoint","linePoint"],"xPosition":[40,40,940,940],"yPosition":[470,470,470,470],"area":[0,0,0,0],"width":[900,900,900,900],"height":[0,0,0,0],"text":["","","",""],"rotation":[0,0,0,0]},"numFields":7,"ids":[44,44,44,44],"mappings":[{"data":["domain"],"attr":"xPosition","type":"linear","params":{"attrMin":40,"attrMax":940,"coeffs":[69.23076923076923,40],"err":1},"dataRange":[0,13],"attrRange":[40,940],"group":"~0~groups~5"}],"nodeAttrs":[{"class":"domain","d":"M0,0V0H900V0","text":""},{"class":"domain","d":"M0,0V0H900V0","text":""},{"class":"domain","d":"M0,0V0H900V0","text":""},{"class":"domain","d":"M0,0V0H900V0","text":""}],"name":"xaxis-line","axis":"xaxis"},{"data":{"domain":[44,44,11,11],"tick":[0,0,0,0],"lineID":[0,1,2,3],"_deriv_xPosition_6":[0,1,2,3],"_deriv_yPosition_6":[0,1,2,3],"_deriv_width_6":[0,1,2,3],"_deriv_height_6":[0,1,2,3]},"attrs":{"font-family":["sans-serif","sans-serif","sans-serif","sans-serif"],"font-size":["11px","11px","11px","11px"],"font-weight":["normal","normal","normal","normal"],"opacity":[1,1,1,1],"fill":["none","none","none","none"],"fill-opacity":[1,1,1,1],"stroke":["rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)","rgb(187,187,136)"],"stroke-width":["2px","2px","2px","2px"],"shape":["linePoint","linePoint","linePoint","linePoint"],"xPosition":[40,40,40,40],"yPosition":[20,20,470,470],"area":[0,0,0,0],"width":[0,0,0,0],"height":[450,450,450,450],"text":["","","",""],"rotation":[0,0,0,0]},"numFields":7,"ids":[64,64,64,64],"mappings":[{"data":["domain"],"attr":"yPosition","type":"linear","params":{"attrMin":20,"attrMax":470,"coeffs":[-13.636363636363637,620],"err":1},"dataRange":[11,44],"attrRange":[470,20],"group":"~0~groups~6"}],"nodeAttrs":[{"class":"domain","d":"M0,0H0V450H0","text":""},{"class":"domain","d":"M0,0H0V450H0","text":""},{"class":"domain","d":"M0,0H0V450H0","text":""},{"class":"domain","d":"M0,0H0V450H0","text":""}],"name":"yaxis-line","axis":"yaxis"}],"mappingSets":{"font-family":[],"font-size":[],"font-weight":[],"opacity":[],"fill":[],"fill-opacity":[],"stroke":[],"stroke-width":[],"shape":[],"xPosition":[{"mappingRefs":[{"data":"number","attr":"xPosition","type":"linear","range":[40,940],"groupID":0},{"data":"number","attr":"xPosition","type":"linear","range":[40,940],"groupID":1},{"data":"x","attr":"xPosition","type":"linear","range":[109.23076629638672,870.7692260742188],"groupID":4},{"data":"domain","attr":"xPosition","type":"linear","range":[40,940],"groupID":5}],"attributes":[40,940],"type":"linear"},{"mappingRefs":[{"data":"number","attr":"xPosition","type":"nominal","range":[25.984375,24.5390625,24.53125,24.203125,24.1953125,24.5703125],"groupID":3}],"attributes":[25.984375,24.5390625,24.53125,24.203125,24.1953125,24.5703125],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_xPosition_3","attr":"xPosition","type":"nominal","range":[24.5703125,24.203125,24.53125,24.5390625,25.984375,24.1953125],"groupID":3}],"attributes":[24.5703125,24.203125,24.53125,24.5390625,25.984375,24.1953125],"type":"nominal"}],"yPosition":[{"mappingRefs":[{"data":"number","attr":"yPosition","type":"linear","range":[74.54545593261719,415.4545593261719],"groupID":2},{"data":"number","attr":"yPosition","type":"linear","range":[72.72514343261719,413.6342468261719],"groupID":3},{"data":"y","attr":"yPosition","type":"linear","range":[33.6363639831543,456.3636474609375],"groupID":4},{"data":"domain","attr":"yPosition","type":"linear","range":[20,470],"groupID":6}],"attributes":[20,470],"type":"linear"}],"area":[{"mappingRefs":[{"data":"number","attr":"area","type":"nominal","range":[639.25048828125,723.123779296875,723.5771484375,742.61865234375,743.0718261003494,721.310302734375],"groupID":3}],"attributes":[639.25048828125,723.123779296875,723.5771484375,742.61865234375,743.0718261003494,721.310302734375],"type":"nominal"}],"width":[{"mappingRefs":[{"data":"number","attr":"width","type":"nominal","range":[22.03125,24.921875,24.9375,25.59375,25.609375,24.859375],"groupID":3}],"attributes":[22.03125,24.921875,24.9375,25.59375,25.609375,24.859375],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_width_3","attr":"width","type":"nominal","range":[22.03125,24.9375,25.59375,25.609375,24.859375,24.921875],"groupID":3}],"attributes":[22.03125,24.9375,25.59375,25.609375,24.859375,24.921875],"type":"nominal"}],"height":[],"text":[{"mappingRefs":[{"data":"number","attr":"text","type":"nominal","range":["0","1","2","3","4","5","6","7","8","9","10","11","12","13"],"groupID":1}],"attributes":["0","1","2","3","4","5","6","7","8","9","10","11","12","13"],"type":"nominal"},{"mappingRefs":[{"data":"number","attr":"text","type":"nominal","range":["15","20","25","30","35","40"],"groupID":3}],"attributes":["15","20","25","30","35","40"],"type":"nominal"}],"rotation":[]},"ids":[]}
+{
+  "svg": {
+    "width": 960,
+    "height": 500
+  },
+  "axes": [
+    {
+      "orient": "bottom",
+      "innerTickSize": -450,
+      "outerTickSize": 0,
+      "tickPadding": 3,
+      "tickArguments": [10],
+      "tickValues": null,
+      "ticks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "axis": "xaxis",
+      "scaleDomain": [
+        0,
+        13
+      ],
+      "offset": {
+        "x": 40,
+        "y": 470
+      },
+      "scaleRange": [
+        40,
+        940
+      ],
+      "boundingBox": {
+        "height": 482.046875,
+        "width": 917.375,
+        "y": 20,
+        "x": 33.5625
+      }
+    },
+    {
+      "orient": "left",
+      "innerTickSize": -900,
+      "outerTickSize": 0,
+      "tickPadding": 3,
+      "tickArguments": [10],
+      "tickValues": null,
+      "ticks": [
+        15,
+        20,
+        25,
+        30,
+        35,
+        40
+      ],
+      "axis": "yaxis",
+      "scaleDomain": [
+        11,
+        44
+      ],
+      "offset": {
+        "x": 40,
+        "y": 20
+      },
+      "scaleRange": [
+        470,
+        20
+      ],
+      "boundingBox": {
+        "height": 450,
+        "width": 928.609375,
+        "y": 20,
+        "x": 11.390625
+      }
+    }
+  ],
+  "groups": [
+    {
+      "data": {
+        "number": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "_deriv_xPosition_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "_deriv_yPosition_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "_deriv_width_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "_deriv_height_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif"
+        ],
+        "font-size": [
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)"
+        ],
+        "stroke-width": [
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px"
+        ],
+        "shape": [
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line"
+        ],
+        "xPosition": [
+          40,
+          109.23076629638672,
+          178.46153259277344,
+          247.6923065185547,
+          316.9230651855469,
+          386.1538391113281,
+          455.3846130371094,
+          524.6153564453125,
+          593.8461303710938,
+          663.076904296875,
+          732.3076782226562,
+          801.5384521484375,
+          870.7692260742188,
+          940
+        ],
+        "yPosition": [
+          245,
+          245,
+          245,
+          245,
+          245,
+          245,
+          245,
+          245,
+          245,
+          245,
+          245,
+          245,
+          245,
+          245
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "height": [
+          450,
+          450,
+          450,
+          450,
+          450,
+          450,
+          450,
+          450,
+          450,
+          450,
+          450,
+          450,
+          450,
+          450
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        3,
+        6,
+        9,
+        12,
+        15,
+        18,
+        21,
+        24,
+        27,
+        30,
+        33,
+        36,
+        39,
+        42
+      ],
+      "mappings": [
+        {
+          "data": ["number"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 40,
+            "attrMax": 940,
+            "coeffs": [
+              69.23076867742853,
+              39.99999433244986
+            ],
+            "err": 0.9999999999999991
+          },
+          "dataRange": [
+            0,
+            13
+          ],
+          "attrRange": [
+            39.99999433244986,
+            939.9999871390207
+          ],
+          "group": "~0~groups~0"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "-450",
+          "x2": "0",
+          "text": ""
+        }
+      ],
+      "name": "xaxis-ticks",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "number": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "_deriv_xPosition_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "_deriv_yPosition_1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "_deriv_width_1": [
+          1,
+          7,
+          4,
+          2,
+          3,
+          8,
+          0,
+          5,
+          6,
+          9,
+          11,
+          12,
+          13,
+          10
+        ],
+        "_deriv_height_1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Impact",
+          "Impact",
+          "Impact",
+          "Impact",
+          "Impact",
+          "Impact",
+          "Impact",
+          "Impact",
+          "Impact",
+          "Impact",
+          "Impact",
+          "Impact",
+          "Impact",
+          "Impact"
+        ],
+        "font-size": [
+          "24px",
+          "24px",
+          "24px",
+          "24px",
+          "24px",
+          "24px",
+          "24px",
+          "24px",
+          "24px",
+          "24px",
+          "24px",
+          "24px",
+          "24px",
+          "24px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text"
+        ],
+        "xPosition": [
+          40,
+          109.23076629638672,
+          178.46153259277344,
+          247.6923065185547,
+          316.9230651855469,
+          386.1538391113281,
+          455.3846130371094,
+          524.6153564453125,
+          593.8461303710938,
+          663.076904296875,
+          732.3076782226562,
+          801.5384521484375,
+          870.7692260742188,
+          940
+        ],
+        "yPosition": [
+          487.5390625,
+          487.5390625,
+          487.5390625,
+          487.5390625,
+          487.5390625,
+          487.5390625,
+          487.5390625,
+          487.5390625,
+          487.5390625,
+          487.5390625,
+          487.5390625,
+          487.5390625,
+          487.5390625,
+          487.5390625
+        ],
+        "area": [
+          373.576171875,
+          265.67431640625,
+          350.0009765625,
+          369.94921875,
+          348.1875,
+          374.48291015625,
+          377.203125,
+          272.92822265625,
+          372.66943359375,
+          377.203125,
+          639.25048828125,
+          530.44189453125,
+          614.7685546875,
+          634.716796875
+        ],
+        "width": [
+          12.875,
+          9.15625,
+          12.0625,
+          12.75,
+          12,
+          12.90625,
+          13,
+          9.40625,
+          12.84375,
+          13,
+          22.03125,
+          18.28125,
+          21.1875,
+          21.875
+        ],
+        "height": [
+          29.015625,
+          29.015625,
+          29.015625,
+          29.015625,
+          29.015625,
+          29.015625,
+          29.015625,
+          29.015625,
+          29.015625,
+          29.015625,
+          29.015625,
+          29.015625,
+          29.015625,
+          29.015625
+        ],
+        "text": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13"
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        4,
+        7,
+        10,
+        13,
+        16,
+        19,
+        22,
+        25,
+        28,
+        31,
+        34,
+        37,
+        40,
+        43
+      ],
+      "mappings": [
+        {
+          "data": "number",
+          "attr": "text",
+          "type": "nominal",
+          "params": {
+            "0": "0",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10",
+            "11": "11",
+            "12": "12",
+            "13": "13"
+          },
+          "group": "~0~groups~1"
+        },
+        {
+          "data": ["number"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 40,
+            "attrMax": 940,
+            "coeffs": [
+              69.23076867742853,
+              39.99999433244986
+            ],
+            "err": 0.9999999999999991
+          },
+          "dataRange": [
+            0,
+            13
+          ],
+          "attrRange": [
+            39.99999433244986,
+            939.9999871390207
+          ],
+          "group": "~0~groups~1"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "0"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "1"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "2"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "3"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "4"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "5"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "6"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "7"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "8"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "9"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "10"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "11"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "12"
+        },
+        {
+          "dy": ".71em",
+          "y": "10",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "13"
+        }
+      ],
+      "name": "xaxis-labels",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "number": [
+          15,
+          20,
+          25,
+          30,
+          35,
+          40
+        ],
+        "_deriv_xPosition_2": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "_deriv_yPosition_2": [
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "_deriv_width_2": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "_deriv_height_2": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif"
+        ],
+        "font-size": [
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)"
+        ],
+        "stroke-width": [
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px"
+        ],
+        "shape": [
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line"
+        ],
+        "xPosition": [
+          490,
+          490,
+          490,
+          490,
+          490,
+          490
+        ],
+        "yPosition": [
+          415.4545593261719,
+          347.2727355957031,
+          279.0909118652344,
+          210.90908813476562,
+          142.72726440429688,
+          74.54545593261719
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          900,
+          900,
+          900,
+          900,
+          900,
+          900
+        ],
+        "height": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        47,
+        50,
+        53,
+        56,
+        59,
+        62
+      ],
+      "mappings": [
+        {
+          "data": ["number"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 74.54545593261719,
+            "attrMax": 415.4545593261719,
+            "coeffs": [
+              -13.636364310128346,
+              620.0000210716612
+            ],
+            "err": 0.9999999999999987
+          },
+          "dataRange": [
+            11,
+            44
+          ],
+          "attrRange": [
+            470.00001366024935,
+            19.999991426013935
+          ],
+          "group": "~0~groups~2"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "x2": "900",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "900",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "900",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "900",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "900",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "900",
+          "y2": "0",
+          "text": ""
+        }
+      ],
+      "name": "yaxis-ticks",
+      "axis": "yaxis"
+    },
+    {
+      "data": {
+        "number": [
+          15,
+          20,
+          25,
+          30,
+          35,
+          40
+        ],
+        "_deriv_xPosition_3": [
+          4,
+          3,
+          2,
+          1,
+          5,
+          0
+        ],
+        "_deriv_yPosition_3": [
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "_deriv_width_3": [
+          0,
+          5,
+          1,
+          2,
+          3,
+          4
+        ],
+        "_deriv_height_3": [
+          4,
+          0,
+          1,
+          2,
+          3,
+          5
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Impact",
+          "Impact",
+          "Impact",
+          "Impact",
+          "Impact",
+          "Impact"
+        ],
+        "font-size": [
+          "24px",
+          "24px",
+          "24px",
+          "24px",
+          "24px",
+          "24px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text"
+        ],
+        "xPosition": [
+          25.984375,
+          24.5390625,
+          24.53125,
+          24.203125,
+          24.1953125,
+          24.5703125
+        ],
+        "yPosition": [
+          413.6342468261719,
+          345.4524230957031,
+          277.2705993652344,
+          209.08877563476562,
+          140.90695571899414,
+          72.72514343261719
+        ],
+        "area": [
+          639.25048828125,
+          723.123779296875,
+          723.5771484375,
+          742.61865234375,
+          743.0718261003494,
+          721.310302734375
+        ],
+        "width": [
+          22.03125,
+          24.921875,
+          24.9375,
+          25.59375,
+          25.609375,
+          24.859375
+        ],
+        "height": [
+          29.015625,
+          29.015625,
+          29.015625,
+          29.015625,
+          29.01561737060547,
+          29.015625
+        ],
+        "text": [
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40"
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        48,
+        51,
+        54,
+        57,
+        60,
+        63
+      ],
+      "mappings": [
+        {
+          "data": "number",
+          "attr": "xPosition",
+          "type": "nominal",
+          "params": {
+            "15": 25.984375,
+            "20": 24.5390625,
+            "25": 24.53125,
+            "30": 24.203125,
+            "35": 24.1953125,
+            "40": 24.5703125
+          },
+          "group": "~0~groups~3"
+        },
+        {
+          "data": "number",
+          "attr": "area",
+          "type": "nominal",
+          "params": {
+            "15": 639.25048828125,
+            "20": 723.123779296875,
+            "25": 723.5771484375,
+            "30": 742.61865234375,
+            "35": 743.0718261003494,
+            "40": 721.310302734375
+          },
+          "group": "~0~groups~3"
+        },
+        {
+          "data": "number",
+          "attr": "width",
+          "type": "nominal",
+          "params": {
+            "15": 22.03125,
+            "20": 24.921875,
+            "25": 24.9375,
+            "30": 25.59375,
+            "35": 25.609375,
+            "40": 24.859375
+          },
+          "group": "~0~groups~3"
+        },
+        {
+          "data": "number",
+          "attr": "text",
+          "type": "nominal",
+          "params": {
+            "15": "15",
+            "20": "20",
+            "25": "25",
+            "30": "30",
+            "35": "35",
+            "40": "40"
+          },
+          "group": "~0~groups~3"
+        },
+        {
+          "data": "_deriv_xPosition_3",
+          "attr": "xPosition",
+          "type": "nominal",
+          "params": {
+            "0": 24.5703125,
+            "1": 24.203125,
+            "2": 24.53125,
+            "3": 24.5390625,
+            "4": 25.984375,
+            "5": 24.1953125
+          },
+          "group": "~0~groups~3"
+        },
+        {
+          "data": "_deriv_width_3",
+          "attr": "width",
+          "type": "nominal",
+          "params": {
+            "0": 22.03125,
+            "1": 24.9375,
+            "2": 25.59375,
+            "3": 25.609375,
+            "4": 24.859375,
+            "5": 24.921875
+          },
+          "group": "~0~groups~3"
+        },
+        {
+          "data": ["number"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 72.72514343261719,
+            "attrMax": 413.6342468261719,
+            "coeffs": [
+              -13.636364244733535,
+              618.1797074090867
+            ],
+            "err": 0.999999999999999
+          },
+          "dataRange": [
+            11,
+            44
+          ],
+          "attrRange": [
+            468.17970071701785,
+            18.17968064081117
+          ],
+          "group": "~0~groups~3"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "dy": ".32em",
+          "x": "-3",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "15"
+        },
+        {
+          "dy": ".32em",
+          "x": "-3",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "20"
+        },
+        {
+          "dy": ".32em",
+          "x": "-3",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "25"
+        },
+        {
+          "dy": ".32em",
+          "x": "-3",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "30"
+        },
+        {
+          "dy": ".32em",
+          "x": "-3",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "35"
+        },
+        {
+          "dy": ".32em",
+          "x": "-3",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "40"
+        }
+      ],
+      "name": "yaxis-labels",
+      "axis": "yaxis"
+    },
+    {
+      "data": {
+        "x": [
+          11.5,
+          11.3,
+          12,
+          11,
+          8.8,
+          9,
+          11.5,
+          7,
+          1,
+          7,
+          3.9,
+          1.3
+        ],
+        "y": [
+          20,
+          22,
+          12,
+          13,
+          17,
+          20,
+          16,
+          19,
+          30,
+          31,
+          40,
+          43
+        ],
+        "_deriv_xPosition_4": [
+          8,
+          11,
+          10,
+          7,
+          9,
+          4,
+          5,
+          3,
+          1,
+          0,
+          6,
+          2
+        ],
+        "_deriv_yPosition_4": [
+          11,
+          10,
+          9,
+          8,
+          1,
+          0,
+          5,
+          7,
+          4,
+          6,
+          3,
+          2
+        ],
+        "_deriv_width_4": [
+          7,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          10,
+          11
+        ],
+        "_deriv_height_4": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif"
+        ],
+        "font-size": [
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px",
+          "11px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          0.75,
+          0.75,
+          0.75,
+          0.75,
+          0.75,
+          0.75,
+          0.75,
+          0.75,
+          0.75,
+          0.75,
+          0.75,
+          0.75
+        ],
+        "fill": [
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)",
+          "rgb(128,0,128)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle"
+        ],
+        "xPosition": [
+          836.1538696289062,
+          822.3076782226562,
+          870.7692260742188,
+          801.5384521484375,
+          649.2307739257812,
+          663.076904296875,
+          836.1538696289062,
+          524.6153717041016,
+          109.23076629638672,
+          524.6153717041016,
+          310,
+          130
+        ],
+        "yPosition": [
+          347.2727355957031,
+          320,
+          456.3636474609375,
+          442.7272644042969,
+          388.18182373046875,
+          347.2727355957031,
+          401.81817626953125,
+          360.9090881347656,
+          210.90908813476562,
+          197.27272033691406,
+          74.54545593261719,
+          33.6363639831543
+        ],
+        "area": [
+          1024,
+          1024,
+          1024,
+          1024,
+          1024,
+          1024,
+          1024,
+          1023.9990234375,
+          1024,
+          1023.9990234375,
+          1024,
+          1024
+        ],
+        "width": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          31.999969482421875,
+          32,
+          31.999969482421875,
+          32,
+          32
+        ],
+        "height": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 6,
+      "ids": [
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "mappings": [
+        {
+          "data": ["x"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 109.23076629638672,
+            "attrMax": 870.7692260742188,
+            "coeffs": [
+              69.23076980796735,
+              39.999993410923494
+            ],
+            "err": 0.9999999999999976
+          },
+          "dataRange": [
+            0,
+            13
+          ],
+          "attrRange": [
+            39.999993410923494,
+            940.000000914499
+          ],
+          "group": "~0~groups~4"
+        },
+        {
+          "data": ["y"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 33.6363639831543,
+            "attrMax": 456.3636474609375,
+            "coeffs": [
+              -13.63636374311334,
+              620.0000032399944
+            ],
+            "err": 0.9999999999999979
+          },
+          "dataRange": [
+            11,
+            44
+          ],
+          "attrRange": [
+            470.0000020657476,
+            19.999998543007337
+          ],
+          "group": "~0~groups~4"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "dot",
+          "r": "16",
+          "cx": "796.1538461538461",
+          "cy": "327.2727272727273",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "16",
+          "cx": "782.3076923076924",
+          "cy": "300.00000000000006",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "16",
+          "cx": "830.7692307692308",
+          "cy": "436.3636363636364",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "16",
+          "cx": "761.5384615384615",
+          "cy": "422.72727272727275",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "16",
+          "cx": "609.2307692307693",
+          "cy": "368.18181818181813",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "16",
+          "cx": "623.0769230769231",
+          "cy": "327.2727272727273",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "16",
+          "cx": "796.1538461538461",
+          "cy": "381.8181818181818",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "16",
+          "cx": "484.6153846153846",
+          "cy": "340.9090909090909",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "16",
+          "cx": "69.23076923076924",
+          "cy": "190.90909090909088",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "16",
+          "cx": "484.6153846153846",
+          "cy": "177.27272727272725",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "16",
+          "cx": "270",
+          "cy": "54.54545454545455",
+          "text": ""
+        },
+        {
+          "class": "dot",
+          "r": "16",
+          "cx": "90",
+          "cy": "13.636363636363624",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "data": {
+        "domain": [
+          0,
+          0,
+          13,
+          13
+        ],
+        "tick": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "lineID": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_xPosition_5": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_yPosition_5": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_width_5": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_height_5": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif"
+        ],
+        "font-size": [
+          "11px",
+          "11px",
+          "11px",
+          "11px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)"
+        ],
+        "stroke-width": [
+          "2px",
+          "2px",
+          "2px",
+          "2px"
+        ],
+        "shape": [
+          "linePoint",
+          "linePoint",
+          "linePoint",
+          "linePoint"
+        ],
+        "xPosition": [
+          40,
+          40,
+          940,
+          940
+        ],
+        "yPosition": [
+          470,
+          470,
+          470,
+          470
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          900,
+          900,
+          900,
+          900
+        ],
+        "height": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 7,
+      "ids": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "mappings": [
+        {
+          "data": ["domain"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 40,
+            "attrMax": 940,
+            "coeffs": [
+              69.23076923076923,
+              40
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            0,
+            13
+          ],
+          "attrRange": [
+            40,
+            940
+          ],
+          "group": "~0~groups~5"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "domain",
+          "d": "M0,0V0H900V0",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,0V0H900V0",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,0V0H900V0",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,0V0H900V0",
+          "text": ""
+        }
+      ],
+      "name": "xaxis-line",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "domain": [
+          44,
+          44,
+          11,
+          11
+        ],
+        "tick": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "lineID": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_xPosition_6": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_yPosition_6": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_width_6": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_height_6": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif"
+        ],
+        "font-size": [
+          "11px",
+          "11px",
+          "11px",
+          "11px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)",
+          "rgb(187,187,136)"
+        ],
+        "stroke-width": [
+          "2px",
+          "2px",
+          "2px",
+          "2px"
+        ],
+        "shape": [
+          "linePoint",
+          "linePoint",
+          "linePoint",
+          "linePoint"
+        ],
+        "xPosition": [
+          40,
+          40,
+          40,
+          40
+        ],
+        "yPosition": [
+          20,
+          20,
+          470,
+          470
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "height": [
+          450,
+          450,
+          450,
+          450
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 7,
+      "ids": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "mappings": [
+        {
+          "data": ["domain"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 20,
+            "attrMax": 470,
+            "coeffs": [
+              -13.636363636363637,
+              620
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            11,
+            44
+          ],
+          "attrRange": [
+            470,
+            20
+          ],
+          "group": "~0~groups~6"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "domain",
+          "d": "M0,0H0V450H0",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,0H0V450H0",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,0H0V450H0",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,0H0V450H0",
+          "text": ""
+        }
+      ],
+      "name": "yaxis-line",
+      "axis": "yaxis"
+    }
+  ],
+  "mappingSets": {
+    "font-family": [],
+    "font-size": [],
+    "font-weight": [],
+    "opacity": [],
+    "fill": [],
+    "fill-opacity": [],
+    "stroke": [],
+    "stroke-width": [],
+    "shape": [],
+    "xPosition": [
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              40,
+              940
+            ],
+            "groupID": 0
+          },
+          {
+            "data": "number",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              40,
+              940
+            ],
+            "groupID": 1
+          },
+          {
+            "data": "x",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              109.23076629638672,
+              870.7692260742188
+            ],
+            "groupID": 4
+          },
+          {
+            "data": "domain",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              40,
+              940
+            ],
+            "groupID": 5
+          }
+        ],
+        "attributes": [
+          40,
+          940
+        ],
+        "type": "linear"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "xPosition",
+            "type": "nominal",
+            "range": [
+              25.984375,
+              24.5390625,
+              24.53125,
+              24.203125,
+              24.1953125,
+              24.5703125
+            ],
+            "groupID": 3
+          }
+        ],
+        "attributes": [
+          25.984375,
+          24.5390625,
+          24.53125,
+          24.203125,
+          24.1953125,
+          24.5703125
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "_deriv_xPosition_3",
+            "attr": "xPosition",
+            "type": "nominal",
+            "range": [
+              24.5703125,
+              24.203125,
+              24.53125,
+              24.5390625,
+              25.984375,
+              24.1953125
+            ],
+            "groupID": 3
+          }
+        ],
+        "attributes": [
+          24.5703125,
+          24.203125,
+          24.53125,
+          24.5390625,
+          25.984375,
+          24.1953125
+        ],
+        "type": "nominal"
+      }
+    ],
+    "yPosition": [
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              74.54545593261719,
+              415.4545593261719
+            ],
+            "groupID": 2
+          },
+          {
+            "data": "number",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              72.72514343261719,
+              413.6342468261719
+            ],
+            "groupID": 3
+          },
+          {
+            "data": "y",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              33.6363639831543,
+              456.3636474609375
+            ],
+            "groupID": 4
+          },
+          {
+            "data": "domain",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              20,
+              470
+            ],
+            "groupID": 6
+          }
+        ],
+        "attributes": [
+          20,
+          470
+        ],
+        "type": "linear"
+      }
+    ],
+    "area": [
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "area",
+            "type": "nominal",
+            "range": [
+              639.25048828125,
+              723.123779296875,
+              723.5771484375,
+              742.61865234375,
+              743.0718261003494,
+              721.310302734375
+            ],
+            "groupID": 3
+          }
+        ],
+        "attributes": [
+          639.25048828125,
+          723.123779296875,
+          723.5771484375,
+          742.61865234375,
+          743.0718261003494,
+          721.310302734375
+        ],
+        "type": "nominal"
+      }
+    ],
+    "width": [
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "width",
+            "type": "nominal",
+            "range": [
+              22.03125,
+              24.921875,
+              24.9375,
+              25.59375,
+              25.609375,
+              24.859375
+            ],
+            "groupID": 3
+          }
+        ],
+        "attributes": [
+          22.03125,
+          24.921875,
+          24.9375,
+          25.59375,
+          25.609375,
+          24.859375
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "_deriv_width_3",
+            "attr": "width",
+            "type": "nominal",
+            "range": [
+              22.03125,
+              24.9375,
+              25.59375,
+              25.609375,
+              24.859375,
+              24.921875
+            ],
+            "groupID": 3
+          }
+        ],
+        "attributes": [
+          22.03125,
+          24.9375,
+          25.59375,
+          25.609375,
+          24.859375,
+          24.921875
+        ],
+        "type": "nominal"
+      }
+    ],
+    "height": [],
+    "text": [
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "text",
+            "type": "nominal",
+            "range": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13"
+            ],
+            "groupID": 1
+          }
+        ],
+        "attributes": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13"
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "text",
+            "type": "nominal",
+            "range": [
+              "15",
+              "20",
+              "25",
+              "30",
+              "35",
+              "40"
+            ],
+            "groupID": 3
+          }
+        ],
+        "attributes": [
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40"
+        ],
+        "type": "nominal"
+      }
+    ],
+    "rotation": []
+  },
+  "ids": []
+}
