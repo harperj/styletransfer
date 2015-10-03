@@ -1,5 +1,4 @@
 var libDecon = require('d3-decon-lib');
-var Deconstruct = libDecon.Deconstruct;
 var Deconstruction = libDecon.Deconstruction;
 var Mapping = libDecon.Mapping;
 var fs = require('fs');
@@ -11,6 +10,7 @@ var ss = require('simple-statistics');
 var d3 = require('d3');
 var CircularJSON = require('circular-json');
 
+var util = require('./util');
 var config = require('./config');
 var transferTests = require('./tests');
 
@@ -982,82 +982,22 @@ var propagateCoeffs = function (mapping, relationship) {
     return [transferredCoeff1, transferredCoeff2];
 };
 
-var rangeContains = function(range1, range2) {
-
-    if (!range1 || !range2 || range1.length !== 2 || range2.length !== 2) {
-        return false;
-    }
-
-    var range1Min = _.min(range1);
-    var range1Max = _.max(range1);
-    var range2Min = _.min(range2);
-    var range2Max = _.max(range2);
-
-    return range1Min <= range2Min + 2 && range1Max >= range2Max - 2;
-};
-
-
-var loadDeconstructedVis = function (filename) {
-    var file = fs.readFileSync(filename, 'utf8');
-    var decon = JSON.parse(file);
-    return Deconstruction.fromJSON(decon);
-};
-
-var loadJSONData = function(filename) {
-    var file = fs.readFileSync(filename, 'utf8');
-    var dataset = JSON.parse(file);
-    var parsedFields = [];
-    _.each(_.keys(dataset.data), function(columnName) {
-        var parsedField = parseJSONDataField(dataset, columnName);
-        parsedFields.push(parsedField);
-    });
-    return {
-        '1': parsedFields
-    };
-};
-
-var parseJSONDataField = function(dataset, columnName) {
-    var fieldName = columnName;
-    var rank = dataset.ranks[columnName];
-    var mappingType = dataset.types[columnName];
-    var fieldData = dataset.data[columnName];
-    var dataRange;
-    if (mappingType === "linear") {
-        fieldData = _.map(fieldData, function(value) {return +value;})
-        dataRange = [_.min(fieldData), _.max(fieldData)];
-    }
-    else {
-        dataRange = _.uniq(fieldData);
-    }
-
-    return {
-        fieldName: fieldName,
-        rank: rank,
-        mappingType: mappingType,
-        dataRange: dataRange,
-        group: undefined,
-        sourceData: dataset.data
-    };
-};
-
-
-
 var main = function () {
     _.each(transferTests, function (test) {
         var sourceData;
         test.sourceDecon = {};
 
         if (typeof test.source_type === "undefined" || test.source_type === "deconstruction") {
-            test.sourceDecon = loadDeconstructedVis(test.source_file);
+            test.sourceDecon = util.loadDeconstructedVis(test.source_file);
 
             // FIXME: extractDataFromVis currently non-functional.
             sourceData = extractDataFromVis(test.sourceDecon);
         }
         else if (test.source_type === "json_data") {
-            sourceData = loadJSONData(test.source_file);
+            sourceData = util.loadJSONData(test.source_file);
         }
 
-        test.targetDecon = loadDeconstructedVis(test.target_file);
+        test.targetDecon = util.loadDeconstructedVis(test.target_file);
 
         test.result = transferChart(sourceData, test.targetDecon);
     });
@@ -1067,7 +1007,3 @@ var main = function () {
 if (require.main === module) {
     main();
 }
-
-module.exports = {
-    loadDeconstructedVis: loadDeconstructedVis
-};
