@@ -328,6 +328,7 @@ var transferChart = function (sourceData, targetVis) {
 var constructDerivedMappings = function constructDerivedMappings(targetDerived, newDerived, sourceGroups) {
     var newDerivedMappings = [];
     _.each(targetDerived, function(derivedMapping) {
+
         var alreadyTransferred = false;
         _.each(newDerived, function(newDerivedMapping) {
             if (newDerivedMapping.targetAnalog === derivedMapping) {
@@ -376,12 +377,6 @@ var constructDerivedMappings = function constructDerivedMappings(targetDerived, 
     return newDerived;
 };
 
-var getBoundingBoxFromGroups = function getBoundingBoxFromGroups(groups) {
-    var decon = new Deconstruction({x: 0, y: 0, width: 0, height: 0}, groups);
-    decon.svg = decon.getMarkBoundingBox({x: 0, y: 0, width: 0, height: 0});
-    return decon.svg;
-};
-
 var createAxes = function(axes, targetVis, newMappings, newGroups) {
     var axisMarkGroups = [];
     _.each(axes, function(axis) {
@@ -405,42 +400,6 @@ var createAxes = function(axes, targetVis, newMappings, newGroups) {
             }
         }
     });
-
-    //var axisBBox = getBoundingBoxFromGroups(axisMarkGroups, targetVis);
-    for (var i = 0; i < axisMarkGroups.length; ++i) {
-        var axis = axisMarkGroups[i];
-        if (axis.length === 0) continue;
-        var ticks = axis[0];
-        var labels = axis[1];
-        var line = axis[2];
-        var newGroupBBox = getBoundingBoxFromGroups(newGroups);
-        var targetNonAxisGroups = _.filter(targetVis.groups, function(group) { return !group.name; });
-        var targetNonAxisBBox = getBoundingBoxFromGroups(targetNonAxisGroups);
-
-        var newDecon = new Deconstruction({width: 0, height:0, x:0, y:0}, newGroups);
-        //var visBoundingBox = newDecon.getMarkBoundingBox();
-
-        //if (ticks.name[0] === 'x' && labels.attrs.yPosition[0] > ticks.attrs.yPosition[0]) {
-        //    // bottom oriented axis
-        //    var axisLineBBox = line.getMarkBoundingBox();
-        //    var axisLineMin = axisLineBBox.y;
-        //    var padding = axisLineMin - (targetNonAxisBBox.y + targetNonAxisBBox.height);
-        //    var newGroupMax = newGroupBBox.y + newGroupBBox.height;
-        //
-        //    if (newGroupMax > axisLineMin) {
-        //        ticks.attrs['yPosition'] = _.map(ticks.attrs['yPosition'], function(yPos) {return yPos + (newGroupMax - axisLineMin + padding);});
-        //        labels.attrs['yPosition'] = _.map(labels.attrs['yPosition'], function(yPos) {return yPos + (newGroupMax - axisLineMin) + padding;});
-        //        line.attrs['yPosition'] = _.map(line.attrs['yPosition'], function(yPos) {return yPos + (newGroupMax - axisLineMin) + padding;});
-        //        //line.getMapping('tick', 'yPosition').params.coeffs[1] += (newGroupMax - axisLineMin) + padding;
-        //    }
-        //}
-        //if (ticks.name[0] === 'y' && labels.attrs.xPosition[0] < ticks.attrs.xPosition[0]) {
-        //    if (ticks.attrs.width[0] > 100) {
-        //        ticks.attrs['xPosition'] = _.map(ticks.attrs['xPosition'], function(xPos, i) {return 0.5 * newGroupBBox.width + (xPos - ticks.attrs['width'][0]/2);});
-        //        ticks.attrs['width'] = _.map(ticks.attrs['width'], function(width) { return newGroupBBox.width; });
-        //    }
-        //}
-    }
 
     return _.flatten(axisMarkGroups);
 };
