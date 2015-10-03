@@ -1,5 +1,6 @@
 var fs = require('fs');
 var Deconstruction = require('d3-decon-lib').Deconstruction;
+var _ = require('lodash');
 
 var loadDeconstructedVis = function (filename) {
     var file = fs.readFileSync(filename, 'utf8');
