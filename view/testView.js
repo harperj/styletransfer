@@ -93,19 +93,16 @@ var createVisContainer = function (container, decon) {
 var renderVis = function (decon, svgNode) {
     var groups = decon.groups;
     groups = _.sortBy(groups, function(group) {
-        var ids = group.ids;
         var val = 0;
         if (group.axis) val = -10;
         return val;
-        //return _.sum(ids) / ids.length;
     });
 
 
     for (var j = 0; j < groups.length; ++j) {
         var vis = groups[j];
-
-        if (vis.data.hasOwnProperty('lineID')) {
-            console.log("has a lineID");
+        if (vis.attrs.shape[0] === 'linePoint') {
+            console.log("Found a line.  WARNING: Lines generated from source charts without lines will not work.");
             var lineInds = getDeconToIndMapping(vis);
             for (var lineDeconID in lineInds) {
                 var inds = lineInds[lineDeconID];
@@ -117,7 +114,7 @@ var renderVis = function (decon, svgNode) {
             }
         }
         else {
-            vis = fixTextElements(vis, svgNode);
+            vis = equalizeTextElementSize(vis, svgNode);
 
             for (var i = 0; i < vis.ids.length; ++i) {
                 var attrs = getAttrsFromInd(vis, i);
@@ -131,7 +128,7 @@ var renderVis = function (decon, svgNode) {
     }
 };
 
-var fixTextElements = function(group, svgNode) {
+var equalizeTextElementSize = function(group, svgNode) {
     var textElementInds = [];
     for (var k = 0; k < group.ids.length; ++k) {
         if (group.attrs['shape'][k] === "text") {
@@ -264,7 +261,6 @@ function getDataFromInds(schema, inds) {
 }
 
 var transferNonSpatialAttrs = function (newNode, nodeAttrs, attrs) {
-
     _.each(nodeAttrs, function (val, attr) {
         if (attr === "text") {
             $(newNode).text(val);
@@ -275,7 +271,8 @@ var transferNonSpatialAttrs = function (newNode, nodeAttrs, attrs) {
     });
 
     _.each(attrs, function (val, attr) {
-        if (attr === "text" && !$(newNode).text()) {
+        if (attr === "text") {
+            // Previously this conditional contained "&& !$(newNode).text()".  Why?
             $(newNode).text(val);
         }
         if (val !== null) {
@@ -290,23 +287,10 @@ var transferSpatialAttrs = function (newNode, svg, attrs, group) {
     var newScale = svg.createSVGTransform();
     var widthScale = attrs['width'] / newNodeBoundingBox.width;
     var heightScale = attrs['height'] / newNodeBoundingBox.height;
-    //if (isNaN(widthScale) || attrs['shape'] === "text") {
-    //    widthScale = 1;
-    //}
-    //if (isNaN(heightScale) || attrs['shape'] === "text") {
-    //    heightScale = 1;
-    //}
+
     if (attrs['shape'] === "text") {
         widthScale = group.textScale.width;
         heightScale = group.textScale.height;
-        //widthScaleDiff = 1 - widthScale;
-        //heightScaleDiff = 1 - heightScale;
-        //if (widthScaleDiff > heightScaleDiff) {
-        //    heightScale = widthScale;
-        //}
-        //else {
-        //    widthScale = heightScale;
-        //}
     }
 
     if (isNaN(widthScale) || widthScale == Infinity) {
@@ -335,10 +319,7 @@ var transferSpatialAttrs = function (newNode, svg, attrs, group) {
     newNodeDestinationGlobalPt.y = attrs['yPosition'];
 
     var localCurrentPt = newNodeCurrentGlobalPt.matrixTransform(globalToLocal);
-    //localCurrentPt.matrixTransform(newScale.matrix);
-
     var localDestinationPt = newNodeDestinationGlobalPt.matrixTransform(globalToLocal);
-    //localDestinationPt.matrixTransform(newScale.matrix);
 
     var xTranslate = localDestinationPt.x - localCurrentPt.x;
     var yTranslate = localDestinationPt.y - localCurrentPt.y;
@@ -377,12 +358,12 @@ var createLine = function (data, attrs, svg) {
     var dString = "";
 
     for (var i = 0; i <= _.max(data['lineID']); ++i) {
-        if (i === 0)
+        if (i === 0) {
             dString += "M" + attrs['xPosition'][indMapping[i]] + "," + attrs['yPosition'][indMapping[i]];
-        else
+        }
+        else {
             dString += "L" + attrs['xPosition'][indMapping[i]] + "," + attrs['yPosition'][indMapping[i]];
-        //var newSeg = newNode.createSVGPathSegMovetoAbs(attrs['x'][indMapping[i]], attrs['y'][indMapping[i]]);
-        //newNode.animatedPathSegList.appendItem(newSeg);
+        }
     }
     d3.select(newNode).attr("d", dString);
     return newNode;

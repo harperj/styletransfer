@@ -299,7 +299,6 @@ var transferChart = function (sourceData, targetVis) {
 var constructDerivedMappings = function constructDerivedMappings(targetDerived, newDerived, sourceGroups) {
     var newDerivedMappings = [];
     _.each(targetDerived, function (derivedMapping) {
-
         var alreadyTransferred = false;
         _.each(newDerived, function (newDerivedMapping) {
             if (newDerivedMapping.targetAnalog === derivedMapping) {
@@ -551,7 +550,7 @@ var createLinearAxis = function (positionMapping, axisTicks, axisLabels, axisLin
         }
     }
 
-    axisLabels.updateAttrsFromMappings();
+    //axisLabels.updateAttrsFromMappings();
 
 
     return [axisTicks, axisLabels, axisLine];
@@ -559,7 +558,7 @@ var createLinearAxis = function (positionMapping, axisTicks, axisLabels, axisLin
 
 var findSetForMapping = function (mapping, mappingSets) {
     var foundSet;
-    mappingSets.forEach(function (mappingSet) {
+    _.each(mappingSets, function (mappingSet) {
         if (_.filter(mappingSet.mappings, function (setMapping) {
                 return setMapping.isEqualTo(mapping);
             }).length > 0) {
@@ -687,6 +686,9 @@ var transferMappingNominal = function (sourceField, targetMapping) {
     var newMapping = new Mapping(sourceField.fieldName, targetMapping.attr, "nominal", {});
     var params = {};
     var sourceDataVals = sourceField.dataRange;
+    if (sourceField.sourceData) {
+        sourceDataVals = _.uniq(sourceField.sourceData[sourceField.fieldName]);
+    }
     var targetDataVals = _.keys(targetMapping.params);
 
     if (targetMapping.attr !== "text") {
@@ -787,7 +789,6 @@ var transferUnmapped = function (sourceVis, transferredVis) {
                 else {
                     transferredVis.attrs[attr][i] = _.chain(valArray).countBy().pairs().max(_.last).head().value();
                 }
-                //transferredVis.attrs[attr][i] = valArray[0];
             }
         }
     });
