@@ -16,15 +16,6 @@ var transferTests = require('./tests');
 
 var EPSILON = Math.pow(2, -8);
 
-var getSemiologyRanking = function (mapping) {
-    if (mapping.type === "linear") {
-        return config.semiology_lin[mapping.attr];
-    }
-    else {
-        return config.semiology_nom[mapping.attr];
-    }
-};
-
 var getNonAxisGroups = function (decon) {
     return _.filter(decon.groups, function (group) {
         return !group.axis;
@@ -45,7 +36,7 @@ var getRankedDataFields = function (groups) {
     });
     var dataFieldsRanked = _.map(mappingsByDataField, function (mappings, fieldName) {
         var maxRankMapping = _.min(mappings, function (mapping) {
-            return getSemiologyRanking(mapping);
+            return util.getSemiologyRanking(mapping.type, mapping.attr);
         });
 
         var dataRange;
@@ -58,7 +49,7 @@ var getRankedDataFields = function (groups) {
 
         return {
             fieldName: fieldName,
-            rank: getSemiologyRanking(maxRankMapping),
+            rank: util.getSemiologyRanking(maxRankMapping.type, maxRankMapping.attr),
             mappingType: maxRankMapping.type,
             dataRange: dataRange,
             group: maxRankMapping.group
@@ -81,7 +72,7 @@ var getRankedMappings = function (groups) {
     targetMappings = _.flatten(targetMappings);
 
     var rankedMappings = _.map(targetMappings, function (mapping) {
-        mapping.rank = getSemiologyRanking(mapping);
+        mapping.rank = util.getSemiologyRanking(mapping.type, mapping.attr);
         return mapping;
     });
     return _.sortBy(rankedMappings, function (mapping) {
@@ -862,6 +853,9 @@ var main = function () {
         }
         else if (test.source_type === "json_data") {
             sourceData = util.loadJSONData(test.source_file);
+        }
+        else if (test.source_type === "vegalite") {
+            sourceData = util.loadVegaLiteVis(test.source_file);
         }
 
         test.targetDecon = util.loadDeconstructedVis(test.target_file);
