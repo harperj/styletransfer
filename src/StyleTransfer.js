@@ -120,7 +120,7 @@ var transferMappings = function (rankedSourceData, rankedTargetMappings) {
 
 var propagateDataToAxes = function (newMappings, axisGroups, sourceDataFields) {
     newMappings.forEach(function (mapping) {
-        var targetDataReplaced = mapping.getData();
+        var targetDataReplaced = mapping.targetAnalog.getData();
         var newDataField = mapping.getData();
         newDataField = _.filter(sourceDataFields, function (dataField) {
             return dataField.fieldName === newDataField;
@@ -167,8 +167,7 @@ var groupMappings = function (newMappings) {
             newMarkGroup.ids.push(j + 1);
         }
 
-        newMarkGroup.updateAttrsFromMappings();
-        transferUnmapped(mappingGroup.targetGroup, newMarkGroup);
+        //transferUnmapped(mappingGroup.targetGroup, newMarkGroup);
         groups.push(newMarkGroup);
     });
     return groups;
@@ -420,6 +419,7 @@ var createDerivedAxis = function (positionMapping, ticks, labels, line, newMappi
     labels.mappings = _.without(labels.mappings, labelPositionMapping);
     labels.data[derivedField] = clone(derivedReplacementField.group.data[derivedReplacementField.fieldName]);
     labels.data['string'] = clone(idField);
+    labels.attrs['text'] = clone(idField);
     labels.mappings.push(clone(newMapping));
     labels.addMarksForData();
     var removed = 0;
@@ -541,7 +541,15 @@ var createLinearAxis = function (positionMapping, axisTicks, axisLabels, axisLin
         }
     }
 
-    //axisLabels.updateAttrsFromMappings();
+    var textMapping = axisLabels.getMappingForAttr('text');
+    textMapping.dataRange = clone(axisLabels.data['number']);
+    textMapping.attrRange = clone(axisLabels.attrs['text']);
+    textMapping.params = {};
+    textMapping.dataRange.forEach(function(dataVal, i) {
+        textMapping.params[dataVal] = textMapping.attrRange[i];
+    });
+
+    axisLabels.updateAttrsFromMappings();
 
 
     return [axisTicks, axisLabels, axisLine];
