@@ -52,7 +52,10 @@ var getRankedDataFields = function (groups) {
             rank: util.getSemiologyRanking(maxRankMapping.type, maxRankMapping.attr),
             mappingType: maxRankMapping.type,
             dataRange: dataRange,
-            group: maxRankMapping.group
+            data: maxRankMapping.group.data,
+            sourceData: maxRankMapping.group.data,
+            //group: maxRankMapping.group
+            group: undefined
         };
     });
     dataFieldsRanked = _.sortBy(dataFieldsRanked, function (dataField) {
@@ -250,7 +253,7 @@ var transferChart = function (sourceData, targetVis) {
         var newNonDerivedMappings = transferMappings(rankedSourceDataNonDerived, rankedTargetMappingsNonDerived, rankedTargetMappings);
 
         var rankedSourceDataDerived = _.filter(rankedSourceData, function (dataField) {
-            return isDerivedField(dataField.fieldName) && !isAxisGroup(dataField.group.name);
+            return isDerivedField(dataField.fieldName);
         });
         var rankedTargetMappingsDerived = _.filter(rankedTargetMappings, function (mapping) {
             var data = mapping.getData();
@@ -327,6 +330,8 @@ var constructDerivedMappings = function constructDerivedMappings(targetDerived, 
                     data: sourceData
                 };
                 var newMapping = transferMapping(field, derivedMapping);
+                newMapping.sourceData = sourceData;
+                sourceGroups.push(field);
             }
             if (newMapping) {
                 newMapping.targetAnalog = derivedMapping;
@@ -389,7 +394,8 @@ var createDerivedAxis = function (positionMapping, ticks, labels, line, newMappi
         derivedReplacementField = {
             fieldName: newDerivedMapping.getData(),
             type: "derived",
-            group: newDerivedMapping.newGroup
+            data: newDerivedMapping.newGroup.data,
+            sourceData: newDerivedMapping.newGroup.data
         };
         tickPositionMapping.data[0] = newDerivedMapping.getData();
     }
@@ -397,19 +403,22 @@ var createDerivedAxis = function (positionMapping, ticks, labels, line, newMappi
 
     var derivedField = tickPositionMapping.data[0];
     if (derivedField) {
-        ticks.data[derivedField] = clone(derivedReplacementField.group.data[derivedReplacementField.fieldName]);
+        ticks.data[derivedField] = clone(derivedReplacementField.data[derivedReplacementField.fieldName]);
     }
     else {
         derivedField = derivedReplacementField.fieldName;
-        ticks.data[derivedField] = clone(derivedReplacementField.group.data[derivedReplacementField.fieldName]);
+        ticks.data[derivedField] = clone(derivedReplacementField.data[derivedReplacementField.fieldName]);
     }
-    var idField = findIdentifierField(derivedReplacementField.group.data);
+    var idFieldInfo = findIdentifierField(derivedReplacementField.data);
+    var idField = idFieldInfo.fieldData;
+    var idFieldName = idFieldInfo.fieldName;
 
-    if (!idField) idField = clone(derivedReplacementField.group.data[derivedReplacementField.fieldName]);
+    if (!idField) idField = clone(derivedReplacementField.data[derivedReplacementField.fieldName]);
     ticks.data['string'] = clone(idField);
 
-    var newMapping = transferIntervalMapping(derivedReplacementField, tickPositionMapping);
-    ticks.mappings.push(newMapping);
+    var newPositionMapping = transferIntervalMapping(derivedReplacementField, tickPositionMapping);
+    newPositionMapping.data[0] = derivedField;
+    ticks.mappings.push(newPositionMapping);
     ticks.addMarksForData();
     ticks.updateAttrsFromMappings();
 
@@ -417,10 +426,24 @@ var createDerivedAxis = function (positionMapping, ticks, labels, line, newMappi
         return mapping.attr === attrName;
     });
     labels.mappings = _.without(labels.mappings, labelPositionMapping);
-    labels.data[derivedField] = clone(derivedReplacementField.group.data[derivedReplacementField.fieldName]);
+    labels.data[derivedField] = clone(derivedReplacementField.data[derivedReplacementField.fieldName]);
     labels.data['string'] = clone(idField);
     labels.attrs['text'] = clone(idField);
-    labels.mappings.push(clone(newMapping));
+    var textMappingParams = {};
+    idField.forEach(function(id) {
+       textMappingParams[id] = id;
+    });
+    var newTextMapping = new Mapping(
+        'string',
+        'text',
+        'nominal',
+        textMappingParams,
+        _.unique(labels.data['string']),
+        _.unique(labels.data['string'])
+    );
+
+    labels.mappings.push(newTextMapping);
+    labels.mappings.push(clone(newPositionMapping));
     labels.addMarksForData();
     var removed = 0;
     for (var j = 0; j < labels.mappings.length - removed; ++j) {
@@ -444,7 +467,7 @@ var createDerivedAxis = function (positionMapping, ticks, labels, line, newMappi
     var oldMinVal = _.min(line.attrs[attrName]);
     var oldMaxVal = _.max(line.data['axis']);
     var oldLength = oldMaxVal - oldMinVal;
-    var newLength = oldLength - (oldNumTicks * newMapping.params.interval) + (ticks.data[derivedField].length * newMapping.params.interval);
+    var newLength = oldLength - (oldNumTicks * newPositionMapping.params.interval) + (ticks.data[derivedField].length * newPositionMapping.params.interval);
     var newMaxVal = oldMinVal + newLength;
 
     for (var i = 0; i < line.attrs[attrName].length; ++i) {
@@ -460,12 +483,17 @@ var createDerivedAxis = function (positionMapping, ticks, labels, line, newMappi
 var findIdentifierField = function (data) {
     var fields = _.keys(data);
     var idField;
-    fields.forEach(function (field) {
+    var idFieldName;
+    fields.forEach(function (field, fieldName) {
         if (typeof data[field][0] === 'string' && _.uniq(data[field]).length === data[field].length) {
             idField = data[field];
+            idFieldName = field;
         }
     });
-    return idField;
+    return {
+        fieldName: idFieldName,
+        fieldData: idField
+    };
 };
 
 var createLinearAxis = function (positionMapping, axisTicks, axisLabels, axisLine, targetVis, newMappings) {
@@ -545,6 +573,7 @@ var createLinearAxis = function (positionMapping, axisTicks, axisLabels, axisLin
     textMapping.dataRange = clone(axisLabels.data['number']);
     textMapping.attrRange = clone(axisLabels.attrs['text']);
     textMapping.params = {};
+    textMapping.type = 'nominal';
     textMapping.dataRange.forEach(function(dataVal, i) {
         textMapping.params[dataVal] = textMapping.attrRange[i];
     });

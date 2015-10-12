@@ -38,7 +38,7 @@ var niceNumberRange = function(range, zeroHeuristic) {
 
     // Zero heuristic prefers zeroes when the smallest value in a column is close to zero;
     // that is, when zero is within 25% of total data range.
-    var ZERO_DIST_TOLERANCE = 0.25;
+    var ZERO_DIST_TOLERANCE = 0.35;
     if (zeroHeuristic) {
         var startDistanceFromZero = Math.abs(niceRange[0] - 0);
         var totalDistance = Math.abs(niceRange[0] - niceRange[1]);
@@ -59,7 +59,7 @@ var parseJSONDataField = function(dataset, columnName) {
     var dataRange;
     if (mappingType === "linear") {
         fieldData = _.map(fieldData, function(value) {return +value;});
-        dataRange = niceNumberRange([_.min(fieldData), _.max(fieldData)]);
+        dataRange = niceNumberRange([_.min(fieldData), _.max(fieldData)], true);
     }
     else {
         dataRange = _.uniq(fieldData);
@@ -95,7 +95,7 @@ var getFieldFromVegaliteEncoding = function(encodingAttr, encoding, chartData) {
     var dataRange;
     if (type === "linear") {
         fieldData = _.map(fieldData, function(value) {return +value;});
-        dataRange = niceNumberRange([_.min(fieldData), _.max(fieldData)]);
+        dataRange = niceNumberRange([_.min(fieldData), _.max(fieldData)], true);
     }
     else {
         dataRange = _.uniq(fieldData);
