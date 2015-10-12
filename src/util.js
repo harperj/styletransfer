@@ -1,6 +1,7 @@
 var fs = require('fs');
 var Deconstruction = require('d3-decon-lib').Deconstruction;
 var _ = require('lodash');
+var d3 = require('d3');
 var config = require('./config');
 
 var getSemiologyRanking = function (mappingType, attr) {
@@ -31,6 +32,25 @@ var loadJSONData = function(filename) {
     };
 };
 
+var niceNumberRange = function(range, zeroHeuristic) {
+    // Get the D3 "nice" range values
+    var niceRange = d3.scale.linear().domain(range).nice().domain();
+
+    // Zero heuristic prefers zeroes when the smallest value in a column is close to zero;
+    // that is, when zero is within 25% of total data range.
+    var ZERO_DIST_TOLERANCE = 0.25;
+    if (zeroHeuristic) {
+        var startDistanceFromZero = Math.abs(niceRange[0] - 0);
+        var totalDistance = Math.abs(niceRange[0] - niceRange[1]);
+        var ratioOfZeroDist = startDistanceFromZero / totalDistance;
+        if (ratioOfZeroDist <= ZERO_DIST_TOLERANCE) {
+            niceRange[0] = 0;
+        }
+    }
+
+    return niceRange;
+};
+
 var parseJSONDataField = function(dataset, columnName) {
     var fieldName = columnName;
     var rank = dataset.ranks[columnName];
@@ -39,7 +59,7 @@ var parseJSONDataField = function(dataset, columnName) {
     var dataRange;
     if (mappingType === "linear") {
         fieldData = _.map(fieldData, function(value) {return +value;});
-        dataRange = [_.min(fieldData), _.max(fieldData)];
+        dataRange = niceNumberRange([_.min(fieldData), _.max(fieldData)]);
     }
     else {
         dataRange = _.uniq(fieldData);
@@ -75,7 +95,7 @@ var getFieldFromVegaliteEncoding = function(encodingAttr, encoding, chartData) {
     var dataRange;
     if (type === "linear") {
         fieldData = _.map(fieldData, function(value) {return +value;});
-        dataRange = [_.min(fieldData), _.max(fieldData)];
+        dataRange = niceNumberRange([_.min(fieldData), _.max(fieldData)]);
     }
     else {
         dataRange = _.uniq(fieldData);
