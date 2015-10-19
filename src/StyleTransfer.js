@@ -167,7 +167,7 @@ var groupMappings = function (newMappings) {
         });
         newMarkGroup.ids = [];
         for (var j = 0; j < dataLength; ++j) {
-            newMarkGroup.ids.push(j + 1);
+            newMarkGroup.ids.push(0);
         }
 
         //transferUnmapped(mappingGroup.targetGroup, newMarkGroup);
