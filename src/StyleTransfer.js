@@ -387,11 +387,11 @@ var createAxes = function (axes, targetVis, newMappings, newGroups) {
         var targetNonAxisBBox = getBoundingBoxFromGroups(targetNonAxisGroups);
 
         var newDecon = new Deconstruction({width: 0, height:0, x:0, y:0}, newGroups);
-        var newVisBoundingBox = newDecon.getMarkBoundingBox();
+        var newVisBoundingBox = newDecon.getMarkBoundingBox({x: 0, y: 0, width: 0, height: 0});
 
         if (ticks.name[0] === 'x' && labels.attrs.yPosition[0] > ticks.attrs.yPosition[0]) {
             // bottom oriented axis
-            var axisLineBBox = line.getMarkBoundingBox();
+            var axisLineBBox = line.getMarkBoundingBox({x: 0, y: 0, width: 0, height: 0});
             var axisLineMin = axisLineBBox.y;
             var padding = axisLineMin - (targetNonAxisBBox.y + targetNonAxisBBox.height);
             var newGroupMax = newGroupBBox.y + newGroupBBox.height;
@@ -402,6 +402,9 @@ var createAxes = function (axes, targetVis, newMappings, newGroups) {
                 ticks.attrs['yPosition'] = _.map(ticks.attrs['yPosition'], function(yPos) {return yPos + newAxisShiftDistance;});
                 labels.attrs['yPosition'] = _.map(labels.attrs['yPosition'], function(yPos) {return yPos + newAxisShiftDistance;});
                 line.attrs['yPosition'] = _.map(line.attrs['yPosition'], function(yPos) {return yPos + newAxisShiftDistance;});
+                line.ids.forEach(function(id, ind) {
+                    line.data['tick'][ind] = line.getMappingForAttr('yPosition').invert(line.attrs['yPosition'][ind]);
+                });
                 //line.getMapping('tick', 'yPosition').params.coeffs[1] += (newGroupMax - axisLineMin) + padding;
             }
         }
