@@ -105,6 +105,11 @@ var tests = [
     {
         source_file: './data/kuijjer_line.json',
         target_file: './data/my_line.json'
+    },
+    {
+        source_type: 'vegalite',
+        source_file: './data/linechart.vegalite.json',
+        target_file: './data/kuijjer_line.json'
     }
 ];
 

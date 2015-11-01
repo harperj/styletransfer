@@ -1,0 +1,32 @@
+{
+  "marktype": "line",
+  "encoding": {
+    "x": {
+      "name": "Year",
+      "type": "Q",
+      "timeUnit": "year"
+    },
+    "y": {
+      "name": "Horsepower",
+      "type": "Q",
+      "aggregate": "mean"
+    }
+  },
+  "data": {
+    "values": [
+      { "Year": 1970, "Horsepower": 148.85714285714286, "lineID": 0},
+      { "Year": 1971, "Horsepower": 104.92857142857144, "lineID": 1 },
+      { "Year": 1972, "Horsepower": 120.17857142857143, "lineID": 2 },
+      { "Year": 1973, "Horsepower": 130.47500000000005, "lineID": 3 },
+      { "Year": 1974, "Horsepower": 94.23076923076923, "lineID": 4 },
+      { "Year": 1975, "Horsepower": 101.06666666666666, "lineID": 5 },
+      { "Year": 1976, "Horsepower": 101.11764705882356, "lineID": 6 },
+      { "Year": 1977, "Horsepower": 105.07142857142856, "lineID": 7 },
+      { "Year": 1978, "Horsepower": 99.69444444444443, "lineID": 8 },
+      { "Year": 1979, "Horsepower": 101.20689655172416, "lineID": 9 },
+      { "Year": 1980, "Horsepower": 77.48148148148151, "lineID": 10 },
+      { "Year": 1982, "Horsepower": 81.74576271186439, "lineID": 11 }
+    ]
+  }
+}
+        
