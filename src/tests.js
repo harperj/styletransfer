@@ -1,16 +1,33 @@
 var tests = [
     {
+        source_file: './data/result_scatter_1.json',
+        target_file: './data/anscombe1.json'
+    },
+    {
         source_file: './data/simplebars.vegalite.json',
         source_type: 'vegalite',
         target_file: './data/dowson_bars.json'
     },
+     //CARS ROLLUP EXAMPLES
     {
-        source_file: './data/iris.data.json',
+        source_file: './data/cars_rollup.data.json',
         source_type: 'json_data',
         target_file: './data/vallandingham_scatter.json'
     },
     {
-        source_file: './data/purple_scatter.json',
+        source_file: './data/cars_rollup.data.json',
+        source_type: 'json_data',
+        target_file: './data/result_scatter_1.json'
+    },
+    {
+        source_file: './data/cars_rollup2.data.json',
+        source_type: 'json_data',
+        target_file: './data/dowson_bars.json'
+    },
+     //IRIS EXAMPLES
+    {
+        source_file: './data/iris.data.json',
+        source_type: 'json_data',
         target_file: './data/vallandingham_scatter.json'
     },
     {
@@ -22,6 +39,15 @@ var tests = [
         source_file: './data/iris.data.json',
         source_type: 'json_data',
         target_file: './data/leondutoit_dots.json'
+    },
+    {
+        source_file: './data/barley.data.json',
+        source_type: 'json_data',
+        target_file: './data/leondutoit_dots.json'
+    },
+    {
+        source_file: './data/purple_scatter.json',
+        target_file: './data/vallandingham_scatter.json'
     },
     {
         source_file: './data/weiglemc_scatter_2.json',
