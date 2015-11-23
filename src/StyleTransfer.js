@@ -460,7 +460,18 @@ var createDerivedAxis = function (positionMapping, ticks, labels, line, newMappi
     var idField = idFieldInfo.fieldData;
     var idFieldName = idFieldInfo.fieldName;
 
-    if (!idField) idField = clone(derivedReplacementField.data[derivedReplacementField.fieldName]);
+    if (!idField) {
+        var sourceFields = _.keys(derivedReplacementField.data);
+        _.max(sourceFields, function(field) {
+            console.log(field);
+        });
+        sourceFields.forEach(function(field) {
+            if (typeof derivedReplacementField.data[field][0] === 'string') {
+                idField = clone(derivedReplacementField.data[field]);
+            }
+        });
+        if (!idField) idField = clone(derivedReplacementField.data[derivedReplacementField.fieldName]);
+    }
     ticks.data['string'] = clone(idField);
 
     var newPositionMapping = transferIntervalMapping(derivedReplacementField, tickPositionMapping);
