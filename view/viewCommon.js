@@ -112,8 +112,8 @@ var equalizeTextElementSize = function(group, svgNode) {
     }
 
     group.textScale = {
-        width: widthScaleFactor,
-        height: heightScaleFactor
+        width: 1,
+        height: 1
     };
     return group;
 };
