@@ -1,1 +1,4477 @@
-{"svg":{"width":940,"height":520},"axes":[{"orient":"bottom","innerTickSize":5,"outerTickSize":5,"tickPadding":3,"tickArguments":[10],"tickValues":null,"ticks":[0,200,400,600,800,1000,1200],"axis":"xaxis","scaleDomain":[-163.8,1308.11],"offset":{"x":60,"y":470},"scaleRange":[60,920],"boundingBox":{"height":20.4375,"width":860,"y":470,"x":60}},{"orient":"left","innerTickSize":6,"outerTickSize":6,"tickPadding":3,"tickArguments":{"0":5},"tickValues":null,"ticks":[86,88,90,92,94,96,98,100],"axis":"yaxis","scaleDomain":[100,86],"offset":{"x":60,"y":20},"scaleRange":[20,470],"boundingBox":{"height":462.828125,"width":28.390625,"y":14.546875,"x":31.609375}}],"groups":[{"data":{"number":[0,200,400,600,800,1000,1200],"_deriv_xPosition_0":[0,1,2,3,4,5,6],"_deriv_yPosition_0":[0,1,2,3,4,5,6],"_deriv_width_0":[0,1,2,3,4,5,6],"_deriv_height_0":[0,1,2,3,4,5,6]},"attrs":{"font-family":["'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif"],"font-size":["13px","13px","13px","13px","13px","13px","13px"],"font-weight":["normal","normal","normal","normal","normal","normal","normal"],"opacity":[1,1,1,1,1,1,1],"fill":["none","none","none","none","none","none","none"],"fill-opacity":[1,1,1,1,1,1,1],"stroke":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"stroke-width":[1,1,1,1,1,1,1],"shape":["line","line","line","line","line","line","line"],"xPosition":[155.7042236328125,272.5592041015625,389.4141540527344,506.2691345214844,623.1240844726562,739.9790649414062,856.8340454101562],"yPosition":[472.5,472.5,472.5,472.5,472.5,472.5,472.5],"area":[0,0,0,0,0,0,0],"width":[0,0,0,0,0,0,0],"height":[5,5,5,5,5,5,5],"text":["","","","","","",""],"rotation":[0,0,0,0,0,0,0]},"numFields":5,"ids":[2,5,8,11,14,17,20],"mappings":[{"data":["number"],"attr":"xPosition","type":"linear","params":{"attrMin":155.7042236328125,"attrMax":856.8340454101562,"coeffs":[0.5842748423985072,155.70422472272597],"err":0.9999999999999987},"dataRange":[-163.8,1308.11],"attrRange":[60.00000553785047,919.9999888126372],"group":"~0~groups~0"}],"nodeAttrs":[{"y2":"5","x2":"0","text":""},{"y2":"5","x2":"0","text":""},{"y2":"5","x2":"0","text":""},{"y2":"5","x2":"0","text":""},{"y2":"5","x2":"0","text":""},{"y2":"5","x2":"0","text":""},{"y2":"5","x2":"0","text":""}],"name":"xaxis-ticks","axis":"xaxis"},{"data":{"number":[0,200,400,600,800,1000,1200],"_deriv_xPosition_0":[0,1,2,3,4,5,6],"_deriv_yPosition_1":[0,1,2,3,4,5,6],"_deriv_width_1":[0,1,4,2,3,6,5],"_deriv_height_1":[0,1,2,3,4,5,6]},"attrs":{"font-family":["'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif"],"font-size":["13px","13px","13px","13px","13px","13px","13px"],"font-weight":["normal","normal","normal","normal","normal","normal","normal"],"opacity":[1,1,1,1,1,1,1],"fill":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"fill-opacity":[1,1,1,1,1,1,1],"stroke":["none","none","none","none","none","none","none"],"stroke-width":[1,1,1,1,1,1,1],"shape":["text","text","text","text","text","text","text"],"xPosition":[155.7042236328125,272.5592041015625,389.4141540527344,506.26914978027344,623.1240844726562,739.9790649414062,856.8340454101562],"yPosition":[484.03125,484.03125,484.03125,484.03125,484.03125,484.03125,484.03125],"area":[102.900390625,289.482421875,291.083984375,291.8851566314697,290.283203125,384.375,365.95703125],"width":[8.03125,22.59375,22.71875,22.781280517578125,22.65625,30,28.5625],"height":[12.8125,12.8125,12.8125,12.8125,12.8125,12.8125,12.8125],"text":["0","200","400","600","800","1,000","1,200"],"rotation":[0,0,0,0,0,0,0]},"numFields":5,"ids":[3,6,9,12,15,18,21],"mappings":[{"data":"number","attr":"area","type":"nominal","params":{"0":102.900390625,"200":289.482421875,"400":291.083984375,"600":291.8851566314697,"800":290.283203125,"1000":384.375,"1200":365.95703125},"group":"~0~groups~1"},{"data":"number","attr":"width","type":"nominal","params":{"0":8.03125,"200":22.59375,"400":22.71875,"600":22.781280517578125,"800":22.65625,"1000":30,"1200":28.5625},"group":"~0~groups~1"},{"data":"number","attr":"text","type":"nominal","params":{"0":"0","200":"200","400":"400","600":"600","800":"800","1000":"1,000","1200":"1,200"},"group":"~0~groups~1"},{"data":"_deriv_width_1","attr":"width","type":"nominal","params":{"0":8.03125,"1":22.59375,"2":22.781280517578125,"3":22.65625,"4":22.71875,"5":28.5625,"6":30},"group":"~0~groups~1"},{"data":["number"],"attr":"xPosition","type":"linear","params":{"attrMin":155.7042236328125,"attrMax":856.8340454101562,"coeffs":[0.5842748423985072,155.70422690255302],"err":0.9999999999999978},"dataRange":[-163.8,1308.11],"attrRange":[60.00000771767752,919.9999909924643],"group":"~0~groups~1"}],"nodeAttrs":[{"dy":".71em","y":"8","x":"0","style":"text-anchor: middle;","text":"0"},{"dy":".71em","y":"8","x":"0","style":"text-anchor: middle;","text":"200"},{"dy":".71em","y":"8","x":"0","style":"text-anchor: middle;","text":"400"},{"dy":".71em","y":"8","x":"0","style":"text-anchor: middle;","text":"600"},{"dy":".71em","y":"8","x":"0","style":"text-anchor: middle;","text":"800"},{"dy":".71em","y":"8","x":"0","style":"text-anchor: middle;","text":"1,000"},{"dy":".71em","y":"8","x":"0","style":"text-anchor: middle;","text":"1,200"}],"name":"xaxis-labels","axis":"xaxis"},{"data":{"number":[86,88,90,92,94,96,98,100],"_deriv_xPosition_2":[0,1,2,3,4,5,6,7],"_deriv_yPosition_2":[7,6,5,4,3,2,1,0],"_deriv_width_2":[0,1,2,3,4,5,6,7],"_deriv_height_2":[0,1,2,3,4,5,6,7]},"attrs":{"font-family":["'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif"],"font-size":["13px","13px","13px","13px","13px","13px","13px","13px"],"font-weight":["normal","normal","normal","normal","normal","normal","normal","normal"],"opacity":[1,1,1,1,1,1,1,1],"fill":["none","none","none","none","none","none","none","none"],"fill-opacity":[1,1,1,1,1,1,1,1],"stroke":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"stroke-width":[1,1,1,1,1,1,1,1],"shape":["line","line","line","line","line","line","line","line"],"xPosition":[57,57,57,57,57,57,57,57],"yPosition":[470,405.71429443359375,341.4285583496094,277.1428527832031,212.85714721679688,148.57142639160156,84.28571319580078,20],"area":[0,0,0,0,0,0,0,0],"width":[6,6,6,6,6,6,6,6],"height":[0,0,0,0,0,0,0,0],"text":["","","","","","","",""],"rotation":[0,0,0,0,0,0,0,0]},"numFields":5,"ids":[26,29,32,35,38,41,44,47],"mappings":[{"data":["number"],"attr":"yPosition","type":"linear","params":{"attrMin":20,"attrMax":470,"coeffs":[-32.14285718827035,3234.2857175554777],"err":0.9999999999999983},"dataRange":[86,100],"attrRange":[469.99999936422773,19.999998728442733],"group":"~0~groups~2"}],"nodeAttrs":[{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""}],"name":"yaxis-ticks","axis":"yaxis"},{"data":{"number":[86,88,90,92,94,96,98,100],"_deriv_xPosition_3":[7,2,5,4,6,0,3,1],"_deriv_yPosition_3":[7,6,5,4,3,2,1,0],"_deriv_width_3":[1,0,3,6,4,5,2,7],"_deriv_height_3":[0,1,2,3,4,5,6,7]},"attrs":{"font-family":["'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif"],"font-size":["13px","13px","13px","13px","13px","13px","13px","13px"],"font-weight":["normal","normal","normal","normal","normal","normal","normal","normal"],"opacity":[1,1,1,1,1,1,1,1],"fill":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"fill-opacity":[1,1,1,1,1,1,1,1],"stroke":["none","none","none","none","none","none","none","none"],"stroke-width":[1,1,1,1,1,1,1,1],"shape":["text","text","text","text","text","text","text","text"],"xPosition":[44.3046875,44.3671875,43.578125,44.3046875,44.234375,44.203125,44.265625,41.3046875],"yPosition":[470.9609375,406.67523193359375,342.3894958496094,278.1037902832031,213.81808471679688,149.53236389160156,85.24665069580078,20.9609375],"area":[171.776611328125,170.173095703125,190.41748046875,171.776611328125,173.58056640625,174.38232421875,172.77880859375,248.745361328125],"width":[13.390625,13.265625,14.84375,13.390625,13.53125,13.59375,13.46875,19.390625],"height":[12.828125,12.828125,12.828125,12.828125,12.828125,12.828125,12.828125,12.828125],"text":["86","88","90","92","94","96","98","100"],"rotation":[0,0,0,0,0,0,0,0]},"numFields":5,"ids":[27,30,33,36,39,42,45,48],"mappings":[{"data":"number","attr":"text","type":"nominal","params":{"86":"86","88":"88","90":"90","92":"92","94":"94","96":"96","98":"98","100":"100"},"group":"~0~groups~3"},{"data":["number"],"attr":"yPosition","type":"linear","params":{"attrMin":20.9609375,"attrMax":470.9609375,"coeffs":[-32.14285718827035,3235.2466550554777],"err":0.9999999999999983},"dataRange":[86,100],"attrRange":[470.96093686422773,20.960936228442733],"group":"~0~groups~3"}],"nodeAttrs":[{"dy":".32em","x":"-9","y":"0","style":"text-anchor: end;","text":"86"},{"dy":".32em","x":"-9","y":"0","style":"text-anchor: end;","text":"88"},{"dy":".32em","x":"-9","y":"0","style":"text-anchor: end;","text":"90"},{"dy":".32em","x":"-9","y":"0","style":"text-anchor: end;","text":"92"},{"dy":".32em","x":"-9","y":"0","style":"text-anchor: end;","text":"94"},{"dy":".32em","x":"-9","y":"0","style":"text-anchor: end;","text":"96"},{"dy":".32em","x":"-9","y":"0","style":"text-anchor: end;","text":"98"},{"dy":".32em","x":"-9","y":"0","style":"text-anchor: end;","text":"100"}],"name":"yaxis-labels","axis":"yaxis"},{"data":{"id":[133,47,647,627,300,180,135,124,150,514,116,289,191,114,142,612,477,461,432,417,129,281,302,230,622,238,303,148,301,1,211,267,328,499,552,236,323,551,109,243,288,308,285,656,176,648,385,546,529,528],"year":[2010,2010,2009,2009,2007,2011,2010,2010,2011,2008,2010,2007,2011,2010,2010,2009,2008,2008,2008,2008,2010,2007,2007,2011,2009,2011,2007,2011,2007,2010,2011,2011,2007,2008,2009,2011,2007,2009,2010,2011,2007,2007,2007,2009,2011,2009,2008,2009,2009,2009],"exclude":["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","y",""],"Film":["Toy Story 3","How to Train Your Dragon","Up ","The Hurt Locker ","Ratatouille","The Muppets","True Grit","The Social Network","Harry Potter and the Deathly Hallows Part 2","WALL-E","The King's Speech","No Country for Old Men","Moneyball","The Kids Are All Right","Winter's Bone","Star Trek ","The Dark Knight","Slumdog Millionaire","Milk","Iron Man","The Town","Juno","Enchanted","Drive","Fantastic Mr. Fox ","50/50","Sicko","Midnight in Paris","The Bourne Ultimatum","127 Hours","Source Code","Take Shelter","Hairspray","The Visitor","Drag Me to Hell ","Arthur Christmas","There Will Be Blood","District 9 ","The Fighter","Winnie The Pooh","Knocked Up","Michael Clayton","The Simpsons Movie","Zombieland ","Bridesmaids","Up in the Air ","Bolt","Coraline ","Adventureland ","A Serious Man "],"Rotten Tomatoes":[99,98,98,97,97,97,96,96,96,96,95,95,95,94,94,94,94,94,94,94,94,94,93,93,93,93,93,93,93,93,92,92,92,92,92,92,91,91,91,91,91,90,90,90,90,90,89,89,89,89],"Audience Score":[91,90,86,83,84,87,86,89,92,89,93,84,89,72,73,91,96,90,88,91,83,89,80,79,80,93,87,84,91,84,81,85,84,83,61,82,84,81,88,79,83,72,78,87,77,76,76,77,56,64],"Story":["Rescue","Underdog","Journey And Return","Quest","Transformation","Quest","Quest","Rags To Riches","Rivalry","Love","Maturation","Pursuit","Underdog","Comedy","Quest","Revenge","Revenge","Underdog","Quest","Metamorphosis","Rivalry","Maturation","Love","Rivalry","Rivalry","Discovery","Quest","Love","Pursuit","Escape","The Riddle","Sacrifice","Underdog","Transformation","Monster Force","Journey And Return","Wretched Excess","Metamorphosis","Underdog","Quest","Love","Transformation","Maturation","Monster Force","Rivalry","Maturation","Rescue","Journey And Return","Maturation","Love"],"Genre":["Animation","Animation","Animation","Drama","Animation","Comedy","Action","Biography","Adventure","Animation","Biography","Drama","Drama","Comedy","Drama","Action","Thriller","Crime","Biography","Action","Crime","Comedy","Comedy","Thriller","Animation","Comedy","Documentary","Romance","Thriller","Adventure","Thriller","Drama","Comedy","Drama","Horror","Animation","Drama","Action","Drama","Animation","Comedy","Thriller","Comedy","Action","Comedy","Drama","Animation","Animation","Comedy","Drama"],"Domestic Gross":[415,217.58,293,14.7,206.45,66.63,171,94.08,381.01,223.78,0,74.28,74.21,20.81,6.25,257.7,530.92,101.89,31.84,318.31,92.18,143.5,127.81,34.68,20.5,34.9,24.54,56.18,227.47,18.33,54.71,1.57,118.87,9.43,77.2,33.7,40.22,115.6,93,26.69,148.77,49.03,183.14,49.2,169.11,83.82,109.9,75.3,16.04,9.2],"Foreign Gross":["648.16","277.3","434","3.4","414.98","5.8","79","105.52","947.1","","","86.72","27.9","8.55","1.54","127.8","468.58","236.59","18.32","266.76","52.37","87.69","212.68","32.33","21.8","1.62","11.23","83","215.35","42.4","68.57","?","83.68","8.65","8.1","57.5","35.96","89.2","35","6.46","70.23","43.96","343.93","42.5","119.28","78.2","195.93","46.6","0.01","7.1"],"Worldwide Gross":[1063.16,494.88,727.1,18.1,621.42,72.43,250.93,199.6,1328.11,507.3,245.2,161,102.11,29.37,7.8,385.5,996.9,198,50.16,581.9,144.55,231.18,340.49,67.01,42.78,36.51,35.77,139.18,442.82,60.73,123.28,1.57,202.55,18.08,86.7,91.2,76.18,204.8,129.19,33.15,219,92.99,527.07,93.3,288.38,162.02,289.3,121.9,16.05,20.5],"Budget":[200,165,175,15,150,45,38,50,125,180,15,25,50,4,2,140,185,15,20,186,37,7.5,85,15,40,8,9,17,110,18,32,5,75,4,30,150,25,30,25,30,33,25,75,23.6,32.5,25,150,60,9.5,7],"Profit":[863.16,329.88,552.1,3.1,471.42,27.43,212.93,149.6,1203.11,327.3,230.2,136,52.11,25.37,5.8,245.5,811.9,183,30.16,395.9,107.55,223.68,255.49,52.01,2.78,28.51,26.77,122.18,332.82,42.73,91.28,-3.43,127.55,14.08,56.7,-58.8,51.18,174.8,104.19,3.15,186,67.99,452.07,69.7,255.88,137.02,139.3,61.9,6.55,13.5],"Proftitability":["531.58%","299.93%","4.15","1.21","414.28%","160.95%","660.34%","399.20%","1062.49%","2.82","1634.67%","644.00%","204.22%","734.25%","390.00%","2.75","5.39","13.2","2.51","3.13","390.68%","3082.46%","400.57%","446.71%","1.07","456.39%","397.42%","818.69%","402.57%","337.39%","385.24%","31.46%","270.06%","4.52","2.89","60.80%","304.73%","6.83","516.76%","110.51%","663.64%","371.97%","702.76%","3.95","887.33%","6.48","1.93","2.03","1.69","2.93"],"_deriv_xPosition_4":[35,31,24,3,39,14,48,49,33,13,26,5,25,18,29,36,23,12,34,47,41,43,30,38,20,27,32,11,45,46,7,37,17,40,6,21,10,15,22,44,9,1,28,19,42,4,2,16,0,8],"_deriv_yPosition_4":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,23,24,25,26,27,28,29,22,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49],"_deriv_width_4":[14,13,33,31,49,21,25,26,48,10,23,3,17,27,29,18,43,11,36,38,41,45,37,39,34,30,44,40,20,6,24,5,7,12,47,32,42,22,28,8,15,4,35,46,1,2,9,16,19,0],"_deriv_height_4":[14,13,33,31,49,21,25,26,48,3,10,17,23,27,29,18,43,11,36,38,41,45,37,39,34,30,44,40,20,6,24,5,7,12,47,42,32,22,28,8,15,4,35,46,1,2,9,16,19,0]},"attrs":{"font-family":["'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif"],"font-size":["13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px","13px"],"font-weight":["normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal","normal"],"opacity":[0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858,0.850000023841858],"fill":["rgb(165,0,38)","rgb(165,0,38)","rgb(165,0,38)","rgb(215,48,39)","rgb(165,0,38)","rgb(244,109,67)","rgb(253,174,97)","rgb(254,224,139)","rgb(255,255,191)","rgb(165,0,38)","rgb(254,224,139)","rgb(215,48,39)","rgb(215,48,39)","rgb(244,109,67)","rgb(215,48,39)","rgb(253,174,97)","rgb(217,239,139)","rgb(166,217,106)","rgb(254,224,139)","rgb(253,174,97)","rgb(166,217,106)","rgb(244,109,67)","rgb(244,109,67)","rgb(217,239,139)","rgb(165,0,38)","rgb(244,109,67)","rgb(102,189,99)","rgb(26,152,80)","rgb(217,239,139)","rgb(255,255,191)","rgb(217,239,139)","rgb(215,48,39)","rgb(244,109,67)","rgb(215,48,39)","rgb(0,104,55)","rgb(165,0,38)","rgb(215,48,39)","rgb(253,174,97)","rgb(215,48,39)","rgb(165,0,38)","rgb(244,109,67)","rgb(217,239,139)","rgb(244,109,67)","rgb(253,174,97)","rgb(244,109,67)","rgb(215,48,39)","rgb(165,0,38)","rgb(165,0,38)","rgb(244,109,67)","rgb(215,48,39)"],"fill-opacity":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"stroke":["rgb(116,0,27)","rgb(116,0,27)","rgb(116,0,27)","rgb(151,34,27)","rgb(116,0,27)","rgb(206,58,12)","rgb(242,121,3)","rgb(253,193,22)","rgb(255,255,57)","rgb(116,0,27)","rgb(253,193,22)","rgb(151,34,27)","rgb(151,34,27)","rgb(206,58,12)","rgb(151,34,27)","rgb(242,121,3)","rgb(184,225,39)","rgb(118,180,46)","rgb(253,193,22)","rgb(242,121,3)","rgb(118,180,46)","rgb(206,58,12)","rgb(206,58,12)","rgb(184,225,39)","rgb(116,0,27)","rgb(206,58,12)","rgb(63,142,60)","rgb(18,106,56)","rgb(184,225,39)","rgb(255,255,57)","rgb(184,225,39)","rgb(151,34,27)","rgb(206,58,12)","rgb(151,34,27)","rgb(0,73,38)","rgb(116,0,27)","rgb(151,34,27)","rgb(242,121,3)","rgb(151,34,27)","rgb(116,0,27)","rgb(206,58,12)","rgb(184,225,39)","rgb(206,58,12)","rgb(242,121,3)","rgb(206,58,12)","rgb(151,34,27)","rgb(116,0,27)","rgb(116,0,27)","rgb(206,58,12)","rgb(151,34,27)"],"stroke-width":["2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px","2px"],"shape":["circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle","circle"],"xPosition":[660.0269165039062,348.44482421875,478.2823791503906,157.51547241210938,431.14306640625,171.7308807373047,280.1138610839844,243.1117401123047,858.651123046875,346.9373779296875,290.2042999267578,235.1656036376953,186.15078735351562,170.52727508544922,159.093017578125,299.14369201660156,630.0769653320312,262.62652587890625,173.3259506225586,387.0186462402344,218.54298400878906,286.3948211669922,304.98060607910156,186.09235382080078,157.32850646972656,172.36190032958984,171.3452606201172,227.09092712402344,350.1625671386719,180.6702880859375,209.03683471679688,153.70015716552734,230.22848510742188,163.9308090209961,188.83261108398438,121.34885787963867,185.60740661621094,257.83545684814453,216.57981872558594,157.54468536376953,264.3793487548828,195.42906188964844,419.83734130859375,196.4281768798828,305.2084655761719,235.76156616210938,237.09371185302734,191.87083435058594,159.53121948242188,163.59193420410156],"yPosition":[52.14285087585449,84.28570365905762,84.28570365905762,116.42855834960938,116.42855834960938,116.42855834960938,148.57144165039062,148.57144165039062,148.57144165039062,148.57144165039062,180.71429443359375,180.71429443359375,180.71429443359375,212.85714721679688,212.85714721679688,212.85714721679688,212.85714721679688,212.85714721679688,212.85714721679688,212.85714721679688,212.85714721679688,212.85714721679688,245.00000762939453,245,245,245,245,245,245,245,277.1428527832031,277.1428527832031,277.1428527832031,277.1428527832031,277.1428527832031,277.1428527832031,309.2857208251953,309.2857208251953,309.2857208251953,309.2857208251953,309.2857208251953,341.42857360839844,341.42857360839844,341.42857360839844,341.42857360839844,341.42857360839844,373.57142639160156,373.57142639160156,373.57142639160156,373.57142639160156],"area":[2170.319946978241,1790.5169786906336,1899.031866430305,162.77423882484436,1627.7412857450545,488.32259668409824,412.3615126032382,542.5808753157035,1356.453530728817,1953.290386736393,162.77384947240353,271.29009321704507,542.5808753157035,43.406435020733625,21.703121275641024,1519.2259509507567,2007.547532081604,162.77423882484436,217.0323401237838,2018.3984859567136,401.51021184027195,81.38690501451492,922.3871157285757,162.77404414862394,434.0650778412819,86.81291161617264,97.66455419454724,184.47737579140812,1193.6763514615595,195.3289445079863,347.2522151507437,54.25825362559408,813.8711541704834,43.40663608163595,325.54872131347656,1627.7415935550816,271.2905958686024,325.54789537237957,271.2905958686024,325.54789537237957,358.1031858185306,271.2905958686024,813.8711541704834,256.098153937608,352.6774649526924,271.2905958686024,1627.743132605683,651.0961765944958,103.09053307864815,75.96153398603201],"width":[46.586669921875,42.31451416015625,43.577880859375,12.75830078125,40.34527587890625,22.0980224609375,20.30670166015625,23.293365478515625,36.830078125,44.196044921875,12.758270263671875,16.47088623046875,23.293365478515625,6.5883636474609375,4.658660888671875,38.977264404296875,44.8056640625,12.75830078125,14.732009887695312,44.92657470703125,20.0377197265625,9.021453857421875,30.370819091796875,12.758285522460938,20.834228515625,9.317337036132812,9.882537841796875,13.582244873046875,34.54962158203125,13.97601318359375,18.63470458984375,7.3660125732421875,28.528411865234375,6.5883636474609375,18.04296875,40.34528350830078,16.47088623046875,18.042953491210938,16.47088623046875,18.042953491210938,18.923614501953125,16.47088623046875,28.5284423828125,16.0030517578125,18.77972412109375,16.47088623046875,40.34529113769531,25.5166015625,10.153350830078125,8.715576171875],"height":[46.58671569824219,42.31448745727539,43.577884674072266,12.75830078125,40.34527587890625,22.0980224609375,20.306671142578125,23.293365478515625,36.830047607421875,44.196044921875,12.75830078125,16.47088623046875,23.293365478515625,6.588348388671875,4.658660888671875,38.97723388671875,44.8056640625,12.75830078125,14.732025146484375,44.926605224609375,20.0377197265625,9.021484375,30.370834350585938,12.75830078125,20.834228515625,9.317352294921875,9.882537841796875,13.582244873046875,34.54962158203125,13.97601318359375,18.63470458984375,7.36602783203125,28.5284423828125,6.58837890625,18.04296875,40.34527587890625,16.470916748046875,18.042938232421875,16.470916748046875,18.042938232421875,18.923614501953125,16.470916748046875,28.528411865234375,16.003082275390625,18.779693603515625,16.470916748046875,40.345306396484375,25.516571044921875,10.153350830078125,8.715606689453125],"text":["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""],"rotation":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"numFields":18,"ids":[57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103,105,107,109,111,113,115,117,119,121,123,125,127,129,131,133,135,137,139,141,143,145,147,149,151,153,155],"mappings":[{"data":"Genre","attr":"fill","type":"nominal","params":{"Animation":"rgb(165,0,38)","Drama":"rgb(215,48,39)","Comedy":"rgb(244,109,67)","Action":"rgb(253,174,97)","Biography":"rgb(254,224,139)","Adventure":"rgb(255,255,191)","Thriller":"rgb(217,239,139)","Crime":"rgb(166,217,106)","Documentary":"rgb(102,189,99)","Romance":"rgb(26,152,80)","Horror":"rgb(0,104,55)"},"group":"~0~groups~4"},{"data":"Genre","attr":"stroke","type":"nominal","params":{"Animation":"rgb(116,0,27)","Drama":"rgb(151,34,27)","Comedy":"rgb(206,58,12)","Action":"rgb(242,121,3)","Biography":"rgb(253,193,22)","Adventure":"rgb(255,255,57)","Thriller":"rgb(184,225,39)","Crime":"rgb(118,180,46)","Documentary":"rgb(63,142,60)","Romance":"rgb(18,106,56)","Horror":"rgb(0,73,38)"},"group":"~0~groups~4"},{"data":["Profit"],"attr":"xPosition","type":"linear","params":{"attrMin":121.34885787963867,"attrMax":858.651123046875,"coeffs":[0.5842748481273295,155.70422256753702],"err":0.9999999999999982},"dataRange":[-163.8,1308.11],"attrRange":[60.000002444280426,919.999994151378],"group":"~0~groups~4"},{"data":["Rotten Tomatoes"],"attr":"yPosition","type":"linear","params":{"attrMin":52.14285087585449,"attrMax":373.57142639160156,"coeffs":[-32.14285745124678,3234.2857443613275],"err":0.9999999999999936},"dataRange":[86,100],"attrRange":[470.0000035541043,19.999999236649273],"group":"~0~groups~4"},{"data":["Budget"],"attr":"area","type":"linear","params":{"attrMin":21.703121275641024,"attrMax":2170.319946978241,"coeffs":[10.85160970964361,0.0001768018444772146],"err":0.9999999999991281},"dataRange":[2,200],"attrRange":[21.703396221131698,2170.3221187305667],"group":"~0~groups~4"}],"nodeAttrs":[{"opacity":"0.85","fill":"#a50026","stroke":"#74001b","stroke-width":"2","r":"23.293360538172468","text":""},{"opacity":"0.85","fill":"#a50026","stroke":"#74001b","stroke-width":"2","r":"21.15724538445552","text":""},{"opacity":"0.85","fill":"#a50026","stroke":"#74001b","stroke-width":"2","r":"21.78894363011041","text":""},{"opacity":"0.85","fill":"#d73027","stroke":"#97221b","stroke-width":"2","r":"6.379149503428867","text":""},{"opacity":"0.85","fill":"#a50026","stroke":"#74001b","stroke-width":"2","r":"20.17264196556732","text":""},{"opacity":"0.85","fill":"#f46d43","stroke":"#ce3a0c","stroke-width":"2","r":"11.049011049016574","text":""},{"opacity":"0.85","fill":"#fdae61","stroke":"#f27903","stroke-width":"2","r":"10.153340464135198","text":""},{"opacity":"0.85","fill":"#fee08b","stroke":"#fdc116","stroke-width":"2","r":"11.646680269086234","text":""},{"opacity":"0.85","fill":"#ffffbf","stroke":"#ffff39","stroke-width":"2","r":"18.41501841502762","text":""},{"opacity":"0.85","fill":"#a50026","stroke":"#74001b","stroke-width":"2","r":"22.098022098033148","text":""},{"opacity":"0.85","fill":"#fee08b","stroke":"#fdc116","stroke-width":"2","r":"6.379149503428867","text":""},{"opacity":"0.85","fill":"#d73027","stroke":"#97221b","stroke-width":"2","r":"8.23544659658244","text":""},{"opacity":"0.85","fill":"#d73027","stroke":"#97221b","stroke-width":"2","r":"11.646680269086234","text":""},{"opacity":"0.85","fill":"#f46d43","stroke":"#ce3a0c","stroke-width":"2","r":"3.294178638632976","text":""},{"opacity":"0.85","fill":"#d73027","stroke":"#97221b","stroke-width":"2","r":"2.3293360538172467","text":""},{"opacity":"0.85","fill":"#fdae61","stroke":"#f27903","stroke-width":"2","r":"19.488623645935167","text":""},{"opacity":"0.85","fill":"#d9ef8b","stroke":"#b8e127","stroke-width":"2","r":"22.402836801936346","text":""},{"opacity":"0.85","fill":"#a6d96a","stroke":"#76b42e","stroke-width":"2","r":"6.379149503428867","text":""},{"opacity":"0.85","fill":"#fee08b","stroke":"#fdc116","stroke-width":"2","r":"7.36600736601105","text":""},{"opacity":"0.85","fill":"#fdae61","stroke":"#f27903","stroke-width":"2","r":"22.463303408003014","text":""},{"opacity":"0.85","fill":"#a6d96a","stroke":"#76b42e","stroke-width":"2","r":"10.018853195592733","text":""},{"opacity":"0.85","fill":"#f46d43","stroke":"#ce3a0c","stroke-width":"2","r":"4.51073987207735","text":""},{"opacity":"0.85","fill":"#f46d43","stroke":"#ce3a0c","stroke-width":"2","r":"15.185413204570642","text":""},{"opacity":"0.85","fill":"#d9ef8b","stroke":"#b8e127","stroke-width":"2","r":"6.379149503428867","text":""},{"opacity":"0.85","fill":"#a50026","stroke":"#74001b","stroke-width":"2","r":"10.417107517552944","text":""},{"opacity":"0.85","fill":"#f46d43","stroke":"#ce3a0c","stroke-width":"2","r":"4.6586721076344935","text":""},{"opacity":"0.85","fill":"#66bd63","stroke":"#3f8e3c","stroke-width":"2","r":"4.941267957949464","text":""},{"opacity":"0.85","fill":"#1a9850","stroke":"#126a38","stroke-width":"2","r":"6.7911232383685745","text":""},{"opacity":"0.85","fill":"#d9ef8b","stroke":"#b8e127","stroke-width":"2","r":"17.274818518256847","text":""},{"opacity":"0.85","fill":"#ffffbf","stroke":"#ffff39","stroke-width":"2","r":"6.98800816145174","text":""},{"opacity":"0.85","fill":"#d9ef8b","stroke":"#b8e127","stroke-width":"2","r":"9.317344215268987","text":""},{"opacity":"0.85","fill":"#d73027","stroke":"#97221b","stroke-width":"2","r":"3.683003683005525","text":""},{"opacity":"0.85","fill":"#f46d43","stroke":"#ce3a0c","stroke-width":"2","r":"14.264211928300979","text":""},{"opacity":"0.85","fill":"#d73027","stroke":"#97221b","stroke-width":"2","r":"3.294178638632976","text":""},{"opacity":"0.85","fill":"#006837","stroke":"#004926","stroke-width":"2","r":"9.0214797441547","text":""},{"opacity":"0.85","fill":"#a50026","stroke":"#74001b","stroke-width":"2","r":"20.17264196556732","text":""},{"opacity":"0.85","fill":"#d73027","stroke":"#97221b","stroke-width":"2","r":"8.23544659658244","text":""},{"opacity":"0.85","fill":"#fdae61","stroke":"#f27903","stroke-width":"2","r":"9.0214797441547","text":""},{"opacity":"0.85","fill":"#d73027","stroke":"#97221b","stroke-width":"2","r":"8.23544659658244","text":""},{"opacity":"0.85","fill":"#a50026","stroke":"#74001b","stroke-width":"2","r":"9.0214797441547","text":""},{"opacity":"0.85","fill":"#f46d43","stroke":"#ce3a0c","stroke-width":"2","r":"9.461807779257244","text":""},{"opacity":"0.85","fill":"#d9ef8b","stroke":"#b8e127","stroke-width":"2","r":"8.23544659658244","text":""},{"opacity":"0.85","fill":"#f46d43","stroke":"#ce3a0c","stroke-width":"2","r":"14.264211928300979","text":""},{"opacity":"0.85","fill":"#fdae61","stroke":"#f27903","stroke-width":"2","r":"8.00153211135419","text":""},{"opacity":"0.85","fill":"#f46d43","stroke":"#ce3a0c","stroke-width":"2","r":"9.389853824139632","text":""},{"opacity":"0.85","fill":"#d73027","stroke":"#97221b","stroke-width":"2","r":"8.23544659658244","text":""},{"opacity":"0.85","fill":"#a50026","stroke":"#74001b","stroke-width":"2","r":"20.17264196556732","text":""},{"opacity":"0.85","fill":"#a50026","stroke":"#74001b","stroke-width":"2","r":"12.758299006857735","text":""},{"opacity":"0.85","fill":"#f46d43","stroke":"#ce3a0c","stroke-width":"2","r":"5.076670232067599","text":""},{"opacity":"0.85","fill":"#d73027","stroke":"#97221b","stroke-width":"2","r":"4.357788726022083","text":""}]},{"data":{"domain":[-163.8,-163.8,1308.11,1308.11],"tick":[0,5,5,0],"lineID":[0,1,2,3],"_deriv_xPosition_5":[0,1,2,3],"_deriv_yPosition_5":[1,2,0,3],"_deriv_width_5":[0,1,2,3],"_deriv_height_5":[0,1,2,3]},"attrs":{"font-family":["'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif"],"font-size":["13px","13px","13px","13px"],"font-weight":["normal","normal","normal","normal"],"opacity":[1,1,1,1],"fill":["none","none","none","none"],"fill-opacity":[1,1,1,1],"stroke":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"stroke-width":[1,1,1,1],"shape":["linePoint","linePoint","linePoint","linePoint"],"xPosition":[60,60,920,920],"yPosition":[475,470,470,475],"area":[4300,4300,4300,4300],"width":[860,860,860,860],"height":[5,5,5,5],"text":["","","",""],"rotation":[0,0,0,0]},"numFields":7,"ids":[22,22,22,22],"mappings":[{"data":["domain"],"attr":"xPosition","type":"linear","params":{"attrMin":60,"attrMax":920,"coeffs":[0.5842748537614393,155.7042210461237],"err":1},"dataRange":[-163.8,1308.11],"attrRange":[59.99999999999994,920],"group":"~0~groups~5"},{"data":["tick"],"attr":"yPosition","type":"linear","params":{"attrMin":470,"attrMax":475,"coeffs":[-1,475],"err":1},"group":"~0~groups~5"}],"nodeAttrs":[{"class":"domain","d":"M0,5V0H860V5","text":""},{"class":"domain","d":"M0,5V0H860V5","text":""},{"class":"domain","d":"M0,5V0H860V5","text":""},{"class":"domain","d":"M0,5V0H860V5","text":""}],"name":"xaxis-line","axis":"xaxis"},{"data":{"domain":[100,100,86,86],"tick":[0,6,6,0],"lineID":[0,1,2,3],"_deriv_xPosition_6":[0,3,1,2],"_deriv_yPosition_6":[0,1,2,3],"_deriv_width_6":[0,1,2,3],"_deriv_height_6":[0,1,2,3]},"attrs":{"font-family":["'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif","'Josefin Sans', sans-serif"],"font-size":["13px","13px","13px","13px"],"font-weight":["normal","normal","normal","normal"],"opacity":[1,1,1,1],"fill":["none","none","none","none"],"fill-opacity":[1,1,1,1],"stroke":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"stroke-width":[1,1,1,1],"shape":["linePoint","linePoint","linePoint","linePoint"],"xPosition":[54,60,60,54],"yPosition":[20,20,470,470],"area":[2700,2700,2700,2700],"width":[6,6,6,6],"height":[450,450,450,450],"text":["","","",""],"rotation":[0,0,0,0]},"numFields":7,"ids":[49,49,49,49],"mappings":[{"data":["tick"],"attr":"xPosition","type":"linear","params":{"attrMin":54,"attrMax":60,"coeffs":[1,54],"err":1},"group":"~0~groups~6"},{"data":["domain"],"attr":"yPosition","type":"linear","params":{"attrMin":20,"attrMax":470,"coeffs":[-32.14285714285718,3234.285714285719],"err":1},"dataRange":[86,100],"attrRange":[470.0000000000018,20.00000000000091],"group":"~0~groups~6"}],"nodeAttrs":[{"class":"domain","d":"M-6,0H0V450H-6","text":""},{"class":"domain","d":"M-6,0H0V450H-6","text":""},{"class":"domain","d":"M-6,0H0V450H-6","text":""},{"class":"domain","d":"M-6,0H0V450H-6","text":""}],"name":"yaxis-line","axis":"yaxis"}],"mappingSets":{"font-family":[],"font-size":[],"font-weight":[],"opacity":[],"fill":[{"mappingRefs":[{"data":"Genre","attr":"fill","type":"nominal","range":["rgb(165,0,38)","rgb(215,48,39)","rgb(244,109,67)","rgb(253,174,97)","rgb(254,224,139)","rgb(255,255,191)","rgb(217,239,139)","rgb(166,217,106)","rgb(102,189,99)","rgb(26,152,80)","rgb(0,104,55)"],"groupID":4}],"attributes":["rgb(165,0,38)","rgb(215,48,39)","rgb(244,109,67)","rgb(253,174,97)","rgb(254,224,139)","rgb(255,255,191)","rgb(217,239,139)","rgb(166,217,106)","rgb(102,189,99)","rgb(26,152,80)","rgb(0,104,55)"],"type":"nominal"}],"fill-opacity":[],"stroke":[{"mappingRefs":[{"data":"Genre","attr":"stroke","type":"nominal","range":["rgb(116,0,27)","rgb(151,34,27)","rgb(206,58,12)","rgb(242,121,3)","rgb(253,193,22)","rgb(255,255,57)","rgb(184,225,39)","rgb(118,180,46)","rgb(63,142,60)","rgb(18,106,56)","rgb(0,73,38)"],"groupID":4}],"attributes":["rgb(116,0,27)","rgb(151,34,27)","rgb(206,58,12)","rgb(242,121,3)","rgb(253,193,22)","rgb(255,255,57)","rgb(184,225,39)","rgb(118,180,46)","rgb(63,142,60)","rgb(18,106,56)","rgb(0,73,38)"],"type":"nominal"}],"stroke-width":[],"shape":[],"xPosition":[{"mappingRefs":[{"data":"number","attr":"xPosition","type":"linear","range":[155.7042236328125,856.8340454101562],"groupID":0},{"data":"number","attr":"xPosition","type":"linear","range":[155.7042236328125,856.8340454101562],"groupID":1},{"data":"Profit","attr":"xPosition","type":"linear","range":[121.34885787963867,858.651123046875],"groupID":4},{"data":"domain","attr":"xPosition","type":"linear","range":[60,920],"groupID":5}],"attributes":[60,920],"type":"linear"}],"yPosition":[{"mappingRefs":[{"data":"number","attr":"yPosition","type":"linear","range":[20,470],"groupID":2},{"data":"number","attr":"yPosition","type":"linear","range":[20.9609375,470.9609375],"groupID":3},{"data":"Rotten Tomatoes","attr":"yPosition","type":"linear","range":[52.14285087585449,373.57142639160156],"groupID":4},{"data":"domain","attr":"yPosition","type":"linear","range":[20,470],"groupID":6}],"attributes":[20,470.9609375],"type":"linear"}],"area":[{"mappingRefs":[{"data":"number","attr":"area","type":"nominal","range":[102.900390625,289.482421875,291.083984375,291.8851566314697,290.283203125,384.375,365.95703125],"groupID":1}],"attributes":[102.900390625,289.482421875,291.083984375,291.8851566314697,290.283203125,384.375,365.95703125],"type":"nominal"},{"mappingRefs":[{"data":"Budget","attr":"area","type":"linear","range":[21.703121275641024,2170.319946978241],"groupID":4}],"attributes":[21.703121275641024,2170.319946978241],"type":"linear"}],"width":[{"mappingRefs":[{"data":"number","attr":"width","type":"nominal","range":[8.03125,22.59375,22.71875,22.781280517578125,22.65625,30,28.5625],"groupID":1}],"attributes":[8.03125,22.59375,22.71875,22.781280517578125,22.65625,30,28.5625],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_width_1","attr":"width","type":"nominal","range":[8.03125,22.59375,22.781280517578125,22.65625,22.71875,28.5625,30],"groupID":1}],"attributes":[8.03125,22.59375,22.781280517578125,22.65625,22.71875,28.5625,30],"type":"nominal"}],"height":[],"text":[{"mappingRefs":[{"data":"number","attr":"text","type":"nominal","range":["0","200","400","600","800","1,000","1,200"],"groupID":1}],"attributes":["0","200","400","600","800","1,000","1,200"],"type":"nominal"},{"mappingRefs":[{"data":"number","attr":"text","type":"nominal","range":["86","88","90","92","94","96","98","100"],"groupID":3}],"attributes":["86","88","90","92","94","96","98","100"],"type":"nominal"}],"rotation":[]},"ids":[]}
+{
+  "svg": {
+    "width": 940,
+    "height": 520
+  },
+  "axes": [
+    {
+      "orient": "bottom",
+      "innerTickSize": 5,
+      "outerTickSize": 5,
+      "tickPadding": 3,
+      "tickArguments": [
+        10
+      ],
+      "tickValues": null,
+      "ticks": [
+        0,
+        200,
+        400,
+        600,
+        800,
+        1000,
+        1200
+      ],
+      "axis": "xaxis",
+      "scaleDomain": [
+        -163.8,
+        1308.11
+      ],
+      "offset": {
+        "x": 60,
+        "y": 470
+      },
+      "scaleRange": [
+        60,
+        920
+      ],
+      "boundingBox": {
+        "height": 20.4375,
+        "width": 860,
+        "y": 470,
+        "x": 60
+      }
+    },
+    {
+      "orient": "left",
+      "innerTickSize": 6,
+      "outerTickSize": 6,
+      "tickPadding": 3,
+      "tickArguments": {
+        "0": 5
+      },
+      "tickValues": null,
+      "ticks": [
+        86,
+        88,
+        90,
+        92,
+        94,
+        96,
+        98,
+        100
+      ],
+      "axis": "yaxis",
+      "scaleDomain": [
+        100,
+        86
+      ],
+      "offset": {
+        "x": 60,
+        "y": 20
+      },
+      "scaleRange": [
+        20,
+        470
+      ],
+      "boundingBox": {
+        "height": 462.828125,
+        "width": 28.390625,
+        "y": 14.546875,
+        "x": 31.609375
+      }
+    }
+  ],
+  "groups": [
+    {
+      "data": {
+        "number": [
+          0,
+          200,
+          400,
+          600,
+          800,
+          1000,
+          1200
+        ],
+        "_deriv_xPosition_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "_deriv_yPosition_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "_deriv_width_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "_deriv_height_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif"
+        ],
+        "font-size": [
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line"
+        ],
+        "xPosition": [
+          155.7042236328125,
+          272.5592041015625,
+          389.4141540527344,
+          506.2691345214844,
+          623.1240844726562,
+          739.9790649414062,
+          856.8340454101562
+        ],
+        "yPosition": [
+          472.5,
+          472.5,
+          472.5,
+          472.5,
+          472.5,
+          472.5,
+          472.5
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "height": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        2,
+        5,
+        8,
+        11,
+        14,
+        17,
+        20
+      ],
+      "mappings": [
+        {
+          "data": [
+            "number"
+          ],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 155.7042236328125,
+            "attrMax": 856.8340454101562,
+            "coeffs": [
+              0.5842748423985072,
+              155.70422472272597
+            ],
+            "err": 0.9999999999999987
+          },
+          "dataRange": [
+            -163.8,
+            1308.11
+          ],
+          "attrRange": [
+            60.00000553785047,
+            919.9999888126372
+          ],
+          "group": "~0~groups~0"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "y2": "5",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "5",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "5",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "5",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "5",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "5",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "5",
+          "x2": "0",
+          "text": ""
+        }
+      ],
+      "name": "xaxis-ticks",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "number": [
+          0,
+          200,
+          400,
+          600,
+          800,
+          1000,
+          1200
+        ],
+        "_deriv_xPosition_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "_deriv_yPosition_1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "_deriv_width_1": [
+          0,
+          1,
+          4,
+          2,
+          3,
+          6,
+          5
+        ],
+        "_deriv_height_1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif"
+        ],
+        "font-size": [
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text"
+        ],
+        "xPosition": [
+          155.7042236328125,
+          272.5592041015625,
+          389.4141540527344,
+          506.26914978027344,
+          623.1240844726562,
+          739.9790649414062,
+          856.8340454101562
+        ],
+        "yPosition": [
+          484.03125,
+          484.03125,
+          484.03125,
+          484.03125,
+          484.03125,
+          484.03125,
+          484.03125
+        ],
+        "area": [
+          102.900390625,
+          289.482421875,
+          291.083984375,
+          291.8851566314697,
+          290.283203125,
+          384.375,
+          365.95703125
+        ],
+        "width": [
+          8.03125,
+          22.59375,
+          22.71875,
+          22.781280517578125,
+          22.65625,
+          30,
+          28.5625
+        ],
+        "height": [
+          12.8125,
+          12.8125,
+          12.8125,
+          12.8125,
+          12.8125,
+          12.8125,
+          12.8125
+        ],
+        "text": [
+          "0",
+          "200",
+          "400",
+          "600",
+          "800",
+          "1,000",
+          "1,200"
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        3,
+        6,
+        9,
+        12,
+        15,
+        18,
+        21
+      ],
+      "mappings": [
+        {
+          "data": "number",
+          "attr": "area",
+          "type": "nominal",
+          "params": {
+            "0": 102.900390625,
+            "200": 289.482421875,
+            "400": 291.083984375,
+            "600": 291.8851566314697,
+            "800": 290.283203125,
+            "1000": 384.375,
+            "1200": 365.95703125
+          },
+          "group": "~0~groups~1"
+        },
+        {
+          "data": "number",
+          "attr": "width",
+          "type": "nominal",
+          "params": {
+            "0": 8.03125,
+            "200": 22.59375,
+            "400": 22.71875,
+            "600": 22.781280517578125,
+            "800": 22.65625,
+            "1000": 30,
+            "1200": 28.5625
+          },
+          "group": "~0~groups~1"
+        },
+        {
+          "data": "number",
+          "attr": "text",
+          "type": "nominal",
+          "params": {
+            "0": "0",
+            "200": "200",
+            "400": "400",
+            "600": "600",
+            "800": "800",
+            "1000": "1,000",
+            "1200": "1,200"
+          },
+          "group": "~0~groups~1"
+        },
+        {
+          "data": "_deriv_width_1",
+          "attr": "width",
+          "type": "nominal",
+          "params": {
+            "0": 8.03125,
+            "1": 22.59375,
+            "2": 22.781280517578125,
+            "3": 22.65625,
+            "4": 22.71875,
+            "5": 28.5625,
+            "6": 30
+          },
+          "group": "~0~groups~1"
+        },
+        {
+          "data": [
+            "number"
+          ],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 155.7042236328125,
+            "attrMax": 856.8340454101562,
+            "coeffs": [
+              0.5842748423985072,
+              155.70422690255302
+            ],
+            "err": 0.9999999999999978
+          },
+          "dataRange": [
+            -163.8,
+            1308.11
+          ],
+          "attrRange": [
+            60.00000771767752,
+            919.9999909924643
+          ],
+          "group": "~0~groups~1"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "dy": ".71em",
+          "y": "8",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "0"
+        },
+        {
+          "dy": ".71em",
+          "y": "8",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "200"
+        },
+        {
+          "dy": ".71em",
+          "y": "8",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "400"
+        },
+        {
+          "dy": ".71em",
+          "y": "8",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "600"
+        },
+        {
+          "dy": ".71em",
+          "y": "8",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "800"
+        },
+        {
+          "dy": ".71em",
+          "y": "8",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "1,000"
+        },
+        {
+          "dy": ".71em",
+          "y": "8",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "1,200"
+        }
+      ],
+      "name": "xaxis-labels",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "number": [
+          86,
+          88,
+          90,
+          92,
+          94,
+          96,
+          98,
+          100
+        ],
+        "_deriv_xPosition_2": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "_deriv_yPosition_2": [
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "_deriv_width_2": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "_deriv_height_2": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif"
+        ],
+        "font-size": [
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line",
+          "line"
+        ],
+        "xPosition": [
+          57,
+          57,
+          57,
+          57,
+          57,
+          57,
+          57,
+          57
+        ],
+        "yPosition": [
+          470,
+          405.71429443359375,
+          341.4285583496094,
+          277.1428527832031,
+          212.85714721679688,
+          148.57142639160156,
+          84.28571319580078,
+          20
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "height": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        26,
+        29,
+        32,
+        35,
+        38,
+        41,
+        44,
+        47
+      ],
+      "mappings": [
+        {
+          "data": [
+            "number"
+          ],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 20,
+            "attrMax": 470,
+            "coeffs": [
+              -32.14285718827035,
+              3234.2857175554777
+            ],
+            "err": 0.9999999999999983
+          },
+          "dataRange": [
+            86,
+            100
+          ],
+          "attrRange": [
+            469.99999936422773,
+            19.999998728442733
+          ],
+          "group": "~0~groups~2"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        }
+      ],
+      "name": "yaxis-ticks",
+      "axis": "yaxis"
+    },
+    {
+      "data": {
+        "number": [
+          86,
+          88,
+          90,
+          92,
+          94,
+          96,
+          98,
+          100
+        ],
+        "_deriv_xPosition_3": [
+          7,
+          2,
+          5,
+          4,
+          6,
+          0,
+          3,
+          1
+        ],
+        "_deriv_yPosition_3": [
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "_deriv_width_3": [
+          1,
+          0,
+          3,
+          6,
+          4,
+          5,
+          2,
+          7
+        ],
+        "_deriv_height_3": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif"
+        ],
+        "font-size": [
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text",
+          "text"
+        ],
+        "xPosition": [
+          44.3046875,
+          44.3671875,
+          43.578125,
+          44.3046875,
+          44.234375,
+          44.203125,
+          44.265625,
+          41.3046875
+        ],
+        "yPosition": [
+          470.9609375,
+          406.67523193359375,
+          342.3894958496094,
+          278.1037902832031,
+          213.81808471679688,
+          149.53236389160156,
+          85.24665069580078,
+          20.9609375
+        ],
+        "area": [
+          171.776611328125,
+          170.173095703125,
+          190.41748046875,
+          171.776611328125,
+          173.58056640625,
+          174.38232421875,
+          172.77880859375,
+          248.745361328125
+        ],
+        "width": [
+          13.390625,
+          13.265625,
+          14.84375,
+          13.390625,
+          13.53125,
+          13.59375,
+          13.46875,
+          19.390625
+        ],
+        "height": [
+          12.828125,
+          12.828125,
+          12.828125,
+          12.828125,
+          12.828125,
+          12.828125,
+          12.828125,
+          12.828125
+        ],
+        "text": [
+          "86",
+          "88",
+          "90",
+          "92",
+          "94",
+          "96",
+          "98",
+          "100"
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        27,
+        30,
+        33,
+        36,
+        39,
+        42,
+        45,
+        48
+      ],
+      "mappings": [
+        {
+          "data": "number",
+          "attr": "text",
+          "type": "nominal",
+          "params": {
+            "86": "86",
+            "88": "88",
+            "90": "90",
+            "92": "92",
+            "94": "94",
+            "96": "96",
+            "98": "98",
+            "100": "100"
+          },
+          "group": "~0~groups~3"
+        },
+        {
+          "data": [
+            "number"
+          ],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 20.9609375,
+            "attrMax": 470.9609375,
+            "coeffs": [
+              -32.14285718827035,
+              3235.2466550554777
+            ],
+            "err": 0.9999999999999983
+          },
+          "dataRange": [
+            86,
+            100
+          ],
+          "attrRange": [
+            470.96093686422773,
+            20.960936228442733
+          ],
+          "group": "~0~groups~3"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "86"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "88"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "90"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "92"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "94"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "96"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "98"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "100"
+        }
+      ],
+      "name": "yaxis-labels",
+      "axis": "yaxis"
+    },
+    {
+      "data": {
+        "id": [
+          133,
+          47,
+          647,
+          627,
+          300,
+          180,
+          135,
+          124,
+          150,
+          514,
+          116,
+          289,
+          191,
+          114,
+          142,
+          612,
+          477,
+          461,
+          432,
+          417,
+          129,
+          281,
+          302,
+          230,
+          622,
+          238,
+          303,
+          148,
+          301,
+          1,
+          211,
+          267,
+          328,
+          499,
+          552,
+          236,
+          323,
+          551,
+          109,
+          243,
+          288,
+          308,
+          285,
+          656,
+          176,
+          648,
+          385,
+          546,
+          529,
+          528
+        ],
+        "year": [
+          2010,
+          2010,
+          2009,
+          2009,
+          2007,
+          2011,
+          2010,
+          2010,
+          2011,
+          2008,
+          2010,
+          2007,
+          2011,
+          2010,
+          2010,
+          2009,
+          2008,
+          2008,
+          2008,
+          2008,
+          2010,
+          2007,
+          2007,
+          2011,
+          2009,
+          2011,
+          2007,
+          2011,
+          2007,
+          2010,
+          2011,
+          2011,
+          2007,
+          2008,
+          2009,
+          2011,
+          2007,
+          2009,
+          2010,
+          2011,
+          2007,
+          2007,
+          2007,
+          2009,
+          2011,
+          2009,
+          2008,
+          2009,
+          2009,
+          2009
+        ],
+        "exclude": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "y",
+          ""
+        ],
+        "Film": [
+          "Toy Story 3",
+          "How to Train Your Dragon",
+          "Up ",
+          "The Hurt Locker ",
+          "Ratatouille",
+          "The Muppets",
+          "True Grit",
+          "The Social Network",
+          "Harry Potter and the Deathly Hallows Part 2",
+          "WALL-E",
+          "The King's Speech",
+          "No Country for Old Men",
+          "Moneyball",
+          "The Kids Are All Right",
+          "Winter's Bone",
+          "Star Trek ",
+          "The Dark Knight",
+          "Slumdog Millionaire",
+          "Milk",
+          "Iron Man",
+          "The Town",
+          "Juno",
+          "Enchanted",
+          "Drive",
+          "Fantastic Mr. Fox ",
+          "50/50",
+          "Sicko",
+          "Midnight in Paris",
+          "The Bourne Ultimatum",
+          "127 Hours",
+          "Source Code",
+          "Take Shelter",
+          "Hairspray",
+          "The Visitor",
+          "Drag Me to Hell ",
+          "Arthur Christmas",
+          "There Will Be Blood",
+          "District 9 ",
+          "The Fighter",
+          "Winnie The Pooh",
+          "Knocked Up",
+          "Michael Clayton",
+          "The Simpsons Movie",
+          "Zombieland ",
+          "Bridesmaids",
+          "Up in the Air ",
+          "Bolt",
+          "Coraline ",
+          "Adventureland ",
+          "A Serious Man "
+        ],
+        "Rotten Tomatoes": [
+          99,
+          98,
+          98,
+          97,
+          97,
+          97,
+          96,
+          96,
+          96,
+          96,
+          95,
+          95,
+          95,
+          94,
+          94,
+          94,
+          94,
+          94,
+          94,
+          94,
+          94,
+          94,
+          93,
+          93,
+          93,
+          93,
+          93,
+          93,
+          93,
+          93,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          91,
+          91,
+          91,
+          91,
+          91,
+          90,
+          90,
+          90,
+          90,
+          90,
+          89,
+          89,
+          89,
+          89
+        ],
+        "Audience Score": [
+          91,
+          90,
+          86,
+          83,
+          84,
+          87,
+          86,
+          89,
+          92,
+          89,
+          93,
+          84,
+          89,
+          72,
+          73,
+          91,
+          96,
+          90,
+          88,
+          91,
+          83,
+          89,
+          80,
+          79,
+          80,
+          93,
+          87,
+          84,
+          91,
+          84,
+          81,
+          85,
+          84,
+          83,
+          61,
+          82,
+          84,
+          81,
+          88,
+          79,
+          83,
+          72,
+          78,
+          87,
+          77,
+          76,
+          76,
+          77,
+          56,
+          64
+        ],
+        "Story": [
+          "Rescue",
+          "Underdog",
+          "Journey And Return",
+          "Quest",
+          "Transformation",
+          "Quest",
+          "Quest",
+          "Rags To Riches",
+          "Rivalry",
+          "Love",
+          "Maturation",
+          "Pursuit",
+          "Underdog",
+          "Comedy",
+          "Quest",
+          "Revenge",
+          "Revenge",
+          "Underdog",
+          "Quest",
+          "Metamorphosis",
+          "Rivalry",
+          "Maturation",
+          "Love",
+          "Rivalry",
+          "Rivalry",
+          "Discovery",
+          "Quest",
+          "Love",
+          "Pursuit",
+          "Escape",
+          "The Riddle",
+          "Sacrifice",
+          "Underdog",
+          "Transformation",
+          "Monster Force",
+          "Journey And Return",
+          "Wretched Excess",
+          "Metamorphosis",
+          "Underdog",
+          "Quest",
+          "Love",
+          "Transformation",
+          "Maturation",
+          "Monster Force",
+          "Rivalry",
+          "Maturation",
+          "Rescue",
+          "Journey And Return",
+          "Maturation",
+          "Love"
+        ],
+        "Genre": [
+          "Animation",
+          "Animation",
+          "Animation",
+          "Drama",
+          "Animation",
+          "Comedy",
+          "Action",
+          "Biography",
+          "Adventure",
+          "Animation",
+          "Biography",
+          "Drama",
+          "Drama",
+          "Comedy",
+          "Drama",
+          "Action",
+          "Thriller",
+          "Crime",
+          "Biography",
+          "Action",
+          "Crime",
+          "Comedy",
+          "Comedy",
+          "Thriller",
+          "Animation",
+          "Comedy",
+          "Documentary",
+          "Romance",
+          "Thriller",
+          "Adventure",
+          "Thriller",
+          "Drama",
+          "Comedy",
+          "Drama",
+          "Horror",
+          "Animation",
+          "Drama",
+          "Action",
+          "Drama",
+          "Animation",
+          "Comedy",
+          "Thriller",
+          "Comedy",
+          "Action",
+          "Comedy",
+          "Drama",
+          "Animation",
+          "Animation",
+          "Comedy",
+          "Drama"
+        ],
+        "Domestic Gross": [
+          415,
+          217.58,
+          293,
+          14.7,
+          206.45,
+          66.63,
+          171,
+          94.08,
+          381.01,
+          223.78,
+          0,
+          74.28,
+          74.21,
+          20.81,
+          6.25,
+          257.7,
+          530.92,
+          101.89,
+          31.84,
+          318.31,
+          92.18,
+          143.5,
+          127.81,
+          34.68,
+          20.5,
+          34.9,
+          24.54,
+          56.18,
+          227.47,
+          18.33,
+          54.71,
+          1.57,
+          118.87,
+          9.43,
+          77.2,
+          33.7,
+          40.22,
+          115.6,
+          93,
+          26.69,
+          148.77,
+          49.03,
+          183.14,
+          49.2,
+          169.11,
+          83.82,
+          109.9,
+          75.3,
+          16.04,
+          9.2
+        ],
+        "Foreign Gross": [
+          "648.16",
+          "277.3",
+          "434",
+          "3.4",
+          "414.98",
+          "5.8",
+          "79",
+          "105.52",
+          "947.1",
+          "",
+          "",
+          "86.72",
+          "27.9",
+          "8.55",
+          "1.54",
+          "127.8",
+          "468.58",
+          "236.59",
+          "18.32",
+          "266.76",
+          "52.37",
+          "87.69",
+          "212.68",
+          "32.33",
+          "21.8",
+          "1.62",
+          "11.23",
+          "83",
+          "215.35",
+          "42.4",
+          "68.57",
+          "?",
+          "83.68",
+          "8.65",
+          "8.1",
+          "57.5",
+          "35.96",
+          "89.2",
+          "35",
+          "6.46",
+          "70.23",
+          "43.96",
+          "343.93",
+          "42.5",
+          "119.28",
+          "78.2",
+          "195.93",
+          "46.6",
+          "0.01",
+          "7.1"
+        ],
+        "Worldwide Gross": [
+          1063.16,
+          494.88,
+          727.1,
+          18.1,
+          621.42,
+          72.43,
+          250.93,
+          199.6,
+          1328.11,
+          507.3,
+          245.2,
+          161,
+          102.11,
+          29.37,
+          7.8,
+          385.5,
+          996.9,
+          198,
+          50.16,
+          581.9,
+          144.55,
+          231.18,
+          340.49,
+          67.01,
+          42.78,
+          36.51,
+          35.77,
+          139.18,
+          442.82,
+          60.73,
+          123.28,
+          1.57,
+          202.55,
+          18.08,
+          86.7,
+          91.2,
+          76.18,
+          204.8,
+          129.19,
+          33.15,
+          219,
+          92.99,
+          527.07,
+          93.3,
+          288.38,
+          162.02,
+          289.3,
+          121.9,
+          16.05,
+          20.5
+        ],
+        "Budget": [
+          200,
+          165,
+          175,
+          15,
+          150,
+          45,
+          38,
+          50,
+          125,
+          180,
+          15,
+          25,
+          50,
+          4,
+          2,
+          140,
+          185,
+          15,
+          20,
+          186,
+          37,
+          7.5,
+          85,
+          15,
+          40,
+          8,
+          9,
+          17,
+          110,
+          18,
+          32,
+          5,
+          75,
+          4,
+          30,
+          150,
+          25,
+          30,
+          25,
+          30,
+          33,
+          25,
+          75,
+          23.6,
+          32.5,
+          25,
+          150,
+          60,
+          9.5,
+          7
+        ],
+        "Profit": [
+          863.16,
+          329.88,
+          552.1,
+          3.1,
+          471.42,
+          27.43,
+          212.93,
+          149.6,
+          1203.11,
+          327.3,
+          230.2,
+          136,
+          52.11,
+          25.37,
+          5.8,
+          245.5,
+          811.9,
+          183,
+          30.16,
+          395.9,
+          107.55,
+          223.68,
+          255.49,
+          52.01,
+          2.78,
+          28.51,
+          26.77,
+          122.18,
+          332.82,
+          42.73,
+          91.28,
+          -3.43,
+          127.55,
+          14.08,
+          56.7,
+          -58.8,
+          51.18,
+          174.8,
+          104.19,
+          3.15,
+          186,
+          67.99,
+          452.07,
+          69.7,
+          255.88,
+          137.02,
+          139.3,
+          61.9,
+          6.55,
+          13.5
+        ],
+        "Proftitability": [
+          "531.58%",
+          "299.93%",
+          "4.15",
+          "1.21",
+          "414.28%",
+          "160.95%",
+          "660.34%",
+          "399.20%",
+          "1062.49%",
+          "2.82",
+          "1634.67%",
+          "644.00%",
+          "204.22%",
+          "734.25%",
+          "390.00%",
+          "2.75",
+          "5.39",
+          "13.2",
+          "2.51",
+          "3.13",
+          "390.68%",
+          "3082.46%",
+          "400.57%",
+          "446.71%",
+          "1.07",
+          "456.39%",
+          "397.42%",
+          "818.69%",
+          "402.57%",
+          "337.39%",
+          "385.24%",
+          "31.46%",
+          "270.06%",
+          "4.52",
+          "2.89",
+          "60.80%",
+          "304.73%",
+          "6.83",
+          "516.76%",
+          "110.51%",
+          "663.64%",
+          "371.97%",
+          "702.76%",
+          "3.95",
+          "887.33%",
+          "6.48",
+          "1.93",
+          "2.03",
+          "1.69",
+          "2.93"
+        ],
+        "_deriv_xPosition_4": [
+          35,
+          31,
+          24,
+          3,
+          39,
+          14,
+          48,
+          49,
+          33,
+          13,
+          26,
+          5,
+          25,
+          18,
+          29,
+          36,
+          23,
+          12,
+          34,
+          47,
+          41,
+          43,
+          30,
+          38,
+          20,
+          27,
+          32,
+          11,
+          45,
+          46,
+          7,
+          37,
+          17,
+          40,
+          6,
+          21,
+          10,
+          15,
+          22,
+          44,
+          9,
+          1,
+          28,
+          19,
+          42,
+          4,
+          2,
+          16,
+          0,
+          8
+        ],
+        "_deriv_yPosition_4": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          22,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49
+        ],
+        "_deriv_width_4": [
+          14,
+          13,
+          33,
+          31,
+          49,
+          21,
+          25,
+          26,
+          48,
+          10,
+          23,
+          3,
+          17,
+          27,
+          29,
+          18,
+          43,
+          11,
+          36,
+          38,
+          41,
+          45,
+          37,
+          39,
+          34,
+          30,
+          44,
+          40,
+          20,
+          6,
+          24,
+          5,
+          7,
+          12,
+          47,
+          32,
+          42,
+          22,
+          28,
+          8,
+          15,
+          4,
+          35,
+          46,
+          1,
+          2,
+          9,
+          16,
+          19,
+          0
+        ],
+        "_deriv_height_4": [
+          14,
+          13,
+          33,
+          31,
+          49,
+          21,
+          25,
+          26,
+          48,
+          3,
+          10,
+          17,
+          23,
+          27,
+          29,
+          18,
+          43,
+          11,
+          36,
+          38,
+          41,
+          45,
+          37,
+          39,
+          34,
+          30,
+          44,
+          40,
+          20,
+          6,
+          24,
+          5,
+          7,
+          12,
+          47,
+          42,
+          32,
+          22,
+          28,
+          8,
+          15,
+          4,
+          35,
+          46,
+          1,
+          2,
+          9,
+          16,
+          19,
+          0
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif"
+        ],
+        "font-size": [
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px",
+          "13px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858,
+          0.850000023841858
+        ],
+        "fill": [
+          "rgb(165,0,38)",
+          "rgb(165,0,38)",
+          "rgb(165,0,38)",
+          "rgb(215,48,39)",
+          "rgb(165,0,38)",
+          "rgb(244,109,67)",
+          "rgb(253,174,97)",
+          "rgb(254,224,139)",
+          "rgb(255,255,191)",
+          "rgb(165,0,38)",
+          "rgb(254,224,139)",
+          "rgb(215,48,39)",
+          "rgb(215,48,39)",
+          "rgb(244,109,67)",
+          "rgb(215,48,39)",
+          "rgb(253,174,97)",
+          "rgb(217,239,139)",
+          "rgb(166,217,106)",
+          "rgb(254,224,139)",
+          "rgb(253,174,97)",
+          "rgb(166,217,106)",
+          "rgb(244,109,67)",
+          "rgb(244,109,67)",
+          "rgb(217,239,139)",
+          "rgb(165,0,38)",
+          "rgb(244,109,67)",
+          "rgb(102,189,99)",
+          "rgb(26,152,80)",
+          "rgb(217,239,139)",
+          "rgb(255,255,191)",
+          "rgb(217,239,139)",
+          "rgb(215,48,39)",
+          "rgb(244,109,67)",
+          "rgb(215,48,39)",
+          "rgb(0,104,55)",
+          "rgb(165,0,38)",
+          "rgb(215,48,39)",
+          "rgb(253,174,97)",
+          "rgb(215,48,39)",
+          "rgb(165,0,38)",
+          "rgb(244,109,67)",
+          "rgb(217,239,139)",
+          "rgb(244,109,67)",
+          "rgb(253,174,97)",
+          "rgb(244,109,67)",
+          "rgb(215,48,39)",
+          "rgb(165,0,38)",
+          "rgb(165,0,38)",
+          "rgb(244,109,67)",
+          "rgb(215,48,39)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(116,0,27)",
+          "rgb(116,0,27)",
+          "rgb(116,0,27)",
+          "rgb(151,34,27)",
+          "rgb(116,0,27)",
+          "rgb(206,58,12)",
+          "rgb(242,121,3)",
+          "rgb(253,193,22)",
+          "rgb(255,255,57)",
+          "rgb(116,0,27)",
+          "rgb(253,193,22)",
+          "rgb(151,34,27)",
+          "rgb(151,34,27)",
+          "rgb(206,58,12)",
+          "rgb(151,34,27)",
+          "rgb(242,121,3)",
+          "rgb(184,225,39)",
+          "rgb(118,180,46)",
+          "rgb(253,193,22)",
+          "rgb(242,121,3)",
+          "rgb(118,180,46)",
+          "rgb(206,58,12)",
+          "rgb(206,58,12)",
+          "rgb(184,225,39)",
+          "rgb(116,0,27)",
+          "rgb(206,58,12)",
+          "rgb(63,142,60)",
+          "rgb(18,106,56)",
+          "rgb(184,225,39)",
+          "rgb(255,255,57)",
+          "rgb(184,225,39)",
+          "rgb(151,34,27)",
+          "rgb(206,58,12)",
+          "rgb(151,34,27)",
+          "rgb(0,73,38)",
+          "rgb(116,0,27)",
+          "rgb(151,34,27)",
+          "rgb(242,121,3)",
+          "rgb(151,34,27)",
+          "rgb(116,0,27)",
+          "rgb(206,58,12)",
+          "rgb(184,225,39)",
+          "rgb(206,58,12)",
+          "rgb(242,121,3)",
+          "rgb(206,58,12)",
+          "rgb(151,34,27)",
+          "rgb(116,0,27)",
+          "rgb(116,0,27)",
+          "rgb(206,58,12)",
+          "rgb(151,34,27)"
+        ],
+        "stroke-width": [
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px",
+          "2px"
+        ],
+        "shape": [
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle",
+          "circle"
+        ],
+        "xPosition": [
+          660.0269165039062,
+          348.44482421875,
+          478.2823791503906,
+          157.51547241210938,
+          431.14306640625,
+          171.7308807373047,
+          280.1138610839844,
+          243.1117401123047,
+          858.651123046875,
+          346.9373779296875,
+          290.2042999267578,
+          235.1656036376953,
+          186.15078735351562,
+          170.52727508544922,
+          159.093017578125,
+          299.14369201660156,
+          630.0769653320312,
+          262.62652587890625,
+          173.3259506225586,
+          387.0186462402344,
+          218.54298400878906,
+          286.3948211669922,
+          304.98060607910156,
+          186.09235382080078,
+          157.32850646972656,
+          172.36190032958984,
+          171.3452606201172,
+          227.09092712402344,
+          350.1625671386719,
+          180.6702880859375,
+          209.03683471679688,
+          153.70015716552734,
+          230.22848510742188,
+          163.9308090209961,
+          188.83261108398438,
+          121.34885787963867,
+          185.60740661621094,
+          257.83545684814453,
+          216.57981872558594,
+          157.54468536376953,
+          264.3793487548828,
+          195.42906188964844,
+          419.83734130859375,
+          196.4281768798828,
+          305.2084655761719,
+          235.76156616210938,
+          237.09371185302734,
+          191.87083435058594,
+          159.53121948242188,
+          163.59193420410156
+        ],
+        "yPosition": [
+          52.14285087585449,
+          84.28570365905762,
+          84.28570365905762,
+          116.42855834960938,
+          116.42855834960938,
+          116.42855834960938,
+          148.57144165039062,
+          148.57144165039062,
+          148.57144165039062,
+          148.57144165039062,
+          180.71429443359375,
+          180.71429443359375,
+          180.71429443359375,
+          212.85714721679688,
+          212.85714721679688,
+          212.85714721679688,
+          212.85714721679688,
+          212.85714721679688,
+          212.85714721679688,
+          212.85714721679688,
+          212.85714721679688,
+          212.85714721679688,
+          245.00000762939453,
+          245,
+          245,
+          245,
+          245,
+          245,
+          245,
+          245,
+          277.1428527832031,
+          277.1428527832031,
+          277.1428527832031,
+          277.1428527832031,
+          277.1428527832031,
+          277.1428527832031,
+          309.2857208251953,
+          309.2857208251953,
+          309.2857208251953,
+          309.2857208251953,
+          309.2857208251953,
+          341.42857360839844,
+          341.42857360839844,
+          341.42857360839844,
+          341.42857360839844,
+          341.42857360839844,
+          373.57142639160156,
+          373.57142639160156,
+          373.57142639160156,
+          373.57142639160156
+        ],
+        "area": [
+          2170.319946978241,
+          1790.5169786906336,
+          1899.031866430305,
+          162.77423882484436,
+          1627.7412857450545,
+          488.32259668409824,
+          412.3615126032382,
+          542.5808753157035,
+          1356.453530728817,
+          1953.290386736393,
+          162.77384947240353,
+          271.29009321704507,
+          542.5808753157035,
+          43.406435020733625,
+          21.703121275641024,
+          1519.2259509507567,
+          2007.547532081604,
+          162.77423882484436,
+          217.0323401237838,
+          2018.3984859567136,
+          401.51021184027195,
+          81.38690501451492,
+          922.3871157285757,
+          162.77404414862394,
+          434.0650778412819,
+          86.81291161617264,
+          97.66455419454724,
+          184.47737579140812,
+          1193.6763514615595,
+          195.3289445079863,
+          347.2522151507437,
+          54.25825362559408,
+          813.8711541704834,
+          43.40663608163595,
+          325.54872131347656,
+          1627.7415935550816,
+          271.2905958686024,
+          325.54789537237957,
+          271.2905958686024,
+          325.54789537237957,
+          358.1031858185306,
+          271.2905958686024,
+          813.8711541704834,
+          256.098153937608,
+          352.6774649526924,
+          271.2905958686024,
+          1627.743132605683,
+          651.0961765944958,
+          103.09053307864815,
+          75.96153398603201
+        ],
+        "width": [
+          46.586669921875,
+          42.31451416015625,
+          43.577880859375,
+          12.75830078125,
+          40.34527587890625,
+          22.0980224609375,
+          20.30670166015625,
+          23.293365478515625,
+          36.830078125,
+          44.196044921875,
+          12.758270263671875,
+          16.47088623046875,
+          23.293365478515625,
+          6.5883636474609375,
+          4.658660888671875,
+          38.977264404296875,
+          44.8056640625,
+          12.75830078125,
+          14.732009887695312,
+          44.92657470703125,
+          20.0377197265625,
+          9.021453857421875,
+          30.370819091796875,
+          12.758285522460938,
+          20.834228515625,
+          9.317337036132812,
+          9.882537841796875,
+          13.582244873046875,
+          34.54962158203125,
+          13.97601318359375,
+          18.63470458984375,
+          7.3660125732421875,
+          28.528411865234375,
+          6.5883636474609375,
+          18.04296875,
+          40.34528350830078,
+          16.47088623046875,
+          18.042953491210938,
+          16.47088623046875,
+          18.042953491210938,
+          18.923614501953125,
+          16.47088623046875,
+          28.5284423828125,
+          16.0030517578125,
+          18.77972412109375,
+          16.47088623046875,
+          40.34529113769531,
+          25.5166015625,
+          10.153350830078125,
+          8.715576171875
+        ],
+        "height": [
+          46.58671569824219,
+          42.31448745727539,
+          43.577884674072266,
+          12.75830078125,
+          40.34527587890625,
+          22.0980224609375,
+          20.306671142578125,
+          23.293365478515625,
+          36.830047607421875,
+          44.196044921875,
+          12.75830078125,
+          16.47088623046875,
+          23.293365478515625,
+          6.588348388671875,
+          4.658660888671875,
+          38.97723388671875,
+          44.8056640625,
+          12.75830078125,
+          14.732025146484375,
+          44.926605224609375,
+          20.0377197265625,
+          9.021484375,
+          30.370834350585938,
+          12.75830078125,
+          20.834228515625,
+          9.317352294921875,
+          9.882537841796875,
+          13.582244873046875,
+          34.54962158203125,
+          13.97601318359375,
+          18.63470458984375,
+          7.36602783203125,
+          28.5284423828125,
+          6.58837890625,
+          18.04296875,
+          40.34527587890625,
+          16.470916748046875,
+          18.042938232421875,
+          16.470916748046875,
+          18.042938232421875,
+          18.923614501953125,
+          16.470916748046875,
+          28.528411865234375,
+          16.003082275390625,
+          18.779693603515625,
+          16.470916748046875,
+          40.345306396484375,
+          25.516571044921875,
+          10.153350830078125,
+          8.715606689453125
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 18,
+      "ids": [
+        57,
+        59,
+        61,
+        63,
+        65,
+        67,
+        69,
+        71,
+        73,
+        75,
+        77,
+        79,
+        81,
+        83,
+        85,
+        87,
+        89,
+        91,
+        93,
+        95,
+        97,
+        99,
+        101,
+        103,
+        105,
+        107,
+        109,
+        111,
+        113,
+        115,
+        117,
+        119,
+        121,
+        123,
+        125,
+        127,
+        129,
+        131,
+        133,
+        135,
+        137,
+        139,
+        141,
+        143,
+        145,
+        147,
+        149,
+        151,
+        153,
+        155
+      ],
+      "mappings": [
+        {
+          "data": "Genre",
+          "attr": "fill",
+          "type": "nominal",
+          "params": {
+            "Animation": "rgb(165,0,38)",
+            "Drama": "rgb(215,48,39)",
+            "Comedy": "rgb(244,109,67)",
+            "Action": "rgb(253,174,97)",
+            "Biography": "rgb(254,224,139)",
+            "Adventure": "rgb(255,255,191)",
+            "Thriller": "rgb(217,239,139)",
+            "Crime": "rgb(166,217,106)",
+            "Documentary": "rgb(102,189,99)",
+            "Romance": "rgb(26,152,80)",
+            "Horror": "rgb(0,104,55)"
+          },
+          "group": "~0~groups~4"
+        },
+        {
+          "data": "Genre",
+          "attr": "stroke",
+          "type": "nominal",
+          "params": {
+            "Animation": "rgb(116,0,27)",
+            "Drama": "rgb(151,34,27)",
+            "Comedy": "rgb(206,58,12)",
+            "Action": "rgb(242,121,3)",
+            "Biography": "rgb(253,193,22)",
+            "Adventure": "rgb(255,255,57)",
+            "Thriller": "rgb(184,225,39)",
+            "Crime": "rgb(118,180,46)",
+            "Documentary": "rgb(63,142,60)",
+            "Romance": "rgb(18,106,56)",
+            "Horror": "rgb(0,73,38)"
+          },
+          "group": "~0~groups~4"
+        },
+        {
+          "data": [
+            "Profit"
+          ],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 121.34885787963867,
+            "attrMax": 858.651123046875,
+            "coeffs": [
+              0.5842748481273295,
+              155.70422256753702
+            ],
+            "err": 0.9999999999999982
+          },
+          "dataRange": [
+            -163.8,
+            1308.11
+          ],
+          "attrRange": [
+            60.000002444280426,
+            919.999994151378
+          ],
+          "group": "~0~groups~4"
+        },
+        {
+          "data": [
+            "Rotten Tomatoes"
+          ],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 52.14285087585449,
+            "attrMax": 373.57142639160156,
+            "coeffs": [
+              -32.14285745124678,
+              3234.2857443613275
+            ],
+            "err": 0.9999999999999936
+          },
+          "dataRange": [
+            86,
+            100
+          ],
+          "attrRange": [
+            470.0000035541043,
+            19.999999236649273
+          ],
+          "group": "~0~groups~4"
+        },
+        {
+          "data": [
+            "Budget"
+          ],
+          "attr": "area",
+          "type": "linear",
+          "params": {
+            "attrMin": 21.703121275641024,
+            "attrMax": 2170.319946978241,
+            "coeffs": [
+              10.85160970964361,
+              0.0001768018444772146
+            ],
+            "err": 0.9999999999991281
+          },
+          "dataRange": [
+            2,
+            200
+          ],
+          "attrRange": [
+            21.703396221131698,
+            2170.3221187305667
+          ],
+          "group": "~0~groups~4"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "opacity": "0.85",
+          "fill": "#a50026",
+          "stroke": "#74001b",
+          "stroke-width": "2",
+          "r": "23.293360538172468",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#a50026",
+          "stroke": "#74001b",
+          "stroke-width": "2",
+          "r": "21.15724538445552",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#a50026",
+          "stroke": "#74001b",
+          "stroke-width": "2",
+          "r": "21.78894363011041",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#d73027",
+          "stroke": "#97221b",
+          "stroke-width": "2",
+          "r": "6.379149503428867",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#a50026",
+          "stroke": "#74001b",
+          "stroke-width": "2",
+          "r": "20.17264196556732",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#f46d43",
+          "stroke": "#ce3a0c",
+          "stroke-width": "2",
+          "r": "11.049011049016574",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#fdae61",
+          "stroke": "#f27903",
+          "stroke-width": "2",
+          "r": "10.153340464135198",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#fee08b",
+          "stroke": "#fdc116",
+          "stroke-width": "2",
+          "r": "11.646680269086234",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#ffffbf",
+          "stroke": "#ffff39",
+          "stroke-width": "2",
+          "r": "18.41501841502762",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#a50026",
+          "stroke": "#74001b",
+          "stroke-width": "2",
+          "r": "22.098022098033148",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#fee08b",
+          "stroke": "#fdc116",
+          "stroke-width": "2",
+          "r": "6.379149503428867",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#d73027",
+          "stroke": "#97221b",
+          "stroke-width": "2",
+          "r": "8.23544659658244",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#d73027",
+          "stroke": "#97221b",
+          "stroke-width": "2",
+          "r": "11.646680269086234",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#f46d43",
+          "stroke": "#ce3a0c",
+          "stroke-width": "2",
+          "r": "3.294178638632976",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#d73027",
+          "stroke": "#97221b",
+          "stroke-width": "2",
+          "r": "2.3293360538172467",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#fdae61",
+          "stroke": "#f27903",
+          "stroke-width": "2",
+          "r": "19.488623645935167",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#d9ef8b",
+          "stroke": "#b8e127",
+          "stroke-width": "2",
+          "r": "22.402836801936346",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#a6d96a",
+          "stroke": "#76b42e",
+          "stroke-width": "2",
+          "r": "6.379149503428867",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#fee08b",
+          "stroke": "#fdc116",
+          "stroke-width": "2",
+          "r": "7.36600736601105",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#fdae61",
+          "stroke": "#f27903",
+          "stroke-width": "2",
+          "r": "22.463303408003014",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#a6d96a",
+          "stroke": "#76b42e",
+          "stroke-width": "2",
+          "r": "10.018853195592733",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#f46d43",
+          "stroke": "#ce3a0c",
+          "stroke-width": "2",
+          "r": "4.51073987207735",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#f46d43",
+          "stroke": "#ce3a0c",
+          "stroke-width": "2",
+          "r": "15.185413204570642",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#d9ef8b",
+          "stroke": "#b8e127",
+          "stroke-width": "2",
+          "r": "6.379149503428867",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#a50026",
+          "stroke": "#74001b",
+          "stroke-width": "2",
+          "r": "10.417107517552944",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#f46d43",
+          "stroke": "#ce3a0c",
+          "stroke-width": "2",
+          "r": "4.6586721076344935",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#66bd63",
+          "stroke": "#3f8e3c",
+          "stroke-width": "2",
+          "r": "4.941267957949464",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#1a9850",
+          "stroke": "#126a38",
+          "stroke-width": "2",
+          "r": "6.7911232383685745",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#d9ef8b",
+          "stroke": "#b8e127",
+          "stroke-width": "2",
+          "r": "17.274818518256847",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#ffffbf",
+          "stroke": "#ffff39",
+          "stroke-width": "2",
+          "r": "6.98800816145174",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#d9ef8b",
+          "stroke": "#b8e127",
+          "stroke-width": "2",
+          "r": "9.317344215268987",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#d73027",
+          "stroke": "#97221b",
+          "stroke-width": "2",
+          "r": "3.683003683005525",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#f46d43",
+          "stroke": "#ce3a0c",
+          "stroke-width": "2",
+          "r": "14.264211928300979",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#d73027",
+          "stroke": "#97221b",
+          "stroke-width": "2",
+          "r": "3.294178638632976",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#006837",
+          "stroke": "#004926",
+          "stroke-width": "2",
+          "r": "9.0214797441547",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#a50026",
+          "stroke": "#74001b",
+          "stroke-width": "2",
+          "r": "20.17264196556732",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#d73027",
+          "stroke": "#97221b",
+          "stroke-width": "2",
+          "r": "8.23544659658244",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#fdae61",
+          "stroke": "#f27903",
+          "stroke-width": "2",
+          "r": "9.0214797441547",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#d73027",
+          "stroke": "#97221b",
+          "stroke-width": "2",
+          "r": "8.23544659658244",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#a50026",
+          "stroke": "#74001b",
+          "stroke-width": "2",
+          "r": "9.0214797441547",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#f46d43",
+          "stroke": "#ce3a0c",
+          "stroke-width": "2",
+          "r": "9.461807779257244",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#d9ef8b",
+          "stroke": "#b8e127",
+          "stroke-width": "2",
+          "r": "8.23544659658244",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#f46d43",
+          "stroke": "#ce3a0c",
+          "stroke-width": "2",
+          "r": "14.264211928300979",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#fdae61",
+          "stroke": "#f27903",
+          "stroke-width": "2",
+          "r": "8.00153211135419",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#f46d43",
+          "stroke": "#ce3a0c",
+          "stroke-width": "2",
+          "r": "9.389853824139632",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#d73027",
+          "stroke": "#97221b",
+          "stroke-width": "2",
+          "r": "8.23544659658244",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#a50026",
+          "stroke": "#74001b",
+          "stroke-width": "2",
+          "r": "20.17264196556732",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#a50026",
+          "stroke": "#74001b",
+          "stroke-width": "2",
+          "r": "12.758299006857735",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#f46d43",
+          "stroke": "#ce3a0c",
+          "stroke-width": "2",
+          "r": "5.076670232067599",
+          "text": ""
+        },
+        {
+          "opacity": "0.85",
+          "fill": "#d73027",
+          "stroke": "#97221b",
+          "stroke-width": "2",
+          "r": "4.357788726022083",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "data": {
+        "domain": [
+          -163.8,
+          -163.8,
+          1308.11,
+          1308.11
+        ],
+        "tick": [
+          0,
+          5,
+          5,
+          0
+        ],
+        "lineID": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_xPosition_5": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_yPosition_5": [
+          1,
+          2,
+          0,
+          3
+        ],
+        "_deriv_width_5": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_height_5": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif"
+        ],
+        "font-size": [
+          "13px",
+          "13px",
+          "13px",
+          "13px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "linePoint",
+          "linePoint",
+          "linePoint",
+          "linePoint"
+        ],
+        "xPosition": [
+          60,
+          60,
+          920,
+          920
+        ],
+        "yPosition": [
+          475,
+          470,
+          470,
+          475
+        ],
+        "area": [
+          4300,
+          4300,
+          4300,
+          4300
+        ],
+        "width": [
+          860,
+          860,
+          860,
+          860
+        ],
+        "height": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 7,
+      "ids": [
+        22,
+        22,
+        22,
+        22
+      ],
+      "mappings": [
+        {
+          "data": [
+            "domain"
+          ],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 60,
+            "attrMax": 920,
+            "coeffs": [
+              0.5842748537614393,
+              155.7042210461237
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            -163.8,
+            1308.11
+          ],
+          "attrRange": [
+            59.99999999999994,
+            920
+          ],
+          "group": "~0~groups~5"
+        },
+        {
+          "data": [
+            "tick"
+          ],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 470,
+            "attrMax": 475,
+            "coeffs": [
+              -1,
+              475
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~5"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "domain",
+          "d": "M0,5V0H860V5",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,5V0H860V5",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,5V0H860V5",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,5V0H860V5",
+          "text": ""
+        }
+      ],
+      "name": "xaxis-line",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "domain": [
+          100,
+          100,
+          86,
+          86
+        ],
+        "tick": [
+          0,
+          6,
+          6,
+          0
+        ],
+        "lineID": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_xPosition_6": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "_deriv_yPosition_6": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_width_6": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_height_6": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif",
+          "'Josefin Sans', sans-serif"
+        ],
+        "font-size": [
+          "13px",
+          "13px",
+          "13px",
+          "13px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "linePoint",
+          "linePoint",
+          "linePoint",
+          "linePoint"
+        ],
+        "xPosition": [
+          54,
+          60,
+          60,
+          54
+        ],
+        "yPosition": [
+          20,
+          20,
+          470,
+          470
+        ],
+        "area": [
+          2700,
+          2700,
+          2700,
+          2700
+        ],
+        "width": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "height": [
+          450,
+          450,
+          450,
+          450
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 7,
+      "ids": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "mappings": [
+        {
+          "data": [
+            "tick"
+          ],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 54,
+            "attrMax": 60,
+            "coeffs": [
+              1,
+              54
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~6"
+        },
+        {
+          "data": [
+            "domain"
+          ],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 20,
+            "attrMax": 470,
+            "coeffs": [
+              -32.14285714285718,
+              3234.285714285719
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            86,
+            100
+          ],
+          "attrRange": [
+            470.0000000000018,
+            20.00000000000091
+          ],
+          "group": "~0~groups~6"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "domain",
+          "d": "M-6,0H0V450H-6",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M-6,0H0V450H-6",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M-6,0H0V450H-6",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M-6,0H0V450H-6",
+          "text": ""
+        }
+      ],
+      "name": "yaxis-line",
+      "axis": "yaxis"
+    }
+  ],
+  "mappingSets": {
+    "font-family": [],
+    "font-size": [],
+    "font-weight": [],
+    "opacity": [],
+    "fill": [
+      {
+        "mappingRefs": [
+          {
+            "data": "Genre",
+            "attr": "fill",
+            "type": "nominal",
+            "range": [
+              "rgb(165,0,38)",
+              "rgb(215,48,39)",
+              "rgb(244,109,67)",
+              "rgb(253,174,97)",
+              "rgb(254,224,139)",
+              "rgb(255,255,191)",
+              "rgb(217,239,139)",
+              "rgb(166,217,106)",
+              "rgb(102,189,99)",
+              "rgb(26,152,80)",
+              "rgb(0,104,55)"
+            ],
+            "groupID": 4
+          }
+        ],
+        "attributes": [
+          "rgb(165,0,38)",
+          "rgb(215,48,39)",
+          "rgb(244,109,67)",
+          "rgb(253,174,97)",
+          "rgb(254,224,139)",
+          "rgb(255,255,191)",
+          "rgb(217,239,139)",
+          "rgb(166,217,106)",
+          "rgb(102,189,99)",
+          "rgb(26,152,80)",
+          "rgb(0,104,55)"
+        ],
+        "type": "nominal"
+      }
+    ],
+    "fill-opacity": [],
+    "stroke": [
+      {
+        "mappingRefs": [
+          {
+            "data": "Genre",
+            "attr": "stroke",
+            "type": "nominal",
+            "range": [
+              "rgb(116,0,27)",
+              "rgb(151,34,27)",
+              "rgb(206,58,12)",
+              "rgb(242,121,3)",
+              "rgb(253,193,22)",
+              "rgb(255,255,57)",
+              "rgb(184,225,39)",
+              "rgb(118,180,46)",
+              "rgb(63,142,60)",
+              "rgb(18,106,56)",
+              "rgb(0,73,38)"
+            ],
+            "groupID": 4
+          }
+        ],
+        "attributes": [
+          "rgb(116,0,27)",
+          "rgb(151,34,27)",
+          "rgb(206,58,12)",
+          "rgb(242,121,3)",
+          "rgb(253,193,22)",
+          "rgb(255,255,57)",
+          "rgb(184,225,39)",
+          "rgb(118,180,46)",
+          "rgb(63,142,60)",
+          "rgb(18,106,56)",
+          "rgb(0,73,38)"
+        ],
+        "type": "nominal"
+      }
+    ],
+    "stroke-width": [],
+    "shape": [],
+    "xPosition": [
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              155.7042236328125,
+              856.8340454101562
+            ],
+            "groupID": 0
+          },
+          {
+            "data": "number",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              155.7042236328125,
+              856.8340454101562
+            ],
+            "groupID": 1
+          },
+          {
+            "data": "Profit",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              121.34885787963867,
+              858.651123046875
+            ],
+            "groupID": 4
+          },
+          {
+            "data": "domain",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              60,
+              920
+            ],
+            "groupID": 5
+          }
+        ],
+        "attributes": [
+          60,
+          920
+        ],
+        "type": "linear"
+      }
+    ],
+    "yPosition": [
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              20,
+              470
+            ],
+            "groupID": 2
+          },
+          {
+            "data": "number",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              20.9609375,
+              470.9609375
+            ],
+            "groupID": 3
+          },
+          {
+            "data": "Rotten Tomatoes",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              52.14285087585449,
+              373.57142639160156
+            ],
+            "groupID": 4
+          },
+          {
+            "data": "domain",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              20,
+              470
+            ],
+            "groupID": 6
+          }
+        ],
+        "attributes": [
+          20,
+          470.9609375
+        ],
+        "type": "linear"
+      }
+    ],
+    "area": [
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "area",
+            "type": "nominal",
+            "range": [
+              102.900390625,
+              289.482421875,
+              291.083984375,
+              291.8851566314697,
+              290.283203125,
+              384.375,
+              365.95703125
+            ],
+            "groupID": 1
+          }
+        ],
+        "attributes": [
+          102.900390625,
+          289.482421875,
+          291.083984375,
+          291.8851566314697,
+          290.283203125,
+          384.375,
+          365.95703125
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "Budget",
+            "attr": "area",
+            "type": "linear",
+            "range": [
+              21.703121275641024,
+              2170.319946978241
+            ],
+            "groupID": 4
+          }
+        ],
+        "attributes": [
+          21.703121275641024,
+          2170.319946978241
+        ],
+        "type": "linear"
+      }
+    ],
+    "width": [
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "width",
+            "type": "nominal",
+            "range": [
+              8.03125,
+              22.59375,
+              22.71875,
+              22.781280517578125,
+              22.65625,
+              30,
+              28.5625
+            ],
+            "groupID": 1
+          }
+        ],
+        "attributes": [
+          8.03125,
+          22.59375,
+          22.71875,
+          22.781280517578125,
+          22.65625,
+          30,
+          28.5625
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "_deriv_width_1",
+            "attr": "width",
+            "type": "nominal",
+            "range": [
+              8.03125,
+              22.59375,
+              22.781280517578125,
+              22.65625,
+              22.71875,
+              28.5625,
+              30
+            ],
+            "groupID": 1
+          }
+        ],
+        "attributes": [
+          8.03125,
+          22.59375,
+          22.781280517578125,
+          22.65625,
+          22.71875,
+          28.5625,
+          30
+        ],
+        "type": "nominal"
+      }
+    ],
+    "height": [],
+    "text": [
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "text",
+            "type": "nominal",
+            "range": [
+              "0",
+              "200",
+              "400",
+              "600",
+              "800",
+              "1,000",
+              "1,200"
+            ],
+            "groupID": 1
+          }
+        ],
+        "attributes": [
+          "0",
+          "200",
+          "400",
+          "600",
+          "800",
+          "1,000",
+          "1,200"
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "text",
+            "type": "nominal",
+            "range": [
+              "86",
+              "88",
+              "90",
+              "92",
+              "94",
+              "96",
+              "98",
+              "100"
+            ],
+            "groupID": 3
+          }
+        ],
+        "attributes": [
+          "86",
+          "88",
+          "90",
+          "92",
+          "94",
+          "96",
+          "98",
+          "100"
+        ],
+        "type": "nominal"
+      }
+    ],
+    "rotation": []
+  },
+  "ids": []
+}
