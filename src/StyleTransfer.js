@@ -219,9 +219,6 @@ var transferChart = function (sourceData, targetVis) {
     });
     var sourceDataCounts = _.keys(sourceData).sort();
     var targetDataCounts = _.keys(targetGroupsByDataCount).sort();
-    //
-    //var allRankedSourceData = getRankedDataFields(sourceVis.groups);
-    //var allRankedTargetMappings = getRankedDataFields(targetVis.groups);
 
     var allNewMappings = [];
 
@@ -943,7 +940,6 @@ var main = function () {
         if (typeof test.source_type === "undefined" || test.source_type === "deconstruction") {
             test.sourceDecon = util.loadDeconstructedVis(test.source_file);
 
-            // FIXME: extractDataFromDeconstruction currently non-functional.
             sourceData = extractDataFromDeconstruction(test.sourceDecon);
         }
         else if (test.source_type === "json_data") {
