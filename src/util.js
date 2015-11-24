@@ -60,6 +60,7 @@ var parseJSONDataField = function(dataset, columnName) {
     if (mappingType === "linear") {
         fieldData = _.map(fieldData, function(value) {return +value;});
         dataRange = niceNumberRange([_.min(fieldData), _.max(fieldData)], true);
+        if (config.forceLinearAxisZero) dataRange[0] = 0;
     }
     else {
         dataRange = _.uniq(fieldData);
