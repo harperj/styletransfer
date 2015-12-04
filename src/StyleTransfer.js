@@ -399,9 +399,11 @@ var createAxes = function (axes, targetVis, newMappings, newGroups) {
                 ticks.attrs['yPosition'] = _.map(ticks.attrs['yPosition'], function(yPos) {return yPos + newAxisShiftDistance;});
                 labels.attrs['yPosition'] = _.map(labels.attrs['yPosition'], function(yPos) {return yPos + newAxisShiftDistance;});
                 line.attrs['yPosition'] = _.map(line.attrs['yPosition'], function(yPos) {return yPos + newAxisShiftDistance;});
-                line.ids.forEach(function(id, ind) {
-                    line.data['tick'][ind] = line.getMappingForAttr('yPosition').invert(line.attrs['yPosition'][ind]);
-                });
+                if (line.getMappingForAttr('yPosition')) {
+                    line.ids.forEach(function (id, ind) {
+                        line.data['tick'][ind] = line.getMappingForAttr('yPosition').invert(line.attrs['yPosition'][ind]);
+                    });
+                }
                 //line.getMapping('tick', 'yPosition').params.coeffs[1] += (newGroupMax - axisLineMin) + padding;
             }
         }
@@ -959,3 +961,8 @@ var main = function () {
 if (require.main === module) {
     main();
 }
+
+module.exports = {
+    transferChart: transferChart,
+    extractDataFromDeconstruction: extractDataFromDeconstruction
+};

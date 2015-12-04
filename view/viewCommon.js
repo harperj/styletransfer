@@ -277,16 +277,34 @@ var drawLine = function (attrs, data, nodeAttrs, svg) {
 
 var createLine = function (data, attrs, svg) {
     var indMapping = {};
-    _.each(data['lineID'], function (lineID, ind) {
-        indMapping[lineID] = ind;
-    });
+
+    if (data['lineID']) {
+        _.each(data['lineID'], function (lineID, ind) {
+            indMapping[lineID] = ind;
+        });
+    }
+    else {
+        var positions = attrs['xPosition'].slice(attrs['xPosition']);
+        positions.forEach(function(position, ind) {
+            positions[ind] = [ind, position];
+        });
+        positions = positions.sort(function(a,b) {
+            if(a[1] > b[1]) return -1;
+            else if(a[1] === b[1]) return 0;
+            else return 1;
+        });
+        _.each(positions, function (position, ind) {
+            indMapping[ind] = position[0];
+        });
+    }
+    //console.log(indMapping);
 
     var newNode = document.createElementNS("http://www.w3.org/2000/svg", "path");
     svg.appendChild(newNode);
 
     var dString = "";
 
-    for (var i = 0; i <= _.max(data['lineID']); ++i) {
+    for (var i = 0; i <= _.max(indMapping); ++i) {
         if (i === 0) {
             dString += "M" + attrs['xPosition'][indMapping[i]] + "," + attrs['yPosition'][indMapping[i]];
         }

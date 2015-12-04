@@ -3,7 +3,7 @@
  */
 
 var transfer_config = {
-    forceLinearAxisZero: true,
+    forceLinearAxisZero: false,
     position_transfer: "boundingbox",
     semiology_lin: {
         "xPosition": 1,
