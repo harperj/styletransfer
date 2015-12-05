@@ -8,8 +8,8 @@ var config = require('./config');
 var targets = [
     './data/result_scatter_1.json',
     './data/dowson_bars.json',
-    './data/result_bars_1.json',
-    './data/kuijjer_line.json'
+    './data/result_dots_2.json',
+    './data/my_line.json'
 ];
 
 var sources = [
@@ -24,6 +24,22 @@ var sources = [
     {
         file: './data/result_dots_1.json',
         type: 'deconstruction'
+    },
+    {
+        file: './data/npr_bars.json',
+        type: 'deconstruction'
+    },
+    {
+        file: './data/5308_bars.json',
+        type: 'deconstruction'
+    },
+    {
+        file: './data/leondutoit_dots.json',
+        type: 'deconstruction'
+    },
+    {
+        file: './data/custody.data.json',
+        type: 'json_data'
     }
 ];
 
