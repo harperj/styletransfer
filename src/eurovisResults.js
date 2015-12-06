@@ -6,10 +6,19 @@ var util = require('./util');
 var config = require('./config');
 
 var targets = [
-    './data/result_scatter_1.json',
+    './data/result_scatter_3.json',
     './data/dowson_bars.json',
     './data/leondutoit_dots.json',
-    './data/my_line.json'
+    './data/kuijjer_line.json',
+    './data/npr_bars.json',
+    './data/vallandingham_scatter.json',
+    './data/result_dots_1.json',
+    './data/example_bars.json',
+    './data/example_dots.json',
+    './data/excel_bars.json',
+    './data/gdp_bars.json',
+    './data/anscombe1.json',
+    './data/5308_bars.json'
 ];
 
 var sources = [
