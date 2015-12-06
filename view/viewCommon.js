@@ -228,7 +228,7 @@ var transferSpatialAttrs = function (newNode, svg, attrs, group) {
     if (isNaN(heightScale) || heightScale == Infinity) {
         heightScale = 1;
     }
-    newScale.setScale(widthScale, heightScale);
+    if (isFinite(widthScale) && isFinite(heightScale)) newScale.setScale(widthScale, heightScale);
 
     newNode.transform.baseVal.appendItem(newScale);
 
