@@ -1,1 +1,1992 @@
-{"svg":{"width":960,"height":500},"axes":[{"orient":"bottom","innerTickSize":6,"outerTickSize":6,"tickPadding":3,"tickArguments":{"0":3},"tickValues":null,"ticks":[0,100,200],"axis":"xaxis","scaleDomain":[0,220],"offset":{"x":60,"y":470},"scaleRange":[60,940],"boundingBox":{"height":21.953125,"width":883.90625,"y":470,"x":56.09375}},{"orient":"left","innerTickSize":6,"outerTickSize":6,"tickPadding":3,"tickArguments":[10],"tickValues":null,"ticks":["Coke","Sprite","Fanta","Pepsi","7 UP"],"axis":"yaxis","scaleDomain":["Coke","Sprite","Fanta","Pepsi","7 UP"],"offset":{"x":60,"y":20},"scaleRange":[29,117,205,293,381],"boundingBox":{"height":450,"width":45.5625,"y":20,"x":14.4375}}],"groups":[{"data":{"drink":["Coke","Sprite","Fanta","Pepsi","7 UP"],"brand":["coke","coke","coke","pepsi","pepsi"],"cost":[200,190,140,210,180],"_deriv_xPosition_0":[2,4,1,0,3],"_deriv_yPosition_0":[0,1,2,3,4],"_deriv_width_0":[2,4,1,0,3],"_deriv_height_0":[0,1,2,3,4]},"attrs":{"font-family":["Times","Times","Times","Times","Times"],"font-size":["16px","16px","16px","16px","16px"],"font-weight":["normal","normal","normal","normal","normal"],"opacity":[1,1,1,1,1],"fill":["rgb(140,86,75)","rgb(140,86,75)","rgb(140,86,75)","rgb(188,189,34)","rgb(188,189,34)"],"fill-opacity":[1,1,1,1,1],"stroke":["none","none","none","none","none"],"stroke-width":[1,1,1,1,1],"shape":["rect","rect","rect","rect","rect"],"xPosition":[460,440,340,480,420],"yPosition":[68.5,156.5,244.5,332.5,420.5],"area":[63200,60040,44240,66360,56880],"width":[800,760,560,840,720],"height":[79,79,79,79,79],"text":["","","","",""],"rotation":[0,0,0,0,0]},"numFields":7,"ids":[1,2,3,4,5],"mappings":[{"data":"brand","attr":"fill","type":"nominal","params":{"coke":"rgb(140,86,75)","pepsi":"rgb(188,189,34)"},"group":"~0~groups~0"},{"data":["cost"],"attr":"xPosition","type":"linear","params":{"attrMin":340,"attrMax":480,"coeffs":[1.999999999999985,60.0000000000075],"err":1},"dataRange":[0,220],"attrRange":[60.0000000000075,500.0000000000042],"group":"~0~groups~0"},{"data":["_deriv_yPosition_0"],"attr":"yPosition","type":"derived","params":{"attrMin":68.5,"attrMax":420.5,"coeffs":[88.00000000000003,68.49999999999991],"err":1},"group":"~0~groups~0"},{"data":["cost"],"attr":"area","type":"linear","params":{"attrMin":44240,"attrMax":66360,"coeffs":[315.99999999999795,1.0368239600211382e-9],"err":1},"dataRange":[140,210],"attrRange":[44240.00000000076,66360.0000000006],"group":"~0~groups~0"},{"data":["cost"],"attr":"width","type":"linear","params":{"attrMin":560,"attrMax":840,"coeffs":[3.9999999999999747,1.2846612662542611e-11],"err":1},"dataRange":[140,210],"attrRange":[560.0000000000093,840.0000000000075],"group":"~0~groups~0"}],"nodeAttrs":[{"class":"bar","x":"0","width":"800","y":"9","height":"79","fill":"rgb(140,86,75)","text":""},{"class":"bar","x":"0","width":"760","y":"97","height":"79","fill":"rgb(140,86,75)","text":""},{"class":"bar","x":"0","width":"560","y":"185","height":"79","fill":"rgb(140,86,75)","text":""},{"class":"bar","x":"0","width":"840","y":"273","height":"79","fill":"rgb(188,189,34)","text":""},{"class":"bar","x":"0","width":"720","y":"361","height":"79","fill":"rgb(188,189,34)","text":""}]},{"data":{"number":[0,100,200],"_deriv_xPosition_1":[0,1,2],"_deriv_yPosition_1":[0,1,2],"_deriv_width_1":[0,1,2],"_deriv_height_1":[0,1,2]},"attrs":{"font-family":["Times","Times","Times"],"font-size":["16px","16px","16px"],"font-weight":["normal","normal","normal"],"opacity":[1,1,1],"fill":["none","none","none"],"fill-opacity":[1,1,1],"stroke":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"stroke-width":["0.5px","0.5px","0.5px"],"shape":["line","line","line"],"xPosition":[60,460,860],"yPosition":[473,473,473],"area":[0,0,0],"width":[0,0,0],"height":[6,6,6],"text":["","",""],"rotation":[0,0,0]},"numFields":5,"ids":[8,11,14],"mappings":[{"data":["number"],"attr":"xPosition","type":"linear","params":{"attrMin":60,"attrMax":860,"coeffs":[4,60.00000000000003],"err":1},"dataRange":[0,220],"attrRange":[60.00000000000003,940],"group":"~0~groups~1"}],"nodeAttrs":[{"y2":"6","x2":"0","text":""},{"y2":"6","x2":"0","text":""},{"y2":"6","x2":"0","text":""}],"name":"xaxis-ticks","axis":"xaxis"},{"data":{"number":[0,100,200],"_deriv_xPosition_1":[0,1,2],"_deriv_yPosition_2":[0,1,2],"_deriv_width_2":[0,1,2],"_deriv_height_2":[0,1,2]},"attrs":{"font-family":["sans-serif","sans-serif","sans-serif"],"font-size":["14px","14px","14px"],"font-weight":["normal","normal","normal"],"opacity":[1,1,1],"fill":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"fill-opacity":[1,1,1],"stroke":["none","none","none"],"stroke-width":[1,1,1],"shape":["text","text","text"],"xPosition":[60,460,860],"yPosition":[485.1875,485.1875,485.1875],"area":[105.712890625,316.29296875,316.29296875],"width":[7.8125,23.375,23.375],"height":[13.53125,13.53125,13.53125],"text":["0","100","200"],"rotation":[0,0,0]},"numFields":5,"ids":[9,12,15],"mappings":[{"data":"number","attr":"text","type":"nominal","params":{"0":"0","100":"100","200":"200"},"group":"~0~groups~2"},{"data":["number"],"attr":"xPosition","type":"linear","params":{"attrMin":60,"attrMax":860,"coeffs":[4,60.00000000000003],"err":1},"dataRange":[0,220],"attrRange":[60.00000000000003,940],"group":"~0~groups~2"}],"nodeAttrs":[{"dy":".71em","y":"9","x":"0","style":"text-anchor: middle;","text":"0"},{"dy":".71em","y":"9","x":"0","style":"text-anchor: middle;","text":"100"},{"dy":".71em","y":"9","x":"0","style":"text-anchor: middle;","text":"200"}],"name":"xaxis-labels","axis":"xaxis"},{"data":{"string":["Coke","Sprite","Fanta","Pepsi","7 UP"],"_deriv_xPosition_3":[0,1,2,3,4],"_deriv_yPosition_0":[0,1,2,3,4],"_deriv_width_3":[0,1,2,3,4],"_deriv_height_3":[0,1,2,3,4]},"attrs":{"font-family":["Times","Times","Times","Times","Times"],"font-size":["16px","16px","16px","16px","16px"],"font-weight":["normal","normal","normal","normal","normal"],"opacity":[1,1,1,1,1],"fill":["none","none","none","none","none"],"fill-opacity":[1,1,1,1,1],"stroke":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"stroke-width":["0.5px","0.5px","0.5px","0.5px","0.5px"],"shape":["line","line","line","line","line"],"xPosition":[57,57,57,57,57],"yPosition":[68.5,156.5,244.5,332.5,420.5],"area":[0,0,0,0,0],"width":[6,6,6,6,6],"height":[0,0,0,0,0],"text":["","","","",""],"rotation":[0,0,0,0,0]},"numFields":5,"ids":[19,22,25,28,31],"mappings":[{"data":["_deriv_yPosition_0"],"attr":"yPosition","type":"derived","params":{"attrMin":68.5,"attrMax":420.5,"coeffs":[88.00000000000003,68.49999999999991],"err":1},"group":"~0~groups~3"}],"nodeAttrs":[{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""},{"x2":"-6","y2":"0","text":""}],"name":"yaxis-ticks","axis":"yaxis"},{"data":{"string":["Coke","Sprite","Fanta","Pepsi","7 UP"],"_deriv_xPosition_4":[1,2,3,0,4],"_deriv_yPosition_0":[0,1,2,3,4],"_deriv_width_4":[4,0,3,2,1],"_deriv_height_4":[0,1,2,3,4]},"attrs":{"font-family":["sans-serif","sans-serif","sans-serif","sans-serif","sans-serif"],"font-size":["14px","14px","14px","14px","14px"],"font-weight":["normal","normal","normal","normal","normal"],"opacity":[1,1,1,1,1],"fill":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"fill-opacity":[1,1,1,1,1],"stroke":["none","none","none","none","none"],"stroke-width":[1,1,1,1,1],"shape":["text","text","text","text","text"],"xPosition":[34.6640625,32.71875,33.1015625,33.4921875,35.4375],"yPosition":[69.2265625,157.2265625,245.2265625,333.2265625,421.2265625],"area":[441.580810546875,494.1650390625,483.817138671875,473.258056640625,420.673828125],"width":[32.671875,36.5625,35.796875,35.015625,31.125],"height":[13.515625,13.515625,13.515625,13.515625,13.515625],"text":["Coke","Sprite","Fanta","Pepsi","7 UP"],"rotation":[0,0,0,0,0]},"numFields":5,"ids":[20,23,26,29,32],"mappings":[{"data":"string","attr":"xPosition","type":"nominal","params":{"Coke":34.6640625,"Sprite":32.71875,"Fanta":33.1015625,"Pepsi":33.4921875,"7 UP":35.4375},"group":"~0~groups~4"},{"data":"string","attr":"area","type":"nominal","params":{"Coke":441.580810546875,"Sprite":494.1650390625,"Fanta":483.817138671875,"Pepsi":473.258056640625,"7 UP":420.673828125},"group":"~0~groups~4"},{"data":"string","attr":"width","type":"nominal","params":{"Coke":32.671875,"Sprite":36.5625,"Fanta":35.796875,"Pepsi":35.015625,"7 UP":31.125},"group":"~0~groups~4"},{"data":"string","attr":"text","type":"nominal","params":{"Coke":"Coke","Sprite":"Sprite","Fanta":"Fanta","Pepsi":"Pepsi","7 UP":"7 UP"},"group":"~0~groups~4"},{"data":"_deriv_xPosition_4","attr":"xPosition","type":"nominal","params":{"0":33.4921875,"1":34.6640625,"2":32.71875,"3":33.1015625,"4":35.4375},"group":"~0~groups~4"},{"data":"_deriv_width_4","attr":"width","type":"nominal","params":{"0":36.5625,"1":31.125,"2":35.015625,"3":35.796875,"4":32.671875},"group":"~0~groups~4"},{"data":["_deriv_yPosition_0"],"attr":"yPosition","type":"derived","params":{"attrMin":69.2265625,"attrMax":421.2265625,"coeffs":[88.00000000000003,69.22656249999993],"err":1},"group":"~0~groups~4"}],"nodeAttrs":[{"dy":".32em","x":"-9","y":"0","style":"text-anchor: end;","text":"Coke"},{"dy":".32em","x":"-9","y":"0","style":"text-anchor: end;","text":"Sprite"},{"dy":".32em","x":"-9","y":"0","style":"text-anchor: end;","text":"Fanta"},{"dy":".32em","x":"-9","y":"0","style":"text-anchor: end;","text":"Pepsi"},{"dy":".32em","x":"-9","y":"0","style":"text-anchor: end;","text":"7 UP"}],"name":"yaxis-labels","axis":"yaxis"},{"data":{"domain":[0,0,220,220],"tick":[0,6,6,0],"lineID":[0,1,2,3],"_deriv_xPosition_5":[0,1,2,3],"_deriv_yPosition_5":[1,2,0,3],"_deriv_width_5":[0,1,2,3],"_deriv_height_5":[0,1,2,3]},"attrs":{"font-family":["Times","Times","Times","Times"],"font-size":["16px","16px","16px","16px"],"font-weight":["normal","normal","normal","normal"],"opacity":[1,1,1,1],"fill":["none","none","none","none"],"fill-opacity":[1,1,1,1],"stroke":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"stroke-width":["0.5px","0.5px","0.5px","0.5px"],"shape":["linePoint","linePoint","linePoint","linePoint"],"xPosition":[60,60,940,940],"yPosition":[476,470,470,476],"area":[5280,5280,5280,5280],"width":[880,880,880,880],"height":[6,6,6,6],"text":["","","",""],"rotation":[0,0,0,0]},"numFields":7,"ids":[16,16,16,16],"mappings":[{"data":["domain"],"attr":"xPosition","type":"linear","params":{"attrMin":60,"attrMax":940,"coeffs":[4.000000000000002,59.99999999999979],"err":1},"dataRange":[0,220],"attrRange":[59.99999999999979,940.0000000000001],"group":"~0~groups~5"},{"data":["tick"],"attr":"yPosition","type":"linear","params":{"attrMin":470,"attrMax":476,"coeffs":[-1,476],"err":1},"group":"~0~groups~5"}],"nodeAttrs":[{"class":"domain","d":"M0,6V0H880V6","text":""},{"class":"domain","d":"M0,6V0H880V6","text":""},{"class":"domain","d":"M0,6V0H880V6","text":""},{"class":"domain","d":"M0,6V0H880V6","text":""}],"name":"xaxis-line","axis":"xaxis"},{"data":{"axis":[0,0,450,450],"tick":[0,6,6,0],"lineID":[0,1,2,3],"_deriv_xPosition_6":[0,3,1,2],"_deriv_yPosition_6":[0,1,2,3],"_deriv_width_6":[0,1,2,3],"_deriv_height_6":[0,1,2,3]},"attrs":{"font-family":["Times","Times","Times","Times"],"font-size":["16px","16px","16px","16px"],"font-weight":["normal","normal","normal","normal"],"opacity":[1,1,1,1],"fill":["none","none","none","none"],"fill-opacity":[1,1,1,1],"stroke":["rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)","rgb(0,0,0)"],"stroke-width":["0.5px","0.5px","0.5px","0.5px"],"shape":["linePoint","linePoint","linePoint","linePoint"],"xPosition":[54,60,60,54],"yPosition":[20,20,470,470],"area":[2700,2700,2700,2700],"width":[6,6,6,6],"height":[450,450,450,450],"text":["","","",""],"rotation":[0,0,0,0]},"numFields":7,"ids":[33,33,33,33],"mappings":[{"data":["tick"],"attr":"xPosition","type":"linear","params":{"attrMin":54,"attrMax":60,"coeffs":[1,54],"err":1},"group":"~0~groups~6"},{"data":["axis"],"attr":"yPosition","type":"linear","params":{"attrMin":20,"attrMax":470,"coeffs":[1,20],"err":1},"dataRange":[0,450],"attrRange":[20,470],"group":"~0~groups~6"}],"nodeAttrs":[{"class":"domain","d":"M-6,0H0V450H-6","text":""},{"class":"domain","d":"M-6,0H0V450H-6","text":""},{"class":"domain","d":"M-6,0H0V450H-6","text":""},{"class":"domain","d":"M-6,0H0V450H-6","text":""}],"name":"yaxis-line","axis":"yaxis"}],"mappingSets":{"font-family":[],"font-size":[],"font-weight":[],"opacity":[],"fill":[{"mappingRefs":[{"data":"brand","attr":"fill","type":"nominal","range":["rgb(140,86,75)","rgb(188,189,34)"],"groupID":0}],"attributes":["rgb(140,86,75)","rgb(188,189,34)"],"type":"nominal"}],"fill-opacity":[],"stroke":[],"stroke-width":[],"shape":[],"xPosition":[{"mappingRefs":[{"data":"cost","attr":"xPosition","type":"linear","range":[340,480],"groupID":0},{"data":"number","attr":"xPosition","type":"linear","range":[60,860],"groupID":1},{"data":"number","attr":"xPosition","type":"linear","range":[60,860],"groupID":2},{"data":"domain","attr":"xPosition","type":"linear","range":[60,940],"groupID":5}],"attributes":[60,940],"type":"linear"},{"mappingRefs":[{"data":"string","attr":"xPosition","type":"nominal","range":[34.6640625,32.71875,33.1015625,33.4921875,35.4375],"groupID":4}],"attributes":[34.6640625,32.71875,33.1015625,33.4921875,35.4375],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_xPosition_4","attr":"xPosition","type":"nominal","range":[33.4921875,34.6640625,32.71875,33.1015625,35.4375],"groupID":4}],"attributes":[33.4921875,34.6640625,32.71875,33.1015625,35.4375],"type":"nominal"}],"yPosition":[{"mappingRefs":[{"data":"axis","attr":"yPosition","type":"linear","range":[20,470],"groupID":6}],"attributes":[20,470],"type":"linear"}],"area":[{"mappingRefs":[{"data":"cost","attr":"area","type":"linear","range":[44240,66360],"groupID":0}],"attributes":[44240,66360],"type":"linear"},{"mappingRefs":[{"data":"string","attr":"area","type":"nominal","range":[441.580810546875,494.1650390625,483.817138671875,473.258056640625,420.673828125],"groupID":4}],"attributes":[441.580810546875,494.1650390625,483.817138671875,473.258056640625,420.673828125],"type":"nominal"}],"width":[{"mappingRefs":[{"data":"cost","attr":"width","type":"linear","range":[560,840],"groupID":0}],"attributes":[560,840],"type":"linear"},{"mappingRefs":[{"data":"string","attr":"width","type":"nominal","range":[32.671875,36.5625,35.796875,35.015625,31.125],"groupID":4}],"attributes":[32.671875,36.5625,35.796875,35.015625,31.125],"type":"nominal"},{"mappingRefs":[{"data":"_deriv_width_4","attr":"width","type":"nominal","range":[36.5625,31.125,35.015625,35.796875,32.671875],"groupID":4}],"attributes":[36.5625,31.125,35.015625,35.796875,32.671875],"type":"nominal"}],"height":[],"text":[{"mappingRefs":[{"data":"number","attr":"text","type":"nominal","range":["0","100","200"],"groupID":2}],"attributes":["0","100","200"],"type":"nominal"},{"mappingRefs":[{"data":"string","attr":"text","type":"nominal","range":["Coke","Sprite","Fanta","Pepsi","7 UP"],"groupID":4}],"attributes":["Coke","Sprite","Fanta","Pepsi","7 UP"],"type":"nominal"}],"rotation":[]},"ids":[]}
+{
+  "svg": {
+    "width": 960,
+    "height": 500
+  },
+  "axes": [
+    {
+      "orient": "bottom",
+      "innerTickSize": 6,
+      "outerTickSize": 6,
+      "tickPadding": 3,
+      "tickArguments": {"0": 3},
+      "tickValues": null,
+      "ticks": [
+        0,
+        100,
+        200
+      ],
+      "axis": "xaxis",
+      "scaleDomain": [
+        0,
+        220
+      ],
+      "offset": {
+        "x": 60,
+        "y": 470
+      },
+      "scaleRange": [
+        60,
+        940
+      ],
+      "boundingBox": {
+        "height": 21.953125,
+        "width": 883.90625,
+        "y": 470,
+        "x": 56.09375
+      }
+    },
+    {
+      "orient": "left",
+      "innerTickSize": 6,
+      "outerTickSize": 6,
+      "tickPadding": 3,
+      "tickArguments": [10],
+      "tickValues": null,
+      "ticks": [
+        "Coke",
+        "Sprite",
+        "Fanta",
+        "Pepsi",
+        "7 UP"
+      ],
+      "axis": "yaxis",
+      "scaleDomain": [
+        "Coke",
+        "Sprite",
+        "Fanta",
+        "Pepsi",
+        "7 UP"
+      ],
+      "offset": {
+        "x": 60,
+        "y": 20
+      },
+      "scaleRange": [
+        29,
+        117,
+        205,
+        293,
+        381
+      ],
+      "boundingBox": {
+        "height": 450,
+        "width": 45.5625,
+        "y": 20,
+        "x": 14.4375
+      }
+    }
+  ],
+  "groups": [
+    {
+      "data": {
+        "drink": [
+          "Coke",
+          "Sprite",
+          "Fanta",
+          "Pepsi",
+          "7 UP"
+        ],
+        "brand": [
+          "coke",
+          "coke",
+          "coke",
+          "pepsi",
+          "pepsi"
+        ],
+        "cost": [
+          200,
+          190,
+          140,
+          210,
+          180
+        ],
+        "_deriv_xPosition_0": [
+          2,
+          4,
+          1,
+          0,
+          3
+        ],
+        "_deriv_yPosition_0": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "_deriv_width_0": [
+          2,
+          4,
+          1,
+          0,
+          3
+        ],
+        "_deriv_height_0": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(140,86,75)",
+          "rgb(140,86,75)",
+          "rgb(140,86,75)",
+          "rgb(188,189,34)",
+          "rgb(188,189,34)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "rect",
+          "rect",
+          "rect",
+          "rect",
+          "rect"
+        ],
+        "xPosition": [
+          460,
+          440,
+          340,
+          480,
+          420
+        ],
+        "yPosition": [
+          68.5,
+          156.5,
+          244.5,
+          332.5,
+          420.5
+        ],
+        "area": [
+          63200,
+          60040,
+          44240,
+          66360,
+          56880
+        ],
+        "width": [
+          800,
+          760,
+          560,
+          840,
+          720
+        ],
+        "height": [
+          79,
+          79,
+          79,
+          79,
+          79
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 7,
+      "ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mappings": [
+        {
+          "data": "brand",
+          "attr": "fill",
+          "type": "nominal",
+          "params": {
+            "coke": "rgb(140,86,75)",
+            "pepsi": "rgb(188,189,34)"
+          },
+          "group": "~0~groups~0"
+        },
+        {
+          "data": ["cost"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 340,
+            "attrMax": 480,
+            "coeffs": [
+              1.999999999999985,
+              60.0000000000075
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            0,
+            220
+          ],
+          "attrRange": [
+            60.0000000000075,
+            500.0000000000042
+          ],
+          "group": "~0~groups~0"
+        },
+        {
+          "data": ["_deriv_yPosition_0"],
+          "attr": "yPosition",
+          "type": "derived",
+          "params": {
+            "attrMin": 68.5,
+            "attrMax": 420.5,
+            "coeffs": [
+              88.00000000000003,
+              68.49999999999991
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~0"
+        },
+        {
+          "data": ["cost"],
+          "attr": "area",
+          "type": "linear",
+          "params": {
+            "attrMin": 44240,
+            "attrMax": 66360,
+            "coeffs": [
+              315.99999999999795,
+              1.0368239600211382e-9
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            140,
+            210
+          ],
+          "attrRange": [
+            44240.00000000076,
+            66360.0000000006
+          ],
+          "group": "~0~groups~0"
+        },
+        {
+          "data": ["cost"],
+          "attr": "width",
+          "type": "linear",
+          "params": {
+            "attrMin": 560,
+            "attrMax": 840,
+            "coeffs": [
+              3.9999999999999747,
+              1.2846612662542611e-11
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            140,
+            210
+          ],
+          "attrRange": [
+            560.0000000000093,
+            840.0000000000075
+          ],
+          "group": "~0~groups~0"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "bar",
+          "x": "0",
+          "width": "800",
+          "y": "9",
+          "height": "79",
+          "fill": "rgb(140,86,75)",
+          "text": ""
+        },
+        {
+          "class": "bar",
+          "x": "0",
+          "width": "760",
+          "y": "97",
+          "height": "79",
+          "fill": "rgb(140,86,75)",
+          "text": ""
+        },
+        {
+          "class": "bar",
+          "x": "0",
+          "width": "560",
+          "y": "185",
+          "height": "79",
+          "fill": "rgb(140,86,75)",
+          "text": ""
+        },
+        {
+          "class": "bar",
+          "x": "0",
+          "width": "840",
+          "y": "273",
+          "height": "79",
+          "fill": "rgb(188,189,34)",
+          "text": ""
+        },
+        {
+          "class": "bar",
+          "x": "0",
+          "width": "720",
+          "y": "361",
+          "height": "79",
+          "fill": "rgb(188,189,34)",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "data": {
+        "number": [
+          0,
+          100,
+          200
+        ],
+        "_deriv_xPosition_1": [
+          0,
+          1,
+          2
+        ],
+        "_deriv_yPosition_1": [
+          0,
+          1,
+          2
+        ],
+        "_deriv_width_1": [
+          0,
+          1,
+          2
+        ],
+        "_deriv_height_1": [
+          0,
+          1,
+          2
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Times",
+          "Times",
+          "Times"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "stroke-width": [
+          "0.5px",
+          "0.5px",
+          "0.5px"
+        ],
+        "shape": [
+          "line",
+          "line",
+          "line"
+        ],
+        "xPosition": [
+          60,
+          460,
+          860
+        ],
+        "yPosition": [
+          473,
+          473,
+          473
+        ],
+        "area": [
+          0,
+          0,
+          0
+        ],
+        "width": [
+          0,
+          0,
+          0
+        ],
+        "height": [
+          6,
+          6,
+          6
+        ],
+        "text": [
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        8,
+        11,
+        14
+      ],
+      "mappings": [
+        {
+          "data": ["number"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 60,
+            "attrMax": 860,
+            "coeffs": [
+              4,
+              60.00000000000003
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            0,
+            220
+          ],
+          "attrRange": [
+            60.00000000000003,
+            940
+          ],
+          "group": "~0~groups~1"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "y2": "6",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "6",
+          "x2": "0",
+          "text": ""
+        },
+        {
+          "y2": "6",
+          "x2": "0",
+          "text": ""
+        }
+      ],
+      "name": "xaxis-ticks",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "number": [
+          0,
+          100,
+          200
+        ],
+        "_deriv_xPosition_1": [
+          0,
+          1,
+          2
+        ],
+        "_deriv_yPosition_2": [
+          0,
+          1,
+          2
+        ],
+        "_deriv_width_2": [
+          0,
+          1,
+          2
+        ],
+        "_deriv_height_2": [
+          0,
+          1,
+          2
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "sans-serif",
+          "sans-serif",
+          "sans-serif"
+        ],
+        "font-size": [
+          "14px",
+          "14px",
+          "14px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "text",
+          "text",
+          "text"
+        ],
+        "xPosition": [
+          60,
+          460,
+          860
+        ],
+        "yPosition": [
+          485.1875,
+          485.1875,
+          485.1875
+        ],
+        "area": [
+          105.712890625,
+          316.29296875,
+          316.29296875
+        ],
+        "width": [
+          7.8125,
+          23.375,
+          23.375
+        ],
+        "height": [
+          13.53125,
+          13.53125,
+          13.53125
+        ],
+        "text": [
+          "0",
+          "100",
+          "200"
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        9,
+        12,
+        15
+      ],
+      "mappings": [
+        {
+          "data": "number",
+          "attr": "text",
+          "type": "nominal",
+          "params": {
+            "0": "0",
+            "100": "100",
+            "200": "200"
+          },
+          "group": "~0~groups~2"
+        },
+        {
+          "data": ["number"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 60,
+            "attrMax": 860,
+            "coeffs": [
+              4,
+              60.00000000000003
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            0,
+            220
+          ],
+          "attrRange": [
+            60.00000000000003,
+            940
+          ],
+          "group": "~0~groups~2"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "dy": ".71em",
+          "y": "9",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "0"
+        },
+        {
+          "dy": ".71em",
+          "y": "9",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "100"
+        },
+        {
+          "dy": ".71em",
+          "y": "9",
+          "x": "0",
+          "style": "text-anchor: middle;",
+          "text": "200"
+        }
+      ],
+      "name": "xaxis-labels",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "string": [
+          "Coke",
+          "Sprite",
+          "Fanta",
+          "Pepsi",
+          "7 UP"
+        ],
+        "_deriv_xPosition_3": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "_deriv_yPosition_0": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "_deriv_width_3": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "_deriv_height_3": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Times",
+          "Times",
+          "Times",
+          "Times",
+          "Times"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "stroke-width": [
+          "0.5px",
+          "0.5px",
+          "0.5px",
+          "0.5px",
+          "0.5px"
+        ],
+        "shape": [
+          "line",
+          "line",
+          "line",
+          "line",
+          "line"
+        ],
+        "xPosition": [
+          57,
+          57,
+          57,
+          57,
+          57
+        ],
+        "yPosition": [
+          68.5,
+          156.5,
+          244.5,
+          332.5,
+          420.5
+        ],
+        "area": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": [
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "height": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        19,
+        22,
+        25,
+        28,
+        31
+      ],
+      "mappings": [
+        {
+          "data": ["_deriv_yPosition_0"],
+          "attr": "yPosition",
+          "type": "derived",
+          "params": {
+            "attrMin": 68.5,
+            "attrMax": 420.5,
+            "coeffs": [
+              88.00000000000003,
+              68.49999999999991
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~3"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        },
+        {
+          "x2": "-6",
+          "y2": "0",
+          "text": ""
+        }
+      ],
+      "name": "yaxis-ticks",
+      "axis": "yaxis"
+    },
+    {
+      "data": {
+        "string": [
+          "Coke",
+          "Sprite",
+          "Fanta",
+          "Pepsi",
+          "7 UP"
+        ],
+        "_deriv_xPosition_4": [
+          1,
+          2,
+          3,
+          0,
+          4
+        ],
+        "_deriv_yPosition_0": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "_deriv_width_4": [
+          4,
+          0,
+          3,
+          2,
+          1
+        ],
+        "_deriv_height_4": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif",
+          "sans-serif"
+        ],
+        "font-size": [
+          "14px",
+          "14px",
+          "14px",
+          "14px",
+          "14px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "stroke-width": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          "text",
+          "text",
+          "text",
+          "text",
+          "text"
+        ],
+        "xPosition": [
+          34.6640625,
+          32.71875,
+          33.1015625,
+          33.4921875,
+          35.4375
+        ],
+        "yPosition": [
+          69.2265625,
+          157.2265625,
+          245.2265625,
+          333.2265625,
+          421.2265625
+        ],
+        "area": [
+          441.580810546875,
+          494.1650390625,
+          483.817138671875,
+          473.258056640625,
+          420.673828125
+        ],
+        "width": [
+          32.671875,
+          36.5625,
+          35.796875,
+          35.015625,
+          31.125
+        ],
+        "height": [
+          13.515625,
+          13.515625,
+          13.515625,
+          13.515625,
+          13.515625
+        ],
+        "text": [
+          "Coke",
+          "Sprite",
+          "Fanta",
+          "Pepsi",
+          "7 UP"
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 5,
+      "ids": [
+        20,
+        23,
+        26,
+        29,
+        32
+      ],
+      "mappings": [
+        {
+          "data": "string",
+          "attr": "xPosition",
+          "type": "nominal",
+          "params": {
+            "Coke": 34.6640625,
+            "Sprite": 32.71875,
+            "Fanta": 33.1015625,
+            "Pepsi": 33.4921875,
+            "7 UP": 35.4375
+          },
+          "group": "~0~groups~4"
+        },
+        {
+          "data": "string",
+          "attr": "area",
+          "type": "nominal",
+          "params": {
+            "Coke": 441.580810546875,
+            "Sprite": 494.1650390625,
+            "Fanta": 483.817138671875,
+            "Pepsi": 473.258056640625,
+            "7 UP": 420.673828125
+          },
+          "group": "~0~groups~4"
+        },
+        {
+          "data": "string",
+          "attr": "width",
+          "type": "nominal",
+          "params": {
+            "Coke": 32.671875,
+            "Sprite": 36.5625,
+            "Fanta": 35.796875,
+            "Pepsi": 35.015625,
+            "7 UP": 31.125
+          },
+          "group": "~0~groups~4"
+        },
+        {
+          "data": "string",
+          "attr": "text",
+          "type": "nominal",
+          "params": {
+            "Coke": "Coke",
+            "Sprite": "Sprite",
+            "Fanta": "Fanta",
+            "Pepsi": "Pepsi",
+            "7 UP": "7 UP"
+          },
+          "group": "~0~groups~4"
+        },
+        {
+          "data": "_deriv_xPosition_4",
+          "attr": "xPosition",
+          "type": "nominal",
+          "params": {
+            "0": 33.4921875,
+            "1": 34.6640625,
+            "2": 32.71875,
+            "3": 33.1015625,
+            "4": 35.4375
+          },
+          "group": "~0~groups~4"
+        },
+        {
+          "data": "_deriv_width_4",
+          "attr": "width",
+          "type": "nominal",
+          "params": {
+            "0": 36.5625,
+            "1": 31.125,
+            "2": 35.015625,
+            "3": 35.796875,
+            "4": 32.671875
+          },
+          "group": "~0~groups~4"
+        },
+        {
+          "data": ["_deriv_yPosition_0"],
+          "attr": "yPosition",
+          "type": "derived",
+          "params": {
+            "attrMin": 69.2265625,
+            "attrMax": 421.2265625,
+            "coeffs": [
+              88.00000000000003,
+              69.22656249999993
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~4"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "Coke"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "Sprite"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "Fanta"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "Pepsi"
+        },
+        {
+          "dy": ".32em",
+          "x": "-9",
+          "y": "0",
+          "style": "text-anchor: end;",
+          "text": "7 UP"
+        }
+      ],
+      "name": "yaxis-labels",
+      "axis": "yaxis"
+    },
+    {
+      "data": {
+        "domain": [
+          0,
+          0,
+          220,
+          220
+        ],
+        "tick": [
+          0,
+          6,
+          6,
+          0
+        ],
+        "lineID": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_xPosition_5": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_yPosition_5": [
+          1,
+          2,
+          0,
+          3
+        ],
+        "_deriv_width_5": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_height_5": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Times",
+          "Times",
+          "Times",
+          "Times"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "stroke-width": [
+          "0.5px",
+          "0.5px",
+          "0.5px",
+          "0.5px"
+        ],
+        "shape": [
+          "linePoint",
+          "linePoint",
+          "linePoint",
+          "linePoint"
+        ],
+        "xPosition": [
+          60,
+          60,
+          940,
+          940
+        ],
+        "yPosition": [
+          476,
+          470,
+          470,
+          476
+        ],
+        "area": [
+          5280,
+          5280,
+          5280,
+          5280
+        ],
+        "width": [
+          880,
+          880,
+          880,
+          880
+        ],
+        "height": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 7,
+      "ids": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "mappings": [
+        {
+          "data": ["domain"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 60,
+            "attrMax": 940,
+            "coeffs": [
+              4.000000000000002,
+              59.99999999999979
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            0,
+            220
+          ],
+          "attrRange": [
+            59.99999999999979,
+            940.0000000000001
+          ],
+          "group": "~0~groups~5"
+        },
+        {
+          "data": ["tick"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 470,
+            "attrMax": 476,
+            "coeffs": [
+              -1,
+              476
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~5"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "domain",
+          "d": "M0,6V0H880V6",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,6V0H880V6",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,6V0H880V6",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M0,6V0H880V6",
+          "text": ""
+        }
+      ],
+      "name": "xaxis-line",
+      "axis": "xaxis"
+    },
+    {
+      "data": {
+        "axis": [
+          0,
+          0,
+          450,
+          450
+        ],
+        "tick": [
+          0,
+          6,
+          6,
+          0
+        ],
+        "lineID": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_xPosition_6": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "_deriv_yPosition_6": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_width_6": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "_deriv_height_6": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "attrs": {
+        "font-family": [
+          "Times",
+          "Times",
+          "Times",
+          "Times"
+        ],
+        "font-size": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "font-weight": [
+          "normal",
+          "normal",
+          "normal",
+          "normal"
+        ],
+        "opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "fill": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ],
+        "fill-opacity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "stroke": [
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)",
+          "rgb(0,0,0)"
+        ],
+        "stroke-width": [
+          "0.5px",
+          "0.5px",
+          "0.5px",
+          "0.5px"
+        ],
+        "shape": [
+          "linePoint",
+          "linePoint",
+          "linePoint",
+          "linePoint"
+        ],
+        "xPosition": [
+          54,
+          60,
+          60,
+          54
+        ],
+        "yPosition": [
+          20,
+          20,
+          470,
+          470
+        ],
+        "area": [
+          2700,
+          2700,
+          2700,
+          2700
+        ],
+        "width": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "height": [
+          450,
+          450,
+          450,
+          450
+        ],
+        "text": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "numFields": 7,
+      "ids": [
+        33,
+        33,
+        33,
+        33
+      ],
+      "mappings": [
+        {
+          "data": ["tick"],
+          "attr": "xPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 54,
+            "attrMax": 60,
+            "coeffs": [
+              1,
+              54
+            ],
+            "err": 1
+          },
+          "group": "~0~groups~6"
+        },
+        {
+          "data": ["axis"],
+          "attr": "yPosition",
+          "type": "linear",
+          "params": {
+            "attrMin": 20,
+            "attrMax": 470,
+            "coeffs": [
+              1,
+              20
+            ],
+            "err": 1
+          },
+          "dataRange": [
+            0,
+            450
+          ],
+          "attrRange": [
+            20,
+            470
+          ],
+          "group": "~0~groups~6"
+        }
+      ],
+      "nodeAttrs": [
+        {
+          "class": "domain",
+          "d": "M-6,0H0V450H-6",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M-6,0H0V450H-6",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M-6,0H0V450H-6",
+          "text": ""
+        },
+        {
+          "class": "domain",
+          "d": "M-6,0H0V450H-6",
+          "text": ""
+        }
+      ],
+      "name": "yaxis-line",
+      "axis": "yaxis"
+    }
+  ],
+  "mappingSets": {
+    "font-family": [],
+    "font-size": [],
+    "font-weight": [],
+    "opacity": [],
+    "fill": [
+      {
+        "mappingRefs": [
+          {
+            "data": "brand",
+            "attr": "fill",
+            "type": "nominal",
+            "range": [
+              "rgb(140,86,75)",
+              "rgb(188,189,34)"
+            ],
+            "groupID": 0
+          }
+        ],
+        "attributes": [
+          "rgb(140,86,75)",
+          "rgb(188,189,34)"
+        ],
+        "type": "nominal"
+      }
+    ],
+    "fill-opacity": [],
+    "stroke": [],
+    "stroke-width": [],
+    "shape": [],
+    "xPosition": [
+      {
+        "mappingRefs": [
+          {
+            "data": "cost",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              340,
+              480
+            ],
+            "groupID": 0
+          },
+          {
+            "data": "number",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              60,
+              860
+            ],
+            "groupID": 1
+          },
+          {
+            "data": "number",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              60,
+              860
+            ],
+            "groupID": 2
+          },
+          {
+            "data": "domain",
+            "attr": "xPosition",
+            "type": "linear",
+            "range": [
+              60,
+              940
+            ],
+            "groupID": 5
+          }
+        ],
+        "attributes": [
+          60,
+          940
+        ],
+        "type": "linear"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "string",
+            "attr": "xPosition",
+            "type": "nominal",
+            "range": [
+              34.6640625,
+              32.71875,
+              33.1015625,
+              33.4921875,
+              35.4375
+            ],
+            "groupID": 4
+          }
+        ],
+        "attributes": [
+          34.6640625,
+          32.71875,
+          33.1015625,
+          33.4921875,
+          35.4375
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "_deriv_xPosition_4",
+            "attr": "xPosition",
+            "type": "nominal",
+            "range": [
+              33.4921875,
+              34.6640625,
+              32.71875,
+              33.1015625,
+              35.4375
+            ],
+            "groupID": 4
+          }
+        ],
+        "attributes": [
+          33.4921875,
+          34.6640625,
+          32.71875,
+          33.1015625,
+          35.4375
+        ],
+        "type": "nominal"
+      }
+    ],
+    "yPosition": [
+      {
+        "mappingRefs": [
+          {
+            "data": "axis",
+            "attr": "yPosition",
+            "type": "linear",
+            "range": [
+              20,
+              470
+            ],
+            "groupID": 6
+          }
+        ],
+        "attributes": [
+          20,
+          470
+        ],
+        "type": "linear"
+      }
+    ],
+    "area": [
+      {
+        "mappingRefs": [
+          {
+            "data": "cost",
+            "attr": "area",
+            "type": "linear",
+            "range": [
+              44240,
+              66360
+            ],
+            "groupID": 0
+          }
+        ],
+        "attributes": [
+          44240,
+          66360
+        ],
+        "type": "linear"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "string",
+            "attr": "area",
+            "type": "nominal",
+            "range": [
+              441.580810546875,
+              494.1650390625,
+              483.817138671875,
+              473.258056640625,
+              420.673828125
+            ],
+            "groupID": 4
+          }
+        ],
+        "attributes": [
+          441.580810546875,
+          494.1650390625,
+          483.817138671875,
+          473.258056640625,
+          420.673828125
+        ],
+        "type": "nominal"
+      }
+    ],
+    "width": [
+      {
+        "mappingRefs": [
+          {
+            "data": "cost",
+            "attr": "width",
+            "type": "linear",
+            "range": [
+              560,
+              840
+            ],
+            "groupID": 0
+          }
+        ],
+        "attributes": [
+          560,
+          840
+        ],
+        "type": "linear"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "string",
+            "attr": "width",
+            "type": "nominal",
+            "range": [
+              32.671875,
+              36.5625,
+              35.796875,
+              35.015625,
+              31.125
+            ],
+            "groupID": 4
+          }
+        ],
+        "attributes": [
+          32.671875,
+          36.5625,
+          35.796875,
+          35.015625,
+          31.125
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "_deriv_width_4",
+            "attr": "width",
+            "type": "nominal",
+            "range": [
+              36.5625,
+              31.125,
+              35.015625,
+              35.796875,
+              32.671875
+            ],
+            "groupID": 4
+          }
+        ],
+        "attributes": [
+          36.5625,
+          31.125,
+          35.015625,
+          35.796875,
+          32.671875
+        ],
+        "type": "nominal"
+      }
+    ],
+    "height": [],
+    "text": [
+      {
+        "mappingRefs": [
+          {
+            "data": "number",
+            "attr": "text",
+            "type": "nominal",
+            "range": [
+              "0",
+              "100",
+              "200"
+            ],
+            "groupID": 2
+          }
+        ],
+        "attributes": [
+          "0",
+          "100",
+          "200"
+        ],
+        "type": "nominal"
+      },
+      {
+        "mappingRefs": [
+          {
+            "data": "string",
+            "attr": "text",
+            "type": "nominal",
+            "range": [
+              "Coke",
+              "Sprite",
+              "Fanta",
+              "Pepsi",
+              "7 UP"
+            ],
+            "groupID": 4
+          }
+        ],
+        "attributes": [
+          "Coke",
+          "Sprite",
+          "Fanta",
+          "Pepsi",
+          "7 UP"
+        ],
+        "type": "nominal"
+      }
+    ],
+    "rotation": []
+  },
+  "ids": []
+}
