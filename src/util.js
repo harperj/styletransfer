@@ -33,18 +33,21 @@ var loadJSONData = function(filename) {
 };
 
 var niceNumberRange = function(range, zeroHeuristic) {
-    // Get the D3 "nice" range values
-    var niceRange = d3.scale.linear().domain(range).nice().domain();
+    var niceRange = [range[0], range[1]]
+    if (config.niceifyRanges) {
+        // Get the D3 "nice" range values
+        niceRange = d3.scale.linear().domain(range).nice().domain();
 
-    // Zero heuristic prefers zeroes when the smallest value in a column is close to zero;
-    // that is, when zero is within 25% of total data range.
-    var ZERO_DIST_TOLERANCE = 0.35;
-    if (zeroHeuristic) {
-        var startDistanceFromZero = Math.abs(niceRange[0] - 0);
-        var totalDistance = Math.abs(niceRange[0] - niceRange[1]);
-        var ratioOfZeroDist = startDistanceFromZero / totalDistance;
-        if (ratioOfZeroDist <= ZERO_DIST_TOLERANCE) {
-            niceRange[0] = 0;
+        // Zero heuristic prefers zeroes when the smallest value in a column is close to zero;
+        // that is, when zero is within 25% of total data range.
+        var ZERO_DIST_TOLERANCE = 0.35;
+        if (zeroHeuristic) {
+            var startDistanceFromZero = Math.abs(niceRange[0] - 0);
+            var totalDistance = Math.abs(niceRange[0] - niceRange[1]);
+            var ratioOfZeroDist = startDistanceFromZero / totalDistance;
+            if (ratioOfZeroDist <= ZERO_DIST_TOLERANCE) {
+                niceRange[0] = 0;
+            }
         }
     }
 

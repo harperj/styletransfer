@@ -86,7 +86,7 @@ var equalizeTextElementSize = function(group, svgNode) {
             });
 
             svgNode.appendChild(newNode);
-            transferNonSpatialAttrs(newNode, group.nodeAttrs[textElementInds[i]], attrs);
+            transferAttrs(newNode, attrs);
             var bbox = transformedBoundingBox(newNode);
             $(newNode).remove();
             if (bbox.width > maxTextWidth) {
@@ -101,6 +101,7 @@ var equalizeTextElementSize = function(group, svgNode) {
                     heightScaleFactor = elHeightScale;
                 }
             }
+            transferNodeAttrs(newNode, group.nodeAttrs[textElementInds[i]])
         }
     }
 
@@ -189,16 +190,7 @@ function getDataFromInds(schema, inds) {
     return data;
 }
 
-var transferNonSpatialAttrs = function (newNode, nodeAttrs, attrs) {
-    _.each(nodeAttrs, function (val, attr) {
-        if (attr === "text") {
-            $(newNode).text(val);
-        }
-        else {
-            d3.select(newNode).attr(attr, val);
-        }
-    });
-
+var transferAttrs = function (newNode, attrs) {
     _.each(attrs, function (val, attr) {
         if (attr === "text") {
             // Previously this conditional contained "&& !$(newNode).text()".  Why?
@@ -209,6 +201,22 @@ var transferNonSpatialAttrs = function (newNode, nodeAttrs, attrs) {
         }
     });
     d3.select(newNode).style("vector-effect", "non-scaling-stroke");
+};
+
+var transferNodeAttrs = function(newNode, nodeAttrs) {
+    _.each(nodeAttrs, function (val, attr) {
+        if (attr === "text" && !$(newNode).text()) {
+            $(newNode).text(val);
+        }
+        else {
+            d3.select(newNode).attr(attr, val);
+        }
+    });
+};
+
+var transferNonSpatialAttrs = function(newNode, nodeAttrs, attrs) {
+    transferAttrs(newNode, attrs);
+    transferNodeAttrs(newNode, attrs);
 };
 
 var transferSpatialAttrs = function (newNode, svg, attrs, group) {
@@ -270,6 +278,8 @@ var drawLine = function (attrs, data, nodeAttrs, svg) {
     delete nodeAttrs[0]['d'];
 
     transferNonSpatialAttrs(newNode, nodeAttrs[0], firstPointAttrs);
+    //transferAttrs(newNode, nodeAttrs[0], firstPointAttrs);
+    //transferNodeAttrs(newNode, nodeAttrs[0], firstPointAttrs);
 
     newNode.__data__ = data;
     newNode.__attrs__ = attrs;
@@ -319,7 +329,7 @@ var createLine = function (data, attrs, svg) {
 function drawNode(attrs, data, nodeAttrs, group, svg) {
     var newNode = getNewNodeFromShape(attrs['shape']);
 
-    transferNonSpatialAttrs(newNode, nodeAttrs, attrs);
+    transferNonSpatialAttrs(newNode, nodeAttrs, attrs)
 
     svg.appendChild(newNode);
 

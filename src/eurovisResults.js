@@ -8,13 +8,17 @@ var config = require('./config');
 var targets = [
     './data/result_scatter_1.json',
     './data/dowson_bars.json',
-    './data/result_dots_2.json',
+    './data/leondutoit_dots.json',
     './data/my_line.json'
 ];
 
 var sources = [
     {
-        file: './data/cars_rollup.data.json',
+        file: './data/cars_rollup3.data.json',
+        type: 'json_data'
+    },
+    {
+        file: './data/custody.data.json',
         type: 'json_data'
     },
     {
@@ -34,12 +38,8 @@ var sources = [
         type: 'deconstruction'
     },
     {
-        file: './data/leondutoit_dots.json',
+        file: './data/result_scatter_2.json',
         type: 'deconstruction'
-    },
-    {
-        file: './data/custody.data.json',
-        type: 'json_data'
     }
 ];
 

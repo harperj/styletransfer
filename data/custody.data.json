@@ -1,12 +1,12 @@
 {
   "ranks": {
-    "Year": 3,
-    "Prisoners": 2,
+    "Year": 2,
+    "Prisoners": 1,
     "Deaths": 6,
-    "Population": 1
+    "Population": 3
   },
   "types": {
-    "Year": "linear",
+    "Year": "nominal",
     "Prisoners": "linear",
     "Deaths": "linear",
     "Population": "linear"
