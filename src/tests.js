@@ -1,4 +1,9 @@
 var tests = [
+    {
+        source_file: './data/custody.data.json',
+        source_type: 'json_data',
+        target_file: './data/my_line.json'
+    }
     //{
     //    source_file: './data/result_scatter_1.json',
     //    target_file: './data/anscombe1.json'
@@ -9,36 +14,36 @@ var tests = [
     //    target_file: './data/dowson_bars.json'
     //},
      //CARS ROLLUP EXAMPLES
-    {
-        source_file: './data/cars_rollup.data.json',
-        source_type: 'json_data',
-        target_file: './data/vallandingham_scatter.json'
-    },
-    {
-        source_file: './data/cars_rollup.data.json',
-        source_type: 'json_data',
-        target_file: './data/result_scatter_1.json'
-    },
-    {
-        source_file: './data/cars_rollup2.data.json',
-        source_type: 'json_data',
-        target_file: './data/dowson_bars.json'
-    },
-    {
-        source_file: './data/cars_rollup2.data.json',
-        source_type: 'json_data',
-        target_file: './data/result_bars_1.json'
-    },
-    {
-        source_file: './data/cars_rollup3.data.json',
-        source_type: 'json_data',
-        target_file: './data/kuijjer_line.json'
-    },
-    {
-        source_file: './data/cars_rollup3.data.json',
-        source_type: 'json_data',
-        target_file: './data/my_line.json'
-    },
+    //{
+    //    source_file: './data/cars_rollup.data.json',
+    //    source_type: 'json_data',
+    //    target_file: './data/vallandingham_scatter.json'
+    //},
+    //{
+    //    source_file: './data/cars_rollup.data.json',
+    //    source_type: 'json_data',
+    //    target_file: './data/result_scatter_1.json'
+    //},
+    //{
+    //    source_file: './data/cars_rollup2.data.json',
+    //    source_type: 'json_data',
+    //    target_file: './data/dowson_bars.json'
+    //},
+    //{
+    //    source_file: './data/cars_rollup2.data.json',
+    //    source_type: 'json_data',
+    //    target_file: './data/result_bars_1.json'
+    //},
+    //{
+    //    source_file: './data/cars_rollup3.data.json',
+    //    source_type: 'json_data',
+    //    target_file: './data/kuijjer_line.json'
+    //},
+    //{
+    //    source_file: './data/cars_rollup3.data.json',
+    //    source_type: 'json_data',
+    //    target_file: './data/my_line.json'
+    //},
      //IRIS EXAMPLES
     //{
     //    source_file: './data/iris.data.json',

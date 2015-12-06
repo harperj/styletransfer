@@ -378,6 +378,7 @@ var createAxes = function (axes, targetVis, newMappings, newGroups) {
         if (axis.length === 0) continue;
         var ticks = axis[0];
         var labels = axis[1];
+
         var line = axis[2];
         var newGroupBBox = getBoundingBoxFromGroups(newGroups);
         var targetNonAxisGroups = _.filter(targetVis.groups, function(group) { return !group.name; });
@@ -399,13 +400,18 @@ var createAxes = function (axes, targetVis, newMappings, newGroups) {
                 ticks.attrs['yPosition'] = _.map(ticks.attrs['yPosition'], function(yPos) {return yPos + newAxisShiftDistance;});
                 labels.attrs['yPosition'] = _.map(labels.attrs['yPosition'], function(yPos) {return yPos + newAxisShiftDistance;});
                 line.attrs['yPosition'] = _.map(line.attrs['yPosition'], function(yPos) {return yPos + newAxisShiftDistance;});
-                line.ids.forEach(function(id, ind) {
-                    line.data['tick'][ind] = line.getMappingForAttr('yPosition').invert(line.attrs['yPosition'][ind]);
-                });
+                if (line.getMappingForAttr('yPosition')) {
+                    line.ids.forEach(function (id, ind) {
+                        line.data['tick'][ind] = line.getMappingForAttr('yPosition').invert(line.attrs['yPosition'][ind]);
+                    });
+                }
                 //line.getMapping('tick', 'yPosition').params.coeffs[1] += (newGroupMax - axisLineMin) + padding;
             }
+
+
         }
         if (ticks.name[0] === 'y' && labels.attrs.xPosition[0] < ticks.attrs.xPosition[0]) {
+            labels.nodeAttrs.forEach(function(nodeAttrObj) {nodeAttrObj['dx'] = '-0.5em'})
             // right-oriented axis
             if (ticks.attrs.width[0] > 100) {
                 ticks.attrs['xPosition'] = _.map(ticks.attrs['xPosition'], function(xPos, i) {return 0.5 * newGroupBBox.width + (xPos - ticks.attrs['width'][0]/2);});
@@ -690,7 +696,7 @@ var propagateMappings = function (newMapping, transferredMapping, allMappings, s
     });
 
     sameDataMappings.forEach(function (sameDataMapping) {
-        if (sameDataMapping.type === "linear") {
+        if (sameDataMapping.type === "linear" && transferredMapping.type === "linear") {
             var rel = transferredMapping.linearRelationshipTo(sameDataMapping);
             var propagatedMappingCoeffs = propagateCoeffs(newMapping, rel);
             newPropagatedMapping = new Mapping(newMapping.data, sameDataMapping.attr, "linear", {coeffs: propagatedMappingCoeffs});
@@ -701,7 +707,7 @@ var propagateMappings = function (newMapping, transferredMapping, allMappings, s
             propagatedMappings.push(newPropagatedMapping);
             skipList.push(sameDataMapping);
         }
-        else if (sameDataMapping.type === "nominal") {
+        else if (sameDataMapping.type === "nominal" || transferredMapping.type === "nominal" || sameDataMapping.type === "text" || transferredMapping.type === "text") {
             newPropagatedMapping = transferMapping(sourceDataField, sameDataMapping);
             if (newPropagatedMapping) {
                 newPropagatedMapping.targetGroup = sameDataMapping.group;
@@ -781,7 +787,17 @@ var transferMappingNominal = function (sourceField, targetMapping) {
     }
     else {
         for (var j = 0; j < sourceDataVals.length; ++j) {
-            params[sourceDataVals[j]] = sourceDataVals[j].toString();
+            if (typeof sourceDataVals[j] === 'number') {
+                if (_.max(sourceDataVals) < 10) {
+                    params[sourceDataVals[j]] = (Math.round(sourceDataVals[j] * 100) / 100).toString();
+                }
+                else {
+                    params[sourceDataVals[j]] = Math.round(sourceDataVals[j]).toString();
+                }
+            }
+            else {
+                params[sourceDataVals[j]] = sourceDataVals[j].toString();
+            }
         }
     }
 
@@ -959,3 +975,8 @@ var main = function () {
 if (require.main === module) {
     main();
 }
+
+module.exports = {
+    transferChart: transferChart,
+    extractDataFromDeconstruction: extractDataFromDeconstruction
+};

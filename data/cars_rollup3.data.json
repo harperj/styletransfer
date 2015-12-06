@@ -1,11 +1,11 @@
 {
   "ranks": {
-    "Year": 1,
+    "Year": 2,
     "mean_Miles_per_Gallon": 3,
     "median_Cylinders": 5,
     "mean_Displacement": 6,
     "mean_Horsepower": 4,
-    "mean_Weight_in_lbs": 2,
+    "mean_Weight_in_lbs": 1,
     "mean_Acceleration": 7
   },
   "types": {
