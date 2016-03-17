@@ -390,10 +390,12 @@ var createAxes = function (axes, targetVis, newMappings, newGroups) {
         if (ticks.name[0] === 'x' && labels.attrs.yPosition[0] > ticks.attrs.yPosition[0]) {
             // bottom oriented axis
             var axisLineBBox = line.getMarkBoundingBox({x: 0, y: 0, width: 0, height: 0});
-            var axisLineMin = axisLineBBox.y;
-            var padding = axisLineMin - (targetNonAxisBBox.y + targetNonAxisBBox.height);
+            var axisLineMin = axisLineBBox.y + newGroupBBox.height;
             var newGroupMax = newGroupBBox.y + newGroupBBox.height;
             var newAxisShiftDistance = newGroupMax - axisLineMin; // + padding;
+            labels.nodeAttrs.forEach(function(nodeAttrObj) {nodeAttrObj['class'] += ' x-axis x-axis-label'});
+            ticks.nodeAttrs.forEach(function(nodeAttrObj) {nodeAttrObj['class'] += ' x-axis x-axis-ticks'});
+            line.nodeAttrs.forEach(function(nodeAttrObj) {nodeAttrObj['class'] += ' x-axis x-axis-line'});
 
             var MIN_DELTA = 5; // don't change unless we've shifted by at least 5 px
             if (newGroupMax > axisLineMin + MIN_DELTA) {
@@ -411,7 +413,8 @@ var createAxes = function (axes, targetVis, newMappings, newGroups) {
 
         }
         if (ticks.name[0] === 'y' && labels.attrs.xPosition[0] < ticks.attrs.xPosition[0]) {
-            labels.nodeAttrs.forEach(function(nodeAttrObj) {nodeAttrObj['dx'] = '-0.5em'})
+            labels.nodeAttrs.forEach(function(nodeAttrObj) {nodeAttrObj['class'] += ' y-axis-label'});
+            ticks.nodeAttrs.forEach(function(nodeAttrObj) {nodeAttrObj['class'] += ' y-axis-line'});
             // right-oriented axis
             if (ticks.attrs.width[0] > 100) {
                 ticks.attrs['xPosition'] = _.map(ticks.attrs['xPosition'], function(xPos, i) {return 0.5 * newGroupBBox.width + (xPos - ticks.attrs['width'][0]/2);});
