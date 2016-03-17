@@ -1,25 +1,25 @@
 {
   "ranks": {
-    "Year": 1,
-    "Prisoners": 2,
+    "Year": 2,
+    "Prisoners": 1,
     "Deaths": 6,
     "Population": 3
   },
   "types": {
-    "Year": "linear",
+    "Year": "categorical",
     "Prisoners": "linear",
     "Deaths": "linear",
     "Population": "linear"
   },
   "data": {
     "Year": [
-      1990,
-      1991,
-      1992,
-      1993,
-      1994,
-      1995,
-      1996
+      "1990",
+      "1991",
+      "1992",
+      "1993",
+      "1994",
+      "1995",
+      "1996"
     ],
     "Prisoners": [
       2041,

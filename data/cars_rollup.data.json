@@ -9,7 +9,7 @@
     "mean_Acceleration": 7
   },
   "types": {
-    "Year": "nominal",
+    "Year": "linear",
     "mean_Miles_per_Gallon": "linear",
     "median_Cylinders": "linear",
     "mean_Displacement": "linear",

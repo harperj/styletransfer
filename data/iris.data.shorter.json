@@ -1,10 +1,10 @@
 {
   "ranks": {
-    "sepal_length": 4,
-    "sepal_width": 2,
-    "petal_length": 5,
+    "sepal_length": 5,
+    "sepal_width": 3,
+    "petal_length": 4,
     "petal_width": 1,
-    "type": 3
+    "type": 2
   },
   "types": {
     "sepal_length": "linear",
