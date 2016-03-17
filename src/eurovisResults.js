@@ -7,6 +7,7 @@ var config = require('./config');
 
 var targets = [
     './data/result_scatter_3.json',
+    './data/result_scatter_2.json',
     './data/dowson_bars.json',
     './data/leondutoit_dots.json',
     './data/kuijjer_line.json',
@@ -19,6 +20,7 @@ var targets = [
     './data/gdp_bars.json',
     './data/anscombe1.json',
     './data/5308_bars.json'
+    './data/result_dots_2.json'
 ];
 
 var sources = [
@@ -39,11 +41,7 @@ var sources = [
         type: 'deconstruction'
     },
     {
-        file: './data/npr_bars.json',
-        type: 'deconstruction'
-    },
-    {
-        file: './data/5308_bars.json',
+        file: './data/result_scatter_1.json',
         type: 'deconstruction'
     },
     {
