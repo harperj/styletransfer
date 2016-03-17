@@ -1,0 +1,58 @@
+[
+  {
+    "country": "Macedonia, FYR",
+    "rate": 32.0
+  },
+  {
+    "country": "Armenia",
+    "rate": 28.6
+  },
+  {
+    "country": "Lesotho",
+    "rate": 25.3
+  },
+  {
+    "country": "South Africa",
+    "rate": 24.7
+  },
+  {
+    "country": "Spain",
+    "rate": 20.1
+  },
+  {
+    "country": "Latvia",
+    "rate": 18.7
+  },
+  {
+    "country": "Estonia",
+    "rate": 16.9
+  },
+  {
+    "country": "Serbia",
+    "rate": 16.6
+  },
+  {
+    "country": "Yemen, Rep.",
+    "rate": 14.6
+  },
+  {
+    "country": "Slovak Republic",
+    "rate": 14.4
+  },
+  {
+    "country": "Dominican Republic",
+    "rate": 14.2
+  },
+  {
+    "country": "Albania",
+    "rate": 13.8
+  },
+  {
+    "country": "Ireland",
+    "rate": 13.6
+  },
+  {
+    "country": "Greece",
+    "rate": 12.5
+  }
+]

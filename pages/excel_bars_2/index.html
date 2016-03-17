@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+/*
+.bar {
+  fill: #5494d8;
+}
+*/
+.axis {
+  font: 12px 'Open Sans';
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: gray;
+  stroke-width: 2px;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+</style>
+<body>
+
+<svg id="visSvg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9dc4fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#468bd2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c6af55;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b69d37;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
+
+<script src="../d3-decon-fixed.min.js"></script>
+<script>
+
+var margin = {top: 20, right: 20, bottom: 100, left: 100},
+    width = 400 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
+
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    .ticks(5)
+    .tickSize(-width, 0);
+    // .tickFormat(function(d) {return d + "K"});
+
+var color = d3.scale.ordinal()
+        .domain(["Europe", "Asia"])
+        .range(["#CD6466", "#669ACC"]);
+
+var svg = d3.select("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.tsv("data.tsv", type, function(error, data) {
+  x.domain(data.map(function(d) { return d.language; }));
+  y.domain([0, d3.max(data, function(d) { return d.speakers })]);
+
+  console.log(data);	
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)
+      .selectAll("text")
+      .attr("transform", "rotate(-90) translate(-10, -15)")
+      .style("text-anchor", "end");
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis);
+    // .append("text")
+    //   .attr("transform", "rotate(-90)")
+    //   .attr("y", 6)
+    //   .attr("dy", ".71em")
+    //   .style("text-anchor", "end")
+    //   .text("Box Office");
+
+  svg.selectAll(".bar")
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+//      .attr("fill", "url(#grad1)")
+      .attr("fill", function(d) { return color(d.continent);})
+      .attr("x", function(d) { return x(d.language) + x.rangeBand() / 4; })
+      .attr("width", x.rangeBand() * (1 / 2))
+      .attr("y", function(d) { return y(d.speakers); })
+      .attr("height", function(d) { return height - y(d.speakers); });
+
+});
+
+function type(d) {
+  d.speakers = +d.speakers;
+  return d;
+}
+
+</script>

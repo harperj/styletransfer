@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="../d3-decon-fixed.min.js"></script>
+<style type="text/css">
+.x-axis path {
+    stroke:black;
+    fill:none;
+}
+.x-axis line {
+    fill: none;
+    stroke: black;
+    stroke-opacity:.8;
+    shape-rendering: crispEdges;
+}
+.bars circle {
+    fill: green;
+    fill-opacity:.9;
+}
+.title {
+    font-weight: bold;
+}
+
+text {
+    font-family: 'Noto Serif', sans-serif;
+    font-size: 16px;
+}
+
+#precise-value {
+    fill:black;
+    font-size: 16px;
+}
+</style>
+</head>
+
+<body>
+<script type="text/javascript">
+
+(function(){
+
+    var margin = {top: 54, bottom: 50, left:250, right: 60};
+    var width = 900 - margin.left - margin.right;
+    var height = 450 - margin.top - margin.bottom;
+
+    var xScale = d3.scale.linear().range([0, width]);
+    var yScale = d3.scale.ordinal().rangeRoundBands([0, height], 1.8,0);
+
+    var numTicks = 5;
+    var xAxis = d3.svg.axis().scale(xScale)
+                    .orient("top")
+                    .ticks(numTicks);
+										
+		var yAxis = d3.svg.axis().scale(yScale)
+										.orient("left");
+
+    var svg = d3.select("body").append("svg")
+                .attr("width", width+margin.left+margin.right)
+                .attr("height", height+margin.top+margin.bottom)
+                .attr("class", "base-svg");
+
+    var barSvg = svg.append("g")
+                .attr("transform", "translate("+margin.left+","+margin.top+")")
+                .attr("class", "bar-svg");
+
+    var x = barSvg.append("g")
+            .attr("class", "x-axis");
+						
+
+    var url = "data.json";
+
+    d3.json(url, function(data) {
+
+        var xMax = d3.max(data, function(d) { return d.rate; } );
+        var xMin = 0;
+        xScale.domain([xMin, xMax]);
+        yScale.domain(data.map(function(d) { return d.country; }));
+
+        d3.select(".base-svg").append("text")
+            .attr("x", margin.left)
+            .attr("y", (margin.top)/2)
+            .attr("text-anchor", "start")
+            .text("Narrowly defined unemployment rates: top 20 countries (2010)")
+            .attr("class", "title");
+
+        var groups = barSvg.append("g").attr("class", "labels")
+                    .selectAll("text")
+                    .data(data)
+                    .enter()
+                    .append("g");
+										
+										
+				var yAxisGroup = barSvg.append("g")
+										.attr("transform", "translate(0,"+ -yScale.rangeBand() +")").call(yAxis);
+                yAxisGroup.selectAll('.domain').style("display", "none");
+                yAxisGroup.selectAll("text").attr("text-anchor", "middle");
+
+        // groups.append("text")
+        //         .attr("x", "0")
+        //         .attr("y", function(d) { return yScale(d.country); })
+        //         .text(function(d) { return d.country; })
+        //         .attr("text-anchor", "end")
+        //         .attr("dy", ".9em")
+        //         .attr("dx", "-.32em")
+        //         .attr("id", function(d,i) { return "label"+i; });
+
+        var bars = groups
+                    .attr("class", "bars")
+                    .append("circle")
+                    .attr("r", 13)
+                    .attr("cx", function(d) { return xScale(d.rate); })
+                    .attr("cy", function(d) { return yScale(d.country) - yScale.rangeBand()/2; })
+                    .attr("id", function(d,i) { return "bar"+i; });
+
+        groups.append("text")
+                .attr("x", function(d) { return xScale(d.rate) + 38; })
+                .attr("y", function(d) { return yScale(d.country)-7 })
+                .text(function(d) { return d.rate; })
+                .attr("text-anchor", "middle")
+                .attr("dy", "1.3em")
+                .attr("dx", "0em")
+                .attr("id", "precise-value");
+
+        bars
+            .on("mouseover", function() {
+                var currentGroup = d3.select(this.parentNode);
+                currentGroup.select("rect").style("fill", "brown");
+                currentGroup.select("text").style("font-weight", "bold");
+            })
+            .on("mouseout", function() {
+                var currentGroup = d3.select(this.parentNode);
+                currentGroup.select("rect").style("fill", "steelblue");
+                currentGroup.select("text").style("font-weight", "normal");
+            });
+
+        x.call(xAxis);
+    });
+
+})();
+
+</script>
+</body>
+
+</html>
