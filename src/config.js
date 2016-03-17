@@ -3,32 +3,33 @@
  */
 
 var transfer_config = {
-    niceifyRanges: false,
+    niceifyRanges: true,
     forceLinearAxisZero: false,
+    forceOnlyYAxisZero: false,
     position_transfer: "boundingbox",
     semiology_lin: {
         "xPosition": 1,
         "yPosition": 1,
-        "width": 2,
-        "height": 2,
-        "area": 3,
-        "fill": 4,
-        "stroke": 4,
-        "opacity": 5,
-        "shape": 6,
+        "width": 3,
+        "height": 3,
+        "area": 4,
+        "fill": 5,
+        "stroke": 5,
+        "opacity": 6,
+        "shape": 7,
         "text": 8
     },
     semiology_nom: {
         "xPosition": 1,
         "yPosition": 1,
-        "fill": 2,
-        "shape": 3,
-        "stroke": 4,
-        "opacity": 5,
-        "width": 6,
-        "height": 6,
-        "area": 7,
-        "text": 8
+        "fill": 3,
+        "shape": 4,
+        "stroke": 5,
+        "opacity": 6,
+        "width": 7,
+        "height": 7,
+        "area": 8,
+        "text": 9
     }
 };
 
