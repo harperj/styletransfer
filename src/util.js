@@ -63,7 +63,14 @@ var parseJSONDataField = function(dataset, columnName) {
     if (mappingType === "linear") {
         fieldData = _.map(fieldData, function(value) {return +value;});
         dataRange = niceNumberRange([_.min(fieldData), _.max(fieldData)], true);
-        if (config.forceLinearAxisZero) dataRange[0] = 0;
+        if (config.forceLinearAxisZero) {
+            dataRange[0] = 0;
+        }
+        else if(config.forceOnlyYAxisZero && rank === 2) {
+            // force y-axis to be zero, yPosition rank == 2
+            // TODO: don't hardcode rank
+            dataRange[0] = 0;
+        }
     }
     else {
         dataRange = _.uniq(fieldData);
