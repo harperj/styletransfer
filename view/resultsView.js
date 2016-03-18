@@ -25,9 +25,27 @@ var createResultContainer = function (container, decon, maxHeight, fixedWidth) {
 var loadResults = function () {
     $("#transfers").empty();
     $.getJSON("data/eurovis_results.json", function (rows) {
+
+        // SETUP TARGET ROW FIRST
+        var targetRowDiv = $('<div class="resultRow"></div>');
+        $("#targets").append(targetRowDiv);
+
+        var emptyDiv = $('<div class="result-container row">');
+        targetRowDiv.append(emptyDiv);
+
+        createResultContainer(emptyDiv[0], {}, 1000, 800);
+        _.each(rows[0].results, function(result) {
+            var target = result.targetDecon;
+            var visDiv = $('<div class="result-container row">');
+            targetRowDiv.append(visDiv);
+            createResultContainer(visDiv[0], target, 1000, 800);
+        });
+
+
+
         _.each(rows, function (row, i) {
-            var targetDiv = $('<div class="resultRow"></div>');
-            $("#targets").append(targetDiv);
+            var resultRowDiv = $('<div class="resultRow"></div>');
+            $("#targets").append(resultRowDiv);
 
             var maxHeight = 0;
             row.results.forEach(function(result) {
@@ -38,18 +56,18 @@ var loadResults = function () {
 
             if (row.sourceDecon) {
                 var visDiv = $('<div class="result-container row">');
-                targetDiv.append(visDiv);
+                resultRowDiv.append(visDiv);
                 createResultContainer(visDiv[0], row.sourceDecon, maxHeight, 800);
             }
             else {
                 var visDiv = $('<div class="result-container row">');
-                targetDiv.append(visDiv);
+                resultRowDiv.append(visDiv);
                 createResultContainer(visDiv[0], {}, maxHeight, 800);
             }
 
             _.each(row.results, function(result) {
                 var visDiv = $('<div class="result-container row">');
-                targetDiv.append(visDiv);
+                resultRowDiv.append(visDiv);
 
                 createResultContainer(visDiv[0], result.resultDecon, maxHeight);
             });

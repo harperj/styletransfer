@@ -283,6 +283,19 @@ var createLine = function (data, attrs, svg) {
             indMapping[lineID] = ind;
         });
     }
+    else if (data['year']) {
+        // TODO: figure out what the right way is to integrate this heuristic
+        var yearSort = data['year'];
+        yearSort = _.map(yearSort, function(val, i) {return [val, i]; });
+        yearSort.sort(function(a,b) {
+            return a[0] > b[0] ? 1
+                : a[0] < b[0] ? -1
+                : 0;
+        });
+        _.each(yearSort, function(sortedVal, ind) {
+            indMapping[sortedVal[1]] = ind;
+        });
+    }
     else {
         var positions = attrs['xPosition'].slice(attrs['xPosition']);
         positions.forEach(function(position, ind) {
